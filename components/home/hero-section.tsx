@@ -2,15 +2,15 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { MapPin, TrendingUp, Award, Users, ShieldCheck } from 'lucide-react';
+import { MapPin, Clock, DollarSign, TreePine, ShieldCheck, Users } from 'lucide-react';
 import { SellerForm } from '@/components/forms/seller-form';
 import { InvestorIntakeForm } from '@/components/forms/investor-intake-form';
 
 const stats = [
-  { label: 'Cash Offer Turnaround', value: '24 Hours', icon: TrendingUp },
-  { label: 'Close Timeline', value: '14 Days', icon: Award },
-  { label: 'Acres in Our Market', value: '1.77M+', icon: MapPin },
-  { label: 'Counties Covered', value: '8', icon: Users },
+  { label: 'Cash Offer', value: '24 hrs', icon: Clock },
+  { label: 'Close Timeline', value: '14 Days', icon: DollarSign },
+  { label: 'Acres Covered', value: '1.77M+', icon: TreePine },
+  { label: 'Counties', value: '8', icon: MapPin },
 ];
 
 const serviceRegions = [
@@ -19,9 +19,9 @@ const serviceRegions = [
   { label: 'Columbiana County', slug: 'columbiana-county-oh' },
   { label: 'Harrison County', slug: 'harrison-county-oh' },
   { label: 'Carroll County', slug: 'carroll-county-oh' },
-  { label: 'Ohio County', slug: 'ohio-county-wv' },
-  { label: 'Marshall County', slug: 'marshall-county-wv' },
-  { label: 'Brooke County', slug: 'brooke-county-wv' },
+  { label: 'Ohio County WV', slug: 'ohio-county-wv' },
+  { label: 'Marshall County WV', slug: 'marshall-county-wv' },
+  { label: 'Brooke County WV', slug: 'brooke-county-wv' },
 ];
 
 const sellerTrustPoints = [
@@ -32,7 +32,7 @@ const sellerTrustPoints = [
 
 const buyerTrustPoints = [
   'First access to off-market Ohio Valley land',
-  'Hunting, farming, development, and investment parcels',
+  'Hunting, farm, development & investment parcels',
   'No membership fees — ever',
 ];
 
@@ -42,36 +42,48 @@ export function HeroSection() {
   const [activeTab, setActiveTab] = useState<Tab>('sell');
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-primary/5 via-background to-background">
-      <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
+    <section className="relative overflow-hidden bg-forest">
 
-      <div className="mx-auto max-w-7xl px-6 py-20 sm:py-28 lg:px-8">
+      {/* Animated pulse rings — New Western style */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+        <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2">
+          <div className="h-64 w-64 rounded-full border border-amber/20 animate-pulse-ring" />
+          <div className="absolute inset-0 h-64 w-64 rounded-full border border-amber/15 animate-pulse-ring-delay" />
+        </div>
+        <div className="absolute top-1/3 right-1/4">
+          <div className="h-48 w-48 rounded-full border border-meadow/20 animate-pulse-ring" style={{ animationDelay: '0.7s' }} />
+        </div>
+        {/* Subtle gradient blobs */}
+        <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-amber/5 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-meadow/5 blur-3xl" />
+      </div>
+
+      <div className="relative mx-auto max-w-7xl px-6 py-20 sm:py-28 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-start">
 
-          {/* Left — Headline + dynamic trust points */}
-          <div className="pt-2">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2">
-              <Award className="h-4 w-4 text-primary" />
-              <span className="text-sm font-semibold text-primary">
-                Local Ohio Valley Land Buyer — Not an Outside Investor
-              </span>
-            </div>
+          {/* Left — Headline + trust points + stats */}
+          <div className="pt-2 animate-fade-up">
+
+            {/* Serif italic label — Mynd style */}
+            <p className="heading-serif text-amber text-2xl mb-4">
+              {activeTab === 'sell' ? 'Sell your land with confidence.' : 'Buy before it hits the market.'}
+            </p>
 
             {activeTab === 'sell' ? (
               <>
-                <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-                  Sell Your Ohio Valley Land
-                  <span className="block text-primary mt-2">Fast. Fair. Simple.</span>
+                <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl leading-tight">
+                  Ohio Valley Land Buyer.
+                  <span className="block text-amber mt-1">Local. Intentional. Fair.</span>
                 </h1>
-                <p className="mt-6 text-lg leading-8 text-muted-foreground">
+                <p className="mt-6 text-lg leading-8 text-white/70">
                   We buy vacant land, inherited property, and back-tax parcels across eight
-                  counties in Ohio and West Virginia. Cash offers in 24 hours — no agents,
-                  no fees, no hassle.
+                  counties in Ohio and West Virginia. Cash offer in 24 hours. Close in 14 days.
+                  No agents, no fees, no out-of-state buyers.
                 </p>
-                <ul className="mt-6 flex flex-col gap-2">
+                <ul className="mt-6 flex flex-col gap-3">
                   {sellerTrustPoints.map((point) => (
-                    <li key={point} className="flex items-center gap-2 text-sm font-medium text-foreground">
-                      <ShieldCheck className="h-4 w-4 text-accent flex-shrink-0" />
+                    <li key={point} className="flex items-center gap-3 text-sm font-medium text-white/80">
+                      <ShieldCheck className="h-4 w-4 text-amber flex-shrink-0" />
                       {point}
                     </li>
                   ))}
@@ -79,19 +91,19 @@ export function HeroSection() {
               </>
             ) : (
               <>
-                <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-                  Buy Off-Market Land
-                  <span className="block text-primary mt-2">in the Ohio Valley</span>
+                <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl leading-tight">
+                  Off-Market Land Deals
+                  <span className="block text-amber mt-1">in the Ohio Valley.</span>
                 </h1>
-                <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                  Join our buyer network and get first access to off-market land deals across
-                  eight counties in Ohio and West Virginia. Tell us what you're looking for —
-                  we'll call you when it's available.
+                <p className="mt-6 text-lg leading-8 text-white/70">
+                  Join our buyer network and get first access to off-market land deals —
+                  hunting tracts, farm ground, development sites, and investment parcels
+                  across eight Ohio Valley counties.
                 </p>
-                <ul className="mt-6 flex flex-col gap-2">
+                <ul className="mt-6 flex flex-col gap-3">
                   {buyerTrustPoints.map((point) => (
-                    <li key={point} className="flex items-center gap-2 text-sm font-medium text-foreground">
-                      <ShieldCheck className="h-4 w-4 text-accent flex-shrink-0" />
+                    <li key={point} className="flex items-center gap-3 text-sm font-medium text-white/80">
+                      <Users className="h-4 w-4 text-amber flex-shrink-0" />
                       {point}
                     </li>
                   ))}
@@ -99,59 +111,70 @@ export function HeroSection() {
               </>
             )}
 
-            <div className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4">
+            {/* Stats row */}
+            <div className="mt-10 grid grid-cols-4 gap-4 border-t border-white/10 pt-10">
               {stats.map((stat) => {
                 const Icon = stat.icon;
                 return (
                   <div key={stat.label} className="flex flex-col items-center text-center">
-                    <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-accent/10 text-accent mb-2">
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <div className="text-xl font-bold text-foreground">{stat.value}</div>
-                    <div className="text-xs text-muted-foreground mt-1">{stat.label}</div>
+                    <Icon className="h-4 w-4 text-amber mb-2" />
+                    <div className="text-xl font-bold text-white">{stat.value}</div>
+                    <div className="text-xs text-white/50 mt-0.5">{stat.label}</div>
                   </div>
                 );
               })}
             </div>
+
+            {/* Community giving badge */}
+            <div className="mt-8">
+              <Link
+                href="/community"
+                className="inline-flex items-center gap-2 rounded-full border border-meadow/40 bg-meadow/10 px-4 py-2 text-xs font-medium text-meadow hover:bg-meadow/20 transition-colors"
+              >
+                <span className="h-1.5 w-1.5 rounded-full bg-meadow" />
+                5% of every closing supports Ohio Valley communities
+              </Link>
+            </div>
           </div>
 
           {/* Right — Tabbed form card */}
-          <div className="w-full">
-            <div className="rounded-2xl border border-border bg-card shadow-lg overflow-hidden">
+          <div className="w-full animate-fade-up-delay-1">
+            <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden shadow-2xl">
 
               {/* Tab switcher */}
-              <div className="grid grid-cols-2 border-b border-border">
+              <div className="grid grid-cols-2">
                 <button
                   type="button"
                   onClick={() => setActiveTab('sell')}
-                  className={`py-4 text-sm font-bold tracking-wide transition-colors ${
+                  className={`py-4 text-sm font-bold tracking-wide transition-all ${
                     activeTab === 'sell'
-                      ? 'bg-primary text-primary-foreground'
-                      : 'bg-card text-muted-foreground hover:text-foreground'
+                      ? 'bg-amber text-forest'
+                      : 'bg-transparent text-white/60 hover:text-white hover:bg-white/5'
                   }`}
                 >
-                  I Want to SELL Land
+                  I Want to SELL
                 </button>
                 <button
                   type="button"
                   onClick={() => setActiveTab('buy')}
-                  className={`py-4 text-sm font-bold tracking-wide transition-colors ${
+                  className={`py-4 text-sm font-bold tracking-wide transition-all border-l border-white/10 ${
                     activeTab === 'buy'
-                      ? 'bg-primary text-primary-foreground'
-                      : 'bg-card text-muted-foreground hover:text-foreground'
+                      ? 'bg-amber text-forest'
+                      : 'bg-transparent text-white/60 hover:text-white hover:bg-white/5'
                   }`}
                 >
-                  I Want to BUY Land
+                  I Want to BUY
                 </button>
               </div>
 
-              <div className="p-8">
+              {/* Form content */}
+              <div className="p-8 bg-white rounded-b-2xl">
                 {activeTab === 'sell' ? (
                   <>
                     <div className="mb-6 text-center">
                       <h2 className="text-xl font-bold text-foreground">Get My Cash Offer</h2>
                       <p className="text-sm text-muted-foreground mt-1">
-                        Takes 30 seconds. We call within 24 hours.
+                        30 seconds. We call within 24 hours.
                       </p>
                     </div>
                     <SellerForm />
@@ -161,7 +184,7 @@ export function HeroSection() {
                     <div className="mb-6 text-center">
                       <h2 className="text-xl font-bold text-foreground">Join the Deal List</h2>
                       <p className="text-sm text-muted-foreground mt-1">
-                        Tell us what you want. We contact you when it's available.
+                        Tell us what you want. We call when it's available.
                       </p>
                     </div>
                     <InvestorIntakeForm />
@@ -172,36 +195,24 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* County service area strip */}
-        <div className="mt-20 border-t border-border pt-10">
-          <div className="text-center mb-6">
-            <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
-              Counties We Serve
-            </p>
-          </div>
-          <div className="flex flex-wrap justify-center gap-3">
+        {/* County strip */}
+        <div className="mt-16 border-t border-white/10 pt-10">
+          <p className="text-xs font-semibold text-white/40 uppercase tracking-widest text-center mb-5">
+            Counties We Serve
+          </p>
+          <div className="flex flex-wrap justify-center gap-2">
             {serviceRegions.map((region) => (
               <Link
                 key={region.slug}
                 href={`/sell-land/${region.slug}`}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border bg-card hover:bg-accent/5 hover:border-accent transition-colors"
+                className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-medium text-white/70 hover:border-amber/50 hover:text-amber transition-colors"
               >
-                <MapPin className="h-4 w-4 text-accent" />
-                <span className="text-sm font-medium text-foreground">{region.label}</span>
+                <MapPin className="h-3 w-3" />
+                {region.label}
               </Link>
             ))}
           </div>
         </div>
-      </div>
-
-      <div className="absolute top-0 right-0 -z-10 transform-gpu overflow-hidden blur-3xl" aria-hidden="true">
-        <div
-          className="aspect-[1108/632] w-[69.25rem] bg-gradient-to-tr from-accent/20 to-primary/20 opacity-20"
-          style={{
-            clipPath:
-              'polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)',
-          }}
-        />
       </div>
     </section>
   );

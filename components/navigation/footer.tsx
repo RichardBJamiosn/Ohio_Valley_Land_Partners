@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Building2, Mail, Phone, MapPin } from 'lucide-react';
+import { TreePine, Mail, Phone, MapPin, Heart } from 'lucide-react';
 import { siteConfig, silos, counties } from '@/lib/seo-config';
 
 const footerNavigation = {
@@ -28,61 +28,62 @@ const footerNavigation = {
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-card" aria-labelledby="footer-heading">
-      <h2 id="footer-heading" className="sr-only">
-        Footer
-      </h2>
+    <footer className="bg-forest border-t border-white/10" aria-labelledby="footer-heading">
+      <h2 id="footer-heading" className="sr-only">Footer</h2>
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
             <Link href="/" className="flex items-center gap-3">
-              <Building2 className="h-10 w-10 text-primary" strokeWidth={2.5} />
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-amber/20">
+                <TreePine className="h-5 w-5 text-amber" />
+              </div>
               <div className="flex flex-col">
-                <span className="text-2xl font-bold tracking-tight text-primary">
+                <span className="text-xl font-bold tracking-tight text-amber">
                   Ohio Valley
                 </span>
-                <span className="text-sm font-semibold text-muted-foreground -mt-1">
+                <span className="text-xs font-medium text-white/50 -mt-0.5">
                   Land Partners
                 </span>
               </div>
             </Link>
-            <p className="text-sm leading-6 text-muted-foreground max-w-xs">
-              Strategic real estate investments across the Ohio Valley. Building wealth through land
-              wholesaling, commercial development, and residential projects since 2005.
+            <p className="text-sm leading-6 text-white/60 max-w-xs">
+              Local cash land buyer serving eight counties across Ohio and West Virginia.
+              Intentional. Not international.
             </p>
-            <div className="flex flex-col gap-3 text-sm text-muted-foreground">
+            <div className="flex flex-col gap-3 text-sm text-white/60">
               <div className="flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-accent" />
+                <MapPin className="h-4 w-4 text-amber flex-shrink-0" />
                 <span>
                   {siteConfig.address.streetAddress}, {siteConfig.address.addressLocality},{' '}
                   {siteConfig.address.addressRegion} {siteConfig.address.postalCode}
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-accent" />
-                <a href={`tel:${siteConfig.phone}`} className="hover:text-accent transition-colors">
+                <Phone className="h-4 w-4 text-amber flex-shrink-0" />
+                <a href={`tel:${siteConfig.phone}`} className="hover:text-amber transition-colors">
                   {siteConfig.phone}
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-accent" />
-                <a href={`mailto:${siteConfig.email}`} className="hover:text-accent transition-colors">
+                <Mail className="h-4 w-4 text-amber flex-shrink-0" />
+                <a href={`mailto:${siteConfig.email}`} className="hover:text-amber transition-colors">
                   {siteConfig.email}
                 </a>
               </div>
+            </div>
+            <div className="flex items-center gap-2 rounded-full border border-meadow/30 bg-meadow/10 px-3 py-1.5 w-fit">
+              <Heart className="h-3.5 w-3.5 text-meadow" />
+              <span className="text-xs text-meadow font-medium">5% back to the Ohio Valley</span>
             </div>
           </div>
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-foreground">Services</h3>
-                <ul role="list" className="mt-6 space-y-4">
+                <h3 className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-6">Services</h3>
+                <ul role="list" className="space-y-4">
                   {footerNavigation.services.map((item) => (
                     <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors"
-                      >
+                      <Link href={item.href} className="text-sm text-white/60 hover:text-amber transition-colors">
                         {item.name}
                       </Link>
                     </li>
@@ -90,14 +91,11 @@ export function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-foreground">County Guides</h3>
-                <ul role="list" className="mt-6 space-y-4">
+                <h3 className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-6">County Guides</h3>
+                <ul role="list" className="space-y-4">
                   {footerNavigation.guides.map((item) => (
                     <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors"
-                      >
+                      <Link href={item.href} className="text-sm text-white/60 hover:text-amber transition-colors">
                         {item.name}
                       </Link>
                     </li>
@@ -107,13 +105,13 @@ export function Footer() {
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-foreground">Company</h3>
-                <ul role="list" className="mt-6 space-y-4">
+                <h3 className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-6">Company</h3>
+                <ul role="list" className="space-y-4">
                   {footerNavigation.company.map((item) => (
                     <li key={item.name}>
                       <Link
                         href={item.href}
-                        className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors"
+                        className="text-sm text-white/60 hover:text-amber transition-colors"
                       >
                         {item.name}
                       </Link>
@@ -122,13 +120,13 @@ export function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-foreground">Legal</h3>
-                <ul role="list" className="mt-6 space-y-4">
+                <h3 className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-6">Legal</h3>
+                <ul role="list" className="space-y-4">
                   {footerNavigation.legal.map((item) => (
                     <li key={item.name}>
                       <Link
                         href={item.href}
-                        className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors"
+                        className="text-sm text-white/60 hover:text-amber transition-colors"
                       >
                         {item.name}
                       </Link>
@@ -139,11 +137,11 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-16 border-t border-border pt-8 sm:mt-20 lg:mt-24 flex flex-col gap-3 text-center">
-          <p className="text-xs leading-5 text-muted-foreground">
+        <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24 flex flex-col gap-3 text-center">
+          <p className="text-xs leading-5 text-white/40">
             &copy; {new Date().getFullYear()} Ohio Valley Land Partners. All rights reserved.
           </p>
-          <p className="text-xs leading-5 text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xs leading-5 text-white/30 max-w-2xl mx-auto">
             Ohio Valley Land Partners operates as a principal buyer of real estate. We are not
             licensed real estate brokers or agents and do not represent sellers or buyers in an
             agency capacity. We purchase properties for our own account.

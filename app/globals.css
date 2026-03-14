@@ -2,77 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 215 28% 17%;
+    /* === OHIO VALLEY LAND PARTNERS — DESIGN SYSTEM === */
+    /* Warm cream background — not sterile white */
+    --background: 40 18% 97%;
+    --foreground: 116 19% 12%;
+
+    /* Card surfaces */
     --card: 0 0% 100%;
-    --card-foreground: 215 28% 17%;
+    --card-foreground: 116 19% 12%;
     --popover: 0 0% 100%;
-    --popover-foreground: 215 28% 17%;
-    --primary: 215 45% 25%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 210 20% 50%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 210 30% 96%;
-    --muted-foreground: 215 15% 45%;
-    --accent: 142 40% 45%;
-    --accent-foreground: 0 0% 98%;
+    --popover-foreground: 116 19% 12%;
+
+    /* Primary: Warm amber gold — #C8963A */
+    --primary: 35 56% 51%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Deep forest green */
+    --secondary: 156 38% 28%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted surfaces */
+    --muted: 37 20% 93%;
+    --muted-foreground: 37 10% 48%;
+
+    /* Accent: Forest green — #33755e */
+    --accent: 156 38% 33%;
+    --accent-foreground: 0 0% 100%;
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 215 20% 88%;
-    --input: 215 20% 88%;
-    --ring: 215 45% 25%;
-    --chart-1: 215 45% 35%;
-    --chart-2: 142 40% 45%;
-    --chart-3: 210 20% 50%;
-    --chart-4: 142 30% 35%;
-    --chart-5: 215 35% 45%;
-    --radius: 0.5rem;
-    --navy: 215 45% 25%;
-    --slate: 210 20% 50%;
-    --earth-green: 142 40% 45%;
-    --trust-navy: 215 35% 20%;
+
+    /* Warm borders — not cold gray */
+    --border: 37 18% 87%;
+    --input: 37 18% 87%;
+    --ring: 35 56% 51%;
+
+    /* Dark hero/nav color as CSS var */
+    --dark: 116 19% 12%;
+    --dark-foreground: 40 18% 97%;
+
+    --radius: 0.75rem;
   }
+
   .dark {
-    --background: 215 28% 10%;
-    --foreground: 0 0% 98%;
-    --card: 215 28% 12%;
-    --card-foreground: 0 0% 98%;
-    --popover: 215 28% 10%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 215 45% 65%;
-    --primary-foreground: 215 28% 10%;
-    --secondary: 210 20% 30%;
+    --background: 116 19% 8%;
+    --foreground: 40 18% 95%;
+    --card: 116 19% 11%;
+    --card-foreground: 40 18% 95%;
+    --popover: 116 19% 8%;
+    --popover-foreground: 40 18% 95%;
+    --primary: 35 56% 55%;
+    --primary-foreground: 116 19% 8%;
+    --secondary: 156 38% 38%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 215 20% 18%;
-    --muted-foreground: 215 15% 65%;
-    --accent: 142 40% 55%;
-    --accent-foreground: 215 28% 10%;
+    --muted: 116 15% 16%;
+    --muted-foreground: 37 10% 62%;
+    --accent: 156 38% 42%;
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 215 20% 20%;
-    --input: 215 20% 20%;
-    --ring: 215 45% 65%;
-    --chart-1: 215 45% 55%;
-    --chart-2: 142 40% 55%;
-    --chart-3: 210 20% 60%;
-    --chart-4: 142 30% 45%;
-    --chart-5: 215 35% 65%;
+    --border: 116 15% 20%;
+    --input: 116 15% 20%;
+    --ring: 35 56% 55%;
   }
 }
 
@@ -82,5 +75,89 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
+}
+
+/* ===== DARK SECTION UTILITY ===== */
+/* Used for nav, hero, footer — dark forest background */
+.section-dark {
+  background-color: hsl(116 19% 12%);
+  color: hsl(40 18% 96%);
+}
+
+/* ===== SERIF ITALIC ACCENT HEADINGS ===== */
+/* Apply to decorative section labels — Mynd-style */
+.heading-serif {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out forwards;
+}
+
+.animate-fade-up-delay-1 {
+  animation: fade-up 0.6s ease-out 0.15s forwards;
+  opacity: 0;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fade-up 0.6s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.animate-fade-up-delay-3 {
+  animation: fade-up 0.6s ease-out 0.45s forwards;
+  opacity: 0;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* ===== ARCHED IMAGE FRAMES — Mynd-style ===== */
+.arch-frame {
+  border-radius: 50% 50% 0 0 / 60% 60% 0 0;
+  overflow: hidden;
+}
+
+/* ===== PROSE OVERRIDES for blog ===== */
+.prose h2 {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 700;
 }

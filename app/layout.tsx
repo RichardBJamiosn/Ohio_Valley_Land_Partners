@@ -1,11 +1,24 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Poppins, Cormorant_Garamond } from 'next/font/google';
 import { MainNav } from '@/components/navigation/main-nav';
 import { Footer } from '@/components/navigation/footer';
 import { siteConfig } from '@/lib/seo-config';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-poppins',
+  display: 'swap',
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  style: ['normal', 'italic'],
+  variable: '--font-cormorant',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: {
@@ -16,11 +29,11 @@ export const metadata: Metadata = {
   keywords: [
     'Ohio Valley real estate',
     'land wholesaling',
-    'commercial development',
-    'residential development',
-    'Belmont County',
-    'Jefferson County',
-    'real estate investment',
+    'sell land Ohio Valley',
+    'cash land buyer Ohio',
+    'Belmont County land',
+    'Jefferson County land',
+    'sell inherited land Ohio',
   ],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
@@ -57,8 +70,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className={inter.className}>
+    <html lang="en" className={`${poppins.variable} ${cormorant.variable}`}>
+      <body className={poppins.className}>
         <MainNav />
         <main className="min-h-screen">{children}</main>
         <Footer />

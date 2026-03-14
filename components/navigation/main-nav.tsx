@@ -3,37 +3,16 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { Menu, X, ChevronDown, Building2 } from 'lucide-react';
+import { Menu, X, TreePine } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { silos } from '@/lib/seo-config';
-import { Button } from '@/components/ui/button';
 
 const navigation = [
-  {
-    name: 'Properties',
-    href: '/properties',
-    description: 'Browse available listings',
-  },
-  {
-    name: silos.land.title,
-    href: silos.land.path,
-    description: 'Wholesale opportunities & land acquisitions',
-  },
-  {
-    name: silos.commercial.title,
-    href: silos.commercial.path,
-    description: 'Industrial & retail developments',
-  },
-  {
-    name: silos.development.title,
-    href: silos.development.path,
-    description: 'Long-term projects & investor relations',
-  },
-  {
-    name: silos.guides.title,
-    href: silos.guides.path,
-    description: 'County-by-county market guides',
-  },
+  { name: 'Buy Land', href: '/properties', description: 'Browse available listings' },
+  { name: 'County Guides', href: silos.guides.path, description: 'County-by-county market guides' },
+  { name: 'Blog', href: '/blog', description: 'Seller guides & market reports' },
+  { name: 'Community', href: '/community', description: 'Our giving commitment' },
+  { name: 'About', href: '/about', description: 'Who we are' },
 ];
 
 export function MainNav() {
@@ -41,43 +20,51 @@ export function MainNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <header className="sticky top-0 z-50 w-full bg-forest border-b border-white/10 backdrop-blur-sm">
+      <nav
+        className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8"
+        aria-label="Global"
+      >
+        {/* Logo */}
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3">
-            <Building2 className="h-8 w-8 text-primary" strokeWidth={2.5} />
-            <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-tight text-primary">
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-amber/20 group-hover:bg-amber/30 transition-colors">
+              <TreePine className="h-5 w-5 text-amber" />
+            </div>
+            <div className="flex flex-col leading-none">
+              <span className="text-base font-bold tracking-tight text-amber">
                 Ohio Valley
               </span>
-              <span className="text-sm font-semibold text-muted-foreground -mt-1">
+              <span className="text-xs font-medium text-white/60 tracking-wide">
                 Land Partners
               </span>
             </div>
           </Link>
         </div>
 
+        {/* Mobile menu button */}
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-foreground"
+            className="inline-flex items-center justify-center rounded-lg p-2 text-white/70 hover:text-white hover:bg-white/10 transition-colors"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <Menu className="h-6 w-6" aria-hidden="true" />
+            <Menu className="h-6 w-6" />
           </button>
         </div>
 
+        {/* Desktop nav links */}
         <div className="hidden lg:flex lg:gap-x-8">
           {navigation.map((item) => (
             <Link
               key={item.name}
               href={item.href}
               className={cn(
-                'text-sm font-semibold leading-6 transition-colors hover:text-primary',
+                'text-sm font-medium transition-colors',
                 pathname?.startsWith(item.href)
-                  ? 'text-primary border-b-2 border-primary'
-                  : 'text-muted-foreground'
+                  ? 'text-amber'
+                  : 'text-white/70 hover:text-white'
               )}
             >
               {item.name}
@@ -85,67 +72,89 @@ export function MainNav() {
           ))}
         </div>
 
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
-          <Button variant="outline" asChild>
-            <Link href="/contact">Contact Us</Link>
-          </Button>
-          <Button asChild>
-            <Link href="/investor-portal">Investor Portal</Link>
-          </Button>
+        {/* Desktop CTAs */}
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-3">
+          <Link
+            href="/land-scouts"
+            className="text-sm font-medium text-white/60 hover:text-white transition-colors px-3 py-2"
+          >
+            Land Scouts
+          </Link>
+          <Link
+            href="/"
+            className="rounded-lg bg-amber px-4 py-2 text-sm font-semibold text-forest hover:bg-amber/90 transition-colors"
+          >
+            Get a Cash Offer
+          </Link>
+          <Link
+            href="/investor-portal"
+            className="rounded-lg border border-white/20 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
+          >
+            Buyer Portal
+          </Link>
         </div>
       </nav>
 
+      {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden" role="dialog" aria-modal="true">
-          <div className="fixed inset-0 z-50" />
-          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-border/10">
-            <div className="flex items-center justify-between">
-              <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
-                <Building2 className="h-7 w-7 text-primary" />
-                <span className="text-lg font-bold text-primary">OVLP</span>
+        <div className="lg:hidden fixed inset-0 z-50">
+          <div
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm"
+            onClick={() => setMobileMenuOpen(false)}
+          />
+          <div className="fixed inset-y-0 right-0 w-full max-w-sm bg-forest px-6 py-6 overflow-y-auto">
+            <div className="flex items-center justify-between mb-8">
+              <Link
+                href="/"
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center gap-2"
+              >
+                <TreePine className="h-6 w-6 text-amber" />
+                <span className="font-bold text-amber">Ohio Valley Land Partners</span>
               </Link>
               <button
                 type="button"
-                className="-m-2.5 rounded-md p-2.5 text-foreground"
+                className="rounded-lg p-2 text-white/70 hover:text-white hover:bg-white/10 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <span className="sr-only">Close menu</span>
-                <X className="h-6 w-6" aria-hidden="true" />
+                <X className="h-6 w-6" />
               </button>
             </div>
-            <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-border/10">
-                <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className={cn(
-                        '-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-muted transition-colors',
-                        pathname?.startsWith(item.href)
-                          ? 'text-primary bg-muted'
-                          : 'text-foreground'
-                      )}
-                    >
-                      <div>{item.name}</div>
-                      <div className="text-xs text-muted-foreground mt-1">{item.description}</div>
-                    </Link>
-                  ))}
-                </div>
-                <div className="py-6 space-y-2">
-                  <Button variant="outline" className="w-full" asChild>
-                    <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
-                      Contact Us
-                    </Link>
-                  </Button>
-                  <Button className="w-full" asChild>
-                    <Link href="/investor-portal" onClick={() => setMobileMenuOpen(false)}>
-                      Investor Portal
-                    </Link>
-                  </Button>
-                </div>
-              </div>
+
+            <div className="flex flex-col gap-1">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={cn(
+                    'rounded-lg px-4 py-3 text-base font-medium transition-colors',
+                    pathname?.startsWith(item.href)
+                      ? 'text-amber bg-white/10'
+                      : 'text-white/80 hover:text-white hover:bg-white/10'
+                  )}
+                >
+                  {item.name}
+                  <div className="text-xs text-white/40 mt-0.5 font-normal">{item.description}</div>
+                </Link>
+              ))}
+            </div>
+
+            <div className="mt-8 flex flex-col gap-3 border-t border-white/10 pt-8">
+              <Link
+                href="/"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full rounded-lg bg-amber py-3 text-center text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
+              >
+                Get a Cash Offer
+              </Link>
+              <Link
+                href="/investor-portal"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full rounded-lg border border-white/20 py-3 text-center text-sm font-semibold text-white hover:bg-white/10 transition-colors"
+              >
+                Buyer Portal
+              </Link>
             </div>
           </div>
         </div>
