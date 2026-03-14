@@ -55,10 +55,9 @@ export default function AboutPage() {
                 specific circumstances that make every land sale different.
               </p>
               <p>
-                Ohio Valley Land Partners was started to change that — one parcel at a time,
-                in eight counties we know and care about. We are a new company. We are not
-                the biggest buyer in the market. What we are is direct, honest, and committed
-                to doing this right from the beginning.
+                Ohio Valley Land Partners was built to change that — one parcel at a time,
+                in eight counties we know and care about. Direct, honest, and committed to
+                doing right by every seller we work with.
               </p>
             </div>
           </div>

@@ -139,10 +139,10 @@ export default function Home() {
               </h2>
               <div className="mt-6 flex flex-col gap-4 text-muted-foreground leading-8">
                 <p>
-                  We are a new company. We are not the largest buyer in the market and we
-                  won't pretend otherwise. What we are is focused — on eight specific counties,
-                  on the landowners and families who need a straightforward way to sell, and
-                  on doing every deal honestly.
+                  We are focused on one region — eight specific counties in Ohio and West
+                  Virginia — and on the landowners and families who need a straightforward
+                  way to sell. No national platform, no call center. A direct buyer who
+                  knows this market and answers the phone.
                 </p>
                 <p>
                   Every transaction we close contributes to a nonprofit we are currently
