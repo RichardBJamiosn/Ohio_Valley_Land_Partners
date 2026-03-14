@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import { silos } from '@/lib/seo-config';
-import { ArrowRight, Warehouse, Briefcase, TrendingUp } from 'lucide-react';
+import { ArrowRight, Building2, MapPin, Phone } from 'lucide-react';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 import { BreadcrumbSchema } from '@/components/seo/json-ld';
 
 export const metadata: Metadata = {
@@ -11,129 +10,103 @@ export const metadata: Metadata = {
   keywords: silos.commercial.keywords,
 };
 
-const opportunities = [
-  {
-    title: 'Industrial Development',
-    description: 'Manufacturing, logistics, and distribution center opportunities with built-in tenant relationships.',
-    icon: Warehouse,
-  },
-  {
-    title: 'Retail Centers',
-    description: 'Mixed-use and retail developments in high-traffic Ohio Valley commercial corridors.',
-    icon: Briefcase,
-  },
-  {
-    title: 'Value-Add Projects',
-    description: 'Repositioning and expansion opportunities with proven 15-20% IRR potential.',
-    icon: TrendingUp,
-  },
-];
-
-const projects = [
-  {
-    name: 'Wheeling Industrial Park',
-    location: 'Ohio County, WV',
-    sqft: '125,000',
-    status: 'Pre-Development',
-  },
-  {
-    name: 'Jefferson County Commerce Hub',
-    location: 'Jefferson County, OH',
-    sqft: '85,000',
-    status: 'Site Acquisition',
-  },
-  {
-    name: 'Belmont Retail Corridor',
-    location: 'Belmont County, OH',
-    sqft: '45,000',
-    status: 'Leasing Phase',
-  },
-];
-
 export default function CommercialPage() {
   return (
     <>
       <BreadcrumbSchema items={[{ name: 'Home', url: '/' }, { name: silos.commercial.title, url: silos.commercial.path }]} />
 
-      <section className="py-20 sm:py-28 bg-gradient-to-b from-primary/5 via-background to-background">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-              Commercial Real Estate
-            </h1>
-            <p className="mt-6 text-xl leading-8 text-muted-foreground">
-              Industrial and retail development opportunities designed for long-term value creation
-              and regional economic growth across the Ohio Valley.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-4 flex-wrap">
-              <Button size="lg" asChild>
-                <Link href="/contact?type=commercial">
-                  Explore Projects
-                  <ArrowRight className="ml-2 h-4 w-4" />
+      <div className="min-h-screen bg-background">
+
+        {/* Hero */}
+        <section className="py-20 sm:py-28">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-3xl">
+              <p className="heading-serif text-amber text-2xl mb-4">Commercial real estate</p>
+              <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl leading-tight">
+                Commercial Opportunities
+                <span className="block text-amber mt-1">in the Ohio Valley.</span>
+              </h1>
+              <p className="mt-6 text-xl leading-8 text-muted-foreground">
+                Ohio Valley Land Partners is actively building its commercial real estate presence
+                across the region. Our primary focus is land acquisition — commercial opportunities
+                are evaluated on a deal-by-deal basis.
+              </p>
+              <p className="mt-4 text-lg leading-8 text-muted-foreground">
+                If you have a commercial property in one of our eight counties and want to talk,
+                contact us directly. We don't run automated valuations — we evaluate real deals
+                with real numbers.
+              </p>
+              <div className="mt-10 flex flex-wrap gap-4">
+                <Link
+                  href="/contact?type=commercial"
+                  className="inline-flex items-center gap-2 rounded-lg bg-amber px-6 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
+                >
+                  Discuss a Commercial Property <ArrowRight className="h-4 w-4" />
                 </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link href="/investor-portal">Investor Reports</Link>
-              </Button>
+                <Link
+                  href="/investor-portal"
+                  className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-6 py-3 text-sm font-bold text-foreground hover:border-amber/50 transition-colors"
+                >
+                  Join Our Buyer Network
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-center mb-16">
-            Development Opportunities
-          </h2>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            {opportunities.map((opp) => {
-              const Icon = opp.icon;
-              return (
-                <article key={opp.title} className="rounded-xl border border-border bg-card p-8 hover:border-accent/50 transition-all hover:shadow-lg">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 text-accent mb-4">
-                    <Icon className="h-6 w-6" />
+        {/* What we look at */}
+        <section className="py-16 bg-card border-t border-border">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-foreground mb-10">What We Evaluate</h2>
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
+              {[
+                {
+                  icon: MapPin,
+                  title: 'Ohio Valley Location',
+                  description: 'We only operate in our eight counties. Commercial parcels inside our service area are evaluated first.',
+                },
+                {
+                  icon: Building2,
+                  title: 'Motivated Sellers',
+                  description: 'We\'re interested in commercial property where the seller needs to move quickly or has a specific situation to work through.',
+                },
+                {
+                  icon: Phone,
+                  title: 'Direct Conversation',
+                  description: 'No online intake process for commercial deals. Call us or use the contact form and we\'ll have a direct conversation about what you have.',
+                },
+              ].map((item) => {
+                const Icon = item.icon;
+                return (
+                  <div key={item.title} className="rounded-xl border border-border bg-background p-8">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber/10 text-amber mb-5">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <h3 className="text-base font-bold text-foreground mb-3">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-7">{item.description}</p>
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-3">{opp.title}</h3>
-                  <p className="text-muted-foreground">{opp.description}</p>
-                </article>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="py-20 sm:py-28 bg-muted/30">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-center mb-16">
-            Active Projects
-          </h2>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            {projects.map((project) => (
-              <article key={project.name} className="rounded-xl border border-border bg-card p-6 hover:shadow-lg transition-shadow">
-                <div className="mb-4">
-                  <h3 className="text-lg font-semibold text-foreground">{project.name}</h3>
-                  <p className="text-sm text-muted-foreground mt-1">{project.location}</p>
-                </div>
-                <div className="flex items-baseline gap-2 mb-4">
-                  <span className="text-2xl font-bold text-foreground">{project.sqft}</span>
-                  <span className="text-sm text-muted-foreground">sq ft</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold bg-accent/10 text-accent px-3 py-1 rounded-full">
-                    {project.status}
-                  </span>
-                  <Link
-                    href="/investor-portal"
-                    className="text-sm font-semibold text-accent hover:text-accent/80 transition-colors"
-                  >
-                    Details &rarr;
-                  </Link>
-                </div>
-              </article>
-            ))}
+        {/* CTA */}
+        <section className="py-20">
+          <div className="mx-auto max-w-xl px-6 text-center">
+            <h2 className="text-2xl font-bold text-foreground mb-4">Have a Commercial Property to Discuss?</h2>
+            <p className="text-muted-foreground mb-8">
+              Use the contact form and select "Commercial" as your inquiry type. We respond within 48 hours.
+            </p>
+            <Link
+              href="/contact?type=commercial"
+              className="inline-flex items-center gap-2 rounded-lg bg-amber px-8 py-4 text-base font-bold text-forest hover:bg-amber/90 transition-colors"
+            >
+              Contact Us <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </>
   );
 }
