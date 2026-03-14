@@ -31,7 +31,7 @@ const principles = [
     icon: Heart,
     title: 'Built to Give Back.',
     description:
-      'A portion of every transaction we close goes toward a nonprofit for children and families in need across the Ohio Valley — currently in formation. A business built on this region should invest in it.',
+      'A portion of every land closing goes directly to our community partners — Arc of Appalachia, protecting Ohio\'s forests and waterways, and the Salvation Army\'s East Palestine recovery work. A business operating in the Ohio Valley should invest in it.',
   },
 ];
 
@@ -119,15 +119,28 @@ export default function AboutPage() {
             <div className="rounded-2xl border border-accent/30 bg-accent/5 p-10">
               <Heart className="h-10 w-10 text-accent mb-6" />
               <h3 className="text-xl font-bold text-foreground mb-4">
-                Ohio Valley Community Fund
+                Our Community Partners
               </h3>
-              <p className="text-muted-foreground leading-7 mb-6">
-                Currently in formation. Planned launch: 2027. Dedicated to children and
-                families in need across the eight-county Ohio Valley region we serve.
+              <div className="flex flex-col gap-4 text-sm text-muted-foreground leading-7 mb-6">
+                <p>
+                  <strong className="text-foreground">Arc of Appalachia</strong> — protecting
+                  Ohio's forests, wetlands, and waterways. Cleaning up what others have left behind.
+                </p>
+                <p>
+                  <strong className="text-foreground">Salvation Army — East Palestine</strong> — on
+                  the ground for Columbiana County families since the 2023 Norfolk Southern
+                  derailment. Clean water, cleanup support, and recovery resources.
+                </p>
+              </div>
+              <p className="text-sm font-bold text-foreground mb-4">
+                5% of every closing. Directly to the Ohio Valley.
               </p>
-              <p className="text-sm font-semibold text-foreground">
-                Every deal. A portion back to the Valley.
-              </p>
+              <Link
+                href="/community"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent/80 transition-colors"
+              >
+                See how our giving works <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
           </div>
         </div>

@@ -146,9 +146,10 @@ export default function Home() {
                   the phone.
                 </p>
                 <p>
-                  Every transaction we close contributes to a nonprofit we are currently
-                  forming for children and families in need across the Ohio Valley. A business
-                  built on this region should invest in it.
+                  5% of every closing goes directly to Arc of Appalachia — protecting
+                  Ohio's forests and waterways — and the Salvation Army's East Palestine
+                  recovery work in Columbiana County. A business operating in the Ohio Valley
+                  should invest in it.
                 </p>
               </div>
               <div className="mt-8">
@@ -166,7 +167,7 @@ export default function Home() {
                 { label: 'Cash offer turnaround', value: '24 Hours', sub: 'Guaranteed response on every inquiry' },
                 { label: 'Average close timeline', value: '14 Days', sub: 'From signed agreement to funded close' },
                 { label: 'Agent fees charged', value: '$0', sub: 'You deal directly with the buyer' },
-                { label: 'Commitment to community', value: 'Every Deal', sub: 'A portion funds our Ohio Valley nonprofit' },
+                { label: 'Back to the Ohio Valley', value: '5%', sub: 'Of every closing to Arc of Appalachia & Salvation Army East Palestine' },
               ].map((item) => (
                 <div key={item.label} className="rounded-xl border border-border bg-card p-6">
                   <div className="text-2xl font-black text-primary mb-1">{item.value}</div>

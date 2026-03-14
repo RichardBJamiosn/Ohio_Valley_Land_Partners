@@ -15,10 +15,10 @@ const footerNavigation = {
   })),
   company: [
     { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/team' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Blog', href: '/blog' },
+    { name: 'Community & Giving', href: '/community' },
     { name: 'Land Scouts', href: '/land-scouts' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' },
   ],
   legal: [
     { name: 'Privacy Policy', href: '/privacy' },
