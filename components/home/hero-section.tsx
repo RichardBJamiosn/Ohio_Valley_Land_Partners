@@ -7,10 +7,10 @@ import { SellerForm } from '@/components/forms/seller-form';
 import { InvestorIntakeForm } from '@/components/forms/investor-intake-form';
 
 const stats = [
-  { label: 'Acres in Region', value: '8 Counties', icon: MapPin },
-  { label: 'Cash Offers', value: '24 hrs', icon: TrendingUp },
-  { label: 'Close Timeline', value: '14–21 Days', icon: Award },
-  { label: 'Buyer Network', value: 'Growing', icon: Users },
+  { label: 'Cash Offer Turnaround', value: '24 Hours', icon: TrendingUp },
+  { label: 'Close Timeline', value: '14 Days', icon: Award },
+  { label: 'Acres in Our Market', value: '1.77M+', icon: MapPin },
+  { label: 'Counties Covered', value: '8', icon: Users },
 ];
 
 const serviceRegions = [

@@ -43,6 +43,38 @@ export default function Home() {
 
       <HeroSection />
 
+      {/* Market Coverage — Census-verified numbers */}
+      <section className="py-16 border-b border-border bg-card">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 text-center">
+            <div className="flex flex-col items-center gap-2">
+              <span className="text-5xl font-black text-primary">1.77M+</span>
+              <span className="text-sm font-semibold text-foreground">Acres in Our Market</span>
+              <span className="text-xs text-muted-foreground max-w-[200px]">
+                Combined land area across all 8 Ohio Valley counties we serve
+              </span>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <span className="text-5xl font-black text-primary">370K+</span>
+              <span className="text-sm font-semibold text-foreground">People in Our Service Area</span>
+              <span className="text-xs text-muted-foreground max-w-[200px]">
+                Serving the full Ohio Valley across Ohio and West Virginia
+              </span>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <span className="text-5xl font-black text-primary">8</span>
+              <span className="text-sm font-semibold text-foreground">Counties. 2 States. One Buyer.</span>
+              <span className="text-xs text-muted-foreground max-w-[200px]">
+                The only cash land buyer focused exclusively on the Ohio Valley region
+              </span>
+            </div>
+          </div>
+          <p className="mt-8 text-center text-xs text-muted-foreground">
+            Source: U.S. Census Bureau, 2020 Decennial Census
+          </p>
+        </div>
+      </section>
+
       <section className="py-24 sm:py-32 bg-muted/30">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
