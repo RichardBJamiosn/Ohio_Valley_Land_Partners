@@ -1,71 +1,103 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import { MapPin, TrendingUp, Award, Users, ShieldCheck } from 'lucide-react';
 import { SellerForm } from '@/components/forms/seller-form';
+import { InvestorIntakeForm } from '@/components/forms/investor-intake-form';
 
 const stats = [
-  { label: 'Acres Transacted', value: '12,500+', icon: MapPin },
-  { label: 'Years of Experience', value: '20+', icon: TrendingUp },
-  { label: 'Counties Served', value: '8', icon: Award },
-  { label: 'Active Investors', value: '150+', icon: Users },
+  { label: 'Acres in Region', value: '8 Counties', icon: MapPin },
+  { label: 'Cash Offers', value: '24 hrs', icon: TrendingUp },
+  { label: 'Close Timeline', value: '14–21 Days', icon: Award },
+  { label: 'Buyer Network', value: 'Growing', icon: Users },
 ];
 
 const serviceRegions = [
-  { label: 'Belmont County', slug: 'belmont-county' },
-  { label: 'Jefferson County', slug: 'jefferson-county' },
-  { label: 'Columbiana County', slug: 'columbiana-county' },
-  { label: 'Harrison County', slug: 'harrison-county' },
-  { label: 'Carroll County', slug: 'carroll-county' },
-  { label: 'Ohio County', slug: 'ohio-county' },
-  { label: 'Marshall County', slug: 'marshall-county' },
-  { label: 'Brooke County', slug: 'brooke-county' },
+  { label: 'Belmont County', slug: 'belmont-county-oh' },
+  { label: 'Jefferson County', slug: 'jefferson-county-oh' },
+  { label: 'Columbiana County', slug: 'columbiana-county-oh' },
+  { label: 'Harrison County', slug: 'harrison-county-oh' },
+  { label: 'Carroll County', slug: 'carroll-county-oh' },
+  { label: 'Ohio County', slug: 'ohio-county-wv' },
+  { label: 'Marshall County', slug: 'marshall-county-wv' },
+  { label: 'Brooke County', slug: 'brooke-county-wv' },
 ];
 
-const trustPoints = [
+const sellerTrustPoints = [
   'No agent fees or commissions',
   'Close in as little as 14 days',
   'We buy land in any condition',
 ];
 
+const buyerTrustPoints = [
+  'First access to off-market Ohio Valley land',
+  'Hunting, farming, development, and investment parcels',
+  'No membership fees — ever',
+];
+
+type Tab = 'sell' | 'buy';
+
 export function HeroSection() {
+  const [activeTab, setActiveTab] = useState<Tab>('sell');
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-primary/5 via-background to-background">
       <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
 
       <div className="mx-auto max-w-7xl px-6 py-20 sm:py-28 lg:px-8">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-start">
 
-        {/* Split layout: left headline / right seller form */}
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-center">
-
-          {/* Left — Headline + Stats */}
-          <div>
+          {/* Left — Headline + dynamic trust points */}
+          <div className="pt-2">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2">
               <Award className="h-4 w-4 text-primary" />
               <span className="text-sm font-semibold text-primary">
-                Ohio Valley's Premier Cash Land Buyer
+                Ohio Valley Cash Land Buyers
               </span>
             </div>
 
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-              Sell Your Ohio Valley Land
-              <span className="block text-primary mt-2">Fast. Fair. Simple.</span>
-            </h1>
-
-            <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              We buy vacant land, inherited property, and back-tax parcels across eight
-              counties in Ohio and West Virginia. Cash offers in 24 hours — no agents,
-              no fees, no hassle.
-            </p>
-
-            <ul className="mt-6 flex flex-col gap-2">
-              {trustPoints.map((point) => (
-                <li key={point} className="flex items-center gap-2 text-sm font-medium text-foreground">
-                  <ShieldCheck className="h-4 w-4 text-accent flex-shrink-0" />
-                  {point}
-                </li>
-              ))}
-            </ul>
+            {activeTab === 'sell' ? (
+              <>
+                <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+                  Sell Your Ohio Valley Land
+                  <span className="block text-primary mt-2">Fast. Fair. Simple.</span>
+                </h1>
+                <p className="mt-6 text-lg leading-8 text-muted-foreground">
+                  We buy vacant land, inherited property, and back-tax parcels across eight
+                  counties in Ohio and West Virginia. Cash offers in 24 hours — no agents,
+                  no fees, no hassle.
+                </p>
+                <ul className="mt-6 flex flex-col gap-2">
+                  {sellerTrustPoints.map((point) => (
+                    <li key={point} className="flex items-center gap-2 text-sm font-medium text-foreground">
+                      <ShieldCheck className="h-4 w-4 text-accent flex-shrink-0" />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ) : (
+              <>
+                <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+                  Buy Off-Market Land
+                  <span className="block text-primary mt-2">in the Ohio Valley</span>
+                </h1>
+                <p className="mt-6 text-lg leading-8 text-muted-foreground">
+                  Join our buyer network and get first access to off-market land deals across
+                  eight counties in Ohio and West Virginia. Tell us what you're looking for —
+                  we'll call you when it's available.
+                </p>
+                <ul className="mt-6 flex flex-col gap-2">
+                  {buyerTrustPoints.map((point) => (
+                    <li key={point} className="flex items-center gap-2 text-sm font-medium text-foreground">
+                      <ShieldCheck className="h-4 w-4 text-accent flex-shrink-0" />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
 
             <div className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4">
               {stats.map((stat) => {
@@ -75,7 +107,7 @@ export function HeroSection() {
                     <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-accent/10 text-accent mb-2">
                       <Icon className="h-5 w-5" />
                     </div>
-                    <div className="text-2xl font-bold text-foreground">{stat.value}</div>
+                    <div className="text-xl font-bold text-foreground">{stat.value}</div>
                     <div className="text-xs text-muted-foreground mt-1">{stat.label}</div>
                   </div>
                 );
@@ -83,25 +115,58 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right — Cash Offer Form */}
+          {/* Right — Tabbed form card */}
           <div className="w-full">
-            <div className="rounded-2xl border border-border bg-card p-8 shadow-lg">
-              <div className="mb-6 text-center">
-                <h2 className="text-2xl font-bold text-foreground">
-                  Get My Cash Offer
-                </h2>
-                <p className="text-sm text-muted-foreground mt-1">
-                  Takes 30 seconds. We call you within 24 hours.
-                </p>
+            <div className="rounded-2xl border border-border bg-card shadow-lg overflow-hidden">
+
+              {/* Tab switcher */}
+              <div className="grid grid-cols-2 border-b border-border">
+                <button
+                  type="button"
+                  onClick={() => setActiveTab('sell')}
+                  className={`py-4 text-sm font-bold tracking-wide transition-colors ${
+                    activeTab === 'sell'
+                      ? 'bg-primary text-primary-foreground'
+                      : 'bg-card text-muted-foreground hover:text-foreground'
+                  }`}
+                >
+                  I Want to SELL Land
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setActiveTab('buy')}
+                  className={`py-4 text-sm font-bold tracking-wide transition-colors ${
+                    activeTab === 'buy'
+                      ? 'bg-primary text-primary-foreground'
+                      : 'bg-card text-muted-foreground hover:text-foreground'
+                  }`}
+                >
+                  I Want to BUY Land
+                </button>
               </div>
-              <SellerForm />
-              <div className="mt-4 border-t border-border pt-4 text-center">
-                <p className="text-xs text-muted-foreground">
-                  Are you an investor?{' '}
-                  <Link href="/investor-portal" className="text-accent hover:underline font-medium">
-                    Access the Investor Portal
-                  </Link>
-                </p>
+
+              <div className="p-8">
+                {activeTab === 'sell' ? (
+                  <>
+                    <div className="mb-6 text-center">
+                      <h2 className="text-xl font-bold text-foreground">Get My Cash Offer</h2>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        Takes 30 seconds. We call within 24 hours.
+                      </p>
+                    </div>
+                    <SellerForm />
+                  </>
+                ) : (
+                  <>
+                    <div className="mb-6 text-center">
+                      <h2 className="text-xl font-bold text-foreground">Join the Deal List</h2>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        Tell us what you want. We contact you when it's available.
+                      </p>
+                    </div>
+                    <InvestorIntakeForm />
+                  </>
+                )}
               </div>
             </div>
           </div>
@@ -118,7 +183,7 @@ export function HeroSection() {
             {serviceRegions.map((region) => (
               <Link
                 key={region.slug}
-                href={`/ohio-valley-guides/${region.slug}`}
+                href={`/sell-land/${region.slug}`}
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border bg-card hover:bg-accent/5 hover:border-accent transition-colors"
               >
                 <MapPin className="h-4 w-4 text-accent" />

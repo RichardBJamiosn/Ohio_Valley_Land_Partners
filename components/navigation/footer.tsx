@@ -18,6 +18,7 @@ const footerNavigation = {
     { name: 'Our Team', href: '/team' },
     { name: 'Contact', href: '/contact' },
     { name: 'Blog', href: '/blog' },
+    { name: 'Land Scouts', href: '/land-scouts' },
   ],
   legal: [
     { name: 'Privacy Policy', href: '/privacy' },
@@ -138,9 +139,14 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-16 border-t border-border pt-8 sm:mt-20 lg:mt-24">
-          <p className="text-xs leading-5 text-muted-foreground text-center">
+        <div className="mt-16 border-t border-border pt-8 sm:mt-20 lg:mt-24 flex flex-col gap-3 text-center">
+          <p className="text-xs leading-5 text-muted-foreground">
             &copy; {new Date().getFullYear()} Ohio Valley Land Partners. All rights reserved.
+          </p>
+          <p className="text-xs leading-5 text-muted-foreground max-w-2xl mx-auto">
+            Ohio Valley Land Partners operates as a principal buyer of real estate. We are not
+            licensed real estate brokers or agents and do not represent sellers or buyers in an
+            agency capacity. We purchase properties for our own account.
           </p>
         </div>
       </div>
