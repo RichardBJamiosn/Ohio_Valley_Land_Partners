@@ -23,9 +23,9 @@ const principles = [
   },
   {
     icon: MapPin,
-    title: 'Ohio Valley Only.',
+    title: 'Local. Not a Land Grab.',
     description:
-      'We are not a national platform running ads in every state. We buy land in eight specific counties in Ohio and West Virginia. That focus means we know these markets and can move with confidence when we find the right parcel.',
+      'There is real concern in the Ohio Valley about outside investors sweeping in to buy family land cheap. We are not that. We are rooted here — buying in eight specific counties in Ohio and West Virginia because this is where we live, not because an algorithm pointed us here.',
   },
   {
     icon: Heart,

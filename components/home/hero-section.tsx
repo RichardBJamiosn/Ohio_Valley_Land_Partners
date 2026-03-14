@@ -25,9 +25,9 @@ const serviceRegions = [
 ];
 
 const sellerTrustPoints = [
+  'Local buyer — rooted in the Ohio Valley',
   'No agent fees or commissions',
   'Close in as little as 14 days',
-  'We buy land in any condition',
 ];
 
 const buyerTrustPoints = [
@@ -53,7 +53,7 @@ export function HeroSection() {
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2">
               <Award className="h-4 w-4 text-primary" />
               <span className="text-sm font-semibold text-primary">
-                Ohio Valley Cash Land Buyers
+                Local Ohio Valley Land Buyer — Not an Outside Investor
               </span>
             </div>
 
