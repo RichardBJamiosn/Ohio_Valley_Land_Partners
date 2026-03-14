@@ -128,56 +128,52 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Mission section */}
       <section className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="text-base font-semibold leading-7 text-accent">
-              Investor-First Approach
-            </h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Built for Long-Term Value Creation
-            </p>
-            <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              Our 20-year roadmap focuses on sustainable growth, transparent reporting,
-              and building lasting partnerships with our investor community.
-            </p>
-          </div>
-          <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-              <div className="flex flex-col">
-                <dt className="text-base font-semibold leading-7 text-foreground">
-                  Transparent Reporting
-                </dt>
-                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-muted-foreground">
-                  <p className="flex-auto">
-                    Quarterly market reports with detailed IRR analysis and performance metrics
-                    for all active projects and developments.
-                  </p>
-                </dd>
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 items-center">
+            <div>
+              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                Built for the Ohio Valley.
+                <span className="block text-primary mt-1">Not Just Built in It.</span>
+              </h2>
+              <div className="mt-6 flex flex-col gap-4 text-muted-foreground leading-8">
+                <p>
+                  We are a new company. We are not the largest buyer in the market and we
+                  won't pretend otherwise. What we are is focused — on eight specific counties,
+                  on the landowners and families who need a straightforward way to sell, and
+                  on doing every deal honestly.
+                </p>
+                <p>
+                  Every transaction we close contributes to a nonprofit we are currently
+                  forming for children and families in need across the Ohio Valley. A business
+                  built on this region should invest in it.
+                </p>
               </div>
-              <div className="flex flex-col">
-                <dt className="text-base font-semibold leading-7 text-foreground">
-                  Regional Expertise
-                </dt>
-                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-muted-foreground">
-                  <p className="flex-auto">
-                    Deep local knowledge across eight counties with established relationships
-                    and proven track records in each market.
-                  </p>
-                </dd>
+              <div className="mt-8">
+                <Link
+                  href="/about"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent/80 transition-colors"
+                >
+                  More about who we are and why we started &rarr;
+                </Link>
               </div>
-              <div className="flex flex-col">
-                <dt className="text-base font-semibold leading-7 text-foreground">
-                  Proven Track Record
-                </dt>
-                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-muted-foreground">
-                  <p className="flex-auto">
-                    Over 20 years of successful land transactions, development projects,
-                    and satisfied investor partnerships across the region.
-                  </p>
-                </dd>
-              </div>
-            </dl>
+            </div>
+
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+              {[
+                { label: 'Cash offer turnaround', value: '24 Hours', sub: 'Guaranteed response on every inquiry' },
+                { label: 'Average close timeline', value: '14 Days', sub: 'From signed agreement to funded close' },
+                { label: 'Agent fees charged', value: '$0', sub: 'You deal directly with the buyer' },
+                { label: 'Commitment to community', value: 'Every Deal', sub: 'A portion funds our Ohio Valley nonprofit' },
+              ].map((item) => (
+                <div key={item.label} className="rounded-xl border border-border bg-card p-6">
+                  <div className="text-2xl font-black text-primary mb-1">{item.value}</div>
+                  <div className="text-sm font-semibold text-foreground mb-1">{item.label}</div>
+                  <div className="text-xs text-muted-foreground">{item.sub}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
