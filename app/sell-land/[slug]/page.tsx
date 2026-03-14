@@ -38,7 +38,7 @@ export default function CountySellPage({ params }: Props) {
       />
       <FAQSchema faqs={faqs} />
 
-      <div className="min-h-screen bg-gradient-to-b from-primary/5 via-background to-background">
+      <div className="min-h-screen bg-background">
 
         {/* Hero + Form */}
         <section className="py-20 sm:py-28">
@@ -47,9 +47,9 @@ export default function CountySellPage({ params }: Props) {
 
               {/* Left */}
               <div>
-                <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5">
-                  <MapPin className="h-3.5 w-3.5 text-primary" />
-                  <span className="text-xs font-semibold text-primary">
+                <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-amber/20 bg-amber/5 px-3 py-1.5">
+                  <MapPin className="h-3.5 w-3.5 text-amber" />
+                  <span className="text-xs font-semibold text-amber">
                     {county.name}, {county.state}
                   </span>
                 </div>
@@ -67,7 +67,7 @@ export default function CountySellPage({ params }: Props) {
                   <ul className="flex flex-col gap-3">
                     {county.commonSituations.map((s) => (
                       <li key={s} className="flex items-start gap-3 text-sm text-muted-foreground">
-                        <CheckCircle className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-4 w-4 text-meadow flex-shrink-0 mt-0.5" />
                         {s}
                       </li>
                     ))}
@@ -110,7 +110,7 @@ export default function CountySellPage({ params }: Props) {
         </section>
 
         {/* Why section */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-16 bg-card border-t border-border">
           <div className="mx-auto max-w-3xl px-6 lg:px-8">
             <h2 className="text-2xl font-bold text-foreground mb-6">
               Why We Buy Land in {county.name}
@@ -137,7 +137,7 @@ export default function CountySellPage({ params }: Props) {
         </section>
 
         {/* Bottom CTA */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-16 bg-card border-t border-border">
           <div className="mx-auto max-w-xl px-6 text-center">
             <h2 className="text-2xl font-bold text-foreground mb-4">
               Ready to Sell Your {county.name} Land?
@@ -147,14 +147,14 @@ export default function CountySellPage({ params }: Props) {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
-                href={`/ohio-valley-guides/${params.slug.replace('-oh', '').replace('-wv', '')}`}
-                className="rounded-lg border border-border bg-card px-5 py-2.5 text-sm font-semibold text-foreground hover:border-accent/50 transition-colors"
+                href="/"
+                className="rounded-lg bg-amber px-5 py-2.5 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
               >
-                {county.name} Market Guide
+                Get a Cash Offer
               </Link>
               <Link
                 href="/blog"
-                className="rounded-lg border border-border bg-card px-5 py-2.5 text-sm font-semibold text-foreground hover:border-accent/50 transition-colors"
+                className="rounded-lg border border-border bg-background px-5 py-2.5 text-sm font-semibold text-foreground hover:border-amber/50 transition-colors"
               >
                 Seller Resources &amp; Blog
               </Link>

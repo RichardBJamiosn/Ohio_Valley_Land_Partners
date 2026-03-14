@@ -37,15 +37,16 @@ const benefits = [
 
 export default function InvestorPortal() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-primary/5 via-background to-background">
+    <div className="min-h-screen bg-background">
 
       {/* Hero */}
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
+            <p className="heading-serif text-amber text-2xl mb-3">Buyer Network</p>
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
               Ohio Valley Land
-              <span className="block text-primary mt-1">Buyer Network</span>
+              <span className="block text-amber mt-1">Deal List</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
               We're building the Ohio Valley's go-to network for off-market land deals.
@@ -63,7 +64,7 @@ export default function InvestorPortal() {
                   key={b.title}
                   className="rounded-xl border border-border bg-card p-6"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-accent mb-4">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber/10 text-amber mb-4">
                     <Icon className="h-5 w-5" />
                   </div>
                   <h3 className="font-semibold text-foreground mb-2">{b.title}</h3>
@@ -88,9 +89,8 @@ export default function InvestorPortal() {
 
           {/* Honest disclaimer */}
           <p className="mt-10 text-center text-xs text-muted-foreground max-w-xl mx-auto">
-            Ohio Valley Land Partners is a new company actively building its deal pipeline across
-            the Ohio Valley region. We operate as principal buyers — not licensed real estate
-            agents or brokers. Deal flow is growing. Joining the list now ensures you're first
+            Ohio Valley Land Partners operates as a principal buyer — not a licensed real estate
+            agent or broker. Deal flow is growing. Joining the list now ensures you're first
             in line when parcels matching your criteria become available.
           </p>
         </div>

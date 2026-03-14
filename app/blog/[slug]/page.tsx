@@ -48,13 +48,13 @@ export default function BlogPostPage({ params }: Props) {
         dateModified={post.dateModified}
       />
 
-      <div className="min-h-screen bg-gradient-to-b from-primary/5 via-background to-background">
+      <div className="min-h-screen bg-background">
         <div className="mx-auto max-w-3xl px-6 py-20 lg:px-8 lg:py-28">
 
           {/* Back link */}
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors mb-10"
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-amber transition-colors mb-10"
           >
             <ArrowLeft className="h-4 w-4" />
             Back to Blog
@@ -92,7 +92,7 @@ export default function BlogPostPage({ params }: Props) {
               prose-li:text-muted-foreground prose-li:leading-7
               prose-ol:space-y-2 prose-ul:space-y-2
               prose-strong:text-foreground prose-strong:font-semibold
-              prose-a:text-accent prose-a:no-underline hover:prose-a:underline"
+              prose-a:text-meadow prose-a:no-underline hover:prose-a:underline"
             dangerouslySetInnerHTML={{ __html: post.body }}
           />
 
@@ -102,7 +102,7 @@ export default function BlogPostPage({ params }: Props) {
           </div>
 
           {/* CTA box */}
-          <div className="mt-16 rounded-2xl border border-accent/30 bg-accent/5 p-8 text-center">
+          <div className="mt-16 rounded-2xl border border-amber/30 bg-amber/5 p-8 text-center">
             <h2 className="text-xl font-bold text-foreground mb-2">
               Ready to Get a Cash Offer on Your Land?
             </h2>
@@ -111,7 +111,7 @@ export default function BlogPostPage({ params }: Props) {
             </p>
             <Link
               href="/"
-              className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-bold text-primary-foreground hover:bg-primary/90 transition-colors"
+              className="inline-flex items-center gap-2 rounded-lg bg-amber px-6 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
             >
               Get My Cash Offer <ArrowRight className="h-4 w-4" />
             </Link>
@@ -123,12 +123,12 @@ export default function BlogPostPage({ params }: Props) {
               {prevPost ? (
                 <Link
                   href={`/blog/${prevPost.slug}`}
-                  className="group flex flex-col gap-1 rounded-xl border border-border bg-card p-5 hover:border-accent/50 transition-colors"
+                  className="group flex flex-col gap-1 rounded-xl border border-border bg-card p-5 hover:border-amber/40 transition-colors"
                 >
                   <span className="text-xs text-muted-foreground flex items-center gap-1">
                     <ArrowLeft className="h-3.5 w-3.5" /> Previous
                   </span>
-                  <span className="font-semibold text-foreground group-hover:text-accent transition-colors line-clamp-2 text-sm">
+                  <span className="font-semibold text-foreground group-hover:text-amber transition-colors line-clamp-2 text-sm">
                     {prevPost.title}
                   </span>
                 </Link>
@@ -136,12 +136,12 @@ export default function BlogPostPage({ params }: Props) {
               {nextPost && (
                 <Link
                   href={`/blog/${nextPost.slug}`}
-                  className="group flex flex-col gap-1 rounded-xl border border-border bg-card p-5 hover:border-accent/50 transition-colors text-right sm:ml-auto sm:w-full"
+                  className="group flex flex-col gap-1 rounded-xl border border-border bg-card p-5 hover:border-amber/40 transition-colors text-right sm:ml-auto sm:w-full"
                 >
                   <span className="text-xs text-muted-foreground flex items-center gap-1 justify-end">
                     Next <ArrowRight className="h-3.5 w-3.5" />
                   </span>
-                  <span className="font-semibold text-foreground group-hover:text-accent transition-colors line-clamp-2 text-sm">
+                  <span className="font-semibold text-foreground group-hover:text-amber transition-colors line-clamp-2 text-sm">
                     {nextPost.title}
                   </span>
                 </Link>

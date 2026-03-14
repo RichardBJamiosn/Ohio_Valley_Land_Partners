@@ -22,14 +22,14 @@ export default function BlogPage() {
   const rest = blogPosts.slice(1);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-primary/5 via-background to-background">
+    <div className="min-h-screen bg-background">
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
 
         {/* Header */}
         <div className="mx-auto max-w-2xl text-center mb-16">
-          <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2 mb-6">
-            <BookOpen className="h-4 w-4 text-primary" />
-            <span className="text-sm font-semibold text-primary">Ohio Valley Land Intelligence</span>
+          <div className="inline-flex items-center gap-2 rounded-full border border-amber/20 bg-amber/5 px-4 py-2 mb-6">
+            <BookOpen className="h-4 w-4 text-amber" />
+            <span className="text-sm font-semibold text-amber">Ohio Valley Land Intelligence</span>
           </div>
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
             Land Guides & Market Reports
@@ -49,13 +49,13 @@ export default function BlogPage() {
         </div>
 
         {/* Featured post */}
-        <article className="group mb-12 rounded-2xl border border-border bg-card overflow-hidden hover:border-accent/50 hover:shadow-lg transition-all">
+        <article className="group relative mb-12 rounded-2xl border border-border bg-card overflow-hidden hover:border-amber/40 hover:shadow-lg transition-all">
           <div className="p-8 lg:p-12">
             <div className="flex items-center gap-3 mb-4">
               <Badge>{featured.category}</Badge>
               <span className="text-sm text-muted-foreground">Featured</span>
             </div>
-            <h2 className="text-2xl font-bold text-foreground group-hover:text-accent transition-colors sm:text-3xl mb-4">
+            <h2 className="text-2xl font-bold text-foreground group-hover:text-amber transition-colors sm:text-3xl mb-4">
               <Link href={`/blog/${featured.slug}`}>
                 <span className="absolute inset-0" aria-hidden="true" />
                 {featured.title}
@@ -73,12 +73,9 @@ export default function BlogPage() {
                 <Clock className="h-4 w-4" />
                 {featured.readingTime}
               </span>
-              <Link
-                href={`/blog/${featured.slug}`}
-                className="ml-auto flex items-center gap-1 font-semibold text-accent hover:text-accent/80 transition-colors"
-              >
+              <span className="ml-auto flex items-center gap-1 font-semibold text-meadow">
                 Read article <ArrowRight className="h-4 w-4" />
-              </Link>
+              </span>
             </div>
           </div>
         </article>
@@ -88,12 +85,12 @@ export default function BlogPage() {
           {rest.map((post) => (
             <article
               key={post.slug}
-              className="group relative flex flex-col rounded-2xl border border-border bg-card p-6 hover:border-accent/50 hover:shadow-lg transition-all"
+              className="group relative flex flex-col rounded-2xl border border-border bg-card p-6 hover:border-amber/40 hover:shadow-lg transition-all"
             >
               <div className="mb-3">
                 <Badge variant="secondary">{post.category}</Badge>
               </div>
-              <h2 className="text-lg font-bold text-foreground group-hover:text-accent transition-colors mb-3 line-clamp-2">
+              <h2 className="text-lg font-bold text-foreground group-hover:text-amber transition-colors mb-3 line-clamp-2">
                 <Link href={`/blog/${post.slug}`}>
                   <span className="absolute inset-0" aria-hidden="true" />
                   {post.title}
@@ -126,7 +123,7 @@ export default function BlogPage() {
           </p>
           <Link
             href="/"
-            className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-bold text-primary-foreground hover:bg-primary/90 transition-colors"
+            className="inline-flex items-center gap-2 rounded-lg bg-amber px-6 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
           >
             Get My Cash Offer <ArrowRight className="h-4 w-4" />
           </Link>

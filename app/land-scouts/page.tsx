@@ -70,19 +70,19 @@ const howItWorks = [
 
 export default function LandScoutsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-primary/5 via-background to-background">
+    <div className="min-h-screen bg-background">
 
       {/* Hero */}
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2">
-              <DollarSign className="h-4 w-4 text-primary" />
-              <span className="text-sm font-semibold text-primary">Land Scout Referral Program</span>
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-amber/20 bg-amber/5 px-4 py-2">
+              <DollarSign className="h-4 w-4 text-amber" />
+              <span className="text-sm font-semibold text-amber">Land Scout Referral Program</span>
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
               Know Someone Who Needs to Sell Land?
-              <span className="block text-primary mt-2">Get Paid for the Introduction.</span>
+              <span className="block text-amber mt-2">Get Paid for the Introduction.</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-2xl mx-auto">
               Ohio Valley Land Partners pays referral fees to anyone who connects us with a
@@ -92,7 +92,7 @@ export default function LandScoutsPage() {
             <div className="mt-10">
               <Link
                 href="/contact?type=partnership"
-                className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-base font-bold text-primary-foreground hover:bg-primary/90 transition-colors"
+                className="inline-flex items-center gap-2 rounded-lg bg-amber px-8 py-4 text-base font-bold text-forest hover:bg-amber/90 transition-colors"
               >
                 Become a Land Scout
               </Link>
@@ -102,7 +102,7 @@ export default function LandScoutsPage() {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-card border-t border-border">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl font-bold text-foreground">How It Works</h2>
@@ -110,8 +110,8 @@ export default function LandScoutsPage() {
           </div>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
             {howItWorks.map((step) => (
-              <div key={step.step} className="relative rounded-2xl border border-border bg-card p-8">
-                <div className="text-5xl font-black text-primary/10 mb-4">{step.step}</div>
+              <div key={step.step} className="relative rounded-2xl border border-border bg-background p-8">
+                <div className="text-5xl font-black text-amber/15 mb-4">{step.step}</div>
                 <h3 className="text-lg font-bold text-foreground mb-3">{step.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
               </div>
@@ -135,9 +135,9 @@ export default function LandScoutsPage() {
               return (
                 <div
                   key={type.title}
-                  className="rounded-xl border border-border bg-card p-6 hover:border-accent/50 hover:shadow-md transition-all"
+                  className="rounded-xl border border-border bg-card p-6 hover:border-amber/40 hover:shadow-md transition-all"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-accent mb-4">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber/10 text-amber mb-4">
                     <Icon className="h-5 w-5" />
                   </div>
                   <h3 className="font-semibold text-foreground mb-2">{type.title}</h3>
@@ -150,9 +150,9 @@ export default function LandScoutsPage() {
       </section>
 
       {/* What Qualifies */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-card border-t border-border">
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
-          <div className="rounded-2xl border border-border bg-card p-8 sm:p-12">
+          <div className="rounded-2xl border border-border bg-background p-8 sm:p-12">
             <h2 className="text-2xl font-bold text-foreground mb-6">What Kind of Leads We're Looking For</h2>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {[
@@ -166,7 +166,7 @@ export default function LandScoutsPage() {
                 'Family land being sold after an estate settlement',
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-accent flex-shrink-0" />
+                  <span className="mt-1 h-2 w-2 rounded-full bg-amber flex-shrink-0" />
                   {item}
                 </div>
               ))}
@@ -188,7 +188,7 @@ export default function LandScoutsPage() {
           </p>
           <Link
             href="/contact?type=partnership"
-            className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-base font-bold text-primary-foreground hover:bg-primary/90 transition-colors"
+            className="inline-flex items-center gap-2 rounded-lg bg-amber px-8 py-4 text-base font-bold text-forest hover:bg-amber/90 transition-colors"
           >
             Contact Us About Scouting
           </Link>

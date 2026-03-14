@@ -37,15 +37,16 @@ const principles = [
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-primary/5 via-background to-background">
+    <div className="min-h-screen bg-background">
 
       {/* Hero */}
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
+            <p className="heading-serif text-amber text-2xl mb-4">Our story</p>
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl leading-tight">
               We Started This Because
-              <span className="block text-primary mt-2">Landowners Deserve Better.</span>
+              <span className="block text-amber mt-2">Landowners Deserve Better.</span>
             </h1>
             <div className="mt-8 flex flex-col gap-5 text-lg leading-9 text-muted-foreground">
               <p>
@@ -78,7 +79,7 @@ export default function AboutPage() {
               const Icon = p.icon;
               return (
                 <div key={p.title} className="rounded-2xl border border-border bg-background p-8">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-accent mb-5">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber/10 text-amber mb-5">
                     <Icon className="h-5 w-5" />
                   </div>
                   <h3 className="text-base font-bold text-foreground mb-3">{p.title}</h3>
@@ -116,8 +117,8 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-accent/30 bg-accent/5 p-10">
-              <Heart className="h-10 w-10 text-accent mb-6" />
+            <div className="rounded-2xl border border-meadow/30 bg-meadow/5 p-10">
+              <Heart className="h-10 w-10 text-meadow mb-6" />
               <h3 className="text-xl font-bold text-foreground mb-4">
                 Our Community Partners
               </h3>
@@ -137,7 +138,7 @@ export default function AboutPage() {
               </p>
               <Link
                 href="/community"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent/80 transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-meadow hover:text-meadow/80 transition-colors"
               >
                 See how our giving works <ArrowRight className="h-4 w-4" />
               </Link>
@@ -147,7 +148,7 @@ export default function AboutPage() {
       </section>
 
       {/* Who this is for */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-card border-t border-border">
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-foreground mb-6">Who We're Here For</h2>
           <div className="flex flex-col gap-4 text-muted-foreground leading-8">
@@ -167,13 +168,13 @@ export default function AboutPage() {
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-bold text-primary-foreground hover:bg-primary/90 transition-colors"
+              className="inline-flex items-center gap-2 rounded-lg bg-amber px-6 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
             >
               Get a Cash Offer <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-6 py-3 text-sm font-bold text-foreground hover:border-accent/50 transition-colors"
+              className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-6 py-3 text-sm font-bold text-foreground hover:border-amber/50 transition-colors"
             >
               Contact Us
             </Link>
