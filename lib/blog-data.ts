@@ -340,4 +340,4 @@ export function getBlogPostsByCategory(category: string): BlogPost[] {
   return blogPosts.filter((p) => p.category === category);
 }
 
-export const blogCategories = [...new Set(blogPosts.map((p) => p.category))];
+export const blogCategories = Array.from(new Set(blogPosts.map((p) => p.category)));
