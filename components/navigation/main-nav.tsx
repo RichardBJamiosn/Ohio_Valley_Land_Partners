@@ -3,9 +3,10 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { Menu, X, TreePine } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { silos } from '@/lib/seo-config';
+import Image from 'next/image';
 
 const navigation = [
   { name: 'Buy Land', href: '/properties', description: 'Browse available listings' },
@@ -27,18 +28,15 @@ export function MainNav() {
       >
         {/* Logo */}
         <div className="flex lg:flex-1">
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-amber/20 group-hover:bg-amber/30 transition-colors">
-              <TreePine className="h-5 w-5 text-amber" />
-            </div>
-            <div className="flex flex-col leading-none">
-              <span className="text-base font-bold tracking-tight text-amber">
-                Ohio Valley
-              </span>
-              <span className="text-xs font-medium text-white/60 tracking-wide">
-                Land Partners
-              </span>
-            </div>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo.png"
+              alt="Ohio Valley Land Partners"
+              width={140}
+              height={56}
+              className="object-contain"
+              priority
+            />
           </Link>
         </div>
 
@@ -107,10 +105,15 @@ export function MainNav() {
               <Link
                 href="/"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center gap-2"
+                className="flex items-center"
               >
-                <TreePine className="h-6 w-6 text-amber" />
-                <span className="font-bold text-amber">Ohio Valley Land Partners</span>
+                <Image
+                  src="/logo.png"
+                  alt="Ohio Valley Land Partners"
+                  width={120}
+                  height={48}
+                  className="object-contain"
+                />
               </Link>
               <button
                 type="button"

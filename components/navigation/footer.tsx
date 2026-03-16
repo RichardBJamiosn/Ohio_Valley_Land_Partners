@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import { TreePine, Mail, Phone, MapPin, Heart } from 'lucide-react';
+import { Mail, Phone, Heart } from 'lucide-react';
 import { siteConfig, silos, counties } from '@/lib/seo-config';
+import Image from 'next/image';
 
 const footerNavigation = {
   services: [
@@ -33,31 +34,20 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-amber/20">
-                <TreePine className="h-5 w-5 text-amber" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-bold tracking-tight text-amber">
-                  Ohio Valley
-                </span>
-                <span className="text-xs font-medium text-white/50 -mt-0.5">
-                  Land Partners
-                </span>
-              </div>
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/logo.png"
+                alt="Ohio Valley Land Partners"
+                width={160}
+                height={64}
+                className="object-contain"
+              />
             </Link>
             <p className="text-sm leading-6 text-white/60 max-w-xs">
               Local cash land buyer serving eight counties across Ohio and West Virginia.
               Intentional. Not international.
             </p>
             <div className="flex flex-col gap-3 text-sm text-white/60">
-              <div className="flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-amber flex-shrink-0" />
-                <span>
-                  {siteConfig.address.streetAddress}, {siteConfig.address.addressLocality},{' '}
-                  {siteConfig.address.addressRegion} {siteConfig.address.postalCode}
-                </span>
-              </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-amber flex-shrink-0" />
                 <a href={`tel:${siteConfig.phone}`} className="hover:text-amber transition-colors">

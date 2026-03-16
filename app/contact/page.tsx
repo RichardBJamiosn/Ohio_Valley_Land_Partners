@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { siteConfig } from '@/lib/seo-config';
 import { ContactForm } from '@/components/forms/contact-form';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
 import { Suspense } from 'react';
 
 export const metadata: Metadata = {
@@ -81,20 +81,6 @@ export default function ContactPage({
                   </div>
                 </div>
 
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <MapPin className="h-6 w-6 text-amber" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-muted-foreground">Address</p>
-                    <address className="mt-1 not-italic text-foreground font-semibold">
-                      {siteConfig.address.streetAddress}
-                      <br />
-                      {siteConfig.address.addressLocality}, {siteConfig.address.addressRegion}{' '}
-                      {siteConfig.address.postalCode}
-                    </address>
-                  </div>
-                </div>
               </div>
             </div>
 
