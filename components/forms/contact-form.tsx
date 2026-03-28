@@ -132,7 +132,7 @@ export function ContactForm({ defaultLeadType = 'inquiry' }: ContactFormProps) {
               <FormItem>
                 <FormLabel>Phone (Optional)</FormLabel>
                 <FormControl>
-                  <Input type="tel" placeholder="(740) 555-0100" {...field} />
+                  <Input type="tel" placeholder="(614) 653-7430" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>

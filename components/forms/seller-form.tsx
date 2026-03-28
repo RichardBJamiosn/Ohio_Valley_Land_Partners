@@ -30,7 +30,7 @@ export function SellerForm() {
       if (!res.ok) throw new Error('Submission failed');
       setSubmitted(true);
     } catch {
-      setError('Something went wrong. Call us directly at (740) 555-0100.');
+      setError('Something went wrong. Call us directly at (614) 653-7430.');
     } finally {
       setLoading(false);
     }
@@ -77,7 +77,7 @@ export function SellerForm() {
           <Input
             id="seller-phone"
             type="tel"
-            placeholder="(740) 555-0100"
+            placeholder="(614) 653-7430"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             className="pl-9"

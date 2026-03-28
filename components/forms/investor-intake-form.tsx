@@ -117,7 +117,7 @@ export function InvestorIntakeForm() {
           <Input
             id="inv-phone"
             type="tel"
-            placeholder="(740) 555-0100"
+            placeholder="(614) 653-7430"
             value={form.phone}
             onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
             required

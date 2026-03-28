@@ -3,7 +3,7 @@ export const siteConfig = {
   description: 'Premier land wholesaling, residential development, and commercial real estate authority in the Ohio Valley region',
   url: 'https://ohiovalleylandpartners.com',
   ogImage: 'https://ohiovalleylandpartners.com/og.jpg',
-    phone: '(614) 653-7430',
+  phone: '(614) 653-7430',
   email: 'info@ovlandpartners.com',
   address: {
     streetAddress: '100 Market Street',
