@@ -4,91 +4,81 @@ import { Poppins, Cormorant_Garamond } from 'next/font/google';
 import { MainNav } from '@/components/navigation/main-nav';
 import { Footer } from '@/components/navigation/footer';
 import { siteConfig } from '@/lib/seo-config';
-import Script from 'next/script';
 
 const poppins = Poppins({
-    subsets: ['latin'],
-    weight: ['300', '400', '500', '600', '700'],
-    variable: '--font-poppins',
-    display: 'swap',
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-poppins',
+  display: 'swap',
 });
 
 const cormorant = Cormorant_Garamond({
-    subsets: ['latin'],
-    weight: ['300', '400', '500', '600'],
-    style: ['normal', 'italic'],
-    variable: '--font-cormorant',
-    display: 'swap',
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  style: ['normal', 'italic'],
+  variable: '--font-cormorant',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
-    title: {
-      default: siteConfig.name,
-          template: `%s | ${siteConfig.name}`,
-    },
+  title: {
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  keywords: [
+    'Ohio Valley real estate',
+    'land wholesaling',
+    'sell land Ohio Valley',
+    'cash land buyer Ohio',
+    'Belmont County land',
+    'Jefferson County land',
+    'sell inherited land Ohio',
+  ],
+  authors: [{ name: siteConfig.name }],
+  creator: siteConfig.name,
+  metadataBase: new URL(siteConfig.url),
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: siteConfig.url,
+    title: siteConfig.name,
     description: siteConfig.description,
-    keywords: [
-          'Ohio Valley real estate',
-          'land wholesaling',
-          'sell land Ohio Valley',
-          'cash land buyer Ohio',
-          'Belmont County land',
-          'Jefferson County land',
-          'sell inherited land Ohio',
-        ],
-    authors: [{ name: siteConfig.name }],
-    creator: siteConfig.name,
-    metadataBase: new URL(siteConfig.url),
-    openGraph: {
-          type: 'website',
-          locale: 'en_US',
-          url: siteConfig.url,
-          title: siteConfig.name,
-          description: siteConfig.description,
-          siteName: siteConfig.name,
+    siteName: siteConfig.name,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteConfig.name,
+    description: siteConfig.description,
+  },
+  alternates: {
+    canonical: siteConfig.url,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
-    twitter: {
-          card: 'summary_large_image',
-          title: siteConfig.name,
-          description: siteConfig.description,
-    },
-    robots: {
-          index: true,
-          follow: true,
-          googleBot: {
-                  index: true,
-                  follow: true,
-                  'max-video-preview': -1,
-                  'max-image-preview': 'large',
-                  'max-snippet': -1,
-          },
-    },
+  },
 };
 
 export default function RootLayout({
-    children,
+  children,
 }: {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-    return (
-          <html lang="en" className={`${poppins.variable} ${cormorant.variable}`}>
-                  <body className={poppins.className}>
-                            <Script
-                                        src="https://www.googletagmanager.com/gtag/js?id=G-BQS1572B7N"
-                                        strategy="afterInteractive"
-                                      />
-                            <Script id="google-analytics" strategy="afterInteractive">
-                              {`
-                                          window.dataLayer = window.dataLayer || [];
-                                                      function gtag(){dataLayer.push(arguments);}
-                                                                  gtag('js', new Date());
-                                                                              gtag('config', 'G-BQS1572B7N');
-                                                                                        `}
-                            </Script>Script>
-                          <MainNav />
-                          <main className="min-h-screen">{children}</main>main>
-                          <Footer />
-                  </body>body>
-          </html>html>
-        );
-}</Script>
+  return (
+    <html lang="en" className={`${poppins.variable} ${cormorant.variable}`}>
+      <body className={poppins.className}>
+        <MainNav />
+        <main className="min-h-screen">{children}</main>
+        <Footer />
+      </body>
+    </html>
+  );
+}

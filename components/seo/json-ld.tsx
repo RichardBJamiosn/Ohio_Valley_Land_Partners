@@ -23,9 +23,15 @@ export function LocalBusinessSchema({
       ...siteConfig.address,
     },
     areaServed: siteConfig.serviceArea.map((area) => ({
-      '@type': 'City',
+      '@type': 'AdministrativeArea',
       name: area,
     })),
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 40.0640,
+      longitude: -80.7209,
+    },
+    hasMap: 'https://maps.google.com/?q=100+Market+Street+Wheeling+WV+26003',
     sameAs: [
       siteConfig.url,
     ],
@@ -215,7 +221,7 @@ export function OrganizationSchema() {
       ...siteConfig.address,
     },
     areaServed: siteConfig.serviceArea.map((area) => ({
-      '@type': 'Place',
+      '@type': 'AdministrativeArea',
       name: area,
     })),
   };

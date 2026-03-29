@@ -330,6 +330,245 @@ export const blogPosts: BlogPost[] = [
 <p>The Intel campus is the most visible catalyst, but the broader Ohio Valley story is one of steady, multi-decade industrial and agricultural land demand. From the eastern Ohio shale counties to the Columbus metro's northern fringe, we are buyers across the entire region. No parcel is too small or too rural for a conversation.</p>
     `,
   },
+
+  // ── NEW POSTS: Weekly SEO rotation ────────────────────────────────────────
+
+  {
+    slug: 'sell-land-belmont-county-ohio-fast',
+    title: 'How to Sell Land in Belmont County, Ohio Fast (2026 Guide)',
+    metaDescription:
+      'Need to sell land in Belmont County, Ohio? This guide covers cash offer timelines, what your land is worth, and how to avoid the tax sale. Direct buyer — no agent needed.',
+    category: 'County Guides',
+    datePublished: '2026-03-21',
+    dateModified: '2026-03-28',
+    readingTime: '6 min read',
+    excerpt:
+      "Belmont County land owners have more options than they think. Here\'s how to sell fast — and what to watch out for.",
+    keywords: [
+      'sell land Belmont County Ohio',
+      'Belmont County land buyer',
+      'sell land fast Belmont County',
+      'cash offer land Belmont County OH',
+      'sell rural land eastern Ohio',
+    ],
+    body: `
+<h2>The Belmont County Land Market in 2026</h2>
+<p>Belmont County remains one of the most active land markets in eastern Ohio. Energy sector activity — particularly natural gas development in the Utica and Marcellus shale formations — keeps demand elevated for rural parcels, while proximity to Wheeling, WV and the I-70 corridor attracts investors from both Ohio and West Virginia.</p>
+<p>The county seat, St. Clairsville, sits at the intersection of I-70 and US-40, making parcels near these corridors especially attractive for commercial and mixed-use buyers. Rural townships like Kirkwood, Pultney, and Warren continue to draw recreational buyers looking for wooded acreage and hunting ground.</p>
+<h2>What Is Your Belmont County Land Actually Worth?</h2>
+<ul>
+  <li><strong>Wooded recreational parcels:</strong> $800–$2,200 per acre depending on timber quality and road access</li>
+  <li><strong>Agricultural ground:</strong> $1,500–$3,500 per acre for tillable farm ground near active operations</li>
+  <li><strong>Rural residential lots:</strong> $5,000–$25,000 per buildable acre depending on utilities and road frontage</li>
+  <li><strong>Mineral rights parcels:</strong> Value varies widely — get a professional appraisal before selling</li>
+</ul>
+<h2>The Belmont County Tax Sale: What Sellers Need to Know</h2>
+<p>Ohio county treasurers hold annual tax lien auctions. In Belmont County, properties with delinquent taxes for two or more years become eligible for the county tax certificate sale. If you are behind on taxes, selling to a cash buyer is almost always a better outcome than waiting. We account for back taxes in our offer and handle the payoff at closing.</p>
+<h2>How the Cash Sale Process Works in Belmont County</h2>
+<ol>
+  <li><strong>Submit your address.</strong> We pull the parcel from Belmont County GIS and auditor records within 24 hours.</li>
+  <li><strong>Receive a cash offer.</strong> We call you — no obligation to accept.</li>
+  <li><strong>Sign a purchase agreement.</strong> Simple two-page document. No agent required.</li>
+  <li><strong>Close through a local title company.</strong> Title work runs 10–14 business days on a clean parcel. We pay all closing costs.</li>
+  <li><strong>Receive payment.</strong> Wire transfer or check at closing.</li>
+</ol>
+<h2>Common Questions from Belmont County Sellers</h2>
+<p><strong>Can you buy land with no road access?</strong> Yes. Landlocked parcels are worth less but many still have value — especially adjoining larger tracts. We will give you an honest assessment.</p>
+<p><strong>Do you need to see the land before making an offer?</strong> No. We make offers based on county records, GIS data, and aerial imagery.</p>
+<p><strong>What if there is a lien on the property?</strong> We handle it. Liens are paid off at closing from the proceeds. You will know your net amount before signing.</p>
+    `,
+  },
+
+  {
+    slug: 'sell-land-jefferson-county-ohio-steubenville',
+    title: 'Selling Land in Jefferson County, Ohio: What Sellers Need to Know',
+    metaDescription:
+      'Jefferson County, Ohio land sellers: get a cash offer in 24 hours. We buy vacant lots, farm ground, river frontage, and inherited parcels in Steubenville and surrounding townships.',
+    category: 'County Guides',
+    datePublished: '2026-03-22',
+    dateModified: '2026-03-28',
+    readingTime: '5 min read',
+    excerpt:
+      "Jefferson County land has unique characteristics — Ohio River frontage, former industrial sites, and rural townships. Here\'s what drives value and how to sell quickly.",
+    keywords: [
+      'sell land Jefferson County Ohio',
+      'Steubenville land buyer',
+      'cash land buyers Jefferson County OH',
+      'sell farm ground Jefferson County Ohio',
+      'sell land near Steubenville',
+    ],
+    body: `
+<h2>Jefferson County Land: The Market Today</h2>
+<p>Jefferson County occupies the Ohio bank of the Ohio River across from Weirton, WV — within an hour of Pittsburgh and at the edge of one of the country's most active industrial corridors. The county's eastern edge draws buyers interested in waterfront and river-view parcels. Rural townships like Cross Creek, Island Creek, and Salem have active recreational and agricultural land markets.</p>
+<h2>What Types of Jefferson County Land Do We Buy?</h2>
+<p>We purchase any land in Jefferson County — vacant lots in Steubenville, farm ground in rural townships, wooded recreational parcels, Ohio River frontage, former industrial sites, and inherited parcels of all sizes. There is no minimum or maximum acreage.</p>
+<h2>Jefferson County Property Tax Delinquency</h2>
+<p>If you are carrying delinquent taxes on a Jefferson County parcel, the clock is running. Ohio law allows the county to begin the tax certificate and foreclosure process after two years of non-payment. We regularly help sellers resolve delinquent tax situations by factoring the balance into our offer and handling payoff at closing.</p>
+<h2>Selling Inherited Land in Jefferson County</h2>
+<p>Jefferson County has a substantial number of parcels held in long-standing family estates — land that was farmed or mined a generation ago and is now largely unused. We work with executors and estate attorneys regularly to structure purchases that close within probate timelines.</p>
+<h2>How Fast Can We Close?</h2>
+<p>On a clean Jefferson County parcel with clear title, we typically close in 14–21 days. If there are title issues, back taxes, or estate complications, we work with a local title company to resolve them. We will give you an honest estimate upfront.</p>
+    `,
+  },
+
+  {
+    slug: 'sell-land-columbiana-county-ohio',
+    title: 'Sell Your Land in Columbiana County, Ohio — Cash Offers in 24 Hours',
+    metaDescription:
+      'Selling land in Columbiana County, Ohio? We buy vacant parcels, farm ground, and inherited property throughout Lisbon, Salem, and surrounding townships. Cash offer in 24 hours.',
+    category: 'County Guides',
+    datePublished: '2026-03-23',
+    dateModified: '2026-03-28',
+    readingTime: '5 min read',
+    excerpt:
+      "Columbiana County land owners: here\'s what drives value in the current market and how a direct sale compares to listing with an agent.",
+    keywords: [
+      'sell land Columbiana County Ohio',
+      'cash land buyers Columbiana County',
+      'sell vacant land Lisbon Ohio',
+      'sell land Salem Ohio',
+      'Columbiana County land buyer',
+    ],
+    body: `
+<h2>Columbiana County: Where the Ohio Valley Meets Northeast Ohio</h2>
+<p>Columbiana County sits at the northeastern edge of the Ohio Valley, bordered by Mahoning County to the north and the Pennsylvania state line to the east. Lisbon, the county seat, and Salem anchor a commercial and residential market drawing buyers from Youngstown and the Pittsburgh corridor. Rural townships like Madison, Hanover, and Knox have steady recreational and agricultural land demand.</p>
+<h2>What Columbiana County Land Is Selling For</h2>
+<p>Agricultural ground currently trades in the $2,000–$4,500 per acre range for productive tillable land. Wooded recreational parcels range from $1,000–$2,500 per acre. Residential lots near Salem or Lisbon with utilities can reach $10,000–$30,000 per buildable acre.</p>
+<h2>Why Sellers Choose a Direct Buyer Over Listing</h2>
+<p>Listing land with an agent in Columbiana County typically takes 90–180 days to close and many rural parcels sit longer. A direct cash sale eliminates the wait and the uncertainty. The tradeoff is price — a direct buyer will not pay full retail. But once you factor in agent commissions, carrying costs, and the time value of waiting, many sellers find the net difference is smaller than expected.</p>
+<h2>Common Situations We Handle in Columbiana County</h2>
+<p>Most sellers we work with fit one of these situations: inherited land from a family estate, out-of-state ownership, back property tax accumulation, a partnership dissolving, or a listing that sat on the MLS with no serious offers. We handle all of these regularly.</p>
+    `,
+  },
+
+  {
+    slug: 'sell-land-ohio-county-west-virginia-wheeling',
+    title: 'Selling Land in Ohio County, West Virginia — What Sellers Need to Know',
+    metaDescription:
+      'Selling land in Ohio County, WV near Wheeling? We buy vacant lots, rural parcels, and inherited land throughout Ohio County. Cash offer in 24 hours. No agent required.',
+    category: 'County Guides',
+    datePublished: '2026-03-24',
+    dateModified: '2026-03-28',
+    readingTime: '5 min read',
+    excerpt:
+      "Ohio County, WV is the urban core of the Ohio Valley. Here\'s what land sells for in 2026 and how to sell yours without an agent.",
+    keywords: [
+      'sell land Ohio County West Virginia',
+      'Wheeling WV land buyer',
+      'sell vacant land Wheeling WV',
+      'cash land buyers Ohio County WV',
+      'sell property Wheeling West Virginia',
+    ],
+    body: `
+<h2>Ohio County, WV: The Heart of the Ohio Valley</h2>
+<p>Ohio County is the urban center of the greater Ohio Valley region. Wheeling, the county seat, sits directly on the Ohio River across from Bridgeport and Benwood. It is the largest city between Pittsburgh and Columbus along the I-70 corridor, and its land market reflects both urban core character and the rural fringe typical of West Virginia counties.</p>
+<h2>The Ohio County Land Market in 2026</h2>
+<p>Urban lots within Wheeling trade widely by location — infill residential lots in Woodsdale and Elm Grove command $20,000–$80,000+, while lots in areas with deferred infrastructure or challenging topography may trade for much less. Rural parcels on the county's outer ring attract recreational buyers from Pittsburgh and the tri-state area.</p>
+<h2>How West Virginia Land Sales Differ from Ohio</h2>
+<p>West Virginia uses a different deed transfer process than Ohio. The state also has a real estate transfer tax of $1.10 per $500 of consideration. Mineral rights in WV are frequently severed from surface rights — understanding what you actually own before selling is essential. We work with West Virginia title companies and are fully fluent in the WV closing process.</p>
+<h2>Selling Inherited Land in Ohio County, WV</h2>
+<p>West Virginia probate operates through the WV Fiduciary Supervisor in each county. We work with WV estate attorneys regularly and can purchase directly from estates mid-probate with court approval. If you have inherited Ohio County land and need to move, we can work within your timeline.</p>
+    `,
+  },
+
+  {
+    slug: 'sell-land-marshall-county-wv-moundsville',
+    title: 'Sell Your Land in Marshall County, WV — Cash Buyers in Moundsville and Beyond',
+    metaDescription:
+      'Selling land in Marshall County, West Virginia? We buy rural parcels, inherited property, and vacant lots near Moundsville. Cash offer in 24 hours. No agent required.',
+    category: 'County Guides',
+    datePublished: '2026-03-25',
+    dateModified: '2026-03-28',
+    readingTime: '5 min read',
+    excerpt:
+      'Marshall County, WV has one of the most active land markets in the northern West Virginia panhandle. Here is what is driving demand and how to sell your parcel.',
+    keywords: [
+      'sell land Marshall County WV',
+      'Moundsville WV land buyer',
+      'cash land buyers Marshall County West Virginia',
+      'sell rural land Marshall County WV',
+      'sell inherited property Marshall County',
+    ],
+    body: `
+<h2>Marshall County, WV: Energy, Agriculture, and the Ohio River</h2>
+<p>Marshall County runs along the Ohio River south of Wheeling, anchored by Moundsville. The county has a long history of energy extraction — natural gas and oil wells dot the rural landscape — and agriculture across its interior townships. In recent years, Marshall County has drawn significant attention from natural gas investors tied to the Utica and Marcellus shale formations.</p>
+<h2>What Is Marshall County Land Worth?</h2>
+<p>Surface land values range broadly. Rural parcels without road access may trade for $500–$1,500 per acre. Agricultural ground with road frontage typically brings $1,800–$3,200 per acre. Parcels near Moundsville or the Ohio River with residential development potential can reach $8,000–$20,000 per buildable acre. If your parcel has active mineral leases, get a mineral rights appraisal before selling.</p>
+<h2>Selling Land with Mineral Rights in Marshall County</h2>
+<p>West Virginia has some of the most complex mineral rights ownership histories in the country. Many parcels have severed mineral estates — the surface owner and mineral rights owner are different. Before selling, pull your deed and any severance documents from the Marshall County Clerk's office to understand exactly what you own. We purchase surface rights, mineral rights, or both.</p>
+<h2>The Marshall County Tax Lien Process</h2>
+<p>West Virginia holds an annual tax lien sale in November. Delinquent tax certificates are sold to investors who then have the right to eventually foreclose. If you own Marshall County land with back taxes, selling before the lien sale is almost always a better outcome. We handle the tax payoff at closing.</p>
+    `,
+  },
+
+  {
+    slug: 'what-to-do-with-land-you-dont-want',
+    title: "What to Do With Land You Don't Want: All Your Options Compared",
+    metaDescription:
+      "Inherited land you don't want? Out-of-state parcel draining your wallet in taxes? Here's a clear breakdown of every option — sell, donate, lease, or walk away.",
+    category: 'Seller Guides',
+    datePublished: '2026-03-26',
+    dateModified: '2026-03-28',
+    readingTime: '7 min read',
+    excerpt:
+      "Owning land you don\'t want is more common than people realize. Here\'s every realistic option — including the ones most sellers don\'t know about.",
+    keywords: [
+      'what to do with land you dont want',
+      'unwanted land options',
+      'sell inherited land Ohio',
+      'donate land tax deduction',
+      'how to get rid of unwanted land',
+    ],
+    body: `
+<h2>You Own Land You Don't Want. Now What?</h2>
+<p>It happens more often than you would think. You inherited a rural parcel from a grandparent. You bought land years ago with plans that never materialized. You own an out-of-state lot costing you money every year in property taxes. What are your realistic options?</p>
+<h2>Option 1: Sell to a Cash Land Buyer</h2>
+<p>The fastest, simplest option for most sellers. A direct cash buyer can move in 14–30 days with no financing contingencies, no showings, and no agent commissions. The tradeoff is price — you will not get full retail market value. Cash buyers build in a margin for the risk and carrying costs they take on. Best for sellers who want to close quickly, have delinquent taxes, inherited the land, or do not want to manage a listing process.</p>
+<h2>Option 2: List with a Land Specialist Agent</h2>
+<p>A real estate agent who specializes in land can market your parcel to a broader pool of buyers and potentially achieve a higher price. The downside is time — rural land listings often take 6–18 months to close, and agents typically charge 6–10% on land transactions. Best for sellers with a desirable parcel, no time pressure, and patience for the process.</p>
+<h2>Option 3: Donate to a Land Trust or Nonprofit</h2>
+<p>If your land has conservation value — wetlands, timber, wildlife habitat, scenic frontage — donating to a land trust may qualify you for a significant charitable deduction based on the fair market value of the donated property, which requires a qualified appraisal. This option eliminates future property tax liability and can provide a meaningful tax benefit. Best for sellers with high-quality conservation land and federal tax liability to offset.</p>
+<h2>Option 4: Lease the Land</h2>
+<p>Agricultural land can be leased to farmers. Timberland can be leased for hunting rights. In shale country, mineral rights can be leased to energy companies. Leasing generates ongoing income without the finality of a sale but requires active management, legal documentation, and ongoing landlord responsibilities.</p>
+<h2>Option 5: Do Nothing — At Your Peril</h2>
+<p>If you stop paying property taxes, the county will eventually foreclose and you lose the property with nothing to show for it. Even if the land is worth very little, selling or donating it is almost always better than abandonment.</p>
+<h2>The Ohio Valley Land Partners Recommendation</h2>
+<p>For most sellers of unwanted Ohio Valley land, a direct cash sale is the fastest path to resolution. We have purchased parcels from sellers who had never seen the land they inherited, from estates trying to close probate, and from out-of-state owners who had not paid taxes in years. Submit your parcel address and we will give you an honest cash offer within 24 hours.</p>
+    `,
+  },
+
+  {
+    slug: 'brooke-harrison-carroll-county-land-buyers',
+    title: 'Cash Land Buyers in Brooke, Harrison, and Carroll Counties',
+    metaDescription:
+      'Selling land in Brooke County WV, Harrison County OH, or Carroll County OH? We buy direct — cash offer in 24 hours, close in 14 days. No agent, no fees.',
+    category: 'County Guides',
+    datePublished: '2026-03-27',
+    dateModified: '2026-03-28',
+    readingTime: '6 min read',
+    excerpt:
+      'Three counties, one buyer. Here is what land sells for in Brooke, Harrison, and Carroll counties and how to get a cash offer on any parcel.',
+    keywords: [
+      'sell land Brooke County WV',
+      'sell land Harrison County Ohio',
+      'sell land Carroll County Ohio',
+      'cash land buyers tri-county Ohio Valley',
+      'sell land Wellsburg WV',
+      'sell land Cadiz Ohio',
+    ],
+    body: `
+<h2>Three Counties, One Market</h2>
+<p>Brooke County WV, Harrison County OH, and Carroll County OH each sit at the outer edges of the Ohio Valley region. Together they represent some of the most rural and least-served land markets in our coverage area — motivated sellers often have fewer buyer options and longer waits when listing traditionally. We buy in all three and we move quickly.</p>
+<h2>Brooke County, West Virginia</h2>
+<p>Brooke County is the smallest county in West Virginia by area, running in a narrow strip along the Ohio River north of Marshall County. Wellsburg, the county seat, sits on the riverbank. Land values range from $500–$1,500 per acre for interior rural parcels to $10,000–$40,000 per acre for buildable lots near Wellsburg or the river. Mineral rights ownership is complex here — always verify what is included in your deed.</p>
+<h2>Harrison County, Ohio</h2>
+<p>Harrison County is anchored by Cadiz, the county seat. The county has a strong agricultural heritage and significant energy activity on the eastern edge of the Utica shale formation. Agricultural ground trades in the $1,800–$3,500 per acre range. Wooded recreational parcels with road access run $900–$2,000 per acre. Mineral rights held separately from surface rights are common due to historical oil and gas leasing activity.</p>
+<h2>Carroll County, Ohio</h2>
+<p>Carroll County shares Harrison County's rural character and sits immediately north. Carrollton is the county seat. The county's western edge borders the Amish country tourist corridor, which has historically elevated recreational and residential land demand in that zone. Parcels near Atwood Lake or with creek frontage command premiums for recreational buyers.</p>
+<h2>How We Buy in All Three Counties</h2>
+<p>Same process regardless of county. Submit your parcel address. We pull records from the county auditor and GIS within 24 hours. We call you with a cash offer — no obligation. If you accept, we send a simple purchase agreement, open title, and close in 14–21 days. We pay all closing costs and handle any back tax payoff at closing.</p>
+    `,
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {

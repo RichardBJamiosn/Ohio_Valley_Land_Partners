@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Block internal/utility routes from indexing
+Disallow: /api/
+Disallow: /investor-portal/
+Disallow: /_next/
+
+# Crawl-delay for bots other than Google
+User-agent: *
+Crawl-delay: 10
+
+# Google — no crawl delay, full access
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Sitemap location
+Sitemap: https://ohiovalleylandpartners.com/sitemap.xml
