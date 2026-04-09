@@ -4,6 +4,7 @@ import { Poppins, Cormorant_Garamond } from 'next/font/google';
 import { MainNav } from '@/components/navigation/main-nav';
 import { Footer } from '@/components/navigation/footer';
 import { siteConfig } from '@/lib/seo-config';
+import Script from 'next/script';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -75,6 +76,18 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${cormorant.variable}`}>
       <body className={poppins.className}>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-7FQDXC8DVC"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-7FQDXC8DVC');
+          `}
+        </Script>
         <MainNav />
         <main className="min-h-screen">{children}</main>
         <Footer />
