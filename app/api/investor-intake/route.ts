@@ -1,28 +1,17 @@
 /**
  * /api/investor-intake — Investor/buyer criteria intake
  * Accepts: name, email, phone, counties[], acreage, useCase, budget
- * Inserts into Supabase `leads` table with lead_type = 'investor'
- * Required env: NEXT_PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY
+ * Sends email notification to info@ohiovalleylandpartners.com via Resend
+ * Required env: RESEND_API_KEY
  */
 
-import { createClient } from '@supabase/supabase-js';
+import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-
-const supabase =
-  supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
   try {
-    if (!supabase) {
-      return NextResponse.json(
-        { error: 'Database service not configured' },
-        { status: 500 }
-      );
-    }
-
     const body = await request.json() as {
       name?: string;
       email?: string;
@@ -42,39 +31,29 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const message = [
-      `Counties: ${counties?.join(', ') || 'Not specified'}`,
-      `Acreage: ${acreage || 'Not specified'}`,
-      `Use case: ${useCase || 'Not specified'}`,
-      `Budget: ${budget || 'Not specified'}`,
-    ].join('\n');
-
-    const { data, error } = await supabase
-      .from('leads')
-      .insert({
-        full_name: name.trim(),
-        email: email.trim(),
-        phone: phone.trim(),
-        lead_type: 'investor',
-        message,
-        source: 'investor-intake',
-        metadata: {
-          counties,
-          acreage,
-          useCase,
-          budget,
-          userAgent: request.headers.get('user-agent'),
-          referer: request.headers.get('referer'),
-        },
-      })
-      .select();
+    const { error } = await resend.emails.send({
+      from: 'OVLP Website <noreply@ohiovalleylandpartners.com>',
+      to: 'info@ohiovalleylandpartners.com',
+      subject: `New Investor/Buyer Lead — ${name.trim()}`,
+      html: `
+        <h2>New Investor / Deal List Signup</h2>
+        <p><strong>Name:</strong> ${name.trim()}</p>
+        <p><strong>Email:</strong> ${email.trim()}</p>
+        <p><strong>Phone:</strong> ${phone.trim()}</p>
+        <p><strong>Counties of Interest:</strong> ${counties?.join(', ') || 'Not specified'}</p>
+        <p><strong>Acreage Range:</strong> ${acreage || 'Not specified'}</p>
+        <p><strong>Intended Use:</strong> ${useCase || 'Not specified'}</p>
+        <p><strong>Budget Range:</strong> ${budget || 'Not specified'}</p>
+        <p><strong>Source:</strong> Investor Portal — Get on the Deal List form</p>
+      `,
+    });
 
     if (error) {
-      console.error('Supabase error:', error);
+      console.error('Resend error:', error);
       return NextResponse.json({ error: 'Failed to submit' }, { status: 500 });
     }
 
-    return NextResponse.json({ success: true, id: data?.[0]?.id }, { status: 201 });
+    return NextResponse.json({ success: true }, { status: 201 });
   } catch (err) {
     console.error('Investor intake error:', err);
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
