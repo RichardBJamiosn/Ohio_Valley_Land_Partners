@@ -5,6 +5,20 @@ export const siteConfig = {
   ogImage: 'https://ohiovalleylandpartners.com/og.jpg',
   phone: '(614) 653-7430',
   email: 'info@ovlandpartners.com',
+  // Author / founder — used in Article schema and About page
+  // TODO: Replace with real name once About page is updated
+  authorName: 'Richard B. Jamison',
+  authorTitle: 'Founder, Ohio Valley Land Partners',
+  authorUrl: 'https://ohiovalleylandpartners.com/about',
+  // sameAs — populate as each account is created
+  // TODO: Replace placeholder comments with real URLs
+  sameAs: [
+    // 'https://www.linkedin.com/company/ohio-valley-land-partners', // add after LinkedIn created
+    // 'https://www.google.com/maps/place/[GBP_ID]',                 // add after GBP verified
+    // 'https://www.bbb.org/us/wv/wheeling/profile/[profile]',       // add after BBB listing
+    // 'https://www.landwatch.com/[listing]',                        // add after LandWatch listing
+    // 'https://www.land.com/[listing]',                             // add after Land.com listing
+  ] as string[],
   address: {
     streetAddress: '100 Market Street',
     addressLocality: 'Wheeling',

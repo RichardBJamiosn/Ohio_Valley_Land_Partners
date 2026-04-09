@@ -1,19 +1,36 @@
 User-agent: *
 Allow: /
-
-# Block internal/utility routes from indexing
 Disallow: /api/
 Disallow: /investor-portal/
 Disallow: /_next/
+Crawl-delay: 2
 
-# Crawl-delay for bots other than Google
-User-agent: *
-Crawl-delay: 10
-
-# Google — no crawl delay, full access
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 0
 
-# Sitemap location
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
 Sitemap: https://ohiovalleylandpartners.com/sitemap.xml
+Sitemap: https://ohiovalleylandpartners.com/llms.txt

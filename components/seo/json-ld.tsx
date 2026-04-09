@@ -32,9 +32,7 @@ export function LocalBusinessSchema({
       longitude: -80.7209,
     },
     hasMap: 'https://maps.google.com/?q=100+Market+Street+Wheeling+WV+26003',
-    sameAs: [
-      siteConfig.url,
-    ],
+    ...(siteConfig.sameAs.length > 0 && { sameAs: siteConfig.sameAs }),
   };
 
   return (
@@ -159,7 +157,7 @@ interface ArticleSchemaProps {
   description: string;
   datePublished: string;
   dateModified?: string;
-  author?: string;
+  slug?: string;
   image?: string;
 }
 
@@ -168,27 +166,56 @@ export function ArticleSchema({
   description,
   datePublished,
   dateModified,
-  author = siteConfig.name,
+  slug,
   image,
 }: ArticleSchemaProps) {
+  const pageUrl = slug
+    ? `${siteConfig.url}/blog/${slug}`
+    : siteConfig.url;
+
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline,
     description,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': pageUrl,
+    },
     author: {
-      '@type': 'Organization',
-      name: author,
-      url: siteConfig.url,
+      '@type': 'Person',
+      name: siteConfig.authorName,
+      url: siteConfig.authorUrl,
+      jobTitle: siteConfig.authorTitle,
+      worksFor: {
+        '@type': 'Organization',
+        name: siteConfig.name,
+        url: siteConfig.url,
+      },
     },
     publisher: {
       '@type': 'Organization',
       name: siteConfig.name,
       url: siteConfig.url,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteConfig.url}/logo.png`,
+      },
     },
     datePublished,
     dateModified: dateModified || datePublished,
-    ...(image && { image }),
+    ...(image && {
+      image: {
+        '@type': 'ImageObject',
+        url: image,
+        width: 1200,
+        height: 630,
+      },
+    }),
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', '.article-intro', '.article-summary'],
+    },
   };
 
   return (
@@ -206,8 +233,17 @@ export function OrganizationSchema() {
     '@id': `${siteConfig.url}#organization`,
     name: siteConfig.name,
     url: siteConfig.url,
-    logo: `${siteConfig.url}/logo.png`,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteConfig.url}/logo.png`,
+    },
     description: siteConfig.description,
+    telephone: siteConfig.phone,
+    email: siteConfig.email,
+    address: {
+      '@type': 'PostalAddress',
+      ...siteConfig.address,
+    },
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: siteConfig.phone,
@@ -216,14 +252,74 @@ export function OrganizationSchema() {
       areaServed: 'US',
       availableLanguage: 'English',
     },
-    address: {
-      '@type': 'PostalAddress',
-      ...siteConfig.address,
-    },
     areaServed: siteConfig.serviceArea.map((area) => ({
       '@type': 'AdministrativeArea',
       name: area,
     })),
+    ...(siteConfig.sameAs.length > 0 && { sameAs: siteConfig.sameAs }),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+export function PersonSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${siteConfig.url}#author`,
+    name: siteConfig.authorName,
+    url: siteConfig.authorUrl,
+    jobTitle: siteConfig.authorTitle,
+    worksFor: {
+      '@type': 'Organization',
+      '@id': `${siteConfig.url}#organization`,
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    knowsAbout: [
+      'Land acquisition',
+      'Rural land sales',
+      'Ohio real estate',
+      'West Virginia real estate',
+      'Cash land purchases',
+      'Ohio Valley land market',
+      'Probate land sales',
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+export function WebSiteSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${siteConfig.url}#website`,
+    name: siteConfig.name,
+    url: siteConfig.url,
+    description: siteConfig.description,
+    publisher: {
+      '@type': 'Organization',
+      '@id': `${siteConfig.url}#organization`,
+    },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${siteConfig.url}/blog?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
   };
 
   return (

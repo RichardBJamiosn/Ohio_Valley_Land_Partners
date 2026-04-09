@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Poppins, Cormorant_Garamond } from 'next/font/google';
 import { MainNav } from '@/components/navigation/main-nav';
 import { Footer } from '@/components/navigation/footer';
+import { WebSiteSchema, PersonSchema } from '@/components/seo/json-ld';
 import { siteConfig } from '@/lib/seo-config';
 import Script from 'next/script';
 
@@ -46,11 +47,20 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: 'Ohio Valley Land Partners — Cash Land Buyers in the Ohio Valley',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: siteConfig.name,
     description: siteConfig.description,
+    images: [siteConfig.ogImage],
   },
   alternates: {
     canonical: siteConfig.url,
@@ -88,6 +98,8 @@ export default function RootLayout({
             gtag('config', 'G-7FQDXC8DVC');
           `}
         </Script>
+        <WebSiteSchema />
+        <PersonSchema />
         <MainNav />
         <main className="min-h-screen">{children}</main>
         <Footer />

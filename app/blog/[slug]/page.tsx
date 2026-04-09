@@ -46,6 +46,7 @@ export default function BlogPostPage({ params }: Props) {
         description={post.metaDescription}
         datePublished={post.datePublished}
         dateModified={post.dateModified}
+        slug={post.slug}
       />
 
       <div className="min-h-screen bg-background">

@@ -1,8 +1,41 @@
 import { HeroSection } from '@/components/home/hero-section';
-import { LocalBusinessSchema, OrganizationSchema } from '@/components/seo/json-ld';
-import { TreePine, Clock, DollarSign, MapPin, Heart } from 'lucide-react';
+import { LocalBusinessSchema, OrganizationSchema, FAQSchema } from '@/components/seo/json-ld';
+import { TreePine, Clock, DollarSign, MapPin, Heart, ChevronDown } from 'lucide-react';
 import Link from 'next/link';
 import { silos } from '@/lib/seo-config';
+
+const homepageFAQs = [
+  {
+    question: 'How long does it take to sell land to a cash buyer in the Ohio Valley?',
+    answer:
+      'Ohio Valley Land Partners closes most transactions in 14–21 business days from signed purchase agreement. No lender approval, appraisal, or agent commission is required. Sellers in all 8 Ohio Valley counties — Belmont, Jefferson, Columbiana, Harrison, and Carroll in Ohio, and Ohio County, Marshall, and Brooke in West Virginia — receive a written cash offer within 24 hours of inquiry.',
+  },
+  {
+    question: 'What types of land do you buy in the Ohio Valley?',
+    answer:
+      'We buy vacant rural land, inherited land, tax-delinquent parcels, landlocked land, timber land, agricultural land, and land with no road access across all 8 Ohio Valley counties. We buy land in any condition — no clean-up, no survey, and no repairs required.',
+  },
+  {
+    question: 'Do I need a real estate agent to sell my land to you?',
+    answer:
+      'No. Ohio Valley Land Partners is a principal buyer, not a licensed broker. You deal directly with the buyer. There are no agent fees, no commissions, and no listing period. We pay all standard closing costs.',
+  },
+  {
+    question: 'Can you buy land that has back taxes owed?',
+    answer:
+      'Yes. We regularly purchase land with delinquent property taxes in Ohio and West Virginia. Outstanding taxes are accounted for in our offer and resolved at closing through the title company. You do not need to pay them out of pocket before we can close.',
+  },
+  {
+    question: 'Can you buy inherited land that is still in probate?',
+    answer:
+      'In many cases, yes. Ohio allows land to be sold during probate with court authorization once the estate is open and an executor has been appointed. We work with sellers in the probate process and can close once the executor has the authority to transfer title. Contact us and we will review your specific situation.',
+  },
+  {
+    question: 'How do you determine your cash offer on a piece of land?',
+    answer:
+      'Our offer is based on comparable land sales from the past 12 months in the county, the parcel\'s access (road frontage or landlocked), zoning classification, any outstanding liens or taxes, and our intended use of the property. We provide a written offer with no obligation — you are free to accept, decline, or compare it with other options.',
+  },
+];
 
 const whatWeDo = [
   {
@@ -26,6 +59,7 @@ export default function Home() {
     <>
       <LocalBusinessSchema />
       <OrganizationSchema />
+      <FAQSchema faqs={homepageFAQs} />
 
       <HeroSection />
 
@@ -113,6 +147,41 @@ export default function Home() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* FAQ section */}
+      <section className="py-24 sm:py-32 bg-background border-t border-border">
+        <div className="mx-auto max-w-3xl px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <p className="heading-serif text-amber text-2xl mb-3">Common Questions</p>
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Selling Land in the Ohio Valley
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Straightforward answers to the questions sellers ask most.
+            </p>
+          </div>
+          <dl className="flex flex-col gap-4">
+            {homepageFAQs.map((faq) => (
+              <details
+                key={faq.question}
+                className="group rounded-xl border border-border bg-card p-6 open:border-amber/30 transition-all"
+              >
+                <summary className="flex cursor-pointer items-center justify-between gap-4 font-semibold text-foreground list-none">
+                  <dt>{faq.question}</dt>
+                  <ChevronDown className="h-5 w-5 text-amber shrink-0 transition-transform group-open:rotate-180" />
+                </summary>
+                <dd className="mt-4 text-sm leading-7 text-muted-foreground">{faq.answer}</dd>
+              </details>
+            ))}
+          </dl>
+          <p className="mt-10 text-center text-sm text-muted-foreground">
+            Have a question that isn&apos;t answered here?{' '}
+            <Link href="/contact" className="text-meadow hover:underline font-semibold">
+              Contact us directly.
+            </Link>
+          </p>
         </div>
       </section>
 

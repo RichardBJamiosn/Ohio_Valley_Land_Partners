@@ -16,12 +16,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${BASE_URL}/sell-land`,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
       url: `${BASE_URL}/ohio-valley-guides`,
       lastModified: now,
       changeFrequency: 'weekly',
