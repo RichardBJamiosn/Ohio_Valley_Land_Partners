@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const footerNavigation = {
   services: [
-    { name: 'Land Wholesaling', href: '/land' },
+    { name: 'Land Offers', href: '/land' },
     { name: 'Commercial Real Estate', href: '/commercial' },
     { name: 'Residential Development', href: '/development' },
     { name: 'Investor Portal', href: '/investor-portal' },

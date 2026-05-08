@@ -18,15 +18,15 @@ export function FAQSection({ county, state }: FAQSectionProps) {
     },
     {
       question: `Is ${county} a good investment for real estate?`,
-      answer: `${county} offers diverse investment opportunities including land wholesaling, residential development, and commercial real estate. The region benefits from strategic Ohio Valley location, established infrastructure, and steady appreciation rates.`,
+      answer: `${county} offers diverse investment opportunities including direct land buying, residential development, and commercial real estate. The region benefits from strategic Ohio Valley location, established infrastructure, and steady appreciation rates.`,
     },
     {
       question: `What types of properties are available in ${county}?`,
-      answer: `${county} features a wide range of properties including raw land, development-ready parcels, commercial sites, and residential lots. We specialize in connecting investors with off-market wholesale opportunities and institutional-grade developments.`,
+      answer: `${county} features a wide range of properties including raw land, development-ready parcels, commercial sites, and residential lots. We specialize in connecting investors with off-market land opportunities and institutional-grade developments.`,
     },
     {
       question: `How long does it take to sell land in ${county}?`,
-      answer: `The timeline for selling land in ${county} depends on property type, pricing, and market conditions. Our wholesale network enables 7-30 day closings for qualified deals, significantly faster than traditional listings.`,
+      answer: `The timeline for selling land in ${county} depends on property type, pricing, and market conditions. Our cash-buyer network supports 7-30 day closings for qualified deals, significantly faster than traditional listings.`,
     },
     {
       question: `What are the zoning regulations in ${county}?`,

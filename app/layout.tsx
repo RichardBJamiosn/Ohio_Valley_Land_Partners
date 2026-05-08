@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   keywords: [
     'Ohio Valley real estate',
-    'land wholesaling',
+    'land offers',
     'sell land Ohio Valley',
     'cash land buyer Ohio',
     'Belmont County land',

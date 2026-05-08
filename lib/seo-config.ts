@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: 'Ohio Valley Land Partners',
-  description: 'Premier land wholesaling, residential development, and commercial real estate authority in the Ohio Valley region and active Central Ohio campaign markets',
+  description: 'Direct land offers, residential development, and commercial real estate authority in the Ohio Valley region and active Central Ohio campaign markets',
   url: 'https://ohiovalleylandpartners.com',
   ogImage: 'https://ohiovalleylandpartners.com/og.jpg',
   phone: '(614) 653-7430',
@@ -41,10 +41,10 @@ export const siteConfig = {
 
 export const silos = {
   land: {
-    title: 'Land Wholesaling',
+    title: 'Land Offers',
     path: '/land',
-    description: 'Strategic land acquisitions and wholesale opportunities for motivated sellers and cash buyers',
-    keywords: 'land wholesaling, cash land buyers, motivated sellers, Ohio Valley land',
+    description: 'Cash land offers for motivated sellers and off-market land opportunities for cash buyers',
+    keywords: 'land offers, cash land buyers, motivated sellers, Ohio Valley land',
   },
   commercial: {
     title: 'Commercial Real Estate',

@@ -167,7 +167,7 @@ export function ContactForm({ defaultLeadType = 'inquiry' }: ContactFormProps) {
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  <SelectItem value="land">Land Wholesaling</SelectItem>
+                  <SelectItem value="land">Land Offers</SelectItem>
                   <SelectItem value="commercial">Commercial Real Estate</SelectItem>
                   <SelectItem value="investor">Investor Relations</SelectItem>
                   <SelectItem value="partnership">Partnership Inquiry</SelectItem>
