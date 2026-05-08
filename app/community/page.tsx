@@ -32,7 +32,7 @@ const partners = [
     url: 'https://www.salvationarmyusa.org',
     tagline: 'On the ground for Ohio Valley families when it matters most.',
     description:
-      'The February 2023 Norfolk Southern train derailment in East Palestine, Ohio — in Columbiana County, one of the eight counties we serve — released toxic chemicals into the air, soil, and waterways of a community that had no warning and no resources to respond alone. The Salvation Army has maintained a presence there since the first days of the disaster, providing clean water, cleanup supplies, food, and emotional support to families whose land and health were compromised through no fault of their own. Supporting their continued work in East Palestine and across the Ohio Valley is personal for us.',
+      'The February 2023 Norfolk Southern train derailment in East Palestine, Ohio — in Columbiana County, one of our core Ohio Valley counties — released toxic chemicals into the air, soil, and waterways of a community that had no warning and no resources to respond alone. The Salvation Army has maintained a presence there since the first days of the disaster, providing clean water, cleanup supplies, food, and emotional support to families whose land and health were compromised through no fault of their own. Supporting their continued work in East Palestine and across the Ohio Valley is personal for us.',
     focus: 'Disaster Recovery & Family Support',
     region: 'East Palestine, OH / Ohio Valley',
   },
@@ -157,8 +157,8 @@ export default function CommunityPage() {
             </h2>
             <div className="flex flex-col gap-4 text-sm text-muted-foreground leading-7">
               <p>
-                East Palestine is in Columbiana County — one of the eight counties we
-                actively buy land in. The February 2023 Norfolk Southern derailment
+                East Palestine is in Columbiana County — one of our core Ohio Valley
+                counties. The February 2023 Norfolk Southern derailment
                 contaminated soil, water, and air in a community that had no warning
                 and no resources to fight back on their own.
               </p>

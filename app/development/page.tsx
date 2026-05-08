@@ -29,7 +29,7 @@ export default function DevelopmentPage() {
               <p className="mt-6 text-xl leading-8 text-muted-foreground">
                 Residential development is part of our long-term vision for the Ohio Valley.
                 Our current focus is land acquisition — we are actively identifying parcels with
-                development potential across all eight counties we serve.
+                development potential across our Ohio Valley service area and Franklin County campaign.
               </p>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
                 If you have land you believe has residential development potential, contact us.
@@ -67,7 +67,7 @@ export default function DevelopmentPage() {
                 {
                   icon: Home,
                   title: 'Ohio Valley-Focused',
-                  description: 'We develop in the communities we operate in. No out-of-region plays. Every project we pursue will be in one of our eight counties.',
+                  description: 'We develop in the communities we operate in. No out-of-region plays. Every project we pursue will be in our Ohio Valley footprint or a deliberate campaign market like Franklin County.',
                 },
                 {
                   icon: Users,

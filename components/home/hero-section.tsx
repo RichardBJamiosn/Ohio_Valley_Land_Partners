@@ -9,11 +9,12 @@ import { InvestorIntakeForm } from '@/components/forms/investor-intake-form';
 const stats = [
   { label: 'Cash Offer', value: '24 hrs', icon: Clock },
   { label: 'Close Timeline', value: '14 Days', icon: DollarSign },
-  { label: 'Acres Covered', value: '1.77M+', icon: TreePine },
-  { label: 'Counties', value: '8', icon: MapPin },
+  { label: 'Core Acres', value: '1.77M+', icon: TreePine },
+  { label: 'Active Counties', value: '9', icon: MapPin },
 ];
 
 const serviceRegions = [
+  { label: 'Franklin County', slug: 'franklin-county-oh' },
   { label: 'Belmont County', slug: 'belmont-county-oh' },
   { label: 'Jefferson County', slug: 'jefferson-county-oh' },
   { label: 'Columbiana County', slug: 'columbiana-county-oh' },
@@ -25,13 +26,13 @@ const serviceRegions = [
 ];
 
 const sellerTrustPoints = [
-  'Local buyer — rooted in the Ohio Valley',
+  'Local buyer — rooted in the Ohio Valley and active in Franklin County',
   'No agent fees or commissions',
   'Close in as little as 14 days',
 ];
 
 const buyerTrustPoints = [
-  'First access to off-market Ohio Valley land',
+  'First access to off-market Ohio Valley and Franklin County land',
   'Hunting, farm, development & investment parcels',
   'No membership fees — ever',
 ];
@@ -76,9 +77,9 @@ export function HeroSection() {
                   <span className="block text-amber mt-1">Local. Intentional. Fair.</span>
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-white/70">
-                  We buy vacant land, inherited property, and back-tax parcels across eight
-                  counties in Ohio and West Virginia. Cash offer in 24 hours. Close in 14 days.
-                  No agents, no fees, no out-of-state buyers.
+                  We buy vacant land, inherited property, and back-tax parcels across the Ohio
+                  Valley and our active Franklin County campaign. Cash offer after review.
+                  No agents, no fees, no out-of-state runaround.
                 </p>
                 <ul className="mt-6 flex flex-col gap-3">
                   {sellerTrustPoints.map((point) => (
@@ -98,7 +99,7 @@ export function HeroSection() {
                 <p className="mt-6 text-lg leading-8 text-white/70">
                   Join our buyer network and get first access to off-market land deals —
                   hunting tracts, farm ground, development sites, and investment parcels
-                  across eight Ohio Valley counties.
+                  across the Ohio Valley and Franklin County.
                 </p>
                 <ul className="mt-6 flex flex-col gap-3">
                   {buyerTrustPoints.map((point) => (
@@ -198,7 +199,7 @@ export function HeroSection() {
         {/* County strip */}
         <div className="mt-16 border-t border-white/10 pt-10">
           <p className="text-xs font-semibold text-white/40 uppercase tracking-widest text-center mb-5">
-            Counties We Serve
+            Active Counties
           </p>
           <div className="flex flex-wrap justify-center gap-2">
             {serviceRegions.map((region) => (

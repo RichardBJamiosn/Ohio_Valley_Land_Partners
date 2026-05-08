@@ -22,6 +22,63 @@ export interface CountySellData {
 
 export const countySellPages: CountySellData[] = [
   {
+    slug: 'franklin-county-oh',
+    name: 'Franklin County',
+    state: 'Ohio',
+    stateAbbr: 'OH',
+    headline: 'We Buy Vacant Land and Residential Lots in Franklin County, OH',
+    subheadline: 'Sell your Franklin County lot or acreage directly to a local land buyer. No agent fees. Cash offer after review.',
+    metaTitle: 'Sell Land in Franklin County, OH | Columbus Lot Buyer',
+    metaDescription:
+      'Selling vacant land, an infill lot, or acreage in Franklin County, Ohio? Ohio Valley Land Partners is actively buying in the Columbus market. No agent fees. Direct cash offer after review.',
+    keywords: [
+      'sell land Franklin County Ohio',
+      'cash land buyers Franklin County OH',
+      'sell vacant lot Columbus Ohio',
+      'sell infill lot Columbus Ohio',
+      'sell inherited land Franklin County Ohio',
+      'sell land with back taxes Franklin County Ohio',
+    ],
+    why: `Franklin County is Ohio Valley Land Partners' first active Central Ohio sales campaign. It is not the Ohio River Valley, but it is a high-activity Columbus land market with steady demand for infill lots, residential vacant lots, teardown opportunities, and larger acreage on the edge of growth. We are actively speaking with sellers, builders, and land buyers in Franklin County and reviewing parcels street by street.`,
+    landTypes: [
+      'Columbus infill lots',
+      'Residential vacant lots',
+      'Larger acreage of 0.8 acres and above',
+      'Inherited land and estate parcels',
+      'Tax-delinquent lots',
+      'Teardown or redevelopment parcels',
+    ],
+    commonSituations: [
+      'Own a vacant Columbus lot and want a direct buyer',
+      'Inherited Franklin County land and do not want to list it',
+      'Owe back taxes or have a parcel that has become a burden',
+      'Have a small residential lot that agents have struggled to sell',
+      'Want a clean sale without showings, repair requests, or commission fees',
+    ],
+    faqs: [
+      {
+        q: 'Is Franklin County part of the Ohio Valley?',
+        a: 'No. Franklin County is the Columbus and Central Ohio market. Ohio Valley Land Partners is the company brand, and Franklin County is our first active sales campaign outside the core Ohio River Valley footprint.',
+      },
+      {
+        q: 'Do you buy small infill lots in Columbus?',
+        a: 'Yes. Franklin County is mainly an infill-lot and residential-lot campaign for us. We review access, utilities, zoning, frontage, nearby sales, and builder demand before making an offer.',
+      },
+      {
+        q: 'Do you buy larger acreage in Franklin County?',
+        a: 'Yes. We also review larger lots and acreage, especially parcels of 0.8 acres and above with strong access, clean ownership, and clear resale or development demand.',
+      },
+      {
+        q: 'How do you price Franklin County land?',
+        a: 'We compare recent land sales, active listings, utility access, zoning, buildability, tax status, and buyer demand in the specific ZIP or neighborhood. We then make a direct offer based on what the parcel can realistically support.',
+      },
+      {
+        q: 'Will you text me after I submit my property?',
+        a: 'For the first month of this campaign, our outreach is call-first. We use phone calls, voicemail when appropriate, and direct follow-up tasks rather than text campaigns.',
+      },
+    ],
+  },
+  {
     slug: 'belmont-county-oh',
     name: 'Belmont County',
     state: 'Ohio',

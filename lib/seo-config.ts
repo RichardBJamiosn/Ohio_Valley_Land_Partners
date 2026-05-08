@@ -1,10 +1,10 @@
 export const siteConfig = {
   name: 'Ohio Valley Land Partners',
-  description: 'Premier land wholesaling, residential development, and commercial real estate authority in the Ohio Valley region',
+  description: 'Premier land wholesaling, residential development, and commercial real estate authority in the Ohio Valley region and active Central Ohio campaign markets',
   url: 'https://ohiovalleylandpartners.com',
   ogImage: 'https://ohiovalleylandpartners.com/og.jpg',
   phone: '(614) 653-7430',
-  email: 'info@ovlandpartners.com',
+  email: 'info@ohiovalleylandpartners.com',
   // Author / founder — used in Article schema and About page
   // TODO: Replace with real name once About page is updated
   authorName: 'Richard B. Jamison',
@@ -27,6 +27,7 @@ export const siteConfig = {
     addressCountry: 'US',
   },
   serviceArea: [
+    'Franklin County, OH',
     'Belmont County, OH',
     'Jefferson County, OH',
     'Columbiana County, OH',
@@ -60,12 +61,13 @@ export const silos = {
   guides: {
     title: 'Ohio Valley Guides',
     path: '/ohio-valley-guides',
-    description: 'Comprehensive county-by-county real estate guides for the Ohio Valley region',
-    keywords: 'Ohio Valley real estate, county guides, local market analysis',
+    description: 'Comprehensive county-by-county real estate guides for the Ohio Valley region and active campaign markets',
+    keywords: 'Ohio Valley real estate, Franklin County land, county guides, local market analysis',
   },
 };
 
 export const counties = [
+  { name: 'Franklin County', state: 'OH', slug: 'franklin-county-oh' },
   { name: 'Belmont County', state: 'OH', slug: 'belmont-county-oh' },
   { name: 'Jefferson County', state: 'OH', slug: 'jefferson-county-oh' },
   { name: 'Columbiana County', state: 'OH', slug: 'columbiana-county-oh' },

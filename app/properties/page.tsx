@@ -6,11 +6,12 @@ import { InvestorIntakeForm } from '@/components/forms/investor-intake-form';
 
 export const metadata: Metadata = {
   title: 'Buy Land — Ohio Valley Land Partners',
-  description: 'Join our buyer network to get first access to off-market land deals in the Ohio Valley. Hunting tracts, farm ground, development sites, and investment parcels across eight counties.',
+  description: 'Join our buyer network to get first access to off-market land deals in the Ohio Valley and Franklin County. Hunting tracts, farm ground, development sites, infill lots, and investment parcels.',
   keywords: 'buy land Ohio Valley, off-market land deals Ohio, hunting land Ohio, farm ground Ohio West Virginia, land buyer network',
 };
 
 const counties = [
+  'Franklin County, OH',
   'Belmont County, OH',
   'Jefferson County, OH',
   'Columbiana County, OH',
@@ -50,7 +51,7 @@ export default function PropertiesPage() {
                   {[
                     { icon: Bell, text: 'First access — before any public listing' },
                     { icon: TreePine, text: 'Hunting, farm, development & investment parcels' },
-                    { icon: MapPin, text: 'All eight Ohio Valley counties' },
+                    { icon: MapPin, text: 'Ohio Valley counties plus Franklin County' },
                   ].map((item) => {
                     const Icon = item.icon;
                     return (
@@ -105,7 +106,8 @@ export default function PropertiesPage() {
               deal directly. No listing fees, no bidding wars, no agents in the middle.
             </p>
             <p className="text-muted-foreground leading-8">
-              If you want first access to Ohio Valley land, the buyer list is the only way to get it.
+              If you want first access to Ohio Valley and Franklin County land, the buyer list
+              is the only way to get it.
             </p>
             <div className="mt-8">
               <Link

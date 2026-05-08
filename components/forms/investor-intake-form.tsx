@@ -7,6 +7,7 @@ import { Label } from '@/components/ui/label';
 import { CheckCircle, Loader2 } from 'lucide-react';
 
 const counties = [
+  'Franklin County, OH',
   'Belmont County, OH',
   'Jefferson County, OH',
   'Columbiana County, OH',

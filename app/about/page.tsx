@@ -25,7 +25,7 @@ const principles = [
     icon: MapPin,
     title: 'Local. Not a Land Grab.',
     description:
-      'There is real concern in the Ohio Valley about outside investors sweeping in to buy family land cheap. We are not that. We are rooted here — buying in eight specific counties in Ohio and West Virginia because this is where we live, not because an algorithm pointed us here.',
+      'There is real concern in the Ohio Valley about outside investors sweeping in to buy family land cheap. We are not that. We are rooted here — buying in specific Ohio Valley counties and running a deliberate Franklin County campaign because we know these markets, not because an algorithm pointed us here.',
   },
   {
     icon: Heart,
@@ -57,8 +57,9 @@ export default function AboutPage() {
               </p>
               <p>
                 Ohio Valley Land Partners was built to change that — one parcel at a time,
-                in eight counties we know and care about. Direct, honest, and committed to
-                doing right by every seller we work with.
+                in counties we know and care about, including our active Franklin County
+                campaign. Direct, honest, and committed to doing right by every seller we
+                work with.
               </p>
             </div>
           </div>
@@ -160,9 +161,10 @@ export default function AboutPage() {
               needs the process to be simple.
             </p>
             <p>
-              We are not the right buyer for every deal. But for land in the Ohio Valley —
-              rural parcels, vacant lots, inherited properties, back-tax land — we are
-              ready to make a serious offer and follow through.
+              We are not the right buyer for every deal. But for land in the Ohio Valley
+              or Franklin County — rural parcels, vacant lots, inherited properties,
+              back-tax land, and infill lots — we are ready to make a serious offer
+              and follow through.
             </p>
           </div>
           <div className="mt-10 flex flex-wrap gap-4">

@@ -44,8 +44,8 @@ export function Footer() {
               />
             </Link>
             <p className="text-sm leading-6 text-white/60 max-w-xs">
-              Local cash land buyer serving eight counties across Ohio and West Virginia.
-              Intentional. Not international.
+              Local cash land buyer serving the Ohio Valley and our active Franklin County
+              campaign. Intentional. Not international.
             </p>
             <div className="flex flex-col gap-3 text-sm text-white/60">
               <div className="flex items-center gap-2">

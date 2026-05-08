@@ -8,12 +8,12 @@ const homepageFAQs = [
   {
     question: 'How long does it take to sell land to a cash buyer in the Ohio Valley?',
     answer:
-      'Ohio Valley Land Partners closes most transactions in 14–21 business days from signed purchase agreement. No lender approval, appraisal, or agent commission is required. Sellers in all 8 Ohio Valley counties — Belmont, Jefferson, Columbiana, Harrison, and Carroll in Ohio, and Ohio County, Marshall, and Brooke in West Virginia — receive a written cash offer within 24 hours of inquiry.',
+      'Ohio Valley Land Partners closes most transactions in 14–21 business days from signed purchase agreement when title is ready. No lender approval, appraisal, or agent commission is required. Sellers in our core Ohio Valley counties and our active Franklin County campaign receive a written cash offer after property review.',
   },
   {
     question: 'What types of land do you buy in the Ohio Valley?',
     answer:
-      'We buy vacant rural land, inherited land, tax-delinquent parcels, landlocked land, timber land, agricultural land, and land with no road access across all 8 Ohio Valley counties. We buy land in any condition — no clean-up, no survey, and no repairs required.',
+      'We buy vacant rural land, inherited land, tax-delinquent parcels, landlocked land, timber land, agricultural land, infill lots, and residential vacant lots across our Ohio Valley service area and Franklin County campaign. We buy land in any condition — no clean-up, no survey, and no repairs required.',
   },
   {
     question: 'Do I need a real estate agent to sell my land to you?',
@@ -40,17 +40,17 @@ const homepageFAQs = [
 const whatWeDo = [
   {
     name: silos.land.title,
-    description: 'Cash offers on vacant land, inherited property, and back-tax parcels across all eight Ohio Valley counties. No agents, no fees.',
+    description: 'Cash offers on vacant land, inherited property, back-tax parcels, and Franklin County infill lots. No agents, no fees.',
     href: silos.land.path,
     icon: TreePine,
     tag: 'Core Business',
   },
   {
     name: silos.guides.title,
-    description: 'County-by-county guides to selling land in the Ohio Valley — what land sells for, who buys it, and how the process works.',
+    description: 'County-by-county guides to selling land in the Ohio Valley and active campaign markets — what land sells for, who buys it, and how the process works.',
     href: silos.guides.path,
     icon: MapPin,
-    tag: '8 Counties',
+    tag: '9 Active',
   },
 ];
 
@@ -69,23 +69,23 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 text-center">
             <div className="flex flex-col items-center gap-2">
               <span className="text-5xl font-black text-amber">1.77M+</span>
-              <span className="text-sm font-semibold text-foreground">Acres in Our Market</span>
+              <span className="text-sm font-semibold text-foreground">Core Ohio Valley Acres</span>
               <span className="text-xs text-muted-foreground max-w-[200px]">
-                Combined land area across all 8 Ohio Valley counties we serve
+                Plus an active Franklin County campaign in Central Ohio
               </span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <span className="text-5xl font-black text-amber">370K+</span>
-              <span className="text-sm font-semibold text-foreground">People in Our Service Area</span>
+              <span className="text-sm font-semibold text-foreground">Core Service-Area Population</span>
               <span className="text-xs text-muted-foreground max-w-[200px]">
-                Serving the full Ohio Valley across Ohio and West Virginia
+                Serving the Ohio Valley while launching Franklin County campaign one
               </span>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <span className="text-5xl font-black text-amber">8</span>
-              <span className="text-sm font-semibold text-foreground">Counties. 2 States. One Buyer.</span>
+              <span className="text-5xl font-black text-amber">9</span>
+              <span className="text-sm font-semibold text-foreground">Active Counties. One Buyer.</span>
               <span className="text-xs text-muted-foreground max-w-[200px]">
-                The only cash land buyer focused exclusively on the Ohio Valley region
+                Eight Ohio Valley counties plus Franklin County, Ohio
               </span>
             </div>
           </div>
@@ -104,8 +104,9 @@ export default function Home() {
               We Buy Ohio Valley Land. That's It.
             </h2>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              No hedge fund. No call center. A local buyer with one focus — buying land in eight
-              Ohio Valley counties from sellers who want a fair deal and a fast close.
+              No hedge fund. No call center. A local buyer with one focus — buying land
+              in the Ohio Valley and Franklin County from sellers who want a fair deal
+              and a fast close.
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-4xl grid grid-cols-1 gap-8 sm:grid-cols-2">

@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 };
 
 const counties = [
+  { label: 'Franklin County, OH', slug: 'franklin-county-oh' },
   { label: 'Belmont County, OH', slug: 'belmont-county-oh' },
   { label: 'Jefferson County, OH', slug: 'jefferson-county-oh' },
   { label: 'Columbiana County, OH', slug: 'columbiana-county-oh' },
@@ -80,11 +81,12 @@ export default function LandPage() {
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-muted-foreground">
                   Vacant land, inherited property, back-tax parcels — we make cash offers on all of it,
-                  across eight counties in Ohio and West Virginia. Call within 24 hours. Close in 14 days.
+                  across the Ohio Valley and our active Franklin County campaign. Call within 24 hours.
+                  Close in 14 days when title is ready.
                 </p>
                 <ul className="mt-6 flex flex-col gap-3">
                   {[
-                    'Local buyer — rooted in the Ohio Valley',
+                    'Local buyer — rooted in the Ohio Valley and active in Franklin County',
                     'No agent fees or commissions — ever',
                     'Cash offer in 24 hours, close in 14 days',
                   ].map((point) => (
@@ -98,7 +100,7 @@ export default function LandPage() {
                 {/* County strip */}
                 <div className="mt-10 pt-8 border-t border-border">
                   <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-4">
-                    Counties We Serve
+                    Active Counties
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {counties.map((c) => (
@@ -170,8 +172,9 @@ export default function LandPage() {
               </div>
               <div className="mt-10 pt-8 border-t border-border">
                 <p className="text-sm text-muted-foreground mb-4">
-                  If your land is in one of our eight counties and you want to sell, we want to hear from you.
-                  Even if you're not sure it qualifies — call us anyway.
+                  If your land is in our Ohio Valley service area or the Franklin County campaign
+                  and you want to sell, we want to hear from you. Even if you're not sure it
+                  qualifies — call us anyway.
                 </p>
                 <Link
                   href="/"

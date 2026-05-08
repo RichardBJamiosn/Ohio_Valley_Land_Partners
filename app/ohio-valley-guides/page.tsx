@@ -23,11 +23,12 @@ export default function GuidesPage() {
             <div className="mx-auto max-w-3xl text-center">
               <p className="heading-serif text-amber text-2xl mb-4">County-by-county</p>
               <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-                Ohio Valley Land Seller Guides
+                Land Seller Guides
               </h1>
               <p className="mt-6 text-xl leading-8 text-muted-foreground">
                 What land sells for. Who buys it. How the process works. County-specific guides
-                for every market we operate in — written by the people who are actually buying land there.
+                for our Ohio Valley footprint and active campaign markets — written by the people
+                who are actually buying land there.
               </p>
             </div>
           </div>

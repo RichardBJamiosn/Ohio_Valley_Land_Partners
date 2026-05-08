@@ -32,9 +32,9 @@ export default function CommercialPage() {
                 are evaluated on a deal-by-deal basis.
               </p>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                If you have a commercial property in one of our eight counties and want to talk,
-                contact us directly. We don't run automated valuations — we evaluate real deals
-                with real numbers.
+                If you have a commercial property in our Ohio Valley service area or Franklin
+                County campaign and want to talk, contact us directly. We don't run automated
+                valuations — we evaluate real deals with real numbers.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
@@ -62,8 +62,8 @@ export default function CommercialPage() {
               {[
                 {
                   icon: MapPin,
-                  title: 'Ohio Valley Location',
-                  description: 'We only operate in our eight counties. Commercial parcels inside our service area are evaluated first.',
+                  title: 'Known-Market Location',
+                  description: 'We prioritize commercial parcels inside our Ohio Valley footprint and active campaign markets like Franklin County.',
                 },
                 {
                   icon: Building2,
