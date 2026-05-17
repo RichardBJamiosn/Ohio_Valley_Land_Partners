@@ -1,27 +1,15 @@
 import type { Metadata } from 'next';
 import { siteConfig } from '@/lib/seo-config';
-import { ContactForm } from '@/components/forms/contact-form';
 import { Phone, Mail } from 'lucide-react';
 import { Suspense } from 'react';
+import { ContactPageClient } from './contact-client';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
   description: 'Get in touch with Ohio Valley Land Partners. Contact our team for inquiries about selling land, joining our buyer network, or Land Scout partnerships.',
 };
 
-export default function ContactPage({
-  searchParams,
-}: {
-  searchParams: { type?: string };
-}) {
-  const leadType = searchParams.type as
-    | 'land'
-    | 'commercial'
-    | 'investor'
-    | 'partnership'
-    | 'inquiry'
-    | undefined;
-
+export default function ContactPage() {
   return (
     <div className="min-h-screen bg-background">
       <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
@@ -41,7 +29,7 @@ export default function ContactPage({
           <div className="lg:col-span-2">
             <div className="rounded-2xl border border-border bg-card p-8">
               <Suspense fallback={<div className="text-center py-8 text-muted-foreground">Loading form...</div>}>
-                <ContactForm defaultLeadType={leadType || 'inquiry'} />
+                <ContactPageClient />
               </Suspense>
             </div>
           </div>
