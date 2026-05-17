@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -210,8 +211,13 @@ export function InvestorIntakeForm() {
         )}
       </Button>
 
-      <p className="text-xs text-center text-muted-foreground">
-        No fees. No spam. We contact you only when a matching deal is available.
+      <p className="text-[11px] text-center text-muted-foreground leading-relaxed">
+        By submitting this form, you consent to receive SMS/text messages and phone calls
+        from Ohio Valley Land Partners regarding available deals matching your criteria.
+        Message frequency varies. Message &amp; data rates may apply. Reply STOP to opt out,
+        HELP for help. Consent is not a condition of purchase. See our{' '}
+        <Link href="/privacy" className="underline hover:text-foreground">Privacy Policy</Link> and{' '}
+        <Link href="/terms" className="underline hover:text-foreground">Terms of Service</Link>.
       </p>
     </form>
   );

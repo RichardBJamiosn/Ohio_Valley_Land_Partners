@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -106,8 +107,13 @@ export function SellerForm() {
         )}
       </Button>
 
-      <p className="text-xs text-center text-muted-foreground">
-        No fees. No obligation. We buy land in any condition across the Ohio Valley.
+      <p className="text-[11px] text-center text-muted-foreground leading-relaxed">
+        By submitting this form, you consent to receive SMS/text messages and phone calls
+        from Ohio Valley Land Partners regarding your property inquiry. Message frequency
+        varies. Message &amp; data rates may apply. Reply STOP to opt out, HELP for help.
+        Consent is not a condition of purchase. See our{' '}
+        <Link href="/privacy" className="underline hover:text-foreground">Privacy Policy</Link> and{' '}
+        <Link href="/terms" className="underline hover:text-foreground">Terms of Service</Link>.
       </p>
     </form>
   );
