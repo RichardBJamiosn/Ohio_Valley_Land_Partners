@@ -4,6 +4,7 @@ import { Poppins, Cormorant_Garamond } from 'next/font/google';
 import { MainNav } from '@/components/navigation/main-nav';
 import { Footer } from '@/components/navigation/footer';
 import { WebSiteSchema, PersonSchema } from '@/components/seo/json-ld';
+import { ChatWidget } from '@/components/chat-widget';
 import { siteConfig } from '@/lib/seo-config';
 import Script from 'next/script';
 
@@ -103,6 +104,7 @@ export default function RootLayout({
         <MainNav />
         <main className="min-h-screen">{children}</main>
         <Footer />
+        <ChatWidget />
       </body>
     </html>
   );
