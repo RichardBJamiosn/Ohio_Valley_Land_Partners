@@ -20,10 +20,10 @@ export const siteConfig = {
     // 'https://www.land.com/[listing]',                             // add after Land.com listing
   ] as string[],
   address: {
-    streetAddress: '100 Market Street',
-    addressLocality: 'Wheeling',
-    addressRegion: 'WV',
-    postalCode: '26003',
+    streetAddress: '2025 Riverside Drive, STE 35682',
+    addressLocality: 'Columbus',
+    addressRegion: 'OH',
+    postalCode: '43221',
     addressCountry: 'US',
   },
   serviceArea: [
