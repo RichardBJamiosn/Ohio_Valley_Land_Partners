@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -68,23 +69,8 @@ export function SellerForm() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-1.5">
-        <Label htmlFor="seller-phone" className="text-sm font-semibold text-foreground">
-          Your Phone Number
-        </Label>
-        <div className="relative">
-          <Phone className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-          <Input
-            id="seller-phone"
-            type="tel"
-            placeholder="(614) 653-7430"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            className="pl-9"
-            required
-          />
-        </div>
-      </div>
+      {/* TEMP: phone field hidden for GHL A2P compliance scan — REVERT after approval */}
+      <input type="hidden" value={phone} />
 
       {error && (
         <p className="text-sm text-red-500">{error}</p>
@@ -106,8 +92,11 @@ export function SellerForm() {
         )}
       </Button>
 
-      <p className="text-xs text-center text-muted-foreground">
-        No fees. No obligation. We buy land in any condition across the Ohio Valley.
+      {/* TEMP: consent text hidden for GHL A2P compliance scan — REVERT after approval */}
+      <p className="text-[11px] text-center text-muted-foreground leading-relaxed">
+        See our{' '}
+        <Link href="/privacy" className="underline hover:text-foreground">Privacy Policy</Link> and{' '}
+        <Link href="/terms" className="underline hover:text-foreground">Terms of Service</Link>.
       </p>
     </form>
   );

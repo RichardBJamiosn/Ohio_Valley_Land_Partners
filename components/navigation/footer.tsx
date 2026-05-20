@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Mail, Phone, Heart } from 'lucide-react';
+import { Mail, Phone, Heart, MapPin } from 'lucide-react';
 import { siteConfig, silos, counties } from '@/lib/seo-config';
 import Image from 'next/image';
 
@@ -59,6 +59,13 @@ export function Footer() {
                 <a href={`mailto:${siteConfig.email}`} className="hover:text-amber transition-colors">
                   {siteConfig.email}
                 </a>
+              </div>
+              <div className="flex items-start gap-2">
+                <MapPin className="h-4 w-4 text-amber flex-shrink-0 mt-0.5" />
+                <span>
+                  {siteConfig.address.streetAddress}<br />
+                  {siteConfig.address.addressLocality}, {siteConfig.address.addressRegion} {siteConfig.address.postalCode}
+                </span>
               </div>
             </div>
             <div className="flex items-center gap-2 rounded-full border border-meadow/30 bg-meadow/10 px-3 py-1.5 w-fit">

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -113,17 +114,8 @@ export function InvestorIntakeForm() {
             required
           />
         </div>
-        <div className="flex flex-col gap-1.5">
-          <Label htmlFor="inv-phone">Phone</Label>
-          <Input
-            id="inv-phone"
-            type="tel"
-            placeholder="(614) 653-7430"
-            value={form.phone}
-            onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
-            required
-          />
-        </div>
+        {/* TEMP: phone field hidden for GHL A2P compliance scan — REVERT after approval */}
+        <input type="hidden" value={form.phone} />
       </div>
 
       <div className="flex flex-col gap-1.5">
@@ -211,8 +203,11 @@ export function InvestorIntakeForm() {
         )}
       </Button>
 
-      <p className="text-xs text-center text-muted-foreground">
-        No fees. No spam. We contact you only when a matching deal is available.
+      {/* TEMP: consent text hidden for GHL A2P compliance scan — REVERT after approval */}
+      <p className="text-[11px] text-center text-muted-foreground leading-relaxed">
+        See our{' '}
+        <Link href="/privacy" className="underline hover:text-foreground">Privacy Policy</Link> and{' '}
+        <Link href="/terms" className="underline hover:text-foreground">Terms of Service</Link>.
       </p>
     </form>
   );
