@@ -538,6 +538,125 @@ export const blogPosts: BlogPost[] = [
   },
 
   {
+    slug: 'franklin-county-ohio-sell-vacant-land-2026',
+    title: 'How to Sell Vacant Land in Franklin County, Ohio for Cash in 2026',
+    metaDescription:
+      'Selling vacant land in Franklin County, Ohio in 2026? Get a cash offer in days, close in 14–21 days. No agent fees. Inherited lots, back taxes, landlocked parcels welcome.',
+    category: 'County Guides',
+    datePublished: '2026-05-20',
+    dateModified: '2026-05-20',
+    readingTime: '7 min read',
+    excerpt:
+      'Franklin County land owners have options — from inherited lots to tax-delinquent parcels. Here\'s how to sell for cash in 2026 and what the process actually looks like.',
+    keywords: [
+      'sell land Franklin County Ohio',
+      'Franklin County cash land buyer',
+      'vacant lot Columbus Ohio sale',
+      'Franklin County tax delinquent land',
+      'sell inherited land Franklin County',
+    ],
+    body: `
+<h2>Why Franklin County Land Is Moving Right Now</h2>
+
+<p>Franklin County is the most populous county in Ohio, anchored by Columbus, which has added residents consistently for over a decade. That growth pressure pushes outward — infill lots in established neighborhoods, transitional parcels on the urban fringe, and agricultural acreage on the county's eastern and southern edges all see buyer interest for different reasons. Residential builders, land investors, and local developers all operate in this market simultaneously.</p>
+
+<p>The Intel semiconductor campus in neighboring Licking County has also kept infrastructure investment and speculation elevated across the Columbus metro corridor, which includes eastern Franklin County parcels near the New Albany and Gahanna areas. Even parcels that seem out of the way are drawing second looks from buyers who are watching long-term development patterns.</p>
+
+<p>That said, not every parcel sells quickly on the open market. Landlocked lots, odd-shaped remnant parcels, land with title complications, and rural acreage far from utilities can sit for months or years with a traditional listing. For those owners, a direct cash sale often makes more sense than waiting.</p>
+
+<h2>What Franklin County Land Is Typically Worth</h2>
+
+<p>Land value in Franklin County varies enormously depending on location, access, zoning, and use. A rough framework:</p>
+
+<ul>
+  <li><strong>Urban infill lots (Columbus city limits):</strong> Typically range from $30,000 to $150,000+ per lot depending on zoning and neighborhood, based on Franklin County Auditor parcel records</li>
+  <li><strong>Suburban fringe parcels (Dublin, Hilliard, Westerville, Reynoldsburg area):</strong> Often priced by the acre; demand from builders can push prices significantly above assessed value</li>
+  <li><strong>Agricultural and rural acreage (southern/eastern Franklin County):</strong> Per USDA NASS, Ohio cropland averaged approximately $7,600 per acre in 2024; Franklin County farmland near urban growth areas typically commands a premium above statewide averages</li>
+  <li><strong>Landlocked or access-impaired parcels:</strong> Can sell at steep discounts — sometimes 40–60% below comparable accessible land — because the buyer pool is limited and development potential is constrained</li>
+</ul>
+
+<p>The Franklin County Auditor's office maintains a publicly accessible property search portal where you can look up your parcel's current assessed value, recent transfer history, and tax status. Assessed value is not market value, but it gives you a baseline. For a faster read on market value, request a cash offer and compare.</p>
+
+<h2>Franklin County Property Taxes: What Sellers Should Know</h2>
+
+<p>Ohio property taxes are assessed by the county auditor and collected by the county treasurer. In Franklin County, tax rates vary by taxing district — a parcel inside Columbus city limits carries a different millage rate than one in a township like Plain or Franklin Township.</p>
+
+<p>If your taxes are current, that's straightforward. If you've fallen behind, it's important to understand the timeline before you lose options:</p>
+
+<ol>
+  <li>Taxes become delinquent on the first day they go unpaid past the due date</li>
+  <li>After two years of delinquency, the Franklin County Treasurer may certify the parcel to the Delinquent Tax and Assessment Collection (DTAC) list</li>
+  <li>The county can eventually initiate a foreclosure action under <strong>ORC § 5721.18</strong>, which governs tax certificate foreclosures in Ohio</li>
+  <li>Once a foreclosure is filed, your time to act shrinks considerably</li>
+</ol>
+
+<p>A cash buyer can close fast enough to pay off the tax lien at settlement and put remaining proceeds in your pocket — but only if you act before the foreclosure process closes that window. If you're uncertain where your parcel stands, contact the Franklin County Treasurer's office directly. Their delinquency records are public.</p>
+
+<h2>Selling Inherited Land in Franklin County Without Probate Headaches</h2>
+
+<p>A significant share of vacant land in Franklin County is held by heirs who never intended to own it. Grandparents bought a lot in the 1960s, the estate was never formally settled, and now three or four family members have a fractional interest in a parcel none of them want.</p>
+
+<p>Under <strong>ORC § 2113.39</strong>, an executor appointed by probate court has authority to sell real property as part of estate administration. If the estate was never opened — or was opened and not fully closed — a title company or real estate attorney will typically require that the probate process be completed before any deed can transfer cleanly.</p>
+
+<p>There are two practical paths forward:</p>
+
+<ul>
+  <li><strong>Open or reopen probate</strong> in the Franklin County Probate Court (located at the Franklin County Courthouse in downtown Columbus) to get a proper executor appointed and clear the title</li>
+  <li><strong>Work with an experienced cash buyer</strong> who has handled heir property transactions before and can work alongside a probate attorney to structure the closing correctly</li>
+</ul>
+
+<p>Ohio also recognizes the Uniform Partition of Heirs Property Act (UPHPA), enacted as part of <strong>ORC § 5307</strong> amendments, which gives co-heirs some additional protections when one heir wants to force a sale. If family members disagree about what to do with inherited Franklin County land, knowing these rules matters. See our post on <a href="/blog/sell-inherited-land-ohio-probate">selling inherited land in Ohio probate</a> for a fuller breakdown.</p>
+
+<h2>The Direct Cash Sale Process: What to Expect</h2>
+
+<p>Selling land to a direct buyer like Ohio Valley Land Partners is not the same as selling a house. There's no inspection contingency, no lender appraisal, and no open house. The process is simpler:</p>
+
+<ol>
+  <li><strong>You submit basic parcel information</strong> — county, parcel number, or address. No paperwork required upfront.</li>
+  <li><strong>We review the parcel</strong> — using county auditor records, GIS data, and title searches to understand what you have.</li>
+  <li><strong>We make a written cash offer</strong> — typically within a few business days. No obligation to accept.</li>
+  <li><strong>You decide.</strong> If you accept, we move to contract. If you want time to think or get other quotes, that's your right.</li>
+  <li><strong>We close at a licensed title company</strong> — typically within 14 to 21 days of a signed contract. You receive proceeds by wire or check at closing.</li>
+</ol>
+
+<p>There are no agent commissions deducted from your proceeds, no listing fees, and no carrying costs during a long listing period. For landowners who want certainty over maximum price, this trade-off makes sense. For owners who have time and a clean-title parcel in a high-demand area, listing with an agent may net more — that's an honest assessment worth making.</p>
+
+<p>Learn more about what to expect county-by-county in our <a href="/ohio-valley-guides/franklin-county-oh">Franklin County Ohio Valley land guide</a>.</p>
+
+<h2>Common Reasons Franklin County Landowners Sell to a Cash Buyer</h2>
+
+<p>Based on the types of calls and inquiries we receive, Franklin County landowners typically reach out when one or more of these situations applies:</p>
+
+<ul>
+  <li>They inherited land from a parent or grandparent and don't want to maintain it or pay taxes on it</li>
+  <li>They owe back taxes and want to close before a foreclosure is filed</li>
+  <li>The parcel has a title defect, easement dispute, or access problem that makes it hard to list traditionally</li>
+  <li>They live out of state and managing a Columbus-area parcel from a distance has become a burden</li>
+  <li>They simply want a fast, certain close — no contingencies, no waiting on a buyer's financing</li>
+  <li>The lot is landlocked or too small to develop and they've been unable to sell it any other way</li>
+</ul>
+
+<p>None of these situations is unusual, and none of them disqualifies a parcel from a cash offer. We buy land in as-is condition, with known issues on the table.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>How quickly can I get a cash offer for my Franklin County land?</h3>
+<p>After you submit your parcel details through our contact page, we typically review the parcel and return a written offer within 2 to 5 business days. The review involves checking Franklin County Auditor records, GIS parcel data, and title history — no visit to the property is required for an initial offer. If additional information is needed, we'll reach out directly.</p>
+
+<h3>Do I need to hire an attorney to sell land in Franklin County?</h3>
+<p>Ohio does not require a seller to retain an attorney for a real estate transaction, but it is often advisable — particularly for inherited parcels, estates in probate, or any situation involving multiple heirs or a title defect. For a straightforward cash sale, a licensed title company handles the closing and prepares the deed. If your situation involves probate, we can refer you to Ohio attorneys who handle estate land sales regularly.</p>
+
+<h3>What if my Franklin County parcel has unpaid taxes?</h3>
+<p>A cash buyer can still purchase a tax-delinquent parcel. At closing, any outstanding tax balance is typically paid from the sale proceeds before the remainder is disbursed to the seller. The key is acting before the Franklin County Treasurer initiates a formal tax certificate foreclosure under ORC § 5721.18 — at that stage, legal costs accumulate and your net proceeds shrink. Contact the Franklin County Treasurer at the county courthouse or their public website to confirm your current balance before you proceed.</p>
+
+<h3>Will you buy land that is landlocked or has no road access?</h3>
+<p>Yes. We evaluate landlocked parcels on a case-by-case basis. Landlocked land in Ohio may have legal remedies available, including prescriptive easement claims or negotiated access agreements with neighboring owners under Ohio common law. We account for these factors when structuring an offer. The offer will reflect the limited buyer pool, but we do not automatically decline parcels with access issues.</p>
+
+<p>If you own vacant land, a rural lot, or an inherited parcel in Franklin County and you want a straightforward cash offer with no obligation, start with our <a href="/sell-land/franklin-county-oh">Franklin County land selling page</a>. We close in 14 to 21 days, pay no agent fees, and handle the paperwork from contract to closing.</p>
+    `,
+  },
+
+  {
     slug: 'brooke-harrison-carroll-county-land-buyers',
     title: 'Cash Land Buyers in Brooke, Harrison, and Carroll Counties',
     metaDescription:

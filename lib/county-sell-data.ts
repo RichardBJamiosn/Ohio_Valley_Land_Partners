@@ -39,7 +39,7 @@ export const countySellPages: CountySellData[] = [
       'sell inherited land Franklin County Ohio',
       'sell land with back taxes Franklin County Ohio',
     ],
-    why: `Franklin County is Ohio Valley Land Partners' first active Central Ohio sales campaign. It is not the Ohio River Valley, but it is a high-activity Columbus land market with steady demand for infill lots, residential vacant lots, teardown opportunities, and larger acreage on the edge of growth. We are actively speaking with sellers, builders, and land buyers in Franklin County and reviewing parcels street by street.`,
+    why: `Franklin County continues to be one of Ohio's most active land markets, driven by Columbus's sustained population growth and ongoing commercial and residential development pressure. Areas along the US-33 corridor toward Dublin and Hilliard, the New Albany–Plain Township zone near the Intel semiconductor campus, and infill pockets within Columbus city limits have all seen increased buyer interest from developers and investors. Ohio Valley Land Partners closes directly on Franklin County parcels in 14–21 days, with no agent fees — whether it's an inherited lot, a tax-delinquent parcel, or acreage on the urban fringe.`,
     landTypes: [
       'Columbus infill lots',
       'Residential vacant lots',
@@ -76,6 +76,14 @@ export const countySellPages: CountySellData[] = [
         q: 'Will you text me after I submit my property?',
         a: 'For the first month of this campaign, our outreach is call-first. We use phone calls, voicemail when appropriate, and direct follow-up tasks rather than text campaigns.',
       },
+      {
+        q: 'Can I sell land in Franklin County if the property taxes are past due?',
+        a: 'Yes — owing back taxes does not prevent you from selling vacant land in Franklin County. Under ORC § 5721.181, delinquent taxes become a lien on the property, but that lien is typically paid at or before closing from sale proceeds, so you walk away clean. Ohio Valley Land Partners buys tax-delinquent lots regularly and handles the payoff coordination as part of closing.',
+      },
+      {
+        q: 'How does Franklin County\'s land split process affect my timeline if I want to sell part of my lot?',
+        a: 'Splitting a parcel in Franklin County requires approval through the Franklin County Engineer\'s Office and, for lots inside Columbus city limits, may also require subdivision review. This process can take several weeks to several months depending on parcel size and zoning. Ohio Valley Land Partners can purchase the entire parcel as-is — no surveying or split approval required on your end.',
+      },
     ],
   },
   {
@@ -95,7 +103,7 @@ export const countySellPages: CountySellData[] = [
       'sell inherited land Belmont County Ohio',
       'sell land St Clairsville Ohio',
     ],
-    why: `Belmont County is one of the most active land markets in eastern Ohio. Located along the Ohio River corridor with significant energy sector activity and proximity to Wheeling, WV, parcels here attract a wide range of buyers — from recreational hunters to energy investors to rural residential developers. We know the Belmont County market well and can move quickly on any parcel.`,
+    why: `Belmont County's land market is shaped by two distinct forces: the ongoing presence of natural resource activity along the Utica and Marcellus shale plays, and the county's position along the I-70 corridor connecting Columbus to Wheeling, WV. Surface parcels near St. Clairsville, Barnesville, and Shadyside attract interest from energy-adjacent buyers, agricultural operators, and buy-and-hold investors. Ohio Valley Land Partners purchases Belmont County land directly, in as-is condition, for cash — whether mineral rights are attached and unsevered or the surface estate alone. We close in 14–21 days.`,
     landTypes: [
       'Vacant rural lots',
       'Agricultural and farm ground',
@@ -127,6 +135,14 @@ export const countySellPages: CountySellData[] = [
       {
         q: 'Do I need to hire a real estate agent to sell to you?',
         a: 'No. We buy directly. No agent, no commission, no listing. You deal directly with us from offer to closing.',
+      },
+      {
+        q: 'Does having oil, gas, or mineral rights attached to my Belmont County land affect how I sell it?',
+        a: 'It can, and it\'s one of the most important questions to clarify before accepting an offer. Belmont County sits within Ohio\'s Utica and Marcellus shale formation areas, and mineral rights — whether severed from the surface or still attached — can significantly affect a parcel\'s value. Review your deed and any recorded Memorandums of Oil and Gas Lease at the Belmont County Recorder\'s Office to understand what you own. Ohio Valley Land Partners purchases surface rights and, where applicable, unsevered mineral interests.',
+      },
+      {
+        q: 'What happens to my Belmont County land if it goes into the county tax forfeiture process?',
+        a: 'Under ORC § 5723.01, land with unpaid taxes can eventually be certified to the State of Ohio as forfeited land, at which point it may be sold through the Belmont County Auditor\'s forfeited land sale and the original owner loses all interest. If your Belmont County property has accumulated delinquent taxes, selling to a cash buyer before forfeiture is initiated is typically the fastest and cleanest option — you receive proceeds rather than walking away with nothing.',
       },
     ],
   },
