@@ -28,10 +28,10 @@ export function LocalBusinessSchema({
     })),
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 40.0640,
-      longitude: -80.7209,
+      latitude: 39.9612,
+      longitude: -83.0007,
     },
-    hasMap: 'https://maps.google.com/?q=100+Market+Street+Wheeling+WV+26003',
+    hasMap: 'https://maps.google.com/?q=2025+Riverside+Drive+STE+35682+Columbus+OH+43221',
     ...(siteConfig.sameAs.length > 0 && { sameAs: siteConfig.sameAs }),
   };
 
