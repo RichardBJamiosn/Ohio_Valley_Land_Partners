@@ -69,23 +69,8 @@ export function SellerForm() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-1.5">
-        <Label htmlFor="seller-phone" className="text-sm font-semibold text-foreground">
-          Your Phone Number
-        </Label>
-        <div className="relative">
-          <Phone className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-          <Input
-            id="seller-phone"
-            type="tel"
-            placeholder="(614) 653-7430"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            className="pl-9"
-            required
-          />
-        </div>
-      </div>
+      {/* Phone field hidden for GHL A2P compliance — GHL widget is the single opt-in source */}
+      <input type="hidden" value={phone} />
 
       {error && (
         <p className="text-sm text-red-500">{error}</p>
@@ -108,10 +93,7 @@ export function SellerForm() {
       </Button>
 
       <p className="text-[11px] text-center text-muted-foreground leading-relaxed">
-        By submitting this form, you consent to receive SMS/text messages and phone calls
-        from Ohio Valley Land Partners regarding your property inquiry. Message frequency
-        varies. Message &amp; data rates may apply. Reply STOP to opt out, HELP for help.
-        Consent is not a condition of purchase. See our{' '}
+        See our{' '}
         <Link href="/privacy" className="underline hover:text-foreground">Privacy Policy</Link> and{' '}
         <Link href="/terms" className="underline hover:text-foreground">Terms of Service</Link>.
       </p>
