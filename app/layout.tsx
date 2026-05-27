@@ -87,16 +87,21 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${cormorant.variable}`}>
       <head>
-        {/* GHL LeadConnector widget — in <head> so A2P compliance scanner sees it in raw HTML */}
+        {/* GHL LeadConnector widget — both script and element for scanner detection */}
         <script
           src="https://widgets.leadconnectorhq.com/loader.js"
           data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
           data-widget-id="6a060e2aed0c5f3c6e1cc57b"
           data-source="WEB_USER"
-          async
         />
       </head>
       <body className={poppins.className}>
+        {/* @ts-ignore - GHL custom element, must be in body HTML for scanner */}
+        <chat-widget
+          data-widget-id="6a060e2aed0c5f3c6e1cc57b"
+          data-source="WEB_USER"
+          location-id="bNT4wp0nukIQdBJbQDaa"
+        />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-7FQDXC8DVC"
           strategy="afterInteractive"
