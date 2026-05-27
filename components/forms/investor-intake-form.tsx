@@ -114,8 +114,17 @@ export function InvestorIntakeForm() {
             required
           />
         </div>
-        {/* TEMP: phone field hidden for GHL A2P compliance scan — REVERT after approval */}
-        <input type="hidden" value={form.phone} />
+        <div className="flex flex-col gap-1.5">
+          <Label htmlFor="inv-phone">Phone</Label>
+          <Input
+            id="inv-phone"
+            type="tel"
+            placeholder="(614) 653-7430"
+            value={form.phone}
+            onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
+            required
+          />
+        </div>
       </div>
 
       <div className="flex flex-col gap-1.5">
@@ -203,9 +212,11 @@ export function InvestorIntakeForm() {
         )}
       </Button>
 
-      {/* TEMP: consent text hidden for GHL A2P compliance scan — REVERT after approval */}
       <p className="text-[11px] text-center text-muted-foreground leading-relaxed">
-        See our{' '}
+        By submitting this form, you consent to receive SMS/text messages and phone calls
+        from Ohio Valley Land Partners regarding available deals matching your criteria.
+        Message frequency varies. Message &amp; data rates may apply. Reply STOP to opt out,
+        HELP for help. Consent is not a condition of purchase. See our{' '}
         <Link href="/privacy" className="underline hover:text-foreground">Privacy Policy</Link> and{' '}
         <Link href="/terms" className="underline hover:text-foreground">Terms of Service</Link>.
       </p>
