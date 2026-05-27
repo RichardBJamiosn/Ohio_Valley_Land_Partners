@@ -4,7 +4,6 @@ import { Poppins, Cormorant_Garamond } from 'next/font/google';
 import { MainNav } from '@/components/navigation/main-nav';
 import { Footer } from '@/components/navigation/footer';
 import { WebSiteSchema, PersonSchema } from '@/components/seo/json-ld';
-import { ChatWidget } from '@/components/chat-widget';
 import { siteConfig } from '@/lib/seo-config';
 import Script from 'next/script';
 
@@ -86,21 +85,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${poppins.variable} ${cormorant.variable}`}>
-      <head>
-        {/* GHL LeadConnector widget — both script and element for scanner detection */}
+      <body className={poppins.className}>
+        {/* GHL LeadConnector A2P widget embed. Keep this as raw HTML for scanner detection. */}
+        <div
+          data-chat-widget=""
+          data-widget-id="6a1730411b5a98ef9dec746a"
+          data-location-id="bNT4wp0nukIQdBJbQDaa"
+        />
         <script
           src="https://widgets.leadconnectorhq.com/loader.js"
           data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-          data-widget-id="6a060e2aed0c5f3c6e1cc57b"
+          data-widget-id="6a1730411b5a98ef9dec746a"
+          data-location-id="bNT4wp0nukIQdBJbQDaa"
           data-source="WEB_USER"
-        />
-      </head>
-      <body className={poppins.className}>
-        {/* @ts-ignore - GHL custom element, must be in body HTML for scanner */}
-        <chat-widget
-          data-widget-id="6a060e2aed0c5f3c6e1cc57b"
-          data-source="WEB_USER"
-          location-id="bNT4wp0nukIQdBJbQDaa"
         />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-7FQDXC8DVC"
@@ -119,7 +116,6 @@ export default function RootLayout({
         <MainNav />
         <main className="min-h-screen">{children}</main>
         <Footer />
-        {/* GHL widget now loaded via <head> script tag for A2P scanner visibility */}
       </body>
     </html>
   );
