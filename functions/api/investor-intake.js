@@ -3,8 +3,8 @@ export async function onRequestPost(context) {
     const body = await context.request.json();
     const { name, email, phone, counties, acreage, useCase, budget } = body;
 
-    if (!name?.trim() || !email?.trim() || !phone?.trim()) {
-      return new Response(JSON.stringify({ error: 'Name, email, and phone are required' }), {
+    if (!name?.trim() || !email?.trim()) {
+      return new Response(JSON.stringify({ error: 'Name and email are required' }), {
         status: 400,
         headers: { 'Content-Type': 'application/json' },
       });
@@ -24,7 +24,7 @@ export async function onRequestPost(context) {
           <h2>New Investor / Deal List Signup</h2>
           <p><strong>Name:</strong> ${name.trim()}</p>
           <p><strong>Email:</strong> ${email.trim()}</p>
-          <p><strong>Phone:</strong> ${phone.trim()}</p>
+          <p><strong>Phone:</strong> ${phone?.trim() || 'Not collected on this form. Phone/SMS opt-in is handled by the GHL chat widget.'}</p>
           <p><strong>Counties of Interest:</strong> ${counties?.join(', ') || 'Not specified'}</p>
           <p><strong>Acreage Range:</strong> ${acreage || 'Not specified'}</p>
           <p><strong>Intended Use:</strong> ${useCase || 'Not specified'}</p>

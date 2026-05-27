@@ -69,8 +69,8 @@ export function InvestorIntakeForm() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError('');
-    if (!form.name || !form.email || !form.phone || form.counties.length === 0) {
-      setError('Name, email, phone, and at least one county are required.');
+    if (!form.name || !form.email || form.counties.length === 0) {
+      setError('Name, email, and at least one county are required.');
       return;
     }
     setLoading(true);

@@ -5,11 +5,11 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { CheckCircle, Loader2, Phone, MapPin } from 'lucide-react';
+import { CheckCircle, Loader2, Mail, MapPin } from 'lucide-react';
 
 export function SellerForm() {
   const [address, setAddress] = useState('');
-  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
@@ -17,7 +17,7 @@ export function SellerForm() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError('');
-    if (!address.trim() || !phone.trim()) {
+    if (!address.trim() || !email.trim()) {
       setError('Both fields are required.');
       return;
     }
@@ -26,7 +26,7 @@ export function SellerForm() {
       const res = await fetch('/api/seller', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ address, phone }),
+        body: JSON.stringify({ address, email }),
       });
       if (!res.ok) throw new Error('Submission failed');
       setSubmitted(true);
@@ -43,7 +43,7 @@ export function SellerForm() {
         <CheckCircle className="h-12 w-12 text-green-500" />
         <h3 className="text-xl font-bold text-foreground">We Got It</h3>
         <p className="text-muted-foreground text-sm max-w-xs">
-          Expect a call within 24 hours with your cash offer. No obligation, no pressure.
+          We&apos;ll review the property details and follow up shortly. No obligation, no pressure.
         </p>
       </div>
     );
@@ -69,8 +69,23 @@ export function SellerForm() {
         </div>
       </div>
 
-      {/* Phone field hidden for GHL A2P compliance — GHL widget is the single opt-in source */}
-      <input type="hidden" value={phone} />
+      <div className="flex flex-col gap-1.5">
+        <Label htmlFor="seller-email" className="text-sm font-semibold text-foreground">
+          Your Email
+        </Label>
+        <div className="relative">
+          <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <Input
+            id="seller-email"
+            type="email"
+            placeholder="you@example.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="pl-9"
+            required
+          />
+        </div>
+      </div>
 
       {error && (
         <p className="text-sm text-red-500">{error}</p>

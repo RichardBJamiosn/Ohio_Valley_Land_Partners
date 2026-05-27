@@ -1,10 +1,10 @@
 export async function onRequestPost(context) {
   try {
     const body = await context.request.json();
-    const { address, phone } = body;
+    const { address, email } = body;
 
-    if (!address?.trim() || !phone?.trim()) {
-      return new Response(JSON.stringify({ error: 'Address and phone are required' }), {
+    if (!address?.trim() || !email?.trim()) {
+      return new Response(JSON.stringify({ error: 'Address and email are required' }), {
         status: 400,
         headers: { 'Content-Type': 'application/json' },
       });
@@ -23,7 +23,8 @@ export async function onRequestPost(context) {
         html: `
           <h2>New Seller Lead</h2>
           <p><strong>Property Address:</strong> ${address.trim()}</p>
-          <p><strong>Phone:</strong> ${phone.trim()}</p>
+          <p><strong>Email:</strong> ${email.trim()}</p>
+          <p><strong>Phone:</strong> Not collected on this form. Phone/SMS opt-in is handled by the GHL chat widget.</p>
           <p><strong>Source:</strong> Homepage — Get My Cash Offer form</p>
         `,
       }),
