@@ -78,7 +78,7 @@ export default function Home() {
               <span className="text-5xl font-black text-amber">370K+</span>
               <span className="text-sm font-semibold text-foreground">Core Service-Area Population</span>
               <span className="text-xs text-muted-foreground max-w-[200px]">
-                Serving the Ohio Valley while launching Franklin County campaign one
+                Serving the Ohio Valley while launching a thriving builder-buyer community.
               </span>
             </div>
             <div className="flex flex-col items-center gap-2">
