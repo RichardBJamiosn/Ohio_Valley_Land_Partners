@@ -82,7 +82,7 @@ export function MainNav() {
             href="/"
             className="rounded-lg bg-amber px-4 py-2 text-sm font-semibold text-forest hover:bg-amber/90 transition-colors"
           >
-            Get a Cash Offer
+            Analysis & Offer
           </Link>
           <Link
             href="/investor-portal"
@@ -149,7 +149,7 @@ export function MainNav() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full rounded-lg bg-amber py-3 text-center text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
               >
-                Get a Cash Offer
+                Analysis & Offer
               </Link>
               <Link
                 href="/investor-portal"

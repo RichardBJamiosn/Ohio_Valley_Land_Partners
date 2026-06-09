@@ -78,7 +78,7 @@ export function HeroSection() {
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-white/70">
                   We buy vacant land, inherited property, and back-tax parcels across the Ohio
-                  Valley and our active Franklin County campaign. Cash offer after review.
+                  Valley and our active Franklin County campaign. Full offer after review.
                   No agents, no fees, no out-of-state runaround.
                 </p>
                 <ul className="mt-6 flex flex-col gap-3">
