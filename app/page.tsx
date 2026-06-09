@@ -83,9 +83,9 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center gap-2">
               <span className="text-5xl font-black text-amber">9</span>
-              <span className="text-sm font-semibold text-foreground">Active Counties. One Buyer.</span>
+              <span className="text-sm font-semibold text-foreground">Active Campaigns Across Ohio</span>
               <span className="text-xs text-muted-foreground max-w-[200px]">
-                Eight Ohio Valley counties plus Franklin County, Ohio
+                Nine Ohio Valley Campaigns actively giving back to local communities.
               </span>
             </div>
           </div>
