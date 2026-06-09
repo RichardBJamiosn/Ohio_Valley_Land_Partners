@@ -71,7 +71,7 @@ export default function Home() {
               <span className="text-5xl font-black text-amber">1.77M+</span>
               <span className="text-sm font-semibold text-foreground">Core Ohio Valley Acres</span>
               <span className="text-xs text-muted-foreground max-w-[200px]">
-                Plus an active Franklin County campaign in Central Ohio
+                Multiple active campaigns across the entire Ohio Valley
               </span>
             </div>
             <div className="flex flex-col items-center gap-2">
