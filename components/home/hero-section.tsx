@@ -81,6 +81,7 @@ export function HeroSection() {
                   Valley with active campaigns in Franklin, Linkoln, Geaoga & Warren counties. Full offer after review.
                   No agents, no fees, no out-of-state runaround.
                 </p>
+                {/* force Cloudflare Pages rebuild - user multiple hard refreshes no luck; dcf01c2 hero counties text + prior menu "Analysis & Offer" */}
                 <ul className="mt-6 flex flex-col gap-3">
                   {sellerTrustPoints.map((point) => (
                     <li key={point} className="flex items-center gap-3 text-sm font-medium text-white/80">
