@@ -78,9 +78,9 @@ export default function CommunityPage() {
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 text-center">
             <div className="flex flex-col items-center gap-2 p-6">
               <span className="text-4xl font-black text-amber">5%</span>
-              <span className="text-sm font-semibold text-foreground">of Every Closing</span>
+              <span className="text-sm font-semibold text-foreground">of All Profits</span>
               <span className="text-xs text-muted-foreground max-w-[200px]">
-                5% of every land closing goes directly to our community partners
+                5% of all profits goes directly to our community partners
               </span>
             </div>
             <div className="flex flex-col items-center gap-2 p-6">
