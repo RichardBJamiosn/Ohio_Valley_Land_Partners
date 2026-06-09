@@ -2,15 +2,15 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { MapPin, Clock, DollarSign, TreePine, ShieldCheck, Users } from 'lucide-react';
+import { MapPin, Clock, DollarSign, TreePine, ShieldCheck, Users, Calendar, Target } from 'lucide-react';
 import { SellerForm } from '@/components/forms/seller-form';
 import { InvestorIntakeForm } from '@/components/forms/investor-intake-form';
 
 const stats = [
-  { label: 'Cash Offer', value: '24 hrs', icon: Clock },
-  { label: 'Close Timeline', value: '14 Days', icon: DollarSign },
-  { label: 'Core Acres', value: '1.77M+', icon: TreePine },
-  { label: 'Active Counties', value: '9', icon: MapPin },
+  { label: 'Full Analysis', value: '24 hrs', icon: Clock },
+  { label: 'Close Timeline', value: '30 Days', icon: Calendar },
+  { label: 'Circumstances Apply', value: '14', icon: ShieldCheck },
+  { label: 'Active Campaigns', value: '', icon: Target },
 ];
 
 const serviceRegions = [
