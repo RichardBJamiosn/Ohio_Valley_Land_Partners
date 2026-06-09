@@ -94,7 +94,7 @@ export default function CommunityPage() {
               <span className="text-4xl font-black text-amber">Ohio Valley</span>
               <span className="text-sm font-semibold text-foreground">Stays in the Ohio Valley</span>
               <span className="text-xs text-muted-foreground max-w-[200px]">
-                Every dollar goes to organizations working specifically in the communities we serve
+                5% of all profits goes directly to organizations working specifically in the communities we serve
               </span>
             </div>
           </div>
