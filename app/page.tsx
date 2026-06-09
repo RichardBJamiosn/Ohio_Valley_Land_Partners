@@ -31,7 +31,7 @@ const homepageFAQs = [
       'In many cases, yes. We work with sellers in the probate process and can close once the executor has the authority to transfer title. We are not legal or licensed experts and strongly advise seeking attorney advice. Contact us and we will review your specific situation.',
   },
   {
-    question: 'How do you determine your cash offer on a piece of land?',
+    question: 'How do you determine your offer on a piece of land?',
     answer:
       'Our offer is based on comparable land sales from the past 12 months in the county, the parcel\'s access (road frontage or landlocked), zoning classification, any outstanding liens or taxes, and our intended use of the property. We provide a written offer with no obligation — you are free to accept, decline, or compare it with other options.',
   },
