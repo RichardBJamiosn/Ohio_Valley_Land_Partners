@@ -134,7 +134,7 @@ export function HeroSection() {
                 className="inline-flex items-center gap-2 rounded-full border border-meadow/40 bg-meadow/10 px-4 py-2 text-xs font-medium text-meadow hover:bg-meadow/20 transition-colors"
               >
                 <span className="h-1.5 w-1.5 rounded-full bg-meadow" />
-                5% of every closing supports Ohio Valley communities
+                5% of profits. All profits supports Ohio Valley communities
               </Link>
             </div>
           </div>
