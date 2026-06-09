@@ -6,20 +6,15 @@ import { InvestorIntakeForm } from '@/components/forms/investor-intake-form';
 
 export const metadata: Metadata = {
   title: 'Buy Land — Ohio Valley Land Partners',
-  description: 'Join our buyer network to get first access to off-market land deals in the Ohio Valley and Franklin County. Hunting tracts, farm ground, development sites, infill lots, and investment parcels.',
+  description: 'Join our buyer network to get first access to off-market land deals across the Ohio Valley (primarily Ohio, reaching into West Virginia, Kentucky, and Pennsylvania). Hunting tracts, farm ground, development sites, infill lots, and investment parcels.',
   keywords: 'buy land Ohio Valley, off-market land deals Ohio, hunting land Ohio, farm ground Ohio West Virginia, land buyer network',
 };
 
-const counties = [
-  'Franklin County, OH',
-  'Belmont County, OH',
-  'Jefferson County, OH',
-  'Columbiana County, OH',
-  'Harrison County, OH',
-  'Carroll County, OH',
-  'Ohio County, WV',
-  'Marshall County, WV',
-  'Brooke County, WV',
+const regions = [
+  'Ohio',
+  'West Virginia',
+  'Kentucky',
+  'Pennsylvania',
 ];
 
 export default function PropertiesPage() {
@@ -51,7 +46,7 @@ export default function PropertiesPage() {
                   {[
                     { icon: Bell, text: 'First access — before any public listing' },
                     { icon: TreePine, text: 'Hunting, farm, development & investment parcels' },
-                    { icon: MapPin, text: 'Ohio Valley counties plus Franklin County' },
+                    { icon: MapPin, text: 'Primarily Ohio, reaching into West Virginia, Kentucky, Pennsylvania & the broader Ohio Valley' },
                   ].map((item) => {
                     const Icon = item.icon;
                     return (
@@ -66,16 +61,16 @@ export default function PropertiesPage() {
                 {/* County coverage */}
                 <div className="mt-10 pt-8 border-t border-border">
                   <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-4">
-                    Counties We Source In
+                    Ohio Valley Region
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {counties.map((c) => (
+                    {regions.map((r) => (
                       <span
-                        key={c}
+                        key={r}
                         className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3 py-1.5 text-xs font-medium text-foreground"
                       >
                         <MapPin className="h-3 w-3 text-amber" />
-                        {c}
+                        {r}
                       </span>
                     ))}
                   </div>

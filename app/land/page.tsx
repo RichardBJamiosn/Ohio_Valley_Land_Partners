@@ -100,7 +100,7 @@ export default function LandPage() {
                 {/* County strip */}
                 <div className="mt-10 pt-8 border-t border-border">
                   <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-4">
-                    Active Counties
+                    Ohio Valley Region
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {counties.map((c) => (
