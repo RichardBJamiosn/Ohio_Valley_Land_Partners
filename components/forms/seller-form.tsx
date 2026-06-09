@@ -103,7 +103,7 @@ export function SellerForm() {
             Submitting...
           </>
         ) : (
-          'Get My Cash Offer'
+          'Request Property Analysis'
         )}
       </Button>
 

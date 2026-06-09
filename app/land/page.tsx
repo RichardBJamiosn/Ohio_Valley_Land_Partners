@@ -120,8 +120,8 @@ export default function LandPage() {
               {/* Seller form */}
               <div className="rounded-2xl border border-border bg-card p-8 shadow-lg">
                 <div className="mb-6 text-center">
-                  <h2 className="text-xl font-bold text-foreground">Get My Cash Offer</h2>
-                  <p className="text-sm text-muted-foreground mt-1">30 seconds. We call within 24 hours.</p>
+                  <h2 className="text-xl font-bold text-foreground">Receive Your Property Analysis &amp; Offer</h2>
+                  <p className="text-sm text-muted-foreground mt-1">Full property analysis and cash offer within 24 hours.</p>
                 </div>
                 <SellerForm />
               </div>
