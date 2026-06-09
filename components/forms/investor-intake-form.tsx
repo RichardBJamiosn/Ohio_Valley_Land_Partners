@@ -48,7 +48,7 @@ export function InvestorIntakeForm() {
     name: '',
     email: '',
     phone: '',
-    counties: [] as string[],
+    counties: '',
     acreage: '',
     useCase: '',
     budget: '',
@@ -57,28 +57,26 @@ export function InvestorIntakeForm() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
 
-  function toggleCounty(county: string) {
-    setForm((f) => ({
-      ...f,
-      counties: f.counties.includes(county)
-        ? f.counties.filter((c) => c !== county)
-        : [...f.counties, county],
-    }));
-  }
+  // Counties now handled via free-text input (split on submit)
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError('');
-    if (!form.name || !form.email || form.counties.length === 0) {
-      setError('Name, email, and at least one county are required.');
+    if (!form.name || !form.email || !form.counties.trim()) {
+      setError('Name, email, and counties of interest are required.');
       return;
     }
     setLoading(true);
     try {
+      const countiesArray = form.counties
+        .split(/[\n,]+/)
+        .map((c) => c.trim())
+        .filter(Boolean);
+      const payload = { ...form, counties: countiesArray };
       const res = await fetch('/api/investor-intake', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify(payload),
       });
       if (!res.ok) throw new Error('Submission failed');
       setSubmitted(true);
@@ -130,28 +128,16 @@ export function InvestorIntakeForm() {
         />
       </div>
 
-      <div className="flex flex-col gap-2">
-        <Label className="text-sm font-semibold">Counties of Interest</Label>
-        <div className="grid grid-cols-2 gap-2">
-          {counties.map((county) => (
-            <label
-              key={county}
-              className={`flex items-center gap-2 rounded-lg border px-3 py-2 text-sm cursor-pointer transition-colors ${
-                form.counties.includes(county)
-                  ? 'border-accent bg-accent/10 text-foreground font-medium'
-                  : 'border-border text-muted-foreground hover:border-accent/50'
-              }`}
-            >
-              <input
-                type="checkbox"
-                className="sr-only"
-                checked={form.counties.includes(county)}
-                onChange={() => toggleCounty(county)}
-              />
-              {county}
-            </label>
-          ))}
-        </div>
+      <div className="flex flex-col gap-1.5">
+        <Label htmlFor="inv-counties">Counties of Interest</Label>
+        <textarea
+          id="inv-counties"
+          placeholder="e.g. Franklin County, OH; any county in West Virginia; etc. (separate by commas or new lines)"
+          value={form.counties}
+          onChange={(e) => setForm((f) => ({ ...f, counties: e.target.value }))}
+          className="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+          required
+        />
       </div>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
