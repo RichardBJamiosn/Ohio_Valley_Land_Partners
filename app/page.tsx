@@ -99,9 +99,9 @@ export default function Home() {
       <section className="py-24 sm:py-32 bg-background">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="heading-serif text-amber text-2xl mb-3">What we do</p>
+            <p className="heading-serif text-amber text-2xl mb-3">Who we are / What we do</p>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              We Buy Ohio Valley Land. That's It.
+              We are builders and developers working directly with landowners.
             </h2>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
               No hedge fund. No call center. A local buyer with one focus — buying land
