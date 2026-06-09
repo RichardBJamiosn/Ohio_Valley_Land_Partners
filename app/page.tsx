@@ -6,9 +6,9 @@ import { silos } from '@/lib/seo-config';
 
 const homepageFAQs = [
   {
-    question: 'How long does it take to sell land to a cash buyer in the Ohio Valley?',
+    question: 'How long does it typically take to close with one of our buyers in the Ohio Valley?',
     answer:
-      'Ohio Valley Land Partners closes most transactions in 14–21 business days from signed purchase agreement when title is ready. No lender approval, appraisal, or agent commission is required. Sellers in our core Ohio Valley counties and our active Franklin County campaign receive a written cash offer after property review.',
+      'Ohio Valley Land Partners closes most transactions in 30 days from signed purchase agreement when title is ready. Under some circumstances, we can close even faster. No lender approval, appraisal, or agent commission is required. If sellers are open to alternative financing, we can often offer more for their property. Sellers in our core Ohio Valley counties and our active Franklin County campaign receive a written cash offer after property review.',
   },
   {
     question: 'What types of land do you buy in the Ohio Valley?',
