@@ -105,7 +105,7 @@ export default function Home() {
             </h2>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
               No hedge fund. No call center. A network of local buyers with one focus — buying land
-              in the Ohio Valley and Franklin County from sellers who want a fair deal
+              in the Ohio Valley from sellers who want a fair deal
               and a fast close.
             </p>
           </div>
