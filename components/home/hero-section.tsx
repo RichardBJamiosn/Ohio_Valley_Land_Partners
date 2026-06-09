@@ -10,7 +10,7 @@ const stats = [
   { label: 'Full Analysis', value: '24 hrs', icon: Clock },
   { label: 'Close Timeline', value: '30 Days', icon: Calendar },
   { label: 'Circumstances Apply', value: '14', icon: ShieldCheck },
-  { label: 'Active Campaigns', value: '', icon: Target },
+  { label: 'Campaigns', value: 'Active', icon: Target },
 ];
 
 const serviceRegions = [
