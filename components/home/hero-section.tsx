@@ -81,7 +81,7 @@ export function HeroSection() {
                   Valley with active campaigns in Franklin, Linkoln, Geaoga & Warren counties. Full offer after review.
                   No agents, no fees, no out-of-state runaround.
                 </p>
-                {/* force Cloudflare Pages rebuild - badge '5% of profits...' update 5cffb35 didnt reflect on live (hard refreshes no luck); dcf01c2 + 852a3cf + 5cffb35 */}
+                {/* force Cloudflare Pages rebuild - user 'again didnt update' on 3c06292 Core Acres restore + stats labels; previous forces insufficient; dcf01c2 + ... + 3c06292; hard refresh no luck */}
                 <ul className="mt-6 flex flex-col gap-3">
                   {sellerTrustPoints.map((point) => (
                     <li key={point} className="flex items-center gap-3 text-sm font-medium text-white/80">
