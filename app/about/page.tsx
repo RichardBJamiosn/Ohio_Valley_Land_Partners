@@ -31,7 +31,7 @@ const principles = [
     icon: Heart,
     title: 'Built to Give Back.',
     description:
-      'A portion of every land closing goes directly to our community partners — Arc of Appalachia, protecting Ohio\'s forests and waterways, and the Salvation Army\'s East Palestine recovery work. A business operating in the Ohio Valley should invest in it.',
+      '5% of all profits goes directly to our community partners — Arc of Appalachia, protecting Ohio\'s forests and waterways, and the Salvation Army\'s East Palestine recovery work. A business operating in the Ohio Valley should invest in it.',
   },
 ];
 
@@ -135,7 +135,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <p className="text-sm font-bold text-foreground mb-4">
-                5% of every closing. Directly to the Ohio Valley.
+                5% of all profits. Directly to Arc and Palestine.
               </p>
               <Link
                 href="/community"
