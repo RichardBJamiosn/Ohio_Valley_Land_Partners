@@ -157,7 +157,7 @@ export default function Home() {
           <div className="text-center mb-14">
             <p className="heading-serif text-amber text-2xl mb-3">Common Questions</p>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Selling Land in the Ohio Valley
+              Selling Land To Ohio Valley Land Partners
             </h2>
             <p className="mt-4 text-muted-foreground">
               Straightforward answers to the questions sellers ask most.
