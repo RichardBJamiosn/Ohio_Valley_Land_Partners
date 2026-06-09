@@ -18,7 +18,7 @@ const homepageFAQs = [
   {
     question: 'Do I need a real estate agent to sell my land to you?',
     answer:
-      'No. Ohio Valley Land Partners is a principal buyer, not a licensed broker. You deal directly with the buyer. There are no agent fees, no commissions, and no listing period. We pay all standard closing costs.',
+      'No. Ohio Valley Land Partners is a network of builders and developers—not legal or licensed real estate experts. We work directly with landowners, allowing us to circumvent the normal real estate listing times and hassles. There are no agent fees, no commissions, and no listing period. We pay all standard closing costs. We strongly advise seeking attorney advice. We pride ourselves in under-offering and over-delivering, with honesty as our core.',
   },
   {
     question: 'Can you buy land that has back taxes owed?',
