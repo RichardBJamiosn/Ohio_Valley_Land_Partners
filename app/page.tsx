@@ -104,7 +104,7 @@ export default function Home() {
               We are builders and developers working directly with landowners.
             </h2>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              No hedge fund. No call center. A local buyer with one focus — buying land
+              No hedge fund. No call center. A network of local buyers with one focus — buying land
               in the Ohio Valley and Franklin County from sellers who want a fair deal
               and a fast close.
             </p>
