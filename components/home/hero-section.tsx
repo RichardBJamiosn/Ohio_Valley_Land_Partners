@@ -9,8 +9,8 @@ import { InvestorIntakeForm } from '@/components/forms/investor-intake-form';
 const stats = [
   { label: 'Full Analysis', value: '24 hrs', icon: Clock },
   { label: 'Close Timeline', value: '30 Days', icon: Calendar },
-  { label: 'Circumstances Apply', value: '14', icon: ShieldCheck },
-  { label: 'Campaigns', value: 'Active', icon: Target },
+  { label: 'Core Acres', value: '1.77M+', icon: TreePine },
+  { label: 'Campaigns', value: 'Active', icon: MapPin },
 ];
 
 const serviceRegions = [
@@ -200,7 +200,7 @@ export function HeroSection() {
         {/* County strip */}
         <div className="mt-16 border-t border-white/10 pt-10">
           <p className="text-xs font-semibold text-white/40 uppercase tracking-widest text-center mb-5">
-            Active Counties
+            Active Campaigns
           </p>
           <div className="flex flex-wrap justify-center gap-2">
             {serviceRegions.map((region) => (
