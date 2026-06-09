@@ -28,7 +28,7 @@ const homepageFAQs = [
   {
     question: 'Can you buy inherited land that is still in probate?',
     answer:
-      'In many cases, yes. Ohio allows land to be sold during probate with court authorization once the estate is open and an executor has been appointed. We work with sellers in the probate process and can close once the executor has the authority to transfer title. Contact us and we will review your specific situation.',
+      'In many cases, yes. We work with sellers in the probate process and can close once the executor has the authority to transfer title. We are not legal or licensed experts and strongly advise seeking attorney advice. Contact us and we will review your specific situation.',
   },
   {
     question: 'How do you determine your cash offer on a piece of land?',
