@@ -31,7 +31,7 @@ const principles = [
     icon: Heart,
     title: 'Built to Give Back.',
     description:
-      '5% of all profits goes directly to our community partners — Arc of Appalachia, protecting Ohio\'s forests and waterways, and the Salvation Army\'s East Palestine recovery work. A business operating in the Ohio Valley should invest in it.',
+      '5% of all profits goes directly to our community partners — Arc of Appalachia, the Salvation Army\'s East Palestine recovery work, and COCIC Franklin County Land Bank. A business operating in the Ohio Valley should invest in it.',
   },
 ];
 
@@ -132,6 +132,10 @@ export default function AboutPage() {
                   <strong className="text-foreground">Salvation Army — East Palestine</strong> — on
                   the ground for Columbiana County families since the 2023 Norfolk Southern
                   derailment. Clean water, cleanup support, and recovery resources.
+                </p>
+                <p>
+                  <strong className="text-foreground">COCIC Franklin County Land Bank</strong> — returning
+                  vacant and abandoned properties to productive use in the communities we operate in most.
                 </p>
               </div>
               <p className="text-sm font-bold text-foreground mb-4">

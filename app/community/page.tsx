@@ -1,17 +1,19 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Heart, Leaf, ArrowRight, ExternalLink } from 'lucide-react';
+import { Heart, Leaf, Building2, ArrowRight, ExternalLink } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Giving Back — Ohio Valley Community Partners',
   description:
-    'Ohio Valley Land Partners donates a portion of every land closing to organizations protecting Ohio Valley land, waterways, and families — including Arc of Appalachia and Salvation Army East Palestine recovery.',
+    'Ohio Valley Land Partners donates a portion of every land closing to organizations protecting Ohio Valley land, waterways, and families — including Arc of Appalachia, Salvation Army East Palestine recovery, and COCIC Franklin County Land Bank.',
   keywords: [
     'Ohio land buyers giving back',
     'support East Palestine recovery',
     'Arc of Appalachia partner',
     'Ohio Valley community investment',
     'land buyer nonprofit partner Ohio',
+    'COCIC Franklin County Land Bank',
+    'Franklin County community development',
   ],
 };
 
@@ -35,6 +37,16 @@ const partners = [
       'The February 2023 Norfolk Southern train derailment in East Palestine, Ohio — in Columbiana County, one of our core Ohio Valley counties — released toxic chemicals into the air, soil, and waterways of a community that had no warning and no resources to respond alone. The Salvation Army has maintained a presence there since the first days of the disaster, providing clean water, cleanup supplies, food, and emotional support to families whose land and health were compromised through no fault of their own. Supporting their continued work in East Palestine and across the Ohio Valley is personal for us.',
     focus: 'Disaster Recovery & Family Support',
     region: 'East Palestine, OH / Ohio Valley',
+  },
+  {
+    icon: Building2,
+    name: 'COCIC Franklin County Land Bank',
+    url: 'https://cocic.org',
+    tagline: 'Returning vacant and abandoned properties to productive community use.',
+    description:
+      'COCIC is the Franklin County Land Bank — a nonprofit that acquires tax-delinquent, vacant, and abandoned properties and returns them to productive use. They demolish blighted structures, clean contaminated sites, and transfer stabilized properties to community land trusts, developers, and homeowners working to rebuild neighborhoods. Franklin County is our primary market. When a land deal closes here, some of that capital goes back to the organization doing the hardest cleanup work in the same communities we operate in.',
+    focus: 'Community Land Banking & Stabilization',
+    region: 'Franklin County, Ohio',
   },
 ];
 
@@ -84,10 +96,10 @@ export default function CommunityPage() {
               </span>
             </div>
             <div className="flex flex-col items-center gap-2 p-6">
-              <span className="text-4xl font-black text-amber">2</span>
+              <span className="text-4xl font-black text-amber">3</span>
               <span className="text-sm font-semibold text-foreground">Partner Organizations</span>
               <span className="text-xs text-muted-foreground max-w-[200px]">
-                Arc of Appalachia and Salvation Army East Palestine — both doing essential work in our region
+                Arc of Appalachia, Salvation Army East Palestine, and COCIC Franklin County Land Bank — all doing essential work in our region
               </span>
             </div>
             <div className="flex flex-col items-center gap-2 p-6">
