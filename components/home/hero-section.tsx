@@ -45,19 +45,20 @@ export function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-forest">
 
-      {/* Animated pulse rings — New Western style */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2">
-          <div className="h-64 w-64 rounded-full border border-amber/20 animate-pulse-ring" />
-          <div className="absolute inset-0 h-64 w-64 rounded-full border border-amber/15 animate-pulse-ring-delay" />
-        </div>
-        <div className="absolute top-1/3 right-1/4">
-          <div className="h-48 w-48 rounded-full border border-meadow/20 animate-pulse-ring" style={{ animationDelay: '0.7s' }} />
-        </div>
-        {/* Subtle gradient blobs */}
-        <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-amber/5 blur-3xl" />
-        <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-meadow/5 blur-3xl" />
-      </div>
+      {/* Hero video — forward→reverse ping-pong loop at 0.5× speed (pre-rendered) */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+        aria-hidden="true"
+      >
+        <source src="/hero.mp4" type="video/mp4" />
+      </video>
+
+      {/* Dark overlay so text stays readable over the video */}
+      <div className="absolute inset-0 bg-forest/75" aria-hidden="true" />
 
       <div className="relative mx-auto max-w-7xl px-6 py-20 sm:py-28 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-start">
