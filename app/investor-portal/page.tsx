@@ -1,10 +1,7 @@
 import type { Metadata } from 'next';
-import { Users, MapPin, TrendingUp, Bell, Lock, ArrowRight } from 'lucide-react';
+import { Users, MapPin, TrendingUp, Bell } from 'lucide-react';
 import { InvestorIntakeForm } from '@/components/forms/investor-intake-form';
-
-// The Builder Network Portal lives on its own domain (server-rendered on Vercel,
-// where the login session cookie is set). This page is the front door to it.
-const PORTAL_LOGIN_URL = 'https://ovlp-portal.vercel.app/login';
+import { PortalLoginForm } from './PortalLoginForm';
 
 export const metadata: Metadata = {
   title: 'Investor Portal — Join the Ohio Valley Land Deal List',
@@ -59,28 +56,9 @@ export default function InvestorPortal() {
             </p>
           </div>
 
-          {/* Member login — existing members go straight to the portal */}
-          <div className="mx-auto max-w-2xl mb-20">
-            <div className="rounded-2xl border border-amber/30 bg-card p-8 sm:p-10 text-center">
-              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-amber/10 text-amber mb-5">
-                <Lock className="h-6 w-6" />
-              </div>
-              <h2 className="text-2xl font-bold text-foreground">Member Login</h2>
-              <p className="mt-2 text-sm text-muted-foreground max-w-md mx-auto">
-                Already in the network? Sign in to view exclusive parcels before they go
-                public and submit offers.
-              </p>
-              <a
-                href={PORTAL_LOGIN_URL}
-                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-amber px-6 py-3 text-sm font-semibold text-forest hover:bg-amber/90 transition-colors"
-              >
-                Access the Portal
-                <ArrowRight className="h-4 w-4" />
-              </a>
-              <p className="mt-4 text-xs text-muted-foreground">
-                Access is by invitation only. Not a member yet? Join the deal list below.
-              </p>
-            </div>
+          {/* Member login — embedded form, posts to portal.ohiovalleylandpartners.com */}
+          <div className="mx-auto max-w-md mb-20">
+            <PortalLoginForm />
           </div>
 
           {/* Benefits */}
