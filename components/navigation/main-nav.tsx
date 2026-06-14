@@ -32,9 +32,9 @@ export function MainNav() {
             <Image
               src="/logo.png"
               alt="Ohio Valley Land Partners"
-              width={140}
-              height={56}
-              className="object-contain"
+              width={180}
+              height={72}
+              className="object-contain mix-blend-screen"
               priority
             />
           </Link>
@@ -110,9 +110,9 @@ export function MainNav() {
                 <Image
                   src="/logo.png"
                   alt="Ohio Valley Land Partners"
-                  width={120}
-                  height={48}
-                  className="object-contain"
+                  width={160}
+                  height={64}
+                  className="object-contain mix-blend-screen"
                 />
               </Link>
               <button
