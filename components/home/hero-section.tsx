@@ -57,8 +57,8 @@ export function HeroSection() {
         <source src="/hero.mp4" type="video/mp4" />
       </video>
 
-      {/* Dark overlay so text stays readable over the video */}
-      <div className="absolute inset-0 bg-forest/75" aria-hidden="true" />
+      {/* Gradient overlay — heavy on the left where content lives, fades right so video shows through */}
+      <div className="absolute inset-0 bg-gradient-to-r from-forest/95 via-forest/75 to-forest/40" aria-hidden="true" />
 
       <div className="relative mx-auto max-w-7xl px-6 py-20 sm:py-28 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-start">
