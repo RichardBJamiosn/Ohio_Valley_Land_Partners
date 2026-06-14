@@ -3,8 +3,10 @@
 import { useState } from 'react';
 import { Lock, ArrowRight } from 'lucide-react';
 
-const PORTAL_API = 'https://portal.ohiovalleylandpartners.com/api/auth/login';
-const PORTAL_DASHBOARD = 'https://portal.ohiovalleylandpartners.com/portal';
+// Temp: pointing at vercel.app while portal.ohiovalleylandpartners.com DNS propagates.
+// Swap back to portal.ohiovalleylandpartners.com once subdomain resolves.
+const PORTAL_API = 'https://ovlp-portal.vercel.app/api/auth/login';
+const PORTAL_DASHBOARD = 'https://ovlp-portal.vercel.app/portal';
 
 export function PortalLoginForm() {
   const [email, setEmail] = useState('');
