@@ -40,7 +40,7 @@ export function Footer() {
                 alt="Ohio Valley Land Partners"
                 width={200}
                 height={80}
-                className="object-contain mix-blend-screen"
+                className="object-contain"
               />
             </Link>
             <p className="text-sm leading-6 text-white/60 max-w-xs">

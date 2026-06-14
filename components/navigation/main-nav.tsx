@@ -34,7 +34,7 @@ export function MainNav() {
               alt="Ohio Valley Land Partners"
               width={180}
               height={72}
-              className="object-contain mix-blend-screen"
+              className="object-contain"
               priority
             />
           </Link>
@@ -112,7 +112,7 @@ export function MainNav() {
                   alt="Ohio Valley Land Partners"
                   width={160}
                   height={64}
-                  className="object-contain mix-blend-screen"
+                  className="object-contain"
                 />
               </Link>
               <button
