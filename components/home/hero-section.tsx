@@ -43,15 +43,16 @@ export function HeroSection() {
   const [activeTab, setActiveTab] = useState<Tab>('sell');
 
   return (
-    <section className="relative overflow-hidden bg-forest">
+    <section className="relative overflow-hidden bg-forest motion-reduce:bg-[url('/og.jpg')] motion-reduce:bg-cover motion-reduce:bg-center">
 
-      {/* Hero video — forward→reverse ping-pong loop at 0.5× speed (pre-rendered) */}
+      {/* Hero video — 24fps motion-interpolated slow-mo (pre-rendered ping-pong loop) */}
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        preload="auto"
+        className="absolute inset-0 w-full h-full object-cover motion-reduce:hidden"
         aria-hidden="true"
       >
         <source src="/hero.mp4" type="video/mp4" />
