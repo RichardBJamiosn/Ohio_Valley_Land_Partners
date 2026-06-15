@@ -1,48 +1,10 @@
-'use client';
-
-import { useState } from 'react';
+import Link from 'next/link';
 import { Lock, ArrowRight } from 'lucide-react';
 
-// Temp: pointing at vercel.app while portal.ohiovalleylandpartners.com DNS propagates.
-// Swap back to portal.ohiovalleylandpartners.com once subdomain resolves.
-const PORTAL_API = 'https://ovlp-portal.vercel.app/api/auth/login';
-const PORTAL_DASHBOARD = 'https://ovlp-portal.vercel.app/portal';
+const PORTAL_LOGIN_URL =
+  process.env.NEXT_PUBLIC_PORTAL_URL ?? 'https://ovlp-portal.vercel.app/login';
 
 export function PortalLoginForm() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
-
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setLoading(true);
-    setError('');
-
-    try {
-      const res = await fetch(PORTAL_API, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        // credentials: 'include' sends and stores cookies cross-origin.
-        // Works because both domains share .ohiovalleylandpartners.com
-        // and the portal sets the cookie with domain=.ohiovalleylandpartners.com.
-        credentials: 'include',
-        body: JSON.stringify({ email, password }),
-      });
-
-      const data = await res.json();
-      if (res.ok) {
-        window.location.href = PORTAL_DASHBOARD;
-      } else {
-        setError(data.error ?? 'Invalid credentials.');
-        setLoading(false);
-      }
-    } catch {
-      setError('Unable to reach the portal. Try again.');
-      setLoading(false);
-    }
-  }
-
   return (
     <div className="rounded-2xl border border-amber/30 bg-card p-8 sm:p-10">
       <div className="flex items-center gap-3 mb-6">
@@ -55,59 +17,17 @@ export function PortalLoginForm() {
         </div>
       </div>
 
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-        <div>
-          <label className="block text-xs font-semibold mb-1.5 text-muted-foreground uppercase tracking-wider">
-            Email Address
-          </label>
-          <input
-            type="email"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            placeholder="your@email.com"
-            required
-            className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-amber/40 transition-shadow"
-          />
-        </div>
+      <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+        Sign in on the secure Builders Network portal. Your credentials are never submitted from this marketing page.
+      </p>
 
-        <div>
-          <label className="block text-xs font-semibold mb-1.5 text-muted-foreground uppercase tracking-wider">
-            Password
-          </label>
-          <input
-            type="password"
-            value={password}
-            onChange={e => setPassword(e.target.value)}
-            placeholder="••••••••••••"
-            required
-            className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-amber/40 transition-shadow"
-          />
-        </div>
-
-        {error && (
-          <p className="text-xs text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg px-4 py-2.5">
-            {error}
-          </p>
-        )}
-
-        <button
-          type="submit"
-          disabled={loading}
-          className="mt-1 flex items-center justify-center gap-2 rounded-lg bg-amber px-6 py-3 text-sm font-semibold text-forest hover:bg-amber/90 transition-colors disabled:opacity-60"
-        >
-          {loading ? (
-            <>
-              <span className="h-4 w-4 rounded-full border-2 border-forest/30 border-t-forest animate-spin" />
-              Signing in…
-            </>
-          ) : (
-            <>
-              Access the Network
-              <ArrowRight className="h-4 w-4" />
-            </>
-          )}
-        </button>
-      </form>
+      <Link
+        href={PORTAL_LOGIN_URL}
+        className="flex items-center justify-center gap-2 rounded-lg bg-amber px-6 py-3 text-sm font-semibold text-forest hover:bg-amber/90 transition-colors w-full"
+      >
+        Go to Member Login
+        <ArrowRight className="h-4 w-4" />
+      </Link>
 
       <p className="mt-5 text-xs text-muted-foreground text-center">
         Not a member?{' '}

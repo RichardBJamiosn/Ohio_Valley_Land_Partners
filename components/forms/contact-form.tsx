@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
+import { TurnstileWidget } from '@/components/TurnstileWidget';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -45,6 +46,8 @@ interface ContactFormProps {
 
 export function ContactForm({ defaultLeadType = 'inquiry' }: ContactFormProps) {
   const [isLoading, setIsLoading] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState('');
+  const onTurnstileExpire = useCallback(() => setTurnstileToken(''), []);
   const { toast } = useToast();
 
   const form = useForm<ContactFormValues>({
@@ -70,6 +73,7 @@ export function ContactForm({ defaultLeadType = 'inquiry' }: ContactFormProps) {
         body: JSON.stringify({
           ...values,
           source: 'website',
+          turnstileToken,
         }),
       });
 
@@ -241,6 +245,8 @@ export function ContactForm({ defaultLeadType = 'inquiry' }: ContactFormProps) {
             </FormItem>
           )}
         />
+
+        <TurnstileWidget onToken={setTurnstileToken} onExpire={onTurnstileExpire} />
 
         <Button type="submit" disabled={isLoading} className="w-full">
           {isLoading ? 'Sending...' : 'Send Inquiry'}

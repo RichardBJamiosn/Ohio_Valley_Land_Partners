@@ -1,0 +1,7 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Frame-Options: DENY
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com https://widgets.leadconnectorhq.com https://www.googletagmanager.com; connect-src 'self' https://api.resend.com https://challenges.cloudflare.com https://ovlp-portal.vercel.app https://portal.ohiovalleylandpartners.com https://www.google-analytics.com https://widgets.leadconnectorhq.com; frame-src https://challenges.cloudflare.com https://widgets.leadconnectorhq.com; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data: https:

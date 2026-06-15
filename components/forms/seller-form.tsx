@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
+import { TurnstileWidget } from '@/components/TurnstileWidget';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -13,6 +14,8 @@ export function SellerForm() {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
+  const [turnstileToken, setTurnstileToken] = useState('');
+  const onTurnstileExpire = useCallback(() => setTurnstileToken(''), []);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -26,7 +29,7 @@ export function SellerForm() {
       const res = await fetch('/api/seller', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ address, email }),
+        body: JSON.stringify({ address, email, turnstileToken }),
       });
       if (!res.ok) throw new Error('Submission failed');
       setSubmitted(true);
@@ -86,6 +89,8 @@ export function SellerForm() {
           />
         </div>
       </div>
+
+      <TurnstileWidget onToken={setTurnstileToken} onExpire={onTurnstileExpire} />
 
       {error && (
         <p className="text-sm text-red-500">{error}</p>

@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
+import { TurnstileWidget } from '@/components/TurnstileWidget';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -56,6 +57,8 @@ export function InvestorIntakeForm() {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
+  const [turnstileToken, setTurnstileToken] = useState('');
+  const onTurnstileExpire = useCallback(() => setTurnstileToken(''), []);
 
   // Counties now handled via free-text input (split on submit)
 
@@ -72,7 +75,7 @@ export function InvestorIntakeForm() {
         .split(/[\n,]+/)
         .map((c) => c.trim())
         .filter(Boolean);
-      const payload = { ...form, counties: countiesArray };
+      const payload = { ...form, counties: countiesArray, turnstileToken };
       const res = await fetch('/api/investor-intake', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -178,6 +181,8 @@ export function InvestorIntakeForm() {
           </select>
         </div>
       </div>
+
+      <TurnstileWidget onToken={setTurnstileToken} onExpire={onTurnstileExpire} />
 
       {error && <p className="text-sm text-red-500">{error}</p>}
 
