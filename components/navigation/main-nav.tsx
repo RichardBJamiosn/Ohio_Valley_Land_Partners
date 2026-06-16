@@ -84,12 +84,12 @@ export function MainNav() {
           >
             Analysis & Offer
           </Link>
-          <Link
-            href="/investor-portal"
+          <a
+            href="https://ovlp-portal.vercel.app"
             className="rounded-lg border border-white/20 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
           >
             Buyer Portal
-          </Link>
+          </a>
         </div>
       </nav>
 
@@ -151,13 +151,13 @@ export function MainNav() {
               >
                 Analysis & Offer
               </Link>
-              <Link
-                href="/investor-portal"
+              <a
+                href="https://ovlp-portal.vercel.app"
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full rounded-lg border border-white/20 py-3 text-center text-sm font-semibold text-white hover:bg-white/10 transition-colors"
               >
                 Buyer Portal
-              </Link>
+              </a>
             </div>
           </div>
         </div>
