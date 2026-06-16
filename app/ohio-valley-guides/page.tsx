@@ -253,34 +253,45 @@ export default function GuidesPage() {
           <p className="heading-serif text-amber text-2xl mb-2">Primary campaign</p>
           <h2 className="text-3xl font-extrabold tracking-tight">Start here if you&apos;re in Central Ohio</h2>
 
-          <article className="mt-6 rounded-2xl border-2 border-amber bg-card p-8 sm:p-10 shadow-sm">
-            <span className="inline-block bg-amber/15 text-amber text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-md mb-4">
-              Franklin County · Active Campaign
-            </span>
-            <h3 className="text-2xl font-extrabold">Franklin County, OH</h3>
-            <p className="text-amber font-semibold text-sm mt-2">
-              Columbus infill lots, residential parcels & urban-fringe acreage
-            </p>
-            <p className="text-muted-foreground text-sm leading-relaxed mt-4 max-w-2xl">
-              Franklin sits outside the core Ohio River Valley — it&apos;s our active Columbus campaign.
-              A different market than Belmont or Jefferson, with its own zoning, pricing, and buyer demand.
-            </p>
-            <div className="flex flex-wrap gap-2 mt-5">
-              {['Infill lots', 'Intel corridor', 'Columbus metro'].map((tag) => (
-                <span
-                  key={tag}
-                  className="text-xs font-semibold px-3 py-1 rounded-lg bg-muted text-meadow"
-                >
-                  {tag}
-                </span>
-              ))}
+          <article className="mt-6 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] rounded-2xl overflow-hidden border-2 border-amber bg-card shadow-[0_12px_48px_rgba(200,150,58,0.12)]">
+            <div className="relative min-h-[240px] lg:min-h-[300px]">
+              <Image
+                src="/guides/county-infill.jpg"
+                alt="Columbus metro skyline"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 60vw"
+              />
+              <span className="absolute top-5 left-5 bg-amber text-forest text-xs font-extrabold uppercase tracking-wider px-3 py-1.5 rounded-md">
+                Franklin County · Active Campaign
+              </span>
             </div>
-            <Link
-              href="/ohio-valley-guides/franklin-county-oh"
-              className="mt-6 inline-flex items-center gap-2 rounded-lg bg-amber px-5 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
-            >
-              Read Franklin County Guide <ArrowRight className="h-4 w-4" />
-            </Link>
+            <div className="flex flex-col justify-center p-8 sm:p-10">
+              <h3 className="text-2xl font-extrabold">Franklin County, OH</h3>
+              <p className="text-amber font-semibold text-sm mt-2">
+                Columbus infill lots, residential parcels & urban-fringe acreage
+              </p>
+              <p className="text-muted-foreground text-sm leading-relaxed mt-4">
+                Franklin sits outside the core Ohio River Valley — it&apos;s our active Columbus campaign.
+                A different market than Belmont or Jefferson, with its own zoning, pricing, and buyer demand.
+              </p>
+              <div className="flex flex-wrap gap-2 mt-5">
+                {['Infill lots', 'Intel corridor', 'Columbus metro'].map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-xs font-semibold px-3 py-1 rounded-lg bg-muted text-meadow"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <Link
+                href="/ohio-valley-guides/franklin-county-oh"
+                className="mt-6 inline-flex w-fit items-center gap-2 rounded-lg bg-amber px-5 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
+              >
+                Read Franklin County Guide <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
           </article>
         </section>
 
