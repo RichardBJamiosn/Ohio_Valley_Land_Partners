@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OVLP Ohio Valley Guides — Redesign Mockup v2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;1,400&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --forest: #1a2e1a; --amber: #c8963a; --amber-light: #e8c47a;
+      --cream: #f9f7f3; --cream-dark: #f0ebe3; --meadow: #33755e;
+      --muted: #6b7268; --white: #fff; --wv-blue: #2a4a6b; --pa-blue: #3d5a80;
+    }
+    body { font-family: 'Poppins', sans-serif; background: var(--cream); color: var(--forest); line-height: 1.6; }
+    .banner { position: sticky; top: 0; z-index: 99; background: #111; color: #fff; text-align: center; padding: 10px; font-size: 12px; font-weight: 600; }
+    .banner span { color: var(--amber-light); }
+
+    .hero { position: relative; min-height: 78vh; display: flex; align-items: center; overflow: hidden; background: var(--forest); }
+    .hero-bg { position: absolute; inset: 0; background: url('images/guides/atlas-hero.jpg') center/cover; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(100deg, rgba(26,46,26,0.93) 40%, rgba(26,46,26,0.5) 100%); }
+    .hero-inner { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; padding: 72px 32px; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center; }
+    .hero-label { font-family: 'Cormorant', serif; font-style: italic; font-size: 1.65rem; color: var(--amber-light); margin-bottom: 14px; }
+    .hero h1 { font-size: clamp(2.4rem, 4.5vw, 3.5rem); font-weight: 800; color: var(--white); line-height: 1.06; letter-spacing: -0.02em; }
+    .hero h1 em { color: var(--amber); font-style: normal; display: block; margin-top: 6px; }
+    .hero-copy { color: rgba(255,255,255,0.8); margin-top: 20px; max-width: 520px; font-size: 1rem; line-height: 1.75; }
+    .hero-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+    .chip { font-size: 0.7rem; font-weight: 600; padding: 7px 14px; border-radius: 999px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14); color: rgba(255,255,255,0.9); text-decoration: none; }
+    .chip:hover { background: rgba(255,255,255,0.14); }
+
+    .atlas-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 28px; backdrop-filter: blur(10px); }
+    .atlas-card h3 { color: var(--white); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; text-align: center; }
+    .atlas-sub { color: rgba(255,255,255,0.55); font-size: 0.72rem; text-align: center; margin-bottom: 18px; line-height: 1.5; }
+    .atlas-states { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    .state-box { text-align: center; padding: 16px 8px; border-radius: 12px; background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.08); }
+    .state-box .abbr { font-size: 1.4rem; font-weight: 800; color: var(--amber); }
+    .state-box .name { font-size: 0.58rem; font-weight: 600; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.04em; margin-top: 4px; line-height: 1.3; }
+    .atlas-foot { margin-top: 16px; text-align: center; font-size: 0.68rem; color: rgba(255,255,255,0.5); font-style: italic; font-family: 'Cormorant', serif; }
+
+    .filter-bar { background: var(--white); border-bottom: 1px solid var(--cream-dark); position: sticky; top: 36px; z-index: 50; }
+    .filter-inner { max-width: 1280px; margin: 0 auto; padding: 16px 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .filter-tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tab { font-size: 0.78rem; font-weight: 700; padding: 8px 18px; border-radius: 999px; border: 1px solid var(--cream-dark); background: var(--cream); color: var(--muted); text-decoration: none; }
+    .tab.active { background: var(--forest); color: var(--white); border-color: var(--forest); }
+    .tab:hover:not(.active) { border-color: var(--amber); color: var(--forest); }
+    .filter-note { font-size: 0.78rem; color: var(--muted); }
+
+    .featured { max-width: 1280px; margin: 0 auto; padding: 56px 32px 24px; }
+    .section-eyebrow { font-family: 'Cormorant', serif; font-style: italic; font-size: 1.35rem; color: var(--amber); margin-bottom: 8px; }
+    .section-title { font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; }
+    .featured-card { margin-top: 24px; display: grid; grid-template-columns: 1.2fr 0.8fr; border-radius: 24px; overflow: hidden; border: 2px solid var(--amber); box-shadow: 0 12px 48px rgba(200,150,58,0.15); background: var(--white); }
+    .featured-img { position: relative; min-height: 300px; background: url('images/guides/county-infill.jpg') center/cover; }
+    .featured-badge { position: absolute; top: 20px; left: 20px; background: var(--amber); color: var(--forest); font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; padding: 6px 12px; border-radius: 6px; }
+    .featured-body { padding: 40px 36px; display: flex; flex-direction: column; justify-content: center; }
+    .featured-body h3 { font-size: 1.75rem; font-weight: 800; }
+    .featured-body .sub { color: var(--amber); font-weight: 600; font-size: 0.9rem; margin: 8px 0 14px; }
+    .featured-body p { color: var(--muted); font-size: 0.88rem; line-height: 1.7; }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 16px 0; }
+    .tag { font-size: 0.68rem; font-weight: 600; padding: 5px 10px; border-radius: 8px; background: var(--cream); color: var(--meadow); }
+    .btn { display: inline-block; margin-top: 12px; background: var(--amber); color: var(--forest); font-weight: 800; font-size: 0.82rem; padding: 12px 22px; border-radius: 10px; text-decoration: none; width: fit-content; }
+
+    .counties { max-width: 1280px; margin: 0 auto; padding: 32px 32px 72px; }
+    .county-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 28px; }
+    .county-card { border-radius: 20px; overflow: hidden; background: var(--white); border: 1px solid var(--cream-dark); box-shadow: 0 4px 20px rgba(26,46,26,0.05); transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; color: inherit; display: block; }
+    .county-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(26,46,26,0.1); }
+    .county-thumb { height: 140px; background-size: cover; background-position: center; position: relative; }
+    .county-thumb::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(26,46,26,0.55), transparent); }
+    .state-pill { position: absolute; bottom: 10px; left: 12px; z-index: 1; font-size: 0.62rem; font-weight: 800; padding: 4px 8px; border-radius: 6px; }
+    .state-pill.oh { background: var(--meadow); color: white; }
+    .state-pill.wv { background: var(--wv-blue); color: white; }
+    .county-body { padding: 20px 22px 24px; }
+    .county-body h4 { font-size: 1.1rem; font-weight: 800; }
+    .county-hook { font-size: 0.78rem; color: var(--amber); font-weight: 600; margin: 6px 0 10px; line-height: 1.4; }
+    .county-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+    .county-link { display: block; margin-top: 14px; font-size: 0.75rem; font-weight: 700; color: var(--meadow); }
+
+    .inside { background: var(--forest); color: var(--white); padding: 72px 32px; }
+    .inside-inner { max-width: 1280px; margin: 0 auto; }
+    .inside h2 { font-size: 2rem; font-weight: 800; text-align: center; margin-bottom: 40px; }
+    .inside-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .inside-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 28px; }
+    .inside-num { font-size: 2rem; font-weight: 800; color: var(--amber); opacity: 0.5; line-height: 1; }
+    .inside-card h3 { font-size: 1rem; font-weight: 700; margin: 12px 0 8px; }
+    .inside-card p { font-size: 0.82rem; color: rgba(255,255,255,0.7); line-height: 1.65; }
+
+    /* Valley scope — editorial, not sales */
+    .scope { max-width: 1280px; margin: 0 auto; padding: 64px 32px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; text-align: center; border-top: 1px solid var(--cream-dark); }
+    .scope-item .num { font-size: 2rem; font-weight: 800; color: var(--amber); }
+    .scope-item .lbl { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--forest); margin-top: 8px; }
+    .scope-item .sub { font-size: 0.78rem; color: var(--muted); margin-top: 6px; line-height: 1.5; }
+
+    .cta { margin: 0 32px 80px; max-width: 1280px; margin-inline: auto; border-radius: 24px; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; background: var(--white); border: 1px solid var(--cream-dark); box-shadow: 0 8px 40px rgba(26,46,26,0.08); }
+    .cta-img { background: url('../images/forest-arch.jpg') center/cover; min-height: 280px; }
+    .cta-body { padding: 48px 40px; display: flex; flex-direction: column; justify-content: center; }
+    .cta-body h2 { font-size: 1.65rem; font-weight: 800; }
+    .cta-body p { color: var(--muted); font-size: 0.9rem; margin-top: 12px; line-height: 1.7; }
+    .btn-ghost { display: inline-block; margin-top: 20px; margin-left: 12px; border: 1px solid var(--cream-dark); color: var(--forest); font-weight: 700; font-size: 0.82rem; padding: 12px 22px; border-radius: 10px; text-decoration: none; }
+
+    @media (max-width: 960px) {
+      .hero-inner, .featured-card, .county-grid, .inside-grid, .scope, .cta { grid-template-columns: 1fr; }
+      .atlas-states { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="banner">DESIGN MOCKUP v2 — <span>Guides hub · editorial tone · real links only</span></div>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <div>
+        <p class="hero-label">County-by-county. Written by the buyer.</p>
+        <h1>Ohio Valley Guides<em>for buyers and sellers.</em></h1>
+        <p class="hero-copy">
+          Field notes from the counties where we work — what land is worth, who buys it,
+          and how each market actually behaves. For landowners selling and builders buying
+          in the same valley.
+        </p>
+        <div class="hero-chips">
+          <a class="chip" href="#county-guides">9 county guides</a>
+          <a class="chip" href="https://ohiovalleylandpartners.com/blog/ohio-valley-land-market-2026">2026 market report</a>
+          <a class="chip" href="https://ohiovalleylandpartners.com/blog">All blog posts</a>
+        </div>
+      </div>
+      <div class="atlas-card">
+        <h3>The Ohio Valley atlas</h3>
+        <p class="atlas-sub">The Ohio River runs 981 miles — Pennsylvania to Illinois. Four states define the heart of the valley we work in.</p>
+        <div class="atlas-states">
+          <div class="state-box"><div class="abbr">PA</div><div class="name">Pennsylvania</div></div>
+          <div class="state-box"><div class="abbr">OH</div><div class="name">Ohio</div></div>
+          <div class="state-box"><div class="abbr">WV</div><div class="name">West Virginia</div></div>
+          <div class="state-box"><div class="abbr">KY</div><div class="name">Kentucky</div></div>
+        </div>
+        <p class="atlas-foot">Our guides cover 9 active counties within this corridor — the ground we know.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Every tab links to a real sitemap page -->
+  <div class="filter-bar">
+    <div class="filter-inner">
+      <div class="filter-tabs">
+        <a class="tab active" href="https://ohiovalleylandpartners.com/ohio-valley-guides">All Guides</a>
+        <a class="tab" href="https://ohiovalleylandpartners.com/blog/ohio-valley-land-market-2026">Valley Market Report</a>
+        <a class="tab" href="https://ohiovalleylandpartners.com/ohio-valley-guides/franklin-county-oh">Franklin County</a>
+        <a class="tab" href="https://ohiovalleylandpartners.com/ohio-valley-guides/belmont-county-oh">Belmont County</a>
+        <a class="tab" href="https://ohiovalleylandpartners.com/ohio-valley-guides/columbiana-county-oh">Columbiana County</a>
+        <a class="tab" href="https://ohiovalleylandpartners.com/land">Sell Land</a>
+        <a class="tab" href="https://ohiovalleylandpartners.com/properties">Browse Listings</a>
+      </div>
+      <span class="filter-note">Quick jump — every link goes to an existing page.</span>
+    </div>
+  </div>
+
+  <section class="featured">
+    <p class="section-eyebrow">Primary campaign</p>
+    <h2 class="section-title">Start here if you're in Central Ohio</h2>
+    <article class="featured-card">
+      <div class="featured-img">
+        <span class="featured-badge">Franklin County · Active Campaign</span>
+      </div>
+      <div class="featured-body">
+        <h3>Franklin County, OH</h3>
+        <p class="sub">Columbus infill lots, residential parcels & urban-fringe acreage</p>
+        <p>Franklin sits outside the core Ohio River Valley — it's our active Columbus campaign. A different market than Belmont or Jefferson, with its own zoning, pricing, and buyer demand.</p>
+        <div class="tag-row">
+          <span class="tag">Infill lots</span>
+          <span class="tag">Intel corridor</span>
+          <span class="tag">Columbus metro</span>
+        </div>
+        <a class="btn" href="https://ohiovalleylandpartners.com/ohio-valley-guides/franklin-county-oh">Read Franklin County Guide →</a>
+      </div>
+    </article>
+  </section>
+
+  <section class="counties" id="county-guides">
+    <p class="section-eyebrow">Our active footprint</p>
+    <h2 class="section-title">County guides — Ohio & West Virginia</h2>
+    <p style="color:var(--muted);font-size:0.9rem;margin-top:8px;max-width:560px;">Nine counties where we buy and publish. Each guide covers land types, common seller situations, and county-specific FAQs.</p>
+    <div class="county-grid">
+
+      <a class="county-card" href="https://ohiovalleylandpartners.com/ohio-valley-guides/belmont-county-oh">
+        <div class="county-thumb" style="background-image:url('images/guides/county-rural.jpg')"><span class="state-pill oh">OH</span></div>
+        <div class="county-body">
+          <h4>Belmont County</h4>
+          <p class="county-hook">Timber, shale country & Ohio River acreage</p>
+          <p class="county-desc">Rural parcels, inherited land, and farm ground in one of the valley's most active land markets.</p>
+          <span class="county-link">Read guide →</span>
+        </div>
+      </a>
+
+      <a class="county-card" href="https://ohiovalleylandpartners.com/ohio-valley-guides/jefferson-county-oh">
+        <div class="county-thumb" style="background-image:url('../images/partner-forest.jpg')"><span class="state-pill oh">OH</span></div>
+        <div class="county-body">
+          <h4>Jefferson County</h4>
+          <p class="county-hook">Hill country & river-bottom land</p>
+          <p class="county-desc">Steep acreage, timber tracts, and parcels along the Ohio — a market with its own pricing logic.</p>
+          <span class="county-link">Read guide →</span>
+        </div>
+      </a>
+
+      <a class="county-card" href="https://ohiovalleylandpartners.com/ohio-valley-guides/columbiana-county-oh" style="border-color:#c8963a44">
+        <div class="county-thumb" style="background-image:url('../images/ep-feature.jpg')"><span class="state-pill oh">OH</span></div>
+        <div class="county-body">
+          <h4>Columbiana County</h4>
+          <p class="county-hook">East Palestine & post-derailment context</p>
+          <p class="county-desc">Market conditions, land value factors, and what sellers in this county should understand right now.</p>
+          <span class="county-link">Read guide →</span>
+        </div>
+      </a>
+
+      <a class="county-card" href="https://ohiovalleylandpartners.com/ohio-valley-guides/harrison-county-oh">
+        <div class="county-thumb" style="background-image:url('images/guides/county-rural.jpg')"><span class="state-pill oh">OH</span></div>
+        <div class="county-body">
+          <h4>Harrison County</h4>
+          <p class="county-hook">Remote acreage & hunting land</p>
+          <p class="county-desc">Back-tax parcels, wooded tracts, and rural ground — what moves and what sits in this county.</p>
+          <span class="county-link">Read guide →</span>
+        </div>
+      </a>
+
+      <a class="county-card" href="https://ohiovalleylandpartners.com/ohio-valley-guides/carroll-county-oh">
+        <div class="county-thumb" style="background-image:url('../images/hero-valley.jpg')"><span class="state-pill oh">OH</span></div>
+        <div class="county-body">
+          <h4>Carroll County</h4>
+          <p class="county-hook">Farm ground & rolling hill country</p>
+          <p class="county-desc">Agricultural parcels, wooded acreage, and inherited family land in Amish country.</p>
+          <span class="county-link">Read guide →</span>
+        </div>
+      </a>
+
+      <a class="county-card" href="https://ohiovalleylandpartners.com/ohio-valley-guides/franklin-county-oh">
+        <div class="county-thumb" style="background-image:url('images/guides/county-infill.jpg')"><span class="state-pill oh">OH</span></div>
+        <div class="county-body">
+          <h4>Franklin County</h4>
+          <p class="county-hook">Columbus infill & metro-fringe lots</p>
+          <p class="county-desc">Central Ohio campaign — different market than the river counties, worth its own guide.</p>
+          <span class="county-link">Read guide →</span>
+        </div>
+      </a>
+
+      <a class="county-card" href="https://ohiovalleylandpartners.com/ohio-valley-guides/ohio-county-wv">
+        <div class="county-thumb" style="background-image:url('images/guides/county-infill.jpg')"><span class="state-pill wv">WV</span></div>
+        <div class="county-body">
+          <h4>Ohio County, WV</h4>
+          <p class="county-hook">Wheeling metro & northern panhandle</p>
+          <p class="county-desc">Vacant lots and acreage on the West Virginia side of the valley — market overview and FAQs.</p>
+          <span class="county-link">Read guide →</span>
+        </div>
+      </a>
+
+      <a class="county-card" href="https://ohiovalleylandpartners.com/ohio-valley-guides/marshall-county-wv">
+        <div class="county-thumb" style="background-image:url('../images/partner-urban.jpg')"><span class="state-pill wv">WV</span></div>
+        <div class="county-body">
+          <h4>Marshall County</h4>
+          <p class="county-hook">Industrial fringe & river parcels</p>
+          <p class="county-desc">Land near Moundsville and the Ohio River — development and investment market notes.</p>
+          <span class="county-link">Read guide →</span>
+        </div>
+      </a>
+
+      <a class="county-card" href="https://ohiovalleylandpartners.com/ohio-valley-guides/brooke-county-wv">
+        <div class="county-thumb" style="background-image:url('../images/forest-arch.jpg')"><span class="state-pill wv">WV</span></div>
+        <div class="county-body">
+          <h4>Brooke County</h4>
+          <p class="county-hook">Ohio River frontage & small-town lots</p>
+          <p class="county-desc">River-adjacent acreage and vacant parcels in the northern panhandle.</p>
+          <span class="county-link">Read guide →</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="inside">
+    <div class="inside-inner">
+      <h2>What's inside every guide</h2>
+      <div class="inside-grid">
+        <div class="inside-card">
+          <div class="inside-num">01</div>
+          <h3>Land types in this county</h3>
+          <p>Vacant lots, timber, farm ground, inherited parcels, back-tax land — what's common here and what buyers look for.</p>
+        </div>
+        <div class="inside-card">
+          <div class="inside-num">02</div>
+          <h3>Seller situations we see</h3>
+          <p>Inherited land, out-of-state owners, estate settlements, delinquent taxes — how each situation plays out locally.</p>
+        </div>
+        <div class="inside-card">
+          <div class="inside-num">03</div>
+          <h3>County FAQs</h3>
+          <p>Zoning, pricing patterns, and process — plain answers from someone operating in that county.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Editorial scope strip — NOT sales stats -->
+  <section class="scope">
+    <div class="scope-item">
+      <div class="num">4</div>
+      <div class="lbl">Ohio River states</div>
+      <div class="sub">Pennsylvania, Ohio, West Virginia & Kentucky — the valley is vast before you reach a single county.</div>
+    </div>
+    <div class="scope-item">
+      <div class="num">981</div>
+      <div class="lbl">Miles of river</div>
+      <div class="sub">From Pittsburgh to Cairo — the corridor that defines Appalachia's western edge.</div>
+    </div>
+    <div class="scope-item">
+      <div class="num">9</div>
+      <div class="lbl">County guides</div>
+      <div class="sub">Our active footprint within the valley — where we publish, buy, and know the ground.</div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="cta-img"></div>
+    <div class="cta-body">
+      <h2>Go deeper on your county</h2>
+      <p>Pick a guide above, or read the full <a href="https://ohiovalleylandpartners.com/blog/ohio-valley-land-market-2026" style="color:var(--meadow);font-weight:600;">2026 Ohio Valley land market report</a> for regional context across PA, OH, WV, and KY.</p>
+      <div>
+        <a class="btn" href="https://ohiovalleylandpartners.com/blog">Read the Blog →</a>
+        <a class="btn-ghost" href="https://ohiovalleylandpartners.com/land">Ready to sell? Start here</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
