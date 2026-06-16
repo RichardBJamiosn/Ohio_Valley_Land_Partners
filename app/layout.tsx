@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Poppins, Cormorant_Garamond } from 'next/font/google';
 import { MainNav } from '@/components/navigation/main-nav';
 import { Footer } from '@/components/navigation/footer';
+import { GhlBubbleOnly } from '@/components/ghl-bubble-only';
 import { WebSiteSchema, PersonSchema } from '@/components/seo/json-ld';
 import { siteConfig } from '@/lib/seo-config';
 import Script from 'next/script';
@@ -116,6 +117,7 @@ export default function RootLayout({
         <MainNav />
         <main className="min-h-screen">{children}</main>
         <Footer />
+        <GhlBubbleOnly />
       </body>
     </html>
   );
