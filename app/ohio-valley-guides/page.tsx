@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, MapPin } from 'lucide-react';
 import { silos } from '@/lib/seo-config';
@@ -147,9 +148,22 @@ export default function GuidesPage() {
 
       <div className="min-h-screen bg-background">
 
-        {/* Hero — type only, no photos */}
-        <section className="bg-forest text-white py-20 sm:py-28">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        {/* Hero — valley photo with heavy overlay for readable type */}
+        <section className="relative min-h-[72vh] flex items-center overflow-hidden bg-forest text-white">
+          <Image
+            src="/guides/atlas-hero.jpg"
+            alt=""
+            fill
+            priority
+            className="object-cover object-center brightness-[0.55]"
+            sizes="100vw"
+          />
+          <div
+            className="absolute inset-0 bg-gradient-to-r from-forest/96 via-forest/88 to-forest/82"
+            aria-hidden
+          />
+
+          <div className="relative z-10 mx-auto max-w-7xl px-6 py-20 sm:py-28 lg:px-8 w-full">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div>
                 <p className="heading-serif text-[#e8c47a] text-2xl sm:text-3xl mb-4">
@@ -186,7 +200,7 @@ export default function GuidesPage() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-white/15 bg-white/5 p-7 sm:p-8">
+              <div className="rounded-2xl border border-white/15 bg-[#142218]/90 backdrop-blur-sm p-7 sm:p-8 shadow-xl">
                 <h2 className="text-xs font-bold uppercase tracking-widest text-center text-white/90 mb-2">
                   The Ohio Valley atlas
                 </h2>
