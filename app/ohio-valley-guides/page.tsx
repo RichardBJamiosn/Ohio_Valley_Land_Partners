@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { silos } from '@/lib/seo-config';
@@ -33,88 +32,88 @@ const COUNTY_GUIDES = [
     slug: 'belmont-county-oh',
     name: 'Belmont County',
     state: 'OH' as const,
+    mark: 'BC',
+    headerClass: 'bg-gradient-to-br from-[#1a3328] via-meadow/50 to-[#0f1f18]',
     hook: 'Timber, shale country & Ohio River acreage',
     description:
       "Rural parcels, inherited land, and farm ground in one of the valley's most active land markets.",
-    image: '/guides/county-rural.jpg',
-    alt: 'Rural Ohio Valley acreage',
   },
   {
     slug: 'jefferson-county-oh',
     name: 'Jefferson County',
     state: 'OH' as const,
+    mark: 'JC',
+    headerClass: 'bg-gradient-to-br from-[#2a3f4f] via-[#1e3040] to-forest',
     hook: 'Hill country & river-bottom land',
     description:
       'Steep acreage, timber tracts, and parcels along the Ohio — a market with its own pricing logic.',
-    image: '/community/partner-forest.jpg',
-    alt: 'Appalachian forest hillside',
   },
   {
     slug: 'columbiana-county-oh',
     name: 'Columbiana County',
     state: 'OH' as const,
+    mark: 'CC',
+    headerClass: 'bg-gradient-to-br from-[#3d3020] via-amber/35 to-forest',
     hook: 'East Palestine & post-derailment context',
     description:
       'Market conditions, land value factors, and what sellers in this county should understand right now.',
-    image: '/community/ep-feature.jpg',
-    alt: 'Columbiana County landscape',
     highlighted: true,
   },
   {
     slug: 'harrison-county-oh',
     name: 'Harrison County',
     state: 'OH' as const,
+    mark: 'HC',
+    headerClass: 'bg-gradient-to-br from-[#1c2e22] via-[#264a38] to-[#142218]',
     hook: 'Remote acreage & hunting land',
     description:
       'Back-tax parcels, wooded tracts, and rural ground — what moves and what sits in this county.',
-    image: '/guides/county-rural.jpg',
-    alt: 'Remote Ohio hunting land',
   },
   {
     slug: 'carroll-county-oh',
     name: 'Carroll County',
     state: 'OH' as const,
+    mark: 'CR',
+    headerClass: 'bg-gradient-to-br from-[#2a3d1f] via-[#3d5a2a] to-forest',
     hook: 'Farm ground & rolling hill country',
     description: 'Agricultural parcels, wooded acreage, and inherited family land in Amish country.',
-    image: '/community/hero-valley.jpg',
-    alt: 'Rolling Ohio hill country',
   },
   {
     slug: 'franklin-county-oh',
     name: 'Franklin County',
     state: 'OH' as const,
+    mark: 'FC',
+    headerClass: 'bg-gradient-to-br from-[#2c3444] via-[#3a4a5c] to-forest',
     hook: 'Columbus infill & metro-fringe lots',
     description: 'Central Ohio campaign — different market than the river counties, worth its own guide.',
-    image: '/guides/county-infill.jpg',
-    alt: 'Columbus infill lot',
   },
   {
     slug: 'ohio-county-wv',
     name: 'Ohio County, WV',
     state: 'WV' as const,
+    mark: 'OC',
+    headerClass: 'bg-gradient-to-br from-[#1e3550] via-[#2a4a6b] to-[#152535]',
     hook: 'Wheeling metro & northern panhandle',
     description:
       'Vacant lots and acreage on the West Virginia side of the valley — market overview and FAQs.',
-    image: '/guides/county-infill.jpg',
-    alt: 'Wheeling metro area',
   },
   {
     slug: 'marshall-county-wv',
     name: 'Marshall County',
     state: 'WV' as const,
+    mark: 'MC',
+    headerClass: 'bg-gradient-to-br from-[#2a2f35] via-[#3d4550] to-[#1a1f24]',
     hook: 'Industrial fringe & river parcels',
     description: 'Land near Moundsville and the Ohio River — development and investment market notes.',
-    image: '/community/partner-urban.jpg',
-    alt: 'Industrial fringe near the Ohio River',
   },
   {
     slug: 'brooke-county-wv',
     name: 'Brooke County',
     state: 'WV' as const,
+    mark: 'BK',
+    headerClass: 'bg-gradient-to-br from-[#1a3040] via-[#254a5a] to-[#122028]',
     hook: 'Ohio River frontage & small-town lots',
     description: 'River-adjacent acreage and vacant parcels in the northern panhandle.',
-    image: '/community/forest-arch.jpg',
-    alt: 'Ohio River frontage',
   },
 ];
 
@@ -178,18 +177,10 @@ export default function GuidesPage() {
 
       <div className="min-h-screen bg-background">
 
-        {/* Hero */}
+        {/* Hero — solid forest, no bright photo behind the type */}
         <section className="relative min-h-[78vh] flex items-center overflow-hidden bg-forest">
-          <Image
-            src="/guides/atlas-hero.jpg"
-            alt=""
-            fill
-            priority
-            className="object-cover"
-            sizes="100vw"
-          />
           <div
-            className="absolute inset-0 bg-gradient-to-r from-forest/93 via-forest/75 to-forest/50"
+            className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_50%,rgba(51,117,94,0.18),transparent_55%),radial-gradient(ellipse_at_80%_20%,rgba(200,150,58,0.08),transparent_45%)]"
             aria-hidden
           />
 
@@ -230,11 +221,11 @@ export default function GuidesPage() {
                 </div>
               </div>
 
-              <div className="rounded-[20px] border border-white/12 bg-white/[0.06] backdrop-blur-md p-7">
+              <div className="rounded-[20px] border border-white/15 bg-[#142218]/90 p-7 shadow-xl">
                 <h2 className="text-white text-xs font-bold uppercase tracking-widest text-center mb-2">
                   The Ohio Valley atlas
                 </h2>
-                <p className="text-white/55 text-[0.72rem] text-center mb-4 leading-snug">
+                <p className="text-white/70 text-[0.72rem] text-center mb-4 leading-snug">
                   The Ohio River runs 981 miles — Pennsylvania to Illinois. Four states define the
                   heart of the valley we work in.
                 </p>
@@ -242,16 +233,16 @@ export default function GuidesPage() {
                   {ATLAS_STATES.map((state) => (
                     <div
                       key={state.abbr}
-                      className="text-center py-4 px-2 rounded-xl bg-black/25 border border-white/10"
+                      className="text-center py-4 px-2 rounded-xl bg-black/30 border border-white/10"
                     >
                       <div className="text-xl font-extrabold text-amber">{state.abbr}</div>
-                      <div className="text-[0.58rem] font-semibold text-white/70 uppercase tracking-wide mt-1 leading-tight">
+                      <div className="text-[0.58rem] font-semibold text-white/75 uppercase tracking-wide mt-1 leading-tight">
                         {state.name}
                       </div>
                     </div>
                   ))}
                 </div>
-                <p className="mt-4 text-center text-[0.68rem] text-white/50 heading-serif italic">
+                <p className="mt-4 text-center text-[0.68rem] text-white/60 heading-serif italic">
                   Our guides cover 9 active counties within this corridor — the ground we know.
                 </p>
               </div>
@@ -289,17 +280,14 @@ export default function GuidesPage() {
           <h2 className="text-3xl font-extrabold tracking-tight">Start here if you&apos;re in Central Ohio</h2>
 
           <article className="mt-6 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] rounded-3xl overflow-hidden border-2 border-amber bg-card shadow-[0_12px_48px_rgba(200,150,58,0.15)]">
-            <div className="relative min-h-[260px] lg:min-h-[300px]">
-              <Image
-                src="/guides/county-infill.jpg"
-                alt="Franklin County infill lot"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 60vw"
-              />
-              <span className="absolute top-5 left-5 bg-amber text-forest text-[0.65rem] font-extrabold uppercase tracking-wider px-3 py-1.5 rounded-md">
-                Franklin County · Active Campaign
-              </span>
+            <div className="relative min-h-[220px] lg:min-h-[300px] bg-gradient-to-br from-[#2c3444] via-forest to-meadow/25 flex items-center justify-center p-8">
+              <div className="text-center">
+                <span className="inline-block bg-amber text-forest text-[0.65rem] font-extrabold uppercase tracking-wider px-3 py-1.5 rounded-md mb-4">
+                  Franklin County · Active Campaign
+                </span>
+                <p className="text-5xl sm:text-6xl font-extrabold text-white/10 tracking-tight">Franklin</p>
+                <p className="heading-serif text-[#e8c47a] text-xl mt-2">Central Ohio · Columbus metro</p>
+              </div>
             </div>
             <div className="flex flex-col justify-center p-8 sm:p-10">
               <h3 className="text-2xl font-extrabold">Franklin County, OH</h3>
@@ -345,21 +333,16 @@ export default function GuidesPage() {
                 key={county.slug}
                 href={`/ohio-valley-guides/${county.slug}`}
                 className={`group rounded-[20px] overflow-hidden bg-card border shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg ${
-                  county.highlighted ? 'border-amber/30' : 'border-border'
+                  county.highlighted ? 'border-amber/40' : 'border-border'
                 }`}
               >
-                <div className="relative h-[140px]">
-                  <Image
-                    src={county.image}
-                    alt={county.alt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                  <div
-                    className="absolute inset-0 bg-gradient-to-t from-forest/55 to-transparent"
+                <div className={`relative h-[120px] ${county.headerClass}`}>
+                  <span
+                    className="absolute inset-0 flex items-center justify-center text-5xl font-extrabold text-white/[0.07] tracking-widest select-none"
                     aria-hidden
-                  />
+                  >
+                    {county.mark}
+                  </span>
                   <StatePill state={county.state} />
                 </div>
                 <div className="p-5 pb-6">
@@ -417,42 +400,31 @@ export default function GuidesPage() {
 
         {/* CTA */}
         <section className="mx-auto max-w-7xl px-6 lg:px-8 pb-20 sm:pb-28">
-          <div className="grid grid-cols-1 lg:grid-cols-2 rounded-3xl overflow-hidden border border-border bg-card shadow-md">
-            <div className="relative min-h-[240px] lg:min-h-[280px]">
-              <Image
-                src="/community/forest-arch.jpg"
-                alt="Ohio Appalachian forest"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-            <div className="flex flex-col justify-center p-8 sm:p-10">
-              <h2 className="text-2xl font-extrabold">Go deeper on your county</h2>
-              <p className="text-sm text-muted-foreground leading-relaxed mt-3">
-                Pick a guide above, or read the full{' '}
-                <Link
-                  href="/blog/ohio-valley-land-market-2026"
-                  className="text-meadow font-semibold hover:text-meadow/80 transition-colors"
-                >
-                  2026 Ohio Valley land market report
-                </Link>{' '}
-                for regional context across PA, OH, WV, and KY.
-              </p>
-              <div className="flex flex-wrap gap-3 mt-5">
-                <Link
-                  href="/blog"
-                  className="inline-flex items-center gap-2 rounded-lg bg-amber px-5 py-3 text-sm font-extrabold text-forest hover:bg-amber/90 transition-colors"
-                >
-                  Read the Blog <ArrowRight className="h-4 w-4" />
-                </Link>
-                <Link
-                  href="/land"
-                  className="inline-flex items-center gap-2 rounded-lg border border-border px-5 py-3 text-sm font-bold text-foreground hover:border-amber transition-colors"
-                >
-                  Ready to sell? Start here
-                </Link>
-              </div>
+          <div className="rounded-3xl overflow-hidden border border-border bg-gradient-to-br from-forest via-[#1e3328] to-meadow/30 p-8 sm:p-12 text-white shadow-md">
+            <h2 className="text-2xl sm:text-3xl font-extrabold">Go deeper on your county</h2>
+            <p className="text-sm text-white/75 leading-relaxed mt-3 max-w-2xl">
+              Pick a guide above, or read the full{' '}
+              <Link
+                href="/blog/ohio-valley-land-market-2026"
+                className="text-[#e8c47a] font-semibold hover:text-amber transition-colors"
+              >
+                2026 Ohio Valley land market report
+              </Link>{' '}
+              for regional context across PA, OH, WV, and KY.
+            </p>
+            <div className="flex flex-wrap gap-3 mt-6">
+              <Link
+                href="/blog"
+                className="inline-flex items-center gap-2 rounded-lg bg-amber px-5 py-3 text-sm font-extrabold text-forest hover:bg-amber/90 transition-colors"
+              >
+                Read the Blog <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                href="/land"
+                className="inline-flex items-center gap-2 rounded-lg border border-white/30 px-5 py-3 text-sm font-bold text-white hover:bg-white/10 transition-colors"
+              >
+                Ready to sell? Start here
+              </Link>
             </div>
           </div>
         </section>
