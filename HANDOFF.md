@@ -1,6 +1,6 @@
 # Ohio Valley Land Partners — Marketing Site Handoff
 
-*Last updated: 2026-06-15 · source: agent · Status: LIVE (Cloudflare Pages)*
+*Last updated: 2026-06-16 · source: agent · Status: LIVE (Cloudflare Pages)*
 
 ---
 
@@ -99,19 +99,43 @@ open /Users/richardjamison/Documents/Projects/Ohio_Valley_Land_Partners/mockups/
 
 | File | Used for |
 |---|---|
-| `public/guides/atlas-hero.jpg` | Hero background |
-| `public/guides/county-infill.jpg` | Franklin featured + infill counties |
+| `public/guides/atlas-hero.jpg` | Hero background (heavy dark overlay for readable type) |
+| `public/guides/county-infill.jpg` | Franklin featured split card (skyline photo, left panel) |
 | `public/guides/county-rural.jpg` | Rural county thumbnails |
-| `public/community/*` | Reused for Jefferson, Columbiana, Carroll, Marshall, Brooke, CTA |
+| `public/guides/carroll-green-field.jpg` | Carroll county card |
+
+County grid is **text-only** (MapPin + hooks) — no photo grid, no `/community/` image reuse.
 
 ---
 
-## Recent session notes (2026-06-15)
+## GHL chat widget (A2P compliance)
+
+Widget loads on **all pages** via raw HTML in `app/layout.tsx` (required for scanner detection).
+
+| Item | Value |
+|---|---|
+| Widget ID | `6a1730411b5a98ef9dec746a` |
+| Location ID | `bNT4wp0nukIQdBJbQDaa` |
+| Loader | `https://widgets.leadconnectorhq.com/loader.js` |
+
+**CSP:** `public/_headers` must allow `widgets.leadconnectorhq.com`, `services.leadconnectorhq.com`, `services.msgsndr.com`, and `stcdn.leadconnectorhq.com` — otherwise the phone popup never renders (`884e53c`, `70d6790`).
+
+**Avatar:** Prompt/header image is configured in GHL dashboard (Sites → Chat Widget), not in repo code. Do **not** hide the widget panel via shadow-DOM CSS — breaks the form and A2P opt-in (`dd84cc6` reverted in `a73daeb`).
+
+Phone fields on site forms remain hidden; GHL widget is the single SMS opt-in source.
+
+---
+
+## Recent session notes (2026-06-15 → 2026-06-16)
 
 - Community page v2 mockup approved → implemented and deployed
 - Guides hub v2 mockup approved → implemented and deployed
-- Images bundled in `public/community/` and `public/guides/` (stock placeholders)
+- Guides hub iterated: clean editorial layout, atlas hero photo restored, Franklin skyline card, text-only county grid
+- GHL CSP fixed → phone registration popup working again
+- Brief experiment hiding chat panel (bubble only) → **reverted**; full widget with avatar restored
 - Portal onboarding work shipped separately — see `OVLP_Portal/HANDOFF.md`
+
+**Recent commits:** `a73daeb` (widget revert) · `70d6790` (CSP) · `5f796a9` (Franklin photo) · `4694f6e` (hero photo) · `a2b524b` (editorial rebuild)
 
 ---
 
@@ -124,6 +148,8 @@ open /Users/richardjamison/Documents/Projects/Ohio_Valley_Land_Partners/mockups/
 | `mockups/guides-redesign.html` | Approved guides redesign mockup |
 | `app/page.tsx` + `components/home/hero-section.tsx` | Landing page (design reference) |
 | `app/globals.css` | Design system tokens |
+| `app/layout.tsx` | GHL widget embed (raw HTML) |
+| `public/_headers` | CSP — must include GHL domains |
 | `mockups/community-redesign.html` | Approved redesign mockup |
 | `public/hero.mp4` | Landing hero video |
 | `public/og.jpg` | OG / fallback imagery |
