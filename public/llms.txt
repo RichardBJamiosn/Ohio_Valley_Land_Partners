@@ -7,6 +7,9 @@
 - /: Homepage — services overview, counties served, process summary
 - /about: Company background, community giving commitment (5% per closing to Arc of Appalachia and Salvation Army East Palestine)
 - /contact: Get a no-obligation cash offer within 24 hours
+- /land: Land offers silo — cash land buyer services
+- /community: Community giving — 5% of every closing donated
+- /land-scouts: Land scouts program
 
 ## Sell Your Land — County Pages
 - /sell-land/franklin-county-oh: Cash land buyer for Franklin County / Columbus-area lots, infill parcels, and acreage
@@ -36,9 +39,16 @@
 - /blog/ohio-valley-land-market-2026: Ohio Valley land market conditions and outlook for 2026
 - /blog/sell-vacant-land-delaware-county-ohio: Selling vacant land in Delaware County, Ohio
 - /blog/sell-land-back-taxes-ohio: How to sell land with back taxes in Ohio
+- /blog/land-near-intel-new-albany-ohio: Selling land near Intel New Albany semiconductor campus
 - /blog/sell-land-belmont-county-ohio-fast: Selling land fast in Belmont County, Ohio
 - /blog/sell-land-jefferson-county-ohio-steubenville: Selling land in Jefferson County (Steubenville area)
+- /blog/sell-land-columbiana-county-ohio: Selling land in Columbiana County, Ohio
+- /blog/sell-land-ohio-county-west-virginia-wheeling: Selling land in Ohio County, West Virginia (Wheeling)
+- /blog/sell-land-marshall-county-wv-moundsville: Selling land in Marshall County, WV (Moundsville)
 - /blog/what-to-do-with-land-you-dont-want: What to do with land you inherited or don't want
+- /blog/brooke-harrison-carroll-county-land-buyers: Cash land buyers in Brooke, Harrison, and Carroll counties
+- /blog/franklin-county-ohio-sell-vacant-land-2026: How to sell vacant land in Franklin County, Ohio in 2026
+- /blog/brooke-county-wv-land-worth-2026: What Brooke County WV land is worth in 2026
 
 ## Service Area
 Ohio counties: Belmont, Jefferson, Columbiana, Harrison, Carroll
@@ -54,3 +64,4 @@ Active campaign market: Franklin County, Ohio
 - Headquarters: 2025 Riverside Drive STE 35682, Columbus, OH 43221
 - Phone: (614) 653-7430
 - Email: info@ohiovalleylandpartners.com
+- Founder: Richard B. Jamison

@@ -25,8 +25,8 @@ export const blogPosts: BlogPost[] = [
       'Step-by-step guide to selling inherited land in Ohio probate court. Learn your options, timeline, and how cash land buyers can close fast — no agent required.',
     category: 'Seller Guides',
     datePublished: '2026-03-01',
-    dateModified: '2026-03-14',
-    readingTime: '6 min read',
+    dateModified: '2026-06-18',
+    readingTime: '10 min read',
     excerpt:
       'Inheriting land in Ohio comes with legal steps most people don\'t expect. Here\'s exactly what happens in probate — and how to sell fast without getting stuck.',
     keywords: [
@@ -38,32 +38,54 @@ export const blogPosts: BlogPost[] = [
     ],
     body: `
 <h2>What Is Ohio Probate and Why Does It Matter for Land Sales?</h2>
-<p>When someone passes away owning real property in Ohio, that property must pass through probate court before it can be sold — unless it was held in a trust or had a Transfer on Death (TOD) deed. Probate is the legal process by which the court validates the will (if one exists) and authorizes an executor to manage and transfer estate assets, including land.</p>
-<p>In Ohio, probate is handled by the Probate Division of the Court of Common Pleas in the county where the deceased lived. If the land is in Licking County and the deceased lived in Delaware County, the court in Delaware County still controls the probate process.</p>
+<p>When someone passes away owning real property in Ohio, that property generally must pass through probate court before it can be sold — unless it was held in a trust, titled jointly with right of survivorship, or transferred via a Transfer on Death (TOD) deed recorded before death. Under <strong>ORC § 2113.01</strong>, probate is the legal process by which the court validates the will (if one exists) and authorizes a fiduciary to manage and transfer estate assets, including vacant land, farm ground, and residential lots.</p>
+<p>In Ohio, probate is handled by the Probate Division of the Court of Common Pleas in the county where the deceased lived at the time of death. If the land is in Belmont County and the deceased lived in Franklin County, the Franklin County Probate Court still controls the estate administration — even though the parcel sits in another county.</p>
+<p>This matters because you cannot simply sign a deed and hand land to a buyer. The court must authorize the sale, creditors must be addressed, and the title company will require probate court orders before insuring the transaction.</p>
 
 <h2>How Long Does Ohio Probate Take?</h2>
-<p>Simple estates with no disputes typically close in 4–6 months. Complex estates — those with multiple heirs, contested wills, or outstanding liens — can run 12–24 months. During this time, you generally cannot sell the land without court authorization, even if you are the executor.</p>
+<p>According to guidance from the <strong>Ohio State Bar Association</strong>, simple estates with no disputes typically close in <strong>4–6 months</strong>. Complex estates — those with multiple heirs, contested wills, unclear title chains, or outstanding liens — can run <strong>12–24 months</strong>. During this time, you generally cannot sell the land without court authorization, even if you are the named executor in the will.</p>
+<p>Land sales add complexity because vacant parcels are harder to appraise than houses, and heirs often live out of state with no plan for the property. Starting the probate process early — and getting a cash offer in hand — gives the estate a clear path to settlement.</p>
 
 <h2>Step-by-Step: Selling Inherited Land in Ohio Probate</h2>
 <ol>
-  <li><strong>Open the estate.</strong> File with the Probate Court in the correct county. The court appoints an executor (if there's a will) or an administrator (if there isn't).</li>
-  <li><strong>Get an inventory and appraisal.</strong> Ohio law requires an inventory of all estate assets within 3 months of appointment. Real property must be appraised at fair market value.</li>
-  <li><strong>Pay debts first.</strong> Creditors must be notified and paid before any assets are distributed or sold. Unpaid property taxes, liens, and mortgages are settled from the estate.</li>
-  <li><strong>Request authority to sell.</strong> The executor can petition the court for authority to sell the real estate. For land sales to cash buyers, this is typically straightforward.</li>
-  <li><strong>Accept an offer and close.</strong> Once you have court authorization, you can accept an offer, sign a purchase agreement, and close. The deed transfers to the buyer through the estate.</li>
+  <li><strong>Open the estate.</strong> File with the Probate Court in the correct county under <strong>ORC § 2113.01</strong>. The court appoints an executor (if there is a will) or an administrator (if there is not).</li>
+  <li><strong>File the inventory.</strong> Under <strong>ORC § 2113.44</strong>, the fiduciary must file an inventory of estate assets within three months of appointment. Real property must be listed at fair market value — usually supported by an appraisal or broker price opinion.</li>
+  <li><strong>Notify creditors.</strong> Known creditors must be paid before assets are distributed. Unpaid property taxes, mortgages, and judgment liens are settled from estate proceeds first.</li>
+  <li><strong>Request authority to sell.</strong> Under <strong>ORC § 2113.39</strong>, the executor or administrator may petition the court for authority to sell real property. For land sales to cash buyers, this is typically straightforward when the offer is documented and the sale benefits the estate.</li>
+  <li><strong>Accept an offer and close.</strong> Once the court issues an order authorizing the sale, you can accept an offer, sign a purchase agreement, and close through a licensed title company. The deed transfers from the estate to the buyer.</li>
 </ol>
 
+<h2>When Multiple Heirs Inherit the Same Parcel</h2>
+<p>Ohio recognizes the <strong>Uniform Partition of Heirs Property Act</strong>, enacted through <strong>ORC § 5307</strong>, which gives co-heirs additional protections when one heir wants to force a sale. If three siblings inherit 40 acres in Harrison County and only one wants to sell, the legal path depends on whether the estate was properly administered and whether all heirs agree.</p>
+<p>A direct cash buyer can purchase from an authorized fiduciary — the executor or administrator with court authority — without requiring every heir to sign individually at the offer stage. But active disputes among heirs must be resolved before closing.</p>
+
 <h2>Can You Sell Before Probate Closes?</h2>
-<p>Yes — with court approval. A cash buyer familiar with Ohio probate can often work within the legal timeline. At Ohio Valley Land Partners, we regularly purchase land directly from estates mid-probate. We understand the paperwork, we're patient with timelines, and we pay cash so there's no financing contingency to kill the deal.</p>
+<p>Yes — with court approval. Under <strong>ORC § 2113.39</strong>, the fiduciary does not need to wait for the entire probate case to close before selling real property, but the court must authorize the sale first. A cash buyer familiar with Ohio probate can work within that timeline.</p>
+<p>At Ohio Valley Land Partners, we regularly purchase land directly from estates mid-probate. We understand the paperwork, we are patient with court schedules, and we pay cash so there is no financing contingency to kill the deal at the last minute.</p>
 
 <h2>What About Back Taxes on Inherited Land?</h2>
-<p>Delinquent property taxes are one of the most common issues we see with inherited Ohio land. The good news: cash buyers will often factor back taxes into the offer and handle the payoff at closing. You walk away clean without coming out of pocket.</p>
+<p>Delinquent property taxes are one of the most common issues we see with inherited Ohio land. Under <strong>ORC § 5721.181</strong>, delinquent taxes become a lien on the property, but that lien is typically paid at or before closing from sale proceeds.</p>
+<p>Cash buyers will often factor back taxes into the offer and handle the payoff at closing. You walk away clean without coming out of pocket. See our guide on <a href="/blog/sell-land-back-taxes-ohio">selling land with back taxes in Ohio</a> for the full timeline.</p>
+
+<h2>Transfer on Death Deeds and Trusts — Probate Workarounds</h2>
+<p>Not every inherited parcel goes through probate. If the deceased recorded a <strong>Transfer on Death (TOD) deed</strong> before passing, the land may transfer directly to the named beneficiary without a full estate administration. Similarly, land held in a revocable living trust typically avoids probate entirely.</p>
+<p>If you are not sure how the land was titled, pull the deed and the county auditor record. The Belmont County Auditor, Franklin County Auditor, or whichever county holds the parcel will show the current owner of record and any transfer documents filed after the death.</p>
 
 <h2>Counties We Serve in the Ohio Valley</h2>
-<p>We actively purchase inherited land in Belmont, Jefferson, Columbiana, Harrison, and Carroll counties in Ohio, as well as Ohio, Marshall, and Brooke counties in West Virginia. If you've inherited a parcel anywhere in the Ohio Valley region, we want to hear from you.</p>
+<p>We actively purchase inherited land in Belmont, Jefferson, Columbiana, Harrison, and Carroll counties in Ohio, as well as Ohio, Marshall, and Brooke counties in West Virginia. We also buy inherited lots and acreage in <a href="/sell-land/franklin-county-oh">Franklin County, Ohio</a> as part of our active Columbus campaign.</p>
+<p>County-specific pages: <a href="/sell-land/belmont-county-oh">Belmont County</a> · <a href="/sell-land/jefferson-county-oh">Jefferson County</a> · <a href="/sell-land/harrison-county-oh">Harrison County</a> · <a href="/sell-land/carroll-county-oh">Carroll County</a></p>
+
+<h3>Do I need a real estate agent to sell inherited land in Ohio probate?</h3>
+<p>No. A licensed agent is not required. The executor or administrator sells through court authorization directly to a buyer. Many inherited parcels — especially vacant land in rural counties — sit on the MLS for months without an offer. A direct cash buyer eliminates commissions and financing delays.</p>
+
+<h3>Who has authority to sign the purchase agreement?</h3>
+<p>Only the court-appointed executor or administrator (or their attorney) can bind the estate. Heirs who are not named fiduciaries cannot sign on behalf of the estate, even if they are the only family member interested in selling.</p>
+
+<h3>What documents does the title company need?</h3>
+<p>Typically: letters testamentary or letters of administration, the court order authorizing the sale, the purchase agreement, and a fiduciary deed. The title company will also pull a title search from the county recorder and verify that property taxes are current or paid at closing.</p>
 
 <h2>Get a Cash Offer on Inherited Ohio Land</h2>
-<p>If you're the executor of an Ohio estate and need to sell land, we can give you a no-obligation cash offer within 24 hours. Just submit the property address — no need to have all the paperwork sorted first. We'll walk through the process together.</p>
+<p>If you are the executor of an Ohio estate and need to sell land, we can give you a no-obligation cash offer within 24 hours. Submit the property address on our <a href="/contact">contact page</a> — no need to have all the paperwork sorted first. We will walk through the probate timeline together and coordinate with your attorney if needed.</p>
     `,
   },
   {
@@ -686,6 +708,75 @@ export const blogPosts: BlogPost[] = [
 <p>Carroll County shares Harrison County's rural character and sits immediately north. Carrollton is the county seat. The county's western edge borders the Amish country tourist corridor, which has historically elevated recreational and residential land demand in that zone. Parcels near Atwood Lake or with creek frontage command premiums for recreational buyers.</p>
 <h2>How We Buy in All Three Counties</h2>
 <p>Same process regardless of county. Submit your parcel address. We pull records from the county auditor and GIS within 24 hours. We call you with a cash offer — no obligation. If you accept, we send a simple purchase agreement, open title, and close in 14–21 days. We pay all closing costs and handle any back tax payoff at closing.</p>
+    `,
+  },
+  {
+    slug: 'brooke-county-wv-land-worth-2026',
+    title: 'What Is Brooke County WV Land Worth in 2026?',
+    metaDescription:
+      'Discover what your Brooke County WV land is worth in 2026. Learn about market trends, property values, and how to sell quickly for cash in West Virginia\'s panhandle.',
+    category: 'County Guides',
+    datePublished: '2026-06-18',
+    dateModified: '2026-06-18',
+    readingTime: '6 min read',
+    excerpt:
+      'Brooke County land values depend on location, access, mineral rights, and zoning. Here is what parcels are actually selling for and how to get a cash offer.',
+    keywords: [
+      'Brooke County WV land value',
+      'sell land Brooke County',
+      'West Virginia land prices 2026',
+      'Brooke County property worth',
+      'cash land buyers WV',
+    ],
+    body: `
+<h2>Understanding Brooke County's Land Market in 2026</h2>
+
+<p>Brooke County's land market remains steady in 2026, driven by its proximity to Pennsylvania and Ohio borders. The county's 89 square miles contain diverse property types, from Ohio River bottomland to rolling hills suitable for agriculture or hunting. Industrial development along the river corridor continues to influence land values, particularly in areas near Wellsburg and Follansbee.</p>
+
+<p>Current market conditions favor sellers with clear titles and accessible properties. Cash buyers are particularly active for parcels between 5–50 acres, especially those with development potential or established agricultural use. Properties with mineral rights intact command premium prices, reflecting the region's ongoing energy sector activity.</p>
+
+<h2>Factors That Determine Land Value in Brooke County</h2>
+
+<p>Location within Brooke County significantly impacts your land's worth. Properties with Ohio River frontage or proximity to major transportation corridors like Route 2 typically command higher prices. Accessibility plays a crucial role — land with direct road access sells faster and for more than parcels requiring easements or private drives.</p>
+
+<p>Mineral rights status dramatically affects valuation. Properties with severed mineral rights may sell for 20–40% less than those with rights intact. Under <strong>WV Code § 37B-1-4</strong>, surface owners have specific rights regarding access and damages related to mineral extraction — an important consideration for sellers in the panhandle. Soil quality matters for agricultural land, with creek bottoms and level fields bringing premium prices.</p>
+
+<p>Zoning and development potential also influence worth. Land zoned for commercial or industrial use near Wellsburg or Follansbee commands higher prices than residential-zoned property. The Brooke County Assessor's office maintains property records that can help you understand your parcel's current classification and assessed value.</p>
+
+<h2>Common Land Types and Their Market Values</h2>
+
+<p>Agricultural land in Brooke County ranges widely in value based on productivity and location. Prime farmland with good drainage and road access typically brings the highest agricultural prices. Per USDA NASS data, West Virginia cropland and pastureland values have trended upward in recent years, though Brooke County's small acreage base means local comparables matter more than statewide averages.</p>
+
+<p>Recreational and hunting land values reflect factors like deer population, water sources, and terrain variety. Properties with established food plots, hunting blinds, or cabins command premiums. Timber value adds to overall worth, particularly for mature hardwood stands accessible by logging equipment.</p>
+
+<p>Residential development land near population centers like Wellsburg sees strong demand. Lots suitable for single-family homes with utilities nearby attract both builders and individual buyers. Industrial-zoned land along transportation corridors maintains steady demand from businesses seeking Ohio Valley locations.</p>
+
+<h2>Key Considerations Before Selling</h2>
+
+<p>Survey accuracy and boundary disputes can delay or derail sales. Ensure your property boundaries are clearly marked and documented. Clear title documentation prevents closing delays and builds buyer confidence.</p>
+
+<p>West Virginia's property transfer process differs from neighboring Ohio. Under <strong>WV Code § 11A-3</strong>, the tax lien sale process is administered through the county sheriff's office, and redemption periods differ from Ohio's ORC § 5721 process. If your Brooke County land has delinquent taxes, understanding these timelines is critical — acting before a tax sale eliminates the risk of losing the property entirely.</p>
+
+<p>For inherited parcels, <strong>WV Code § 44-1</strong> governs the estate administration process. West Virginia probate can be straightforward for simple estates, but parcels with unclear title chains or multiple heirs require proper legal resolution before a deed can transfer.</p>
+
+<h2>Working with Cash Land Buyers</h2>
+
+<p>Cash buyers offer several advantages for Brooke County landowners ready to sell quickly. They eliminate financing contingencies that can cause deals to fall through, and typically close within 2–4 weeks instead of the 60–90 days common with financed purchases.</p>
+
+<p>Professional land buyers understand mineral rights, easements, and other complexities common in West Virginia real estate. They often purchase properties as-is, eliminating the need for costly repairs or improvements before sale. This approach particularly benefits sellers with inherited land or properties requiring significant maintenance.</p>
+
+<p>When evaluating cash offers, consider the total net proceeds after all costs rather than just the gross sale price. Cash sales typically involve fewer fees, no loan-related delays, and reduced risk of deals falling through at closing.</p>
+
+<h3>How much is my Brooke County land worth in 2026?</h3>
+<p>Land values in Brooke County vary significantly based on location, size, access, and intended use. Agricultural land typically ranges from $3,000–$8,000 per acre, while development-ready land near population centers can bring $10,000–$25,000 per acre. Properties with mineral rights intact command premium prices. For an accurate valuation, request a cash offer and compare against the Brooke County Assessor's records.</p>
+
+<h3>Should I sell my mineral rights with the land?</h3>
+<p>Keeping mineral rights with your land typically results in a higher sale price and attracts more buyers. Severed mineral rights can reduce property value by 20–40% and may limit your buyer pool. However, if you've already leased mineral rights or receive ongoing royalty payments, factor these income streams into your decision. Consult with an attorney familiar with West Virginia mineral law before making this decision.</p>
+
+<h3>How long does it take to sell land in Brooke County?</h3>
+<p>Well-priced properties under 20 acres typically sell within 60–90 days through traditional marketing. Larger tracts or specialized properties may take 6–12 months. Cash buyers can often complete purchases within 2–4 weeks, eliminating financing delays and contingencies that extend traditional sales.</p>
+
+<p>Ready to sell your Brooke County land? Ohio Valley Land Partners provides cash offers for all property types throughout the county. We handle complex title issues, mineral rights questions, and can close quickly on your timeline. <a href="/sell-land/brooke-county-wv">Get your free, no-obligation cash offer for your Brooke County property today</a> and see our <a href="/ohio-valley-guides/brooke-county-wv">Brooke County land guide</a> for more information.</p>
     `,
   },
 ];
