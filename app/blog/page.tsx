@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { blogPosts, blogCategories } from '@/lib/blog-data';
+import { blogPosts, blogCategories, getBlogPost, campaignFeaturedSlug } from '@/lib/blog-data';
+import { siteConfig } from '@/lib/seo-config';
 import { Calendar, Clock, ArrowRight, BookOpen } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
@@ -14,12 +15,17 @@ export const metadata: Metadata = {
     'Ohio probate land sale',
     'cash land buyers Ohio',
     'Ohio land market 2026',
+    'sell vacant land Geauga County Ohio',
   ],
+  alternates: {
+    canonical: `${siteConfig.url}/blog`,
+  },
 };
 
 export default function BlogPage() {
-  const featured = blogPosts[0];
-  const rest = blogPosts.slice(1);
+  const campaignPost = getBlogPost(campaignFeaturedSlug);
+  const featured = campaignPost ?? blogPosts[0];
+  const rest = blogPosts.filter((p) => p.slug !== featured.slug);
 
   return (
     <div className="min-h-screen bg-background">
@@ -48,12 +54,25 @@ export default function BlogPage() {
           ))}
         </div>
 
+        {campaignPost ? (
+          <div className="mb-8 rounded-2xl border border-amber/30 bg-amber/5 px-6 py-4 text-center">
+            <p className="text-sm font-semibold text-amber">
+              Active campaign — Geauga County, Ohio
+            </p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Cash offers for vacant lots and inherited land in western Geauga — Chesterland, Chardon, Bainbridge, and surrounding townships.
+            </p>
+          </div>
+        ) : null}
+
         {/* Featured post */}
         <article className="group relative mb-12 rounded-2xl border border-border bg-card overflow-hidden hover:border-amber/40 hover:shadow-lg transition-all">
           <div className="p-8 lg:p-12">
             <div className="flex items-center gap-3 mb-4">
               <Badge>{featured.category}</Badge>
-              <span className="text-sm text-muted-foreground">Featured</span>
+              <span className="text-sm text-muted-foreground">
+                {campaignPost ? 'Campaign Feature' : 'Featured'}
+              </span>
             </div>
             <h2 className="text-2xl font-bold text-foreground group-hover:text-amber transition-colors sm:text-3xl mb-4">
               <Link href={`/blog/${featured.slug}`}>

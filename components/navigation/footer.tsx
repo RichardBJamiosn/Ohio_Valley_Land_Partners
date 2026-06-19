@@ -10,10 +10,18 @@ const footerNavigation = {
     { name: 'Residential Development', href: '/development' },
     { name: 'Investor Portal', href: '/investor-portal' },
   ],
+  sellLand: counties.map((county) => ({
+    name: `${county.name}, ${county.state}`,
+    href: `/sell-land/${county.slug}`,
+  })),
   guides: counties.slice(0, 4).map((county) => ({
     name: `${county.name}, ${county.state}`,
     href: `/ohio-valley-guides/${county.slug}`,
   })),
+  campaigns: [
+    { name: 'Geauga County, OH', href: '/blog/sell-vacant-land-geauga-county-ohio-2026' },
+    { name: 'Franklin County Campaign', href: '/sell-land/franklin-county-oh' },
+  ],
   company: [
     { name: 'About Us', href: '/about' },
     { name: 'Community & Giving', href: '/community' },
@@ -44,8 +52,8 @@ export function Footer() {
               />
             </Link>
             <p className="text-sm leading-6 text-white/60 max-w-xs">
-              Local cash land buyer serving the Ohio Valley and our active Franklin County
-              campaign. Intentional. Not international.
+              Local cash land buyer serving the Ohio Valley with active campaigns in Franklin and
+              Geauga counties. Intentional. Not international.
             </p>
             <div className="flex flex-col gap-3 text-sm text-white/60">
               <div className="flex items-center gap-2">
@@ -88,9 +96,9 @@ export function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-6">County Guides</h3>
+                <h3 className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-6">Sell Land</h3>
                 <ul role="list" className="space-y-4">
-                  {footerNavigation.guides.map((item) => (
+                  {footerNavigation.sellLand.map((item) => (
                     <li key={item.name}>
                       <Link href={item.href} className="text-sm text-white/60 hover:text-amber transition-colors">
                         {item.name}
@@ -117,6 +125,16 @@ export function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
+                <h3 className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-6">Campaigns</h3>
+                <ul role="list" className="space-y-4 mb-8">
+                  {footerNavigation.campaigns.map((item) => (
+                    <li key={item.name}>
+                      <Link href={item.href} className="text-sm text-white/60 hover:text-amber transition-colors">
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
                 <h3 className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-6">Legal</h3>
                 <ul role="list" className="space-y-4">
                   {footerNavigation.legal.map((item) => (

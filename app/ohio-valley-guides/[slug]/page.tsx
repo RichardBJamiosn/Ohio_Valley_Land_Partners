@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { counties } from '@/lib/seo-config';
+import { counties, siteConfig } from '@/lib/seo-config';
 import { countySellPages, getCountySellPage } from '@/lib/county-sell-data';
 import { notFound } from 'next/navigation';
 import { MapPin, CheckCircle, ArrowRight } from 'lucide-react';
@@ -17,12 +17,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!county) return { title: 'County Guide Not Found' };
 
+  const url = `${siteConfig.url}/ohio-valley-guides/${slug}`;
   return {
     title: `Sell Land in ${county.name}, ${county.state} — Ohio Valley Land Partners`,
     description:
       sellData?.metaDescription ??
       `Cash land buyer in ${county.name}, ${county.state}. We buy vacant land, inherited property, and back-tax parcels. Cash offer in 24 hours.`,
     keywords: sellData?.keywords ?? [`sell land ${county.name}`, 'Ohio Valley land buyer'],
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title: `Sell Land in ${county.name}, ${county.state}`,
+      description:
+        sellData?.metaDescription ??
+        `Cash land buyer in ${county.name}, ${county.state}. Cash offer in 24 hours.`,
+      url,
+      type: 'website',
+    },
   };
 }
 

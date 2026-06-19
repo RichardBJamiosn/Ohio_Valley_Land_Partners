@@ -1,8 +1,17 @@
+import type { Metadata } from 'next';
 import { HeroSection } from '@/components/home/hero-section';
 import { LocalBusinessSchema, FAQSchema } from '@/components/seo/json-ld';
-import { TreePine, Clock, DollarSign, MapPin, Heart, ChevronDown } from 'lucide-react';
+import { TreePine, Clock, DollarSign, MapPin, Heart, ChevronDown, ArrowRight, Target } from 'lucide-react';
 import Link from 'next/link';
-import { silos } from '@/lib/seo-config';
+import { silos, siteConfig } from '@/lib/seo-config';
+import { countySellPages } from '@/lib/county-sell-data';
+import { campaignFeaturedSlug } from '@/lib/blog-data';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: siteConfig.url,
+  },
+};
 
 const homepageFAQs = [
   {
@@ -71,6 +80,83 @@ export default function Home() {
       <FAQSchema faqs={homepageFAQs} />
 
       <HeroSection />
+
+      {/* Geauga County campaign — Monday outbound push */}
+      <section className="border-b border-amber/20 bg-amber/5">
+        <div className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 rounded-full border border-amber/30 bg-amber/10 px-3 py-1 text-xs font-semibold text-amber mb-4">
+                <Target className="h-3.5 w-3.5" />
+                Active Campaign — Geauga County, OH
+              </div>
+              <h2 className="text-2xl font-bold text-foreground sm:text-3xl">
+                Selling vacant land in Chesterland, Chardon, or western Geauga?
+              </h2>
+              <p className="mt-3 text-muted-foreground leading-relaxed">
+                We are buying vacant lots, inherited parcels, and long-held infill ground across
+                western Geauga — ZIP codes 44022, 44023, 44026, 44065, 44072, and 44202. Cash offer
+                within 24 hours. Close in 14–21 days.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+              <Link
+                href={`/blog/${campaignFeaturedSlug}`}
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground hover:border-amber/40 transition-colors"
+              >
+                Read the Geauga guide
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-amber px-5 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
+              >
+                Get Cash Offer <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sell-land index — crawl paths for county conversion pages */}
+      <section className="py-16 border-b border-border bg-card">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="heading-serif text-amber text-xl mb-2">Sell Your Land</p>
+            <h2 className="text-2xl font-bold text-foreground sm:text-3xl">
+              County Cash-Buyer Pages
+            </h2>
+            <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">
+              Every county we buy in has a dedicated page with local FAQs, tax guidance, and a direct
+              path to a cash offer.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {countySellPages.map((county) => (
+              <Link
+                key={county.slug}
+                href={`/sell-land/${county.slug}`}
+                className="flex items-center justify-between rounded-xl border border-border bg-background px-5 py-4 text-sm font-medium text-foreground hover:border-amber/40 hover:text-amber transition-colors"
+              >
+                <span>
+                  {county.name}, {county.stateAbbr}
+                </span>
+                <ArrowRight className="h-4 w-4 text-muted-foreground" />
+              </Link>
+            ))}
+          </div>
+          <p className="mt-8 text-center text-sm text-muted-foreground">
+            Also buying in{' '}
+            <Link href={`/blog/${campaignFeaturedSlug}`} className="text-meadow font-semibold hover:underline">
+              Geauga County, Ohio
+            </Link>
+            {' '}this season —{' '}
+            <Link href="/ohio-valley-guides" className="text-meadow font-semibold hover:underline">
+              browse all county guides
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
 
       {/* Market Coverage — Census-verified numbers */}
       <section className="py-16 border-b border-border bg-card">

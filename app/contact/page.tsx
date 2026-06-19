@@ -7,6 +7,9 @@ import { ContactPageClient } from './contact-client';
 export const metadata: Metadata = {
   title: 'Contact Us',
   description: 'Get in touch with Ohio Valley Land Partners. Contact our team for inquiries about selling land, joining our buyer network, or Land Scout partnerships.',
+  alternates: {
+    canonical: `${siteConfig.url}/contact`,
+  },
 };
 
 export default function ContactPage() {

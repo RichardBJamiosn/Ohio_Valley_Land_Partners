@@ -19,12 +19,19 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const county = getCountySellPage(params.slug);
   if (!county) return {};
+  const url = `${siteConfig.url}/sell-land/${county.slug}`;
   return {
     title: county.metaTitle,
     description: county.metaDescription,
     keywords: county.keywords,
     alternates: {
-      canonical: `${siteConfig.url}/sell-land/${county.slug}`,
+      canonical: url,
+    },
+    openGraph: {
+      title: county.metaTitle,
+      description: county.metaDescription,
+      url,
+      type: 'website',
     },
   };
 }

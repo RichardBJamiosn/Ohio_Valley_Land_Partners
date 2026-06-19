@@ -18,14 +18,19 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getBlogPost(params.slug);
   if (!post) return {};
+  const url = `${siteConfig.url}/blog/${post.slug}`;
   return {
     title: post.title,
     description: post.metaDescription,
     keywords: post.keywords,
+    alternates: {
+      canonical: url,
+    },
     openGraph: {
       title: post.title,
       description: post.metaDescription,
       type: 'article',
+      url,
       publishedTime: post.datePublished,
       modifiedTime: post.dateModified,
     },

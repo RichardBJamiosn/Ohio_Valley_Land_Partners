@@ -2,17 +2,21 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, MapPin } from 'lucide-react';
-import { silos } from '@/lib/seo-config';
+import { silos, siteConfig } from '@/lib/seo-config';
 import { BreadcrumbSchema } from '@/components/seo/json-ld';
 
 export const metadata: Metadata = {
   title: silos.guides.title,
   description: silos.guides.description,
   keywords: silos.guides.keywords,
+  alternates: {
+    canonical: `${siteConfig.url}/ohio-valley-guides`,
+  },
 };
 
 const FILTER_TABS = [
   { label: 'All Guides', href: '/ohio-valley-guides', active: true },
+  { label: 'Geauga Campaign', href: '/blog/sell-vacant-land-geauga-county-ohio-2026' },
   { label: 'Valley Market Report', href: '/blog/ohio-valley-land-market-2026' },
   { label: 'Franklin County', href: '/ohio-valley-guides/franklin-county-oh' },
   { label: 'Belmont County', href: '/ohio-valley-guides/belmont-county-oh' },

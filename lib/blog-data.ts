@@ -805,7 +805,96 @@ export const blogPosts: BlogPost[] = [
 <p>Ready to sell your Brooke County land? Ohio Valley Land Partners provides cash offers for all property types throughout the county. We handle complex title issues, mineral rights questions, and can close quickly on your timeline. <a href="/sell-land/brooke-county-wv">Get your free, no-obligation cash offer for your Brooke County property today</a> and see our <a href="/ohio-valley-guides/brooke-county-wv">Brooke County land guide</a> for more information.</p>
     `,
   },
+
+  {
+    slug: 'sell-vacant-land-geauga-county-ohio-2026',
+    title: 'How to Sell Vacant Land in Geauga County, Ohio for Cash (2026)',
+    metaDescription:
+      'Selling vacant land in Geauga County, Ohio? Cash offers for lots in Chesterland, Chardon, Bainbridge, and western Geauga. Inherited parcels, back taxes, and infill lots welcome. Close in 14–21 days.',
+    category: 'County Guides',
+    datePublished: '2026-06-19',
+    dateModified: '2026-06-19',
+    readingTime: '9 min read',
+    excerpt:
+      'Geauga County landowners in Chesterland, Chardon, and western townships have a strong cash-buyer market in 2026 — especially for vacant residential lots, inherited parcels, and long-held infill ground.',
+    keywords: [
+      'sell vacant land Geauga County Ohio',
+      'cash land buyer Geauga County',
+      'sell lot Chesterland Ohio',
+      'sell inherited land Geauga County',
+      'Geauga County vacant lot cash offer',
+      'sell land Bainbridge Ohio',
+      'sell land Chardon Ohio cash',
+    ],
+    body: `
+<h2>Why Geauga County Landowners Are Selling in 2026</h2>
+<p>Geauga County sits in the outer ring of the Cleveland metro — rural enough to feel like country, close enough to Cuyahoga County that vacant lots and small acreage still carry real value. Many parcels in western Geauga (Chesterland, Bainbridge, Russell, and surrounding townships) were bought decades ago as retirement land, family investments, or inherited from parents who never built on them.</p>
+<p>In 2026, three seller profiles dominate our Geauga County conversations:</p>
+<ul>
+  <li><strong>Long-term owners</strong> who held a lot for 10–30+ years and no longer want the tax bill or maintenance</li>
+  <li><strong>Heirs</strong> with fractional interests in a parcel nobody in the family plans to use</li>
+  <li><strong>Absentee owners</strong> who moved out of state but still receive Geauga County tax statements every year</li>
+</ul>
+<p>Ohio Valley Land Partners is running an active cash-acquisition campaign in western Geauga County. We buy direct — no listing, no agent commissions, no waiting for a financed buyer to qualify.</p>
+
+<h2>Geauga County Land Market: What Moves and What Sits</h2>
+<p>Geauga is not a single market. A wooded five-acre tract in southern townships behaves differently from a 0.25-acre infill lot on a paved road in Chesterland or Bainbridge. Broad patterns we see in 2026:</p>
+<ul>
+  <li><strong>Vacant residential lots with road frontage</strong> in ZIP codes 44022, 44023, 44026, 44065, 44072, and 44202 attract builder and investor interest when utilities and zoning align</li>
+  <li><strong>Smaller infill parcels (under 0.50 acre)</strong> can move quickly to cash buyers when title is clean and the lot is buildable</li>
+  <li><strong>Larger acreage and landlocked parcels</strong> take longer on the open market but still sell to direct buyers when priced for reality</li>
+  <li><strong>Tax-delinquent lots</strong> lose value every year they sit — Geauga County can eventually foreclose under <strong>ORC § 5721.18</strong></li>
+</ul>
+<p>The Geauga County Auditor maintains public parcel records at <em>auditor.co.geauga.oh.us</em> — you can verify ownership, assessed value, and tax status before you call us.</p>
+
+<h2>Western Geauga: Chesterland, Chardon, Bainbridge &amp; Russell</h2>
+<p>Our current campaign focuses on western and central Geauga townships where vacant-lot inventory is highest and seller motivation is strongest. Common situations:</p>
+<ul>
+  <li>Lots platted in the 1960s–1990s that were never built on</li>
+  <li>Parcels inherited after a parent passed without a clean estate plan</li>
+  <li>Land bought as a future retirement site that never happened</li>
+  <li>Properties with overdue taxes where the owner wants out before a certificate sale</li>
+</ul>
+<p>If your parcel sits on a paved road, has a recorded plat, and shows as vacant residential on the county auditor, you are exactly the profile we built this campaign for. <a href="/contact">Submit your address</a> and we will pull auditor and GIS records before we call.</p>
+
+<h2>Selling Inherited Land in Geauga County</h2>
+<p>Heir property is common in Geauga — especially lots that have passed through two generations without a formal probate closing. Under <strong>ORC § 2113.39</strong>, an executor or administrator appointed by the Geauga County Probate Court (Chardon) can sell real estate to settle an estate. If probate was never opened, a title company will require it before any deed transfers.</p>
+<p>We purchase from estates mid-probate and coordinate with your attorney. You do not need a cleared title before you talk to us — we will tell you honestly what has to happen before closing. See our full guide on <a href="/blog/sell-inherited-land-ohio-probate">selling inherited land in Ohio probate</a>.</p>
+
+<h2>Back Taxes and Tax Liens in Geauga County</h2>
+<p>If you have fallen behind on property taxes, you are not alone — and you still have options. Delinquent taxes become a lien under <strong>ORC § 5721.01</strong>. A cash buyer can pay off the lien at closing from sale proceeds so you walk away with the net cash instead of losing the parcel at a tax sale.</p>
+<p>The Geauga County Treasurer publishes delinquency information publicly. Acting before a tax certificate is sold to an investor is almost always better than waiting. Read more in our post on <a href="/blog/sell-land-back-taxes-ohio">selling land with back taxes in Ohio</a>.</p>
+
+<h2>How a Direct Cash Sale Works in Geauga County</h2>
+<ol>
+  <li><strong>Submit your parcel address</strong> through our <a href="/contact">contact form</a> or call <a href="tel:+16146537430">(614) 653-7430</a></li>
+  <li><strong>We research within 24 hours</strong> — Geauga County Auditor records, tax status, comparable sales, and road access</li>
+  <li><strong>You receive a written cash offer</strong> by phone with a plain-English explanation of how we calculated it</li>
+  <li><strong>Close in 14–21 days</strong> through a licensed Ohio title company — we pay cash, you sign, done</li>
+</ol>
+<p>We are a principal buyer, not a licensed real estate broker. We do not list your property for other people to buy — we buy it ourselves for our own account.</p>
+
+<h2>Geauga County vs. Our Ohio Valley Core Markets</h2>
+<p>Our core service counties — Belmont, Jefferson, Columbiana, Harrison, Carroll, and the West Virginia panhandle — are where we have the deepest field history. Geauga County is an <strong>active expansion campaign</strong> alongside our Franklin County Columbus market. The process is the same: cash offer, fast close, no agent fees.</p>
+<p>If you also own land in our core Ohio Valley counties, see our county pages: <a href="/sell-land/columbiana-county-oh">Columbiana</a>, <a href="/sell-land/harrison-county-oh">Harrison</a>, <a href="/sell-land/carroll-county-oh">Carroll</a>, <a href="/sell-land/franklin-county-oh">Franklin</a>, and the rest of our <a href="/ohio-valley-guides">Ohio Valley guides</a>.</p>
+
+<h2>Frequently Asked Questions — Geauga County Land Sellers</h2>
+<h3>Do you buy land in Chesterland and Bainbridge?</h3>
+<p>Yes. Western Geauga — including Chesterland, Bainbridge, Russell, and adjacent townships — is the focus of our current campaign. Submit your parcel address and we will confirm we are buying in your specific township.</p>
+<h3>How fast can you close on a Geauga County vacant lot?</h3>
+<p>Clean-title residential lots typically close in 14–21 days. Probate, heir disputes, or complex liens extend the timeline, but we still move faster than a traditional listing because there is no lender or appraisal contingency.</p>
+<h3>What if my Geauga County lot is landlocked?</h3>
+<p>We evaluate landlocked parcels case by case. Access constraints reduce value, but many lots still have buyer interest — especially if they adjoin buildable ground or have a recorded easement. We will tell you honestly if we can make an offer.</p>
+<h3>Do I need a realtor to sell land in Geauga County?</h3>
+<p>No. Land is a specialty asset and many agents rarely list raw lots. A direct cash buyer eliminates listing fees, showings, and months of waiting for a financed purchaser.</p>
+
+<p><strong>Ready for a Geauga County cash offer?</strong> <a href="/contact">Submit your parcel information</a> or call (614) 653-7430. We respond within 24 hours with a no-obligation offer after reviewing Geauga County auditor records.</p>
+    `,
+  },
 ];
+
+/** Active outbound campaign — featured on blog hub and homepage. */
+export const campaignFeaturedSlug = 'sell-vacant-land-geauga-county-ohio-2026';
 
 export function getBlogPost(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);

@@ -13,6 +13,10 @@ const stats = [
   { label: 'Campaigns', value: 'Active', icon: MapPin },
 ];
 
+const campaignRegions = [
+  { label: 'Geauga County', href: '/blog/sell-vacant-land-geauga-county-ohio-2026', highlight: true },
+];
+
 const serviceRegions = [
   { label: 'Franklin County', slug: 'franklin-county-oh' },
   { label: 'Belmont County', slug: 'belmont-county-oh' },
@@ -80,7 +84,8 @@ export function HeroSection() {
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-white/70">
                   We buy vacant land, inherited property, and back-tax parcels across nine counties
-                  in Ohio and West Virginia — with an active Franklin County, Columbus campaign.
+                  in Ohio and West Virginia — with active campaigns in Franklin County (Columbus)
+                  and Geauga County (Chesterland and western townships).
                   Full offer after review. No agents, no fees, no out-of-state runaround.
                 </p>
                 {/* force Cloudflare Pages rebuild - user 'again didnt update' on 3c06292 Core Acres restore + stats labels; previous forces insufficient; dcf01c2 + ... + 3c06292; hard refresh no luck */}
@@ -204,6 +209,18 @@ export function HeroSection() {
           <p className="text-xs font-semibold text-white/40 uppercase tracking-widest text-center mb-5">
             Active Campaigns
           </p>
+          <div className="flex flex-wrap justify-center gap-2 mb-4">
+            {campaignRegions.map((region) => (
+              <Link
+                key={region.href}
+                href={region.href}
+                className="inline-flex items-center gap-1.5 rounded-full border border-amber/50 bg-amber/15 px-3 py-1.5 text-xs font-semibold text-amber hover:bg-amber/25 transition-colors"
+              >
+                <Target className="h-3 w-3" />
+                {region.label}
+              </Link>
+            ))}
+          </div>
           <div className="flex flex-wrap justify-center gap-2">
             {serviceRegions.map((region) => (
               <Link

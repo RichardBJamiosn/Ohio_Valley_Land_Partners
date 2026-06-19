@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { silos } from '@/lib/seo-config';
+import { silos, siteConfig } from '@/lib/seo-config';
 import { ArrowRight, MapPin, Clock, DollarSign, ShieldCheck, TreePine } from 'lucide-react';
 import Link from 'next/link';
 import { BreadcrumbSchema } from '@/components/seo/json-ld';
@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: silos.land.title,
   description: silos.land.description,
   keywords: silos.land.keywords,
+  alternates: {
+    canonical: `${siteConfig.url}/land`,
+  },
 };
 
 const counties = [
