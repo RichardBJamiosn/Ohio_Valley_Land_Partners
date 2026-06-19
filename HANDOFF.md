@@ -1,6 +1,6 @@
 # Ohio Valley Land Partners — Marketing Site Handoff
 
-*Last updated: 2026-06-16 · source: agent · Status: LIVE (Cloudflare Pages)*
+*Last updated: 2026-06-18 · source: agent · Status: LIVE (Cloudflare Pages)*
 
 ---
 
@@ -18,9 +18,17 @@
 
 ## Repo location
 
+**MacMe (canonical):**
+```
+/Users/macbook15/Documents/May 4 Clean/Next Clean From MacMe 4:30/Ohio_Valley_Land_Partners/
+```
+
+**MiniMe (mirror):**
 ```
 /Users/richardjamison/Documents/Projects/Ohio_Valley_Land_Partners/
 ```
+
+**SEO agent prompts:** `SEO-AGENT-PROMPTS.md` (weekly Agent 1–4 rotation)
 
 Stack: **Next.js** (static export) + **Cloudflare Pages** + form APIs in `functions/api/`.
 
@@ -123,6 +131,40 @@ Widget loads on **all pages** via raw HTML in `app/layout.tsx` (required for sca
 **Avatar:** Prompt/header image is configured in GHL dashboard (Sites → Chat Widget), not in repo code. Do **not** hide the widget panel via shadow-DOM CSS — breaks the form and A2P opt-in (`dd84cc6` reverted in `a73daeb`).
 
 Phone fields on site forms remain hidden; GHL widget is the single SMS opt-in source.
+
+---
+
+## SEO enterprise pass — LIVE (2026-06-18)
+
+Commit `1dac65d` — built on MacMe, pushed via MiniMe (MacMe git HTTPS auth blocked).
+
+### Critical fix
+- Removed wildcard `public/_redirects` rule `/sell-land/* → /ohio-valley-guides` that 301'd all 9 county sell pages
+- County pages now return **200** (e.g. `/sell-land/franklin-county-oh`, `/sell-land/belmont-county-oh`)
+- Bare `/sell-land` still 301s to guides hub (intentional)
+
+### County sell pages (all 9)
+- 8–9 FAQs each with ORC / WV Code citations
+- `localGeography`, `citations`, `relatedBlogSlugs` in `lib/county-sell-data.ts`
+- Template enriched: breadcrumbs, geography, sources, internal links to guides/blog/contact (`app/sell-land/[slug]/page.tsx`)
+
+### Content
+- Probate blog expanded with ORC § 2113 / § 5307 / § 5721 (`sell-inherited-land-ohio-probate`)
+- `llms.txt` — all 15 blog posts including `brooke-county-wv-land-worth-2026`
+- 59 static pages in build
+
+### Still manual (per SEO-AGENT-PROMPTS.md)
+- Google Business Profile verification (C-5 / H-6)
+- `sameAs` URLs in `lib/seo-config.ts` once GBP / LinkedIn exist
+- Off-site directory backlinks
+
+### MacMe build note
+Path contains `4:30` — use direct binary, not `npm run build`:
+```bash
+cd "/Users/macbook15/Documents/May 4 Clean/Next Clean From MacMe 4:30/Ohio_Valley_Land_Partners"
+source ~/.nvm/nvm.sh
+./node_modules/.bin/next build
+```
 
 ---
 
