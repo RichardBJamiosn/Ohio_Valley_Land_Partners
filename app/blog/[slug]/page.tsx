@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { blogPosts, getBlogPost } from '@/lib/blog-data';
-import { ArticleSchema } from '@/components/seo/json-ld';
+import { ArticleSchema, BreadcrumbSchema } from '@/components/seo/json-ld';
+import { siteConfig } from '@/lib/seo-config';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, ArrowLeft, ArrowRight } from 'lucide-react';
 
@@ -41,6 +42,13 @@ export default function BlogPostPage({ params }: Props) {
 
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: siteConfig.url },
+          { name: 'Blog', url: `${siteConfig.url}/blog` },
+          { name: post.title, url: `${siteConfig.url}/blog/${post.slug}` },
+        ]}
+      />
       <ArticleSchema
         headline={post.title}
         description={post.metaDescription}
@@ -111,7 +119,7 @@ export default function BlogPostPage({ params }: Props) {
               No obligation. No agent fees. We buy land across the Ohio Valley — any condition, any situation.
             </p>
             <Link
-              href="/"
+              href="/contact"
               className="inline-flex items-center gap-2 rounded-lg bg-amber px-6 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
             >
               Get My Cash Offer <ArrowRight className="h-4 w-4" />

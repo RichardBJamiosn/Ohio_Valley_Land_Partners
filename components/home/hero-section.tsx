@@ -8,7 +8,7 @@ import { InvestorIntakeForm } from '@/components/forms/investor-intake-form';
 
 const stats = [
   { label: 'Full Analysis', value: '24 hrs', icon: Clock },
-  { label: 'Close Timeline', value: '30 Days', icon: Calendar },
+  { label: 'Close Timeline', value: '14 Days', icon: Calendar },
   { label: 'Core Acres', value: '1.77M+', icon: TreePine },
   { label: 'Campaigns', value: 'Active', icon: MapPin },
 ];
@@ -79,9 +79,9 @@ export function HeroSection() {
                   <span className="block text-amber mt-1">Local. Intentional. Fair.</span>
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-white/70">
-                  We buy vacant land, inherited property, and back-tax parcels across the Ohio
-                  Valley with active campaigns in Franklin, Linkoln, Geaoga & Warren counties. Full offer after review.
-                  No agents, no fees, no out-of-state runaround.
+                  We buy vacant land, inherited property, and back-tax parcels across nine counties
+                  in Ohio and West Virginia — with an active Franklin County, Columbus campaign.
+                  Full offer after review. No agents, no fees, no out-of-state runaround.
                 </p>
                 {/* force Cloudflare Pages rebuild - user 'again didnt update' on 3c06292 Core Acres restore + stats labels; previous forces insufficient; dcf01c2 + ... + 3c06292; hard refresh no luck */}
                 <ul className="mt-6 flex flex-col gap-3">
@@ -136,7 +136,7 @@ export function HeroSection() {
                 className="inline-flex items-center gap-2 rounded-full border border-meadow/40 bg-meadow/10 px-4 py-2 text-xs font-medium text-meadow hover:bg-meadow/20 transition-colors"
               >
                 <span className="h-1.5 w-1.5 rounded-full bg-meadow" />
-                5% of profits. All profits supports Ohio Valley communities
+                5% of every closing supports Ohio Valley communities
               </Link>
             </div>
           </div>

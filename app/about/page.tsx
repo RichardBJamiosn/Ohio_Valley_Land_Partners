@@ -31,7 +31,7 @@ const principles = [
     icon: Heart,
     title: 'Built to Give Back.',
     description:
-      '5% of all profits goes directly to our community partners — Arc of Appalachia, the Salvation Army\'s East Palestine recovery work, and COCIC Franklin County Land Bank. A business operating in the Ohio Valley should invest in it.',
+      '5% of every closing goes directly to our community partners — Arc of Appalachia, the Salvation Army\'s East Palestine recovery work, and COCIC Franklin County Land Bank. A business operating in the Ohio Valley should invest in it.',
   },
 ];
 
@@ -139,7 +139,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <p className="text-sm font-bold text-foreground mb-4">
-                5% of all profits. Directly to Arc and Palestine.
+                5% of every closing. Directly to Arc and Palestine.
               </p>
               <Link
                 href="/community"

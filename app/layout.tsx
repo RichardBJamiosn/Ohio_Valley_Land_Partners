@@ -3,7 +3,8 @@ import type { Metadata } from 'next';
 import { Poppins, Cormorant_Garamond } from 'next/font/google';
 import { MainNav } from '@/components/navigation/main-nav';
 import { Footer } from '@/components/navigation/footer';
-import { WebSiteSchema, PersonSchema } from '@/components/seo/json-ld';
+import { MobileStickyCta } from '@/components/navigation/mobile-sticky-cta';
+import { WebSiteSchema, PersonSchema, OrganizationSchema, ServiceSchema } from '@/components/seo/json-ld';
 import { siteConfig } from '@/lib/seo-config';
 import Script from 'next/script';
 
@@ -112,10 +113,24 @@ export default function RootLayout({
           `}
         </Script>
         <WebSiteSchema />
+        <OrganizationSchema />
+        <ServiceSchema />
         <PersonSchema />
+        {siteConfig.clarityProjectId ? (
+          <Script id="microsoft-clarity" strategy="afterInteractive">
+            {`
+              (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "${siteConfig.clarityProjectId}");
+            `}
+          </Script>
+        ) : null}
         <MainNav />
-        <main className="min-h-screen">{children}</main>
+        <main className="min-h-screen pb-20 lg:pb-0">{children}</main>
         <Footer />
+        <MobileStickyCta />
       </body>
     </html>
   );

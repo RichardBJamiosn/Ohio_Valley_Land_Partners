@@ -134,6 +134,27 @@ Phone fields on site forms remain hidden; GHL widget is the single SMS opt-in so
 
 ---
 
+## SEO pre-Columbus blitz — LIVE (2026-06-18)
+
+Per `OVLP-SEO-HANDOFF-PRE-COLUMBUS.md` — all 9 code tasks shipped before Columbus trip (June 21–22).
+
+| Task | Status |
+|------|--------|
+| Copy errors (hero, about, terms, FAQ 30-day) | Done |
+| Blog internal links (12 posts → county pages) | Done |
+| OrganizationSchema + ServiceSchema in layout | Done |
+| Blog BreadcrumbSchema | Done |
+| Homepage FAQ (8 seller-intent Q&As) | Done |
+| Mobile sticky CTA + GA4 events | Done |
+| IndexNow key + notify script | Done |
+| Microsoft Clarity | Blocked — set `NEXT_PUBLIC_CLARITY_ID` after signup |
+
+**IndexNow:** key file at `/a7f3e91c2b8d4056e6f1a9c3d7e5b204.txt` — run `scripts/indexnow-notify.sh` after deploy.
+
+**Still blocked until after Columbus:** GBP verification, `sameAs` URLs, off-site directory backlinks.
+
+---
+
 ## SEO enterprise pass — LIVE (2026-06-18)
 
 Commit `1dac65d` — built on MacMe, pushed via MiniMe (MacMe git HTTPS auth blocked).

@@ -1,39 +1,49 @@
 import { HeroSection } from '@/components/home/hero-section';
-import { LocalBusinessSchema, OrganizationSchema, FAQSchema } from '@/components/seo/json-ld';
+import { LocalBusinessSchema, FAQSchema } from '@/components/seo/json-ld';
 import { TreePine, Clock, DollarSign, MapPin, Heart, ChevronDown } from 'lucide-react';
 import Link from 'next/link';
 import { silos } from '@/lib/seo-config';
 
 const homepageFAQs = [
   {
-    question: 'How long does it typically take to close with one of our buyers in the Ohio Valley?',
+    question: 'How do I sell vacant land in Ohio without a real estate agent?',
     answer:
-      'Ohio Valley Land Partners closes most transactions in 30 days from signed purchase agreement when title is ready. Under some circumstances, we can close even faster. No lender approval, appraisal, or agent commission is required. If sellers are open to alternative financing, we can often offer more for their property. Sellers in our core Ohio Valley counties and our active Franklin County campaign receive a written cash offer after property review.',
+      'Submit your parcel address through our contact form or homepage. Ohio Valley Land Partners reviews county auditor records, tax history, and comparable sales, then calls you with a written cash offer within 24 hours. If you accept, we sign a purchase agreement and close through a licensed title company in 14–21 days — no listing, no showings, and no agent commissions.',
   },
   {
-    question: 'What types of land do you buy in the Ohio Valley?',
+    question: 'Do you buy land with back taxes or tax liens?',
     answer:
-      'We buy vacant rural land, inherited land, tax-delinquent parcels, landlocked land, timber land, agricultural land, infill lots, and residential vacant lots across our Ohio Valley service area and Franklin County campaign. We buy land in any condition — no clean-up, no survey, and no repairs required.',
+      'Yes. Under ORC § 5721.181 in Ohio (and comparable WV processes), delinquent taxes become a lien paid at closing from sale proceeds. We factor the total tax debt into our offer so you do not pay out of pocket. Selling before a county tax sale or forfeiture is almost always better than doing nothing.',
   },
   {
-    question: 'Do I need a real estate agent to sell my land to you?',
+    question: 'Can I sell inherited land before probate is complete?',
     answer:
-      'No. Ohio Valley Land Partners is a network of builders and developers—not legal or licensed real estate experts. We work directly with landowners, allowing us to circumvent the normal real estate listing times and hassles. There are no agent fees, no commissions, and no listing period. We pay all standard closing costs. We strongly advise seeking attorney advice. We pride ourselves in under-offering and over-delivering, with honesty as our core.',
+      'Often yes, with court authorization. Under ORC § 2113.39, an Ohio executor or administrator can petition probate court to approve a sale of estate real property before the estate fully closes. Ohio Valley Land Partners regularly purchases from estates mid-probate and coordinates with your attorney.',
   },
   {
-    question: 'Can you buy land that has back taxes owed?',
+    question: 'Do you buy landlocked parcels with no road access?',
     answer:
-      'Yes. We regularly purchase land with delinquent property taxes in Ohio and West Virginia. Outstanding taxes are accounted for in our offer and resolved at closing through the title company. You do not need to pay them out of pocket before we can close.',
+      'We evaluate them case by case. Landlocked parcels are worth less, but many still have value — especially if they adjoin larger tracts or have a recorded easement. Submit the address and we will check county GIS maps and title records before giving you an honest assessment.',
   },
   {
-    question: 'Can you buy inherited land that is still in probate?',
+    question: 'How fast can you close on vacant land?',
     answer:
-      'In many cases, yes. We work with sellers in the probate process and can close once the executor has the authority to transfer title. We are not legal or licensed experts and strongly advise seeking attorney advice. Contact us and we will review your specific situation.',
+      'Typically 14–21 days from signed purchase agreement on a clean-title parcel. Probate, heir disputes, or complex title issues can extend the timeline, but we handle those with a local title company. No lender approval or appraisal contingency is required because we pay cash.',
   },
   {
-    question: 'How do you determine your offer on a piece of land?',
+    question: 'What counties in Ohio and West Virginia do you buy land in?',
     answer:
-      'Our offer is based on comparable land sales from the past 12 months in the county, the parcel\'s access (road frontage or landlocked), zoning classification, any outstanding liens or taxes, and our intended use of the property. We provide a written offer with no obligation — you are free to accept, decline, or compare it with other options.',
+      'Nine counties: Franklin, Belmont, Jefferson, Columbiana, Harrison, and Carroll in Ohio; Ohio, Marshall, and Brooke in West Virginia. Franklin County is our active Columbus campaign. Each county has a dedicated sell-land page and Ohio Valley guide on this site.',
+  },
+  {
+    question: 'How do you calculate a cash offer for my land?',
+    answer:
+      'We pull comparable land sales from the county auditor, assess road access, utilities, zoning, liens, and back taxes, then build an offer based on what the parcel can realistically support for our end use. We explain the number when we call — no obligation to accept.',
+  },
+  {
+    question: 'What happens after I submit my parcel information?',
+    answer:
+      'We research your parcel within 24 hours using county auditor and GIS records. A team member calls you with a cash offer and walks through next steps. If you accept, we send a purchase agreement, open title, and schedule closing. You can also reach us at (614) 653-7430.',
   },
 ];
 
@@ -58,7 +68,6 @@ export default function Home() {
   return (
     <>
       <LocalBusinessSchema />
-      <OrganizationSchema />
       <FAQSchema faqs={homepageFAQs} />
 
       <HeroSection />

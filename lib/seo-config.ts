@@ -12,6 +12,9 @@ export const siteConfig = {
   authorUrl: 'https://ohiovalleylandpartners.com/about',
   // sameAs — populate as each account is created
   // TODO: Replace placeholder comments with real URLs
+  // Set after signing up at clarity.microsoft.com (rbjpholdings@gmail.com)
+  clarityProjectId: process.env.NEXT_PUBLIC_CLARITY_ID ?? '',
+  indexNowKey: 'a7f3e91c2b8d4056e6f1a9c3d7e5b204',
   sameAs: [
     // 'https://www.linkedin.com/company/ohio-valley-land-partners', // add after LinkedIn created
     // 'https://www.google.com/maps/place/[GBP_ID]',                 // add after GBP verified

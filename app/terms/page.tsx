@@ -33,7 +33,7 @@ export default function TermsOfServicePage() {
           <h2>2. About Our Business</h2>
           <p>
             {siteConfig.name} is a principal buyer of real estate. We purchase vacant land,
-            inherited property, and tax-delinquent parcels across eight counties in Ohio and
+            inherited property, and tax-delinquent parcels across nine counties in Ohio and
             West Virginia. We are not licensed real estate brokers or agents and do not represent
             sellers or buyers in an agency capacity. We purchase properties for our own account.
           </p>

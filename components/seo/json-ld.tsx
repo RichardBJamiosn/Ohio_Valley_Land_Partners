@@ -300,6 +300,41 @@ export function PersonSchema() {
   );
 }
 
+export function ServiceSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${siteConfig.url}#cash-land-purchases`,
+    serviceType: 'Cash Land Purchases',
+    name: 'Cash Land Purchases — Ohio Valley Land Partners',
+    description:
+      'Cash purchases of vacant, inherited, tax-delinquent, and landlocked land across nine Ohio and West Virginia counties.',
+    provider: {
+      '@type': 'Organization',
+      '@id': `${siteConfig.url}#organization`,
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    areaServed: siteConfig.serviceArea.map((area) => ({
+      '@type': 'AdministrativeArea',
+      name: area,
+    })),
+    offers: {
+      '@type': 'Offer',
+      availability: 'https://schema.org/InStock',
+      priceCurrency: 'USD',
+      description: 'No-obligation cash offer within 24 hours of inquiry',
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
 export function WebSiteSchema() {
   const schema = {
     '@context': 'https://schema.org',
