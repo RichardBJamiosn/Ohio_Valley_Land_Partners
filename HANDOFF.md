@@ -1,6 +1,6 @@
 # Ohio Valley Land Partners — Marketing Site Handoff
 
-*Last updated: 2026-06-19 · source: agent · Status: LIVE (Cloudflare Pages) · HEAD: `9b8a5aa`*
+*Last updated: 2026-06-19 · source: agent · Status: LIVE (Cloudflare Pages) · HEAD: `6ab6ce2`*
 
 ---
 
@@ -131,6 +131,24 @@ Widget loads on **all pages** via raw HTML in `app/layout.tsx` (required for sca
 **Avatar:** Prompt/header image is configured in GHL dashboard (Sites → Chat Widget), not in repo code. Do **not** hide the widget panel via shadow-DOM CSS — breaks the form and A2P opt-in (`dd84cc6` reverted in `a73daeb`).
 
 Phone fields on site forms remain hidden; GHL widget is the single SMS opt-in source.
+
+---
+
+## SEO indexing blitz — LIVE (2026-06-19)
+
+Commit `6ab6ce2` — targets 20+ indexed pages by weeks 3–4.
+
+| Fix | Status |
+|-----|--------|
+| Removed root-layout homepage canonical (was blocking blog/guide indexing) | Done |
+| Per-page canonical + OG url on blog, guides, sell-land | Done |
+| Homepage county sell-land grid + footer sell-land links | Done |
+| IndexNow submits all sitemap URLs (not just 12) | Done |
+| Geauga County campaign blog + homepage/hero/footer promotion | Done |
+
+**Geauga campaign URL:** `/blog/sell-vacant-land-geauga-county-ohio-2026` — featured on blog hub for Monday outbound.
+
+**Post-deploy:** run `scripts/indexnow-notify.sh` · GSC → URL Inspection → Request indexing on top 20 URLs.
 
 ---
 
