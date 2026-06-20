@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'sell land Ohio',
     'Ohio Valley real estate blog',
     'Ohio probate land sale',
-    'direct land buyers Ohio',
+    'cash land buyers Ohio',
     'Ohio land market 2026',
     'sell vacant land Geauga County Ohio',
   ],

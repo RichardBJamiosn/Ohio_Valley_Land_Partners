@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `Sell Land in ${county.name}, ${county.state} — Ohio Valley Land Partners`,
     description:
       sellData?.metaDescription ??
-      `Local land buyer in ${county.name}, ${county.state}. We buy vacant land, inherited property, and back-tax parcels. Free property market analysis and written offer after review.`,
+      `Cash land buyer in ${county.name}, ${county.state}. We buy vacant land, inherited property, and back-tax parcels. Cash offer in 24 hours.`,
     keywords: sellData?.keywords ?? [`sell land ${county.name}`, 'Ohio Valley land buyer'],
     alternates: {
       canonical: url,
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `Sell Land in ${county.name}, ${county.state}`,
       description:
         sellData?.metaDescription ??
-        `Local land buyer in ${county.name}, ${county.state}. Property analysis and offer after review.`,
+        `Cash land buyer in ${county.name}, ${county.state}. Cash offer in 24 hours.`,
       url,
       type: 'website',
     },
@@ -73,11 +73,11 @@ export default async function CountyGuidePage({ params }: Props) {
                 <span className="text-xs font-semibold text-amber">{county.name}, {county.state}</span>
               </div>
               <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl leading-tight">
-                {sellData?.headline ?? `Sell Land in ${county.name}, ${county.state}`}
+                {`Sell Land in ${county.name}, ${county.state}`}
               </h1>
               <p className="mt-6 text-xl leading-8 text-muted-foreground">
-                {sellData?.subheadline ??
-                  `Direct offers on all land in ${county.name} after property market analysis. No agents, no fees.`}
+                County guide from a local buyer active in {county.name}. Free property market
+                analysis and a written offer after review. No agents, no fees.
               </p>
               <div className="mt-8">
                 <Link

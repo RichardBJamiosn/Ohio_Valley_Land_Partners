@@ -5,7 +5,7 @@ import { ArrowRight, Heart, Shield, MapPin, Handshake } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'About Us — Ohio Valley Land Partners',
   description:
-    'Ohio Valley Land Partners is a local land buyer dedicated to the Ohio Valley region — built on honest property analysis, fair offers after review, and a commitment to giving back to the communities we serve.',
+    'Ohio Valley Land Partners is a cash land buyer dedicated to the Ohio Valley region — honest offers, fast closings, and a commitment to giving back to the communities we serve.',
 };
 
 const principles = [
