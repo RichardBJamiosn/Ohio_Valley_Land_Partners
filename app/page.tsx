@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { silos, siteConfig } from '@/lib/seo-config';
 import { countySellPages } from '@/lib/county-sell-data';
 import { campaignFeaturedSlug } from '@/lib/blog-data';
+import { LegalDisclaimer } from '@/components/legal-disclaimer';
 
 export const metadata: Metadata = {
   alternates: {
@@ -22,12 +23,12 @@ const homepageFAQs = [
   {
     question: 'Do you buy land with back taxes or tax liens?',
     answer:
-      'Yes. Under ORC § 5721.181 in Ohio (and comparable WV processes), delinquent taxes become a lien paid at closing from sale proceeds. We factor the total tax debt into our offer so you do not pay out of pocket. Selling before a county tax sale or forfeiture is almost always better than doing nothing.',
+      'Yes. Delinquent taxes are commonly addressed at closing from sale proceeds — your attorney and title company can explain how that applies to your parcel. We factor known tax debt into our offer. Many sellers consult counsel before a county tax sale or forfeiture deadline.',
   },
   {
     question: 'Can I sell inherited land before probate is complete?',
     answer:
-      'Often yes, with court authorization. Under ORC § 2113.39, an Ohio executor or administrator can petition probate court to approve a sale of estate real property before the estate fully closes. Ohio Valley Land Partners regularly purchases from estates mid-probate and coordinates with your attorney.',
+      'Often yes, with court authorization — probate rules vary by county and estate. Ohio Valley Land Partners regularly purchases from estates mid-probate and coordinates with your attorney; we do not provide legal advice on fiduciary authority.',
   },
   {
     question: 'Do you buy landlocked parcels with no road access?',
@@ -272,7 +273,8 @@ export default function Home() {
               </details>
             ))}
           </dl>
-          <p className="mt-10 text-center text-sm text-muted-foreground">
+          <LegalDisclaimer className="mt-10 text-center max-w-xl mx-auto" />
+          <p className="mt-6 text-center text-sm text-muted-foreground">
             Have a question that isn&apos;t answered here?{' '}
             <Link href="/contact" className="text-meadow hover:underline font-semibold">
               Contact us directly.

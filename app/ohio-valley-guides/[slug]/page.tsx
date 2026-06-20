@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { MapPin, CheckCircle, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { BreadcrumbSchema, FAQSchema } from '@/components/seo/json-ld';
+import { LegalDisclaimer } from '@/components/legal-disclaimer';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -183,9 +184,7 @@ export default async function CountyGuidePage({ params }: Props) {
                 Ask a Question
               </Link>
             </div>
-            <p className="mt-8 text-xs text-muted-foreground">
-              Ohio Valley Land Partners operates as a principal buyer, not a licensed real estate broker or agent.
-            </p>
+            <LegalDisclaimer className="mt-8 text-center" />
           </div>
         </section>
       </div>

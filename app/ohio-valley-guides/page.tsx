@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { ArrowRight, MapPin } from 'lucide-react';
 import { silos, siteConfig } from '@/lib/seo-config';
 import { BreadcrumbSchema } from '@/components/seo/json-ld';
+import { LegalDisclaimer } from '@/components/legal-disclaimer';
 
 export const metadata: Metadata = {
   title: silos.guides.title,
@@ -400,6 +401,7 @@ export default function GuidesPage() {
                 Ready to sell? Start here
               </Link>
             </div>
+            <LegalDisclaimer className="mt-8" tone="on-dark" />
           </div>
         </section>
 

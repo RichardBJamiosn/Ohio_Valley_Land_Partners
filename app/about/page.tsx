@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, Heart, Shield, MapPin, Handshake } from 'lucide-react';
+import { LegalDisclaimer } from '@/components/legal-disclaimer';
 
 export const metadata: Metadata = {
   title: 'About Us — Ohio Valley Land Partners',
@@ -185,11 +186,7 @@ export default function AboutPage() {
               Contact Us
             </Link>
           </div>
-          <p className="mt-10 text-xs text-muted-foreground">
-            Ohio Valley Land Partners operates as a principal buyer of real estate. We are not
-            licensed real estate brokers or agents and do not represent sellers or buyers in
-            an agency capacity.
-          </p>
+          <LegalDisclaimer className="mt-10" />
         </div>
       </section>
     </div>

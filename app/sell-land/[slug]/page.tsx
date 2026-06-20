@@ -4,6 +4,7 @@ import { countySellPages, getCountySellPage } from '@/lib/county-sell-data';
 import { getBlogPost } from '@/lib/blog-data';
 import { siteConfig } from '@/lib/seo-config';
 import { BreadcrumbSchema, FAQSchema, LocalBusinessSchema } from '@/components/seo/json-ld';
+import { LegalDisclaimer } from '@/components/legal-disclaimer';
 import { SellerForm } from '@/components/forms/seller-form';
 import { CheckCircle, MapPin, ChevronRight, BookOpen, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
@@ -280,10 +281,7 @@ export default function CountySellPage({ params }: Props) {
                 Seller Resources &amp; Blog
               </Link>
             </div>
-            <p className="mt-8 text-xs text-muted-foreground">
-              Ohio Valley Land Partners operates as a principal buyer, not a licensed real estate broker
-              or agent. We are not affiliated with any MLS or real estate brokerage.
-            </p>
+            <LegalDisclaimer className="mt-8 text-center" />
           </div>
         </section>
       </div>

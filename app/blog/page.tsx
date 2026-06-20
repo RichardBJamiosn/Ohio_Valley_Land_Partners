@@ -4,6 +4,7 @@ import { blogPosts, blogCategories, getBlogPost, campaignFeaturedSlug } from '@/
 import { siteConfig } from '@/lib/seo-config';
 import { Calendar, Clock, ArrowRight, BookOpen } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { LegalDisclaimer } from '@/components/legal-disclaimer';
 
 export const metadata: Metadata = {
   title: 'Blog — Ohio Valley Land Guides & Market Reports',
@@ -44,6 +45,7 @@ export default function BlogPage() {
             Straight answers on selling land in Ohio — probate, back taxes, county markets, and the
             deals most agents won't talk about.
           </p>
+          <LegalDisclaimer className="mt-5" />
         </div>
 
         {/* Categories */}

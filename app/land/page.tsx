@@ -4,6 +4,7 @@ import { ArrowRight, MapPin, Clock, DollarSign, ShieldCheck, TreePine } from 'lu
 import Link from 'next/link';
 import { BreadcrumbSchema } from '@/components/seo/json-ld';
 import { SellerForm } from '@/components/forms/seller-form';
+import { LegalDisclaimer } from '@/components/legal-disclaimer';
 
 export const metadata: Metadata = {
   title: silos.land.title,
@@ -189,6 +190,7 @@ export default function LandPage() {
                 </Link>
               </div>
             </div>
+            <LegalDisclaimer className="mt-10 text-center" />
           </div>
         </section>
       </div>

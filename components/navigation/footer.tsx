@@ -32,6 +32,7 @@ const footerNavigation = {
   legal: [
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },
+    { name: 'Legal Disclaimer', href: '/disclaimer' },
   ],
 };
 
@@ -157,9 +158,11 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Ohio Valley Land Partners. All rights reserved.
           </p>
           <p className="text-xs leading-5 text-white/30 max-w-2xl mx-auto">
-            Ohio Valley Land Partners operates as a principal buyer of real estate. We are not
-            licensed real estate brokers or agents and do not represent sellers or buyers in an
-            agency capacity. We purchase properties for our own account.
+            Principal buyer — not a licensed broker, agent, or law firm.{' '}
+            <Link href="/disclaimer" className="underline underline-offset-2 hover:text-white/45">
+              Legal disclaimer
+            </Link>
+            .
           </p>
         </div>
       </div>

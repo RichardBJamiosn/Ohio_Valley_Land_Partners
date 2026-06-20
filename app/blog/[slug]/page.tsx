@@ -5,6 +5,7 @@ import { blogPosts, getBlogPost } from '@/lib/blog-data';
 import { ArticleSchema, BreadcrumbSchema } from '@/components/seo/json-ld';
 import { siteConfig } from '@/lib/seo-config';
 import { Badge } from '@/components/ui/badge';
+import { LegalDisclaimer } from '@/components/legal-disclaimer';
 import { Calendar, Clock, ArrowLeft, ArrowRight } from 'lucide-react';
 
 interface Props {
@@ -130,6 +131,8 @@ export default function BlogPostPage({ params }: Props) {
               Request Analysis &amp; Offer <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
+
+          <LegalDisclaimer className="mt-8 text-center" />
 
           {/* Prev / Next navigation */}
           {(prevPost || nextPost) && (
