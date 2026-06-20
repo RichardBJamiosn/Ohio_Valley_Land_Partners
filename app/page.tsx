@@ -17,7 +17,7 @@ const homepageFAQs = [
   {
     question: 'How do I sell vacant land in Ohio without a real estate agent?',
     answer:
-      'Submit your parcel address through our contact form or homepage. Ohio Valley Land Partners reviews county auditor records, tax history, and comparable sales, then calls you with a written cash offer within 24 hours. If you accept, we sign a purchase agreement and close through a licensed title company in 14–21 days — no listing, no showings, and no agent commissions.',
+      'Submit your parcel address through our contact form or homepage. Ohio Valley Land Partners provides a free in-depth property market analysis — reviewing county auditor records, tax history, and comparable sales — then calls you with a written cash offer. If you accept, we sign a purchase agreement and close through a licensed title company on a timeline that works for you, including fast closings when needed — no listing, no showings, and no agent commissions.',
   },
   {
     question: 'Do you buy land with back taxes or tax liens?',
@@ -37,12 +37,12 @@ const homepageFAQs = [
   {
     question: 'How fast can you close on vacant land?',
     answer:
-      'Typically 14–21 days from signed purchase agreement on a clean-title parcel. Probate, heir disputes, or complex title issues can extend the timeline, but we handle those with a local title company. No lender approval or appraisal contingency is required because we pay cash.',
+      'We close quickly and comfortably — without long, drawn-out closings. On a clean-title parcel we can accommodate fast closing needs; probate, heir disputes, or complex title issues may take longer, but we handle those with a local title company. No lender approval or appraisal contingency is required because we pay cash.',
   },
   {
     question: 'What counties in Ohio and West Virginia do you buy land in?',
     answer:
-      'Nine counties: Franklin, Belmont, Jefferson, Columbiana, Harrison, and Carroll in Ohio; Ohio, Marshall, and Brooke in West Virginia. Franklin County is our active Columbus campaign. Each county has a dedicated sell-land page and Ohio Valley guide on this site.',
+      'We buy across the entire Ohio Valley — Ohio, Pennsylvania, West Virginia, Kentucky, and Indiana — with multiple active campaigns and dedicated sell-land pages and Ohio Valley guides for Franklin, Belmont, Jefferson, Columbiana, Harrison, Carroll, Ohio County WV, Marshall, and Brooke counties.',
   },
   {
     question: 'How do you calculate a cash offer for my land?',
@@ -52,14 +52,14 @@ const homepageFAQs = [
   {
     question: 'What happens after I submit my parcel information?',
     answer:
-      'We research your parcel within 24 hours using county auditor and GIS records. A team member calls you with a cash offer and walks through next steps. If you accept, we send a purchase agreement, open title, and schedule closing. You can also reach us at (614) 653-7430.',
+      'We provide a free in-depth property market analysis using county auditor and GIS records. A team member calls you with a cash offer and walks through next steps. If you accept, we send a purchase agreement, open title, and schedule closing on your timeline. You can also reach us at (614) 653-7430.',
   },
 ];
 
 const whatWeDo = [
   {
     name: silos.land.title,
-    description: 'Cash offers on vacant land, inherited property, back-tax parcels, and Franklin County infill lots. No agents, no fees.',
+    description: 'Cash offers on vacant land, inherited property, and back-tax parcels across the Ohio Valley. No agents, no fees.',
     href: silos.land.path,
     icon: TreePine,
     tag: 'Core Business',
@@ -95,8 +95,8 @@ export default function Home() {
               </h2>
               <p className="mt-3 text-muted-foreground leading-relaxed">
                 We are buying vacant lots, inherited parcels, and long-held infill ground across
-                western Geauga — ZIP codes 44022, 44023, 44026, 44065, 44072, and 44202. Cash offer
-                within 24 hours. Close in 14–21 days.
+                western Geauga — ZIP codes 44022, 44023, 44026, 44065, 44072, and 44202. Free
+                in-depth property market analysis. We comfortably accommodate fast closing needs.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
@@ -166,21 +166,21 @@ export default function Home() {
               <span className="text-5xl font-black text-amber">1.77M+</span>
               <span className="text-sm font-semibold text-foreground">Core Ohio Valley Acres</span>
               <span className="text-xs text-muted-foreground max-w-[200px]">
-                Multiple active campaigns across the entire Ohio Valley
+                Multiple active campaigns across OH, PA, WV, KY, and Indiana
               </span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <span className="text-5xl font-black text-amber">370K+</span>
               <span className="text-sm font-semibold text-foreground">Core Service-Area Population</span>
               <span className="text-xs text-muted-foreground max-w-[200px]">
-                Serving the Ohio Valley while launching a thriving builder-buyer community.
+                Active builders network connecting local buyers across the Ohio Valley.
               </span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <span className="text-5xl font-black text-amber">9</span>
-              <span className="text-sm font-semibold text-foreground">Active Campaigns Across Ohio</span>
+              <span className="text-sm font-semibold text-foreground">Active Campaigns</span>
               <span className="text-xs text-muted-foreground max-w-[200px]">
-                Nine Ohio Valley Campaigns actively giving back to local communities.
+                Multiple Ohio Valley campaigns actively giving back to local communities.
               </span>
             </div>
           </div>
@@ -294,10 +294,10 @@ export default function Home() {
               <div className="mt-6 flex flex-col gap-4 text-muted-foreground leading-8">
                 <p>
                   We are an intentional buyer — not an international one. Rooted in the
-                  Ohio Valley, buying land in eight specific counties in Ohio and West Virginia.
-                  No out-of-state hedge fund. No call center. A local buyer who knows this
-                  market, understands what this land means to families here, and answers
-                  the phone.
+                  Ohio Valley, buying land across counties in Ohio, Pennsylvania, West Virginia,
+                  Kentucky, and Indiana — not just one market. No out-of-state hedge fund.
+                  No call center. A local buyer who knows this region, understands what this
+                  land means to families here, and answers the phone.
                 </p>
                 <p>
                   5% of every closing goes directly to Arc of Appalachia — protecting
@@ -318,8 +318,8 @@ export default function Home() {
 
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               {[
-                { label: 'Cash offer turnaround', value: '24 Hours', sub: 'Guaranteed response on every inquiry', icon: Clock },
-                { label: 'Average close timeline', value: '14 Days', sub: 'From signed agreement to funded close', icon: Clock },
+                { label: 'Property market analysis', value: 'Free', sub: 'In-depth review before every offer', icon: Clock },
+                { label: 'Closing pace', value: 'Flexible', sub: 'Comfortably accommodates fast closing when you need it', icon: Clock },
                 { label: 'Agent fees charged', value: '$0', sub: 'You deal directly with the buyer', icon: DollarSign },
                 { label: 'Back to the Ohio Valley', value: '5%', sub: 'Of every closing to Arc of Appalachia & Salvation Army East Palestine', icon: Heart },
               ].map((item) => (

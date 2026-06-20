@@ -52,8 +52,8 @@ export function Footer() {
               />
             </Link>
             <p className="text-sm leading-6 text-white/60 max-w-xs">
-              Local cash land buyer serving the Ohio Valley with active campaigns in Franklin and
-              Geauga counties. Intentional. Not international.
+              Local cash land buyer across the Ohio Valley — OH, PA, WV, KY, and Indiana.
+              Multiple active campaigns. Active builders network. Intentional. Not international.
             </p>
             <div className="flex flex-col gap-3 text-sm text-white/60">
               <div className="flex items-center gap-2">

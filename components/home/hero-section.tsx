@@ -7,10 +7,10 @@ import { SellerForm } from '@/components/forms/seller-form';
 import { InvestorIntakeForm } from '@/components/forms/investor-intake-form';
 
 const stats = [
-  { label: 'Full Analysis', value: '24 hrs', icon: Clock },
-  { label: 'Close Timeline', value: '14 Days', icon: Calendar },
+  { label: 'In-Depth Market Analysis', value: 'Free', icon: Clock },
+  { label: 'Fast Closing When You Need It', value: 'Flexible', icon: Calendar },
   { label: 'Core Acres', value: '1.77M+', icon: TreePine },
-  { label: 'Campaigns', value: 'Active', icon: MapPin },
+  { label: 'Campaigns & Buyers Network', value: 'Active', icon: MapPin },
 ];
 
 const campaignRegions = [
@@ -30,13 +30,14 @@ const serviceRegions = [
 ];
 
 const sellerTrustPoints = [
-  'Local buyer — rooted in the Ohio Valley and active in Franklin County',
-  'No agent fees or commissions',
-  'Close in as little as 14 days',
+  'Local buyer — active across Ohio Valley counties in OH, PA, WV, KY, and Indiana',
+  'Multiple active campaigns backed by an active builders network',
+  'Close quickly and comfortably — without long, drawn-out closings',
+  'We under-promise and over-deliver on every offer',
 ];
 
 const buyerTrustPoints = [
-  'First access to off-market Ohio Valley and Franklin County land',
+  'First access to off-market land across the entire Ohio Valley',
   'Hunting, farm, development & investment parcels',
   'No membership fees — ever',
 ];
@@ -83,10 +84,11 @@ export function HeroSection() {
                   <span className="block text-amber mt-1">Local. Intentional. Fair.</span>
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-white/70">
-                  We buy vacant land, inherited property, and back-tax parcels across nine counties
-                  in Ohio and West Virginia — with active campaigns in Franklin County (Columbus)
-                  and Geauga County (Chesterland and western townships).
-                  Full offer after review. No agents, no fees, no out-of-state runaround.
+                  We buy vacant land, inherited property, and back-tax parcels across the entire
+                  Ohio Valley — Ohio, Pennsylvania, West Virginia, Kentucky, and Indiana. Multiple
+                  active campaigns with an active builders network. A local buyer in counties
+                  throughout the region — not just Franklin. Full offer after review. No agents,
+                  no fees, no out-of-state runaround.
                 </p>
                 {/* force Cloudflare Pages rebuild - user 'again didnt update' on 3c06292 Core Acres restore + stats labels; previous forces insufficient; dcf01c2 + ... + 3c06292; hard refresh no luck */}
                 <ul className="mt-6 flex flex-col gap-3">
@@ -105,9 +107,9 @@ export function HeroSection() {
                   <span className="block text-amber mt-1">in the Ohio Valley.</span>
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-white/70">
-                  Join our buyer network and get first access to off-market land deals —
+                  Join our active builders network and get first access to off-market land deals —
                   hunting tracts, farm ground, development sites, and investment parcels
-                  across the Ohio Valley and Franklin County.
+                  across the Ohio Valley in OH, PA, WV, KY, and Indiana.
                 </p>
                 <ul className="mt-6 flex flex-col gap-3">
                   {buyerTrustPoints.map((point) => (
@@ -183,7 +185,7 @@ export function HeroSection() {
                     <div className="mb-6 text-center">
                       <h2 className="text-xl font-bold text-foreground">Receive Your Property Analysis &amp; Offer</h2>
                       <p className="text-sm text-muted-foreground mt-1">
-                        Full property analysis and offer within 24 hours.
+                        Free in-depth property market analysis. We under-promise and over-deliver.
                       </p>
                     </div>
                     <SellerForm />

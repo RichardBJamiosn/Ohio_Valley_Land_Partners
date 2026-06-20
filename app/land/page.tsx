@@ -35,7 +35,7 @@ const process = [
   },
   {
     step: '02',
-    title: 'We Call Within 24 Hours',
+    title: 'Free Market Analysis',
     description: 'A real person calls you — not a bot, not a form response. We ask a few questions and discuss your situation.',
     icon: Clock,
   },
@@ -47,8 +47,8 @@ const process = [
   },
   {
     step: '04',
-    title: 'Close in 14 Days',
-    description: 'If you accept, we handle everything. Close in as little as 14 days, no agent commissions, no fees from you.',
+    title: 'Close On Your Timeline',
+    description: 'If you accept, we handle everything. Close quickly and comfortably — we accommodate fast closing needs without long, drawn-out closings. No agent commissions, no fees from you.',
     icon: ShieldCheck,
   },
 ];
@@ -83,15 +83,17 @@ export default function LandPage() {
                   <span className="block text-amber mt-1">Direct. No Agents. No Fees.</span>
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                  Vacant land, inherited property, back-tax parcels — we make cash offers on all of it,
-                  across the Ohio Valley and our active Franklin County campaign. Call within 24 hours.
-                  Close in 14 days when title is ready.
+                  Vacant land, inherited property, back-tax parcels — we make cash offers on all of it
+                  across the entire Ohio Valley in OH, PA, WV, KY, and Indiana. Multiple active
+                  campaigns with an active builders network. Free in-depth property market analysis.
+                  We under-promise and over-deliver.
                 </p>
                 <ul className="mt-6 flex flex-col gap-3">
                   {[
-                    'Local buyer — rooted in the Ohio Valley and active in Franklin County',
+                    'Local buyer — active across Ohio Valley counties in OH, PA, WV, KY, and Indiana',
                     'No agent fees or commissions — ever',
-                    'Cash offer in 24 hours, close in 14 days',
+                    'Close quickly and comfortably — fast closing when you need it',
+                    'We under-promise and over-deliver on every offer',
                   ].map((point) => (
                     <li key={point} className="flex items-center gap-3 text-sm font-medium text-foreground">
                       <ShieldCheck className="h-4 w-4 text-amber flex-shrink-0" />
@@ -124,7 +126,7 @@ export default function LandPage() {
               <div className="rounded-2xl border border-border bg-card p-8 shadow-lg">
                 <div className="mb-6 text-center">
                   <h2 className="text-xl font-bold text-foreground">Receive Your Property Analysis &amp; Offer</h2>
-                  <p className="text-sm text-muted-foreground mt-1">Full property analysis and cash offer within 24 hours.</p>
+                  <p className="text-sm text-muted-foreground mt-1">Free in-depth property market analysis. We under-promise and over-deliver.</p>
                 </div>
                 <SellerForm />
               </div>
