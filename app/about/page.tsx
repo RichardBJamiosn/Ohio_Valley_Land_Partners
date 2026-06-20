@@ -5,7 +5,7 @@ import { ArrowRight, Heart, Shield, MapPin, Handshake } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'About Us — Ohio Valley Land Partners',
   description:
-    'Ohio Valley Land Partners is a cash land buyer dedicated to the Ohio Valley region — built on honest offers, fast closings, and a commitment to giving back to the communities we serve.',
+    'Ohio Valley Land Partners is a local land buyer dedicated to the Ohio Valley region — built on honest property analysis, fair offers after review, and a commitment to giving back to the communities we serve.',
 };
 
 const principles = [
@@ -51,7 +51,7 @@ export default function AboutPage() {
             <div className="mt-8 flex flex-col gap-5 text-lg leading-9 text-muted-foreground">
               <p>
                 Selling land in the Ohio Valley is harder than it should be. The traditional
-                market ignores rural parcels. National cash buyers treat them as line items.
+                market ignores rural parcels. National bulk buyers treat them as line items.
                 Agents who do take the listing rarely know the county, the zoning, or the
                 specific circumstances that make every land sale different.
               </p>
@@ -176,7 +176,7 @@ export default function AboutPage() {
               href="/"
               className="inline-flex items-center gap-2 rounded-lg bg-amber px-6 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
             >
-              Get a Cash Offer <ArrowRight className="h-4 w-4" />
+              Request Analysis &amp; Offer <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="/contact"

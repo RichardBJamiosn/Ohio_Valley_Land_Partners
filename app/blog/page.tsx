@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'sell land Ohio',
     'Ohio Valley real estate blog',
     'Ohio probate land sale',
-    'cash land buyers Ohio',
+    'direct land buyers Ohio',
     'Ohio land market 2026',
     'sell vacant land Geauga County Ohio',
   ],
@@ -60,7 +60,7 @@ export default function BlogPage() {
               Active campaign — Geauga County, Ohio
             </p>
             <p className="mt-1 text-sm text-muted-foreground">
-              Cash offers for vacant lots and inherited land in western Geauga — Chesterland, Chardon, Bainbridge, and surrounding townships.
+              Property analysis and offers for vacant lots and inherited land in western Geauga — Chesterland, Chardon, Bainbridge, and surrounding townships.
             </p>
           </div>
         ) : null}
@@ -138,13 +138,13 @@ export default function BlogPage() {
         <div className="mt-20 rounded-2xl border border-border bg-card p-10 text-center">
           <h2 className="text-2xl font-bold text-foreground mb-3">Ready to Sell Your Land?</h2>
           <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-            Get a no-obligation cash offer within 24 hours. No agents, no fees, no games.
+            Free in-depth property market analysis and a written offer after review. No agents, no fees, no pressure.
           </p>
           <Link
             href="/"
             className="inline-flex items-center gap-2 rounded-lg bg-amber px-6 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
           >
-            Get My Cash Offer <ArrowRight className="h-4 w-4" />
+            Request Analysis &amp; Offer <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </div>

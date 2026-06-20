@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `Sell Land in ${county.name}, ${county.state} — Ohio Valley Land Partners`,
     description:
       sellData?.metaDescription ??
-      `Cash land buyer in ${county.name}, ${county.state}. We buy vacant land, inherited property, and back-tax parcels. Cash offer in 24 hours.`,
+      `Local land buyer in ${county.name}, ${county.state}. We buy vacant land, inherited property, and back-tax parcels. Free property market analysis and written offer after review.`,
     keywords: sellData?.keywords ?? [`sell land ${county.name}`, 'Ohio Valley land buyer'],
     alternates: {
       canonical: url,
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `Sell Land in ${county.name}, ${county.state}`,
       description:
         sellData?.metaDescription ??
-        `Cash land buyer in ${county.name}, ${county.state}. Cash offer in 24 hours.`,
+        `Local land buyer in ${county.name}, ${county.state}. Property analysis and offer after review.`,
       url,
       type: 'website',
     },
@@ -77,14 +77,14 @@ export default async function CountyGuidePage({ params }: Props) {
               </h1>
               <p className="mt-6 text-xl leading-8 text-muted-foreground">
                 {sellData?.subheadline ??
-                  `Cash offers on all land in ${county.name}. No agents, no fees. We call within 24 hours.`}
+                  `Direct offers on all land in ${county.name} after property market analysis. No agents, no fees.`}
               </p>
               <div className="mt-8">
                 <Link
                   href={`/sell-land/${slug}`}
                   className="inline-flex items-center gap-2 rounded-lg bg-amber px-6 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
                 >
-                  Get a Cash Offer <ArrowRight className="h-4 w-4" />
+                  Request Analysis &amp; Offer <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
             </div>
@@ -167,14 +167,14 @@ export default async function CountyGuidePage({ params }: Props) {
               Ready to Sell Your {county.name} Land?
             </h2>
             <p className="text-muted-foreground mb-8">
-              We call within 24 hours. No obligation. No agent fees. Cash offer on any parcel.
+              Free property market analysis. No obligation. No agent fees. Written offer after review on any parcel.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
                 href={`/sell-land/${slug}`}
                 className="rounded-lg bg-amber px-6 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
               >
-                Get a Cash Offer
+                Request Analysis &amp; Offer
               </Link>
               <Link
                 href="/contact"

@@ -41,8 +41,8 @@ const process = [
   },
   {
     step: '03',
-    title: 'Cash Offer in Writing',
-    description: 'We send a written offer with our number and the reasoning behind it. No mystery pricing.',
+    title: 'Written Offer After Review',
+    description: 'We send a written offer with our number and the reasoning behind it. No mystery pricing — we under-promise and over-deliver.',
     icon: DollarSign,
   },
   {
@@ -77,16 +77,16 @@ export default function LandPage() {
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-start">
 
               <div>
-                <p className="heading-serif text-amber text-2xl mb-4">Cash land buyer</p>
+                <p className="heading-serif text-amber text-2xl mb-4">Local land buyer</p>
                 <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl leading-tight">
                   We Buy Ohio Valley Land.
                   <span className="block text-amber mt-1">Direct. No Agents. No Fees.</span>
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                  Vacant land, inherited property, back-tax parcels — we make cash offers on all of it
-                  across the entire Ohio Valley in OH, PA, WV, KY, and Indiana. Multiple active
-                  campaigns with an active builders network. Free in-depth property market analysis.
-                  We under-promise and over-deliver.
+                  Vacant land, inherited property, back-tax parcels — we review all of it across the
+                  entire Ohio Valley in OH, PA, WV, KY, and Indiana. Multiple active campaigns with
+                  an active builders network. Free in-depth property market analysis and a written
+                  offer after review. We under-promise and over-deliver.
                 </p>
                 <ul className="mt-6 flex flex-col gap-3">
                   {[
@@ -185,7 +185,7 @@ export default function LandPage() {
                   href="/"
                   className="inline-flex items-center gap-2 rounded-lg bg-amber px-6 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
                 >
-                  Get a Cash Offer <ArrowRight className="h-4 w-4" />
+                  Request Analysis &amp; Offer <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
             </div>

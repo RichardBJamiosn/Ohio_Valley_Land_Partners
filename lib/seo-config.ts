@@ -46,8 +46,8 @@ export const silos = {
   land: {
     title: 'Land Offers',
     path: '/land',
-    description: 'Cash land offers for motivated sellers and off-market land opportunities for cash buyers',
-    keywords: 'land offers, cash land buyers, motivated sellers, Ohio Valley land',
+    description: 'Direct land offers for motivated sellers — free property market analysis and written offers after review',
+    keywords: 'land offers, direct land buyers, motivated sellers, Ohio Valley land',
   },
   commercial: {
     title: 'Commercial Real Estate',

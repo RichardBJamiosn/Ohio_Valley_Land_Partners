@@ -118,7 +118,7 @@ export default function BlogPostPage({ params }: Props) {
           {/* CTA box */}
           <div className="mt-16 rounded-2xl border border-amber/30 bg-amber/5 p-8 text-center">
             <h2 className="text-xl font-bold text-foreground mb-2">
-              Ready to Get a Cash Offer on Your Land?
+              Ready for Your Property Analysis &amp; Offer?
             </h2>
             <p className="text-sm text-muted-foreground mb-6">
               No obligation. No agent fees. We buy land across the Ohio Valley — any condition, any situation.
@@ -127,7 +127,7 @@ export default function BlogPostPage({ params }: Props) {
               href="/contact"
               className="inline-flex items-center gap-2 rounded-lg bg-amber px-6 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
             >
-              Get My Cash Offer <ArrowRight className="h-4 w-4" />
+              Request Analysis &amp; Offer <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
 
