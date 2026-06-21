@@ -200,7 +200,7 @@ export default function Home() {
               We are builders and developers working directly with landowners.
             </h2>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              No hedge fund. No call center. We evaluate land for our own account and connect portfolio opportunities with our private builders network. Property owners choose whether our direct-purchase model fits their goals.
+              No hedge fund. We evaluate land for our own account and connect portfolio opportunities with our private builders network. Property owners choose whether our direct-purchase model fits their goals.
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-4xl grid grid-cols-1 gap-8 sm:grid-cols-2">
@@ -296,7 +296,7 @@ export default function Home() {
                   We are an intentional buyer — not an international one. Rooted in the
                   Ohio Valley, buying land across counties in Ohio, Pennsylvania, West Virginia,
                   Kentucky, and Indiana — not just one market. No out-of-state hedge fund.
-                  No call center. A local buyer who knows this region, understands what this
+                  A local buyer who knows this region, understands what this
                   land means to families here, and answers the phone.
                 </p>
                 <p>
