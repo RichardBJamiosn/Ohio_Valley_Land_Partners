@@ -7,7 +7,7 @@
 - /: Homepage — services overview, counties served, process summary
 - /about: Company background, community giving commitment (5% per closing to Arc of Appalachia and Salvation Army East Palestine)
 - /contact: Submit a property for internal acquisition review
-- /land: Land offers silo — cash land buyer services
+- /land: Land offers silo — direct principal buyer services
 - /community: Community giving — 5% of every closing donated
 - /land-scouts: Introductions and local partnerships; no compensation is promised
 

@@ -5,8 +5,6 @@ import { siteConfig } from '@/lib/seo-config';
 import { Calendar, Clock, ArrowRight, BookOpen } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { LegalDisclaimer } from '@/components/legal-disclaimer';
-import { publicBlogSummary } from '@/lib/public-copy';
-
 export const metadata: Metadata = {
   title: 'Blog — Ohio Valley Land Topics & Market Observations',
   description:
@@ -15,7 +13,7 @@ export const metadata: Metadata = {
     'sell land Ohio',
     'Ohio Valley real estate blog',
     'Ohio probate land sale',
-    'cash land buyers Ohio',
+    'direct land buyers Ohio',
     'Ohio land market 2026',
     'sell vacant land Geauga County Ohio',
   ],
@@ -82,7 +80,7 @@ export default function BlogPage() {
                 {featured.title}
               </Link>
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">{publicBlogSummary(featured.category)}</p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">{featured.excerpt}</p>
             <div className="flex items-center gap-6 text-sm text-muted-foreground">
               <span className="flex items-center gap-1.5">
                 <Calendar className="h-4 w-4" />

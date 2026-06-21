@@ -33,8 +33,8 @@ export const blogPosts: BlogPost[] = [
       'sell inherited land Ohio',
       'Ohio probate land sale',
       'inherited property Ohio',
-      'sell land without agent Ohio',
-      'cash land buyers Ohio Valley',
+      'inherited land Ohio professionals',
+      'direct land buyers Ohio Valley',
     ],
     body: `
 <h2>Why inherited land deserves professional review</h2>
@@ -58,7 +58,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'cash-land-buyers-ohio-valley',
     title: 'Understanding Direct Land Buyers in the Ohio Valley',
     metaDescription:
-      'What does selling to a cash land buyer actually look like? Here\'s the honest process — timeline, offer calculation, and what separates legitimate buyers from bad actors.',
+      'What does a direct land purchase inquiry look like? OVLP\'s role as a principal buyer, review process, and questions owners may wish to ask their own professionals.',
     category: 'Seller Guides',
     datePublished: '2026-03-05',
     dateModified: '2026-03-14',
@@ -66,11 +66,11 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       'A direct buyer is one possible path for a landowner. This article explains OVLP’s role as a principal buyer and suggests questions owners may wish to ask.',
     keywords: [
-      'cash land buyers Ohio Valley',
-      'sell land fast Ohio',
-      'cash offer vacant land',
-      'Ohio land wholesaler',
-      'sell land without realtor Ohio',
+      'direct land buyers Ohio Valley',
+      'sell land Ohio Valley',
+      'vacant land direct buyer',
+      'Ohio land principal buyer',
+      'Ohio land sale options',
     ],
     body: `
 <h2>What a direct land buyer does</h2>
@@ -94,7 +94,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'sell-vacant-land-delaware-county-ohio',
     title: 'Delaware County, Ohio Land: General Market Observations',
     metaDescription:
-      'Selling vacant land in Delaware County, Ohio? Here\'s what the local market looks like in 2026, property factors buyers may review, and how to close fast for cash.',
+      'Delaware County, Ohio land: general 2026 market observations, property factors buyers may review, and how OVLP considers direct acquisition inquiries.',
     category: 'County Guides',
     datePublished: '2026-03-08',
     dateModified: '2026-03-14',
@@ -104,7 +104,7 @@ export const blogPosts: BlogPost[] = [
     keywords: [
       'sell vacant land Delaware County Ohio',
       'Delaware County Ohio land for sale',
-      'cash land buyers Delaware County',
+      'direct land buyers Delaware County',
       'sell land fast Central Ohio',
       'Silicon Heartland land sales',
     ],
@@ -225,7 +225,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'sell-land-belmont-county-ohio-fast',
     title: 'Belmont County, Ohio Land: Acquisition Notes for 2026',
     metaDescription:
-      'Need to sell land in Belmont County, Ohio? This guide covers cash offer timelines, property factors buyers may review, and how to avoid the tax sale. Direct buyer — principal-buyer inquiry.',
+      'Belmont County, Ohio land: acquisition notes, property factors buyers may review, and how OVLP considers direct purchase inquiries as a principal buyer.',
     category: 'County Guides',
     datePublished: '2026-03-21',
     dateModified: '2026-03-28',
@@ -236,7 +236,7 @@ export const blogPosts: BlogPost[] = [
       'sell land Belmont County Ohio',
       'Belmont County land buyer',
       'sell land fast Belmont County',
-      'cash offer land Belmont County OH',
+      'direct land buyer Belmont County OH',
       'sell rural land eastern Ohio',
     ],
     body: `
@@ -272,7 +272,7 @@ export const blogPosts: BlogPost[] = [
     keywords: [
       'sell land Jefferson County Ohio',
       'Steubenville land buyer',
-      'cash land buyers Jefferson County OH',
+      'direct land buyers Jefferson County OH',
       'sell farm ground Jefferson County Ohio',
       'sell land near Steubenville',
     ],
@@ -305,10 +305,10 @@ export const blogPosts: BlogPost[] = [
     dateModified: '2026-03-28',
     readingTime: '5 min read',
     excerpt:
-      "Columbiana County land owners: here\'s what drives value in the current market and how a direct sale compares to listing with an agent.",
+      'Columbiana County landowners: general market observations and property factors that may influence buyer interest — not sale strategy advice.',
     keywords: [
       'sell land Columbiana County Ohio',
-      'cash land buyers Columbiana County',
+      'direct land buyers Columbiana County',
       'sell vacant land Lisbon Ohio',
       'sell land Salem Ohio',
       'Columbiana County land buyer',
@@ -342,12 +342,12 @@ export const blogPosts: BlogPost[] = [
     dateModified: '2026-03-28',
     readingTime: '5 min read',
     excerpt:
-      "Ohio County, WV is the urban core of the Ohio Valley. Here\'s general land-market observations in 2026 and how to sell yours without an agent.",
+      'Ohio County, West Virginia land: general market observations for 2026 and how OVLP reviews direct acquisition inquiries.',
     keywords: [
       'sell land Ohio County West Virginia',
       'Wheeling WV land buyer',
       'sell vacant land Wheeling WV',
-      'cash land buyers Ohio County WV',
+      'direct land buyers Ohio County WV',
       'sell property Wheeling West Virginia',
     ],
     body: `
@@ -383,7 +383,7 @@ export const blogPosts: BlogPost[] = [
     keywords: [
       'sell land Marshall County WV',
       'Moundsville WV land buyer',
-      'cash land buyers Marshall County West Virginia',
+      'direct land buyers Marshall County West Virginia',
       'sell rural land Marshall County WV',
       'sell inherited property Marshall County',
     ],
@@ -446,16 +446,16 @@ export const blogPosts: BlogPost[] = [
     slug: 'franklin-county-ohio-sell-vacant-land-2026',
     title: 'Franklin County, Ohio Vacant Land: 2026 Campaign Notes',
     metaDescription:
-      'Selling vacant land in Franklin County, Ohio in 2026? Request a property review in days, discuss a property-specific closing schedule. No agent fees. Inherited lots, back taxes, landlocked parcels welcome.',
+      'Franklin County, Ohio vacant land campaign notes for 2026. Full property analysis from a local principal buyer — inherited lots, back taxes, and landlocked parcels welcome.',
     category: 'County Guides',
     datePublished: '2026-05-20',
     dateModified: '2026-05-20',
     readingTime: '7 min read',
     excerpt:
-      'Franklin County land owners have options — from inherited lots to tax-delinquent parcels. Here\'s how to sell for cash in 2026 and what the process actually looks like.',
+      'Franklin County landowners: from inherited lots to tax-delinquent parcels — how OVLP reviews direct acquisition inquiries after a full property analysis.',
     keywords: [
       'sell land Franklin County Ohio',
-      'Franklin County cash land buyer',
+      'Franklin County direct land buyer',
       'vacant lot Columbus Ohio sale',
       'Franklin County tax delinquent land',
       'sell inherited land Franklin County',
@@ -483,7 +483,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'brooke-harrison-carroll-county-land-buyers',
     title: 'Direct Land Buyers in Brooke, Harrison, and Carroll Counties',
     metaDescription:
-      'Selling land in Brooke County WV, Harrison County OH, or Carroll County OH? We buy direct — property-specific proposal after review, discuss a property-specific closing schedule. No agent, no fees.',
+      'Brooke, Harrison, and Carroll county land: general market observations and how OVLP reviews direct acquisition inquiries as a principal buyer.',
     category: 'County Guides',
     datePublished: '2026-03-27',
     dateModified: '2026-03-28',
@@ -494,7 +494,7 @@ export const blogPosts: BlogPost[] = [
       'sell land Brooke County WV',
       'sell land Harrison County Ohio',
       'sell land Carroll County Ohio',
-      'cash land buyers tri-county Ohio Valley',
+      'direct land buyers tri-county Ohio Valley',
       'sell land Wellsburg WV',
       'sell land Cadiz Ohio',
     ],
@@ -512,7 +512,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'brooke-county-wv-land-worth-2026',
     title: 'Brooke County, WV Land: Factors Buyers May Consider in 2026',
     metaDescription:
-      'Discover what your Brooke County WV land is worth in 2026. Learn about market trends, property values, and how direct purchase inquiries work for cash in West Virginia\'s panhandle.',
+      'Brooke County, WV land in 2026: market trends, property factors buyers may consider, and how OVLP reviews direct acquisition inquiries.',
     category: 'County Guides',
     datePublished: '2026-06-18',
     dateModified: '2026-06-18',
@@ -524,7 +524,7 @@ export const blogPosts: BlogPost[] = [
       'sell land Brooke County',
       'West Virginia land prices 2026',
       'Brooke County property worth',
-      'cash land buyers WV',
+      'direct land buyers WV',
     ],
     body: `
 <h2>Factors that may affect buyer interest</h2>
@@ -543,21 +543,21 @@ export const blogPosts: BlogPost[] = [
     slug: 'sell-vacant-land-geauga-county-ohio-2026',
     title: 'Geauga County, Ohio Vacant Land: 2026 Campaign Notes',
     metaDescription:
-      'Selling vacant land in Geauga County, Ohio? Cash offers for lots in Chesterland, Chardon, Bainbridge, and western Geauga. Inherited parcels, back taxes, and infill lots welcome. discuss a property-specific closing schedule.',
+      'Geauga County, Ohio vacant land campaign notes for Chesterland, Chardon, Bainbridge, and western townships. Full property analysis from a local principal buyer.',
     category: 'County Guides',
     datePublished: '2026-06-19',
     dateModified: '2026-06-19',
     readingTime: '9 min read',
     excerpt:
-      'General notes from OVLP’s western Geauga acquisition campaign, including the parcel characteristics our team reviews.',
+      'Geauga County landowners in Chesterland, Chardon, and western townships — general notes from OVLP’s acquisition campaign and the parcel characteristics our team reviews.',
     keywords: [
       'sell vacant land Geauga County Ohio',
-      'cash land buyer Geauga County',
+      'direct land buyer Geauga County',
       'sell lot Chesterland Ohio',
       'sell inherited land Geauga County',
-      'Geauga County vacant lot cash offer',
+      'Geauga County vacant lot analysis',
       'sell land Bainbridge Ohio',
-      'sell land Chardon Ohio cash',
+      'sell land Chardon Ohio',
     ],
     body: `
 <h2>About the western Geauga campaign</h2>
