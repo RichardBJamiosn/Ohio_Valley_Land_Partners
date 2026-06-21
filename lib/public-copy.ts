@@ -18,13 +18,29 @@ export const sellerPositioning = {
 } as const;
 
 export function countySubheadline(countyName: string): string {
-  return `Full property analysis for ${countyName} parcels. Aggressively fast closings when necessary — no agent fees.`;
+  return `Full property analysis for ${countyName} parcels. Aggressively fast closings when necessary.`;
 }
+
+/** FAQ section framing — process only, not seller advice. */
+export const faqFraming = {
+  sectionTitle: 'Questions About Working With OVLP',
+  sectionSub:
+    'What we can tell you about our acquisition process — not legal, tax, brokerage, or sale-strategy advice.',
+} as const;
+
 const PROFESSIONAL_TOPIC =
   /(probate|inherit|estate|executor|administrator|fiduciary|heir|court|tax|lien|foreclos|forfeit|mineral|deed|title|split|survey|easement|zoning|legal)/i;
 
 export function softenCountyFaq(question: string, answer: string): string {
   const combined = `${question} ${answer}`;
+
+  if (/how (?:do|to) i sell|without a real estate agent|without an agent|sell.*without.*agent/i.test(combined)) {
+    return 'OVLP does not advise on how to sell property or whether to use an agent. We review submitted parcel information only to decide whether we may wish to purchase the property for our own account. Sale strategy, listing decisions, and legal questions belong with a licensed attorney, tax professional, or real estate professional.';
+  }
+
+  if (/(real estate agent|listing agent|hire an agent|need.*agent|without an agent|without a mls)/i.test(combined)) {
+    return 'OVLP is a prospective principal buyer, not a listing agent or broker. Whether you use a real estate agent is your decision. We do not advise on sale strategy or marketing. Consult a licensed real estate professional if you want guidance on your options.';
+  }
 
   if (/(probate|inherit|estate|executor|administrator|fiduciary|heir|court)/i.test(combined)) {
     return 'Estate authority and the ability to transfer inherited property depend on the deed, estate documents, court orders, and applicable law. OVLP may review the parcel only as a prospective principal buyer and does not determine who may sign or what the estate must do. Please consult the estate attorney and title company.';

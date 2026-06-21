@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { countySellPages, getCountySellPage } from '@/lib/county-sell-data';
 import { getBlogPost } from '@/lib/blog-data';
 import { siteConfig } from '@/lib/seo-config';
-import { countySubheadline, sellerPositioning, softenCountyFaq } from '@/lib/public-copy';
+import { countySubheadline, faqFraming, sellerPositioning, softenCountyFaq } from '@/lib/public-copy';
 import { BreadcrumbSchema, FAQSchema, LocalBusinessSchema } from '@/components/seo/json-ld';
 import { LegalDisclaimer } from '@/components/legal-disclaimer';
 import { SellerForm } from '@/components/forms/seller-form';
@@ -194,7 +194,7 @@ export default function CountySellPage({ params }: Props) {
         <section className="py-16 border-t border-border">
           <div className="mx-auto max-w-3xl px-6 lg:px-8">
             <h2 className="text-2xl font-bold text-foreground mb-8">
-              Common Questions About Selling Land in {county.name}
+              {faqFraming.sectionTitle} — {county.name}
             </h2>
             <div className="flex flex-col gap-6">
               {county.faqs.map((faq) => (

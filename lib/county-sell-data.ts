@@ -195,8 +195,8 @@ export const countySellPages: CountySellData[] = [
         a: 'We still evaluate it. Landlocked parcels are worth less, but many still have value — especially if they adjoin larger tracts. Submit the address and we\'ll give you an honest assessment.',
       },
       {
-        q: 'Do I need to hire a real estate agent to sell to you?',
-        a: 'No. We buy directly. No agent, no commission, no listing. You deal directly with us from offer to closing.',
+        q: 'Does OVLP act as my real estate agent?',
+        a: 'No. OVLP is a prospective principal buyer reviewing whether we wish to purchase your property. We do not list property, represent sellers, or advise on sale strategy.',
       },
       {
         q: 'Does having oil, gas, or mineral rights attached to my Belmont County land affect how I sell it?',
@@ -356,7 +356,7 @@ export const countySellPages: CountySellData[] = [
       'Own farm ground that is no longer being worked',
       'Inherited property from a parent or grandparent',
       'Land is generating property tax bills with no income',
-      'Want to sell without dealing with a real estate agent',
+      'Exploring a direct purchase inquiry',
       'Owe back taxes and need to act before the tax sale',
     ],
     faqs: [
@@ -537,7 +537,7 @@ export const countySellPages: CountySellData[] = [
       'Inherited Carroll County property from an estate',
       'Delinquent property taxes piling up',
       'Out-of-state owner with no connection to the land',
-      'Want to sell quickly without an agent or MLS listing',
+      'Exploring a direct sale timeline',
     ],
     faqs: [
       {
@@ -626,7 +626,7 @@ export const countySellPages: CountySellData[] = [
       'Own land that\'s been sitting vacant for years',
       'Owe West Virginia property taxes and want to sell',
       'Out-of-state heir with West Virginia land',
-      'Want to sell without dealing with a WV real estate agent',
+      'Exploring a direct purchase inquiry',
     ],
     faqs: [
       {
@@ -803,7 +803,7 @@ export const countySellPages: CountySellData[] = [
       'Inherited property in Brooke County WV as an out-of-state heir',
       'Old family land with delinquent taxes',
       'Small parcel that\'s hard to sell through traditional channels',
-      'Want to sell without hiring a WV real estate agent',
+      'Exploring a direct purchase inquiry',
       'Need to wrap up an estate and get the land sold cleanly',
     ],
     faqs: [

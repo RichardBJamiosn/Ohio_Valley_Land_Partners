@@ -7,7 +7,7 @@ import { silos, siteConfig } from '@/lib/seo-config';
 import { countySellPages } from '@/lib/county-sell-data';
 import { campaignFeaturedSlug } from '@/lib/blog-data';
 import { LegalDisclaimer } from '@/components/legal-disclaimer';
-import { sellerPositioning } from '@/lib/public-copy';
+import { faqFraming, sellerPositioning } from '@/lib/public-copy';
 
 export const metadata: Metadata = {
   alternates: {
@@ -27,9 +27,9 @@ const homepageFAQs = [
       'We consider properties with reported delinquent taxes, but the effect on ownership, timing, and proceeds depends on the parcel and local process. A title company, attorney, and tax professional can explain how any balance may affect a transaction. Our role is limited to evaluating whether we wish to purchase the property.',
   },
   {
-    question: 'Can I sell inherited land before probate is complete?',
+    question: 'Will OVLP consider inherited or estate-owned land?',
     answer:
-      'Possibly, but authority to sell inherited property depends on the estate, title, court orders, and applicable law. OVLP may consider an estate-owned parcel as a prospective buyer, but we do not determine who has authority to sell. Please consult the estate attorney and title company.',
+      'We may review estate-owned parcels as a prospective buyer. Who has authority to sell, and whether a sale can occur before probate concludes, depends on the estate, title, and applicable law. OVLP does not advise on estate strategy. Consult the estate attorney and title company.',
   },
   {
     question: 'Do you buy landlocked parcels with no road access?',
@@ -251,10 +251,10 @@ export default function Home() {
           <div className="text-center mb-14">
             <p className="heading-serif text-amber text-2xl mb-3">Common Questions</p>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Selling Land To Ohio Valley Land Partners
+              {faqFraming.sectionTitle}
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Straightforward answers to the questions sellers ask most.
+              {faqFraming.sectionSub}
             </p>
           </div>
           <dl className="flex flex-col gap-4">

@@ -6,7 +6,7 @@ import { MapPin, CheckCircle, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { BreadcrumbSchema, FAQSchema } from '@/components/seo/json-ld';
 import { LegalDisclaimer } from '@/components/legal-disclaimer';
-import { softenCountyFaq } from '@/lib/public-copy';
+import { faqFraming, softenCountyFaq } from '@/lib/public-copy';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -148,7 +148,7 @@ export default async function CountyGuidePage({ params }: Props) {
           <section className="py-16 bg-card border-t border-border">
             <div className="mx-auto max-w-3xl px-6 lg:px-8">
               <h2 className="text-2xl font-bold text-foreground mb-8">
-                Common Questions About Selling Land in {county.name}
+                {faqFraming.sectionTitle} — {county.name}
               </h2>
               <div className="flex flex-col gap-6">
                 {sellData.faqs.map((faq) => (
