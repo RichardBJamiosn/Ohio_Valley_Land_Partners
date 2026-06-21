@@ -25,7 +25,7 @@ export const blogPosts: BlogPost[] = [
       'General background on inherited Ohio land, ownership records, and questions to raise with an estate attorney, title company, tax professional, or licensed real estate professional.',
     category: 'Seller Guides',
     datePublished: '2026-03-01',
-    dateModified: '2026-06-18',
+    dateModified: '2026-06-21',
     readingTime: '10 min read',
     excerpt:
       'Inherited land can involve estate, title, tax, and family questions. This overview identifies topics to discuss with independent licensed professionals.',
@@ -228,7 +228,7 @@ export const blogPosts: BlogPost[] = [
       'Belmont County, Ohio land: acquisition notes, property factors buyers may review, and how OVLP considers direct purchase inquiries as a principal buyer.',
     category: 'County Guides',
     datePublished: '2026-03-21',
-    dateModified: '2026-03-28',
+    dateModified: '2026-06-21',
     readingTime: '6 min read',
     excerpt:
       "Belmont County land owners have more options than they think. Here\'s how direct purchase inquiries work — and what to watch out for.",
@@ -265,7 +265,7 @@ export const blogPosts: BlogPost[] = [
       'Jefferson County, Ohio land sellers: get a property-specific proposal after review. We buy vacant lots, farm ground, river frontage, and inherited parcels in Steubenville and surrounding townships.',
     category: 'County Guides',
     datePublished: '2026-03-22',
-    dateModified: '2026-03-28',
+    dateModified: '2026-06-21',
     readingTime: '5 min read',
     excerpt:
       "Jefferson County land has unique characteristics — Ohio River frontage, former industrial sites, and rural townships. Here\'s what drives value and how direct purchase inquiries work.",
@@ -302,7 +302,7 @@ export const blogPosts: BlogPost[] = [
       'Selling land in Columbiana County, Ohio? We buy vacant parcels, farm ground, and inherited property throughout Lisbon, Salem, and surrounding townships. property-specific proposal after review.',
     category: 'County Guides',
     datePublished: '2026-03-23',
-    dateModified: '2026-03-28',
+    dateModified: '2026-06-21',
     readingTime: '5 min read',
     excerpt:
       'Columbiana County landowners: general market observations and property factors that may influence buyer interest — not sale strategy advice.',
@@ -339,7 +339,7 @@ export const blogPosts: BlogPost[] = [
       'Selling land in Ohio County, WV near Wheeling? We buy vacant lots, rural parcels, and inherited land throughout Ohio County. property-specific proposal after review. principal-buyer inquiry.',
     category: 'County Guides',
     datePublished: '2026-03-24',
-    dateModified: '2026-03-28',
+    dateModified: '2026-06-21',
     readingTime: '5 min read',
     excerpt:
       'Ohio County, West Virginia land: general market observations for 2026 and how OVLP reviews direct acquisition inquiries.',
@@ -376,7 +376,7 @@ export const blogPosts: BlogPost[] = [
       'Selling land in Marshall County, West Virginia? We buy rural parcels, inherited property, and vacant lots near Moundsville. property-specific proposal after review. principal-buyer inquiry.',
     category: 'County Guides',
     datePublished: '2026-03-25',
-    dateModified: '2026-03-28',
+    dateModified: '2026-06-21',
     readingTime: '5 min read',
     excerpt:
       'Marshall County, WV has one of the most active land markets in the northern West Virginia panhandle. Here is what is driving demand and how to sell your parcel.',
@@ -413,7 +413,7 @@ export const blogPosts: BlogPost[] = [
       "Inherited land you don't want? Out-of-state parcel draining your wallet in taxes? Here's a clear breakdown of every option — sell, donate, lease, or walk away.",
     category: 'Seller Guides',
     datePublished: '2026-03-26',
-    dateModified: '2026-03-28',
+    dateModified: '2026-06-21',
     readingTime: '7 min read',
     excerpt:
       "Owning land you don\'t want is more common than people realize. Here\'s every realistic option — including the ones most sellers don\'t know about.",
@@ -449,7 +449,7 @@ export const blogPosts: BlogPost[] = [
       'Franklin County, Ohio vacant land campaign notes for 2026. Full property analysis from a local principal buyer — inherited lots, back taxes, and landlocked parcels welcome.',
     category: 'County Guides',
     datePublished: '2026-05-20',
-    dateModified: '2026-05-20',
+    dateModified: '2026-06-21',
     readingTime: '7 min read',
     excerpt:
       'Franklin County landowners: from inherited lots to tax-delinquent parcels — how OVLP reviews direct acquisition inquiries after a full property analysis.',
@@ -486,7 +486,7 @@ export const blogPosts: BlogPost[] = [
       'Brooke, Harrison, and Carroll county land: general market observations and how OVLP reviews direct acquisition inquiries as a principal buyer.',
     category: 'County Guides',
     datePublished: '2026-03-27',
-    dateModified: '2026-03-28',
+    dateModified: '2026-06-21',
     readingTime: '6 min read',
     excerpt:
       'General observations about three rural county markets and how OVLP reviews direct acquisition inquiries.',
@@ -515,7 +515,7 @@ export const blogPosts: BlogPost[] = [
       'Brooke County, WV land in 2026: market trends, property factors buyers may consider, and how OVLP reviews direct acquisition inquiries.',
     category: 'County Guides',
     datePublished: '2026-06-18',
-    dateModified: '2026-06-18',
+    dateModified: '2026-06-21',
     readingTime: '6 min read',
     excerpt:
       'Location, access, utilities, use, title, and other property-specific facts may affect buyer interest in Brooke County.',
@@ -546,7 +546,7 @@ export const blogPosts: BlogPost[] = [
       'Geauga County, Ohio vacant land campaign notes for Chesterland, Chardon, Bainbridge, and western townships. Full property analysis from a local principal buyer.',
     category: 'County Guides',
     datePublished: '2026-06-19',
-    dateModified: '2026-06-19',
+    dateModified: '2026-06-21',
     readingTime: '9 min read',
     excerpt:
       'Geauga County landowners in Chesterland, Chardon, and western townships — general notes from OVLP’s acquisition campaign and the parcel characteristics our team reviews.',

@@ -1,6 +1,6 @@
 # Ohio Valley Land Partners — Marketing Site Handoff
 
-*Last updated: 2026-06-20 · source: CODEX · Status: LOCAL CHANGES — legal/advisory copy safety pass pending deploy*
+*Last updated: 2026-06-21 · source: GROK · Status: LIVE — weekend copy pass deployed (`6700b42`)*
 
 ---
 
@@ -207,15 +207,45 @@ source ~/.nvm/nvm.sh
 
 ---
 
-## Legal/advisory copy safety pass — 2026-06-20
+## Weekend copy pass — SHIPPED 2026-06-20 → 2026-06-21
 
-- Softened site-wide language that could read as legal, tax, title, appraisal, brokerage, or transaction advice.
-- Reframed county FAQs through a shared public-copy safeguard.
-- Rewrote the highest-risk probate, delinquent-tax, valuation, and campaign articles as general informational overviews.
-- Replaced the public referral-fee / "no license required" Land Scouts program with a limited introductions and partnerships page.
-- Corrected organization schema so OVLP is not represented as a RealEstateAgent.
-- Preserved OVLP's right to market its own acquisition interests, private builders network, and portfolio as a principal buyer.
-- Build and visual verification required before deploy.
+Commits `ac2dbf1` → `6700b42` on `main`. Cloudflare Pages live.
+
+| Change | Status |
+|---|---|
+| Removed all "cash offer" / "cash buyer" public positioning | Done |
+| Centralized seller voice in `lib/public-copy.ts` | Done |
+| County section: full property analysis + fast closings when necessary | Done |
+| Removed "call center" negative framing | Done |
+| FAQs reframed as OVLP process — not seller advice | Done |
+| Blog cards cleaned (Geauga, Franklin, tri-county, Columbiana, probate) | Done |
+| Removed anti-realtor / "without an agent" framing | Done |
+| `softenCountyFaq()` blocks leading how-to-sell questions | Done |
+
+Earlier legal/advisory pass (same weekend branch):
+- Softened language that could read as legal, tax, title, appraisal, or brokerage advice.
+- Land Scouts reframed as introductions/partnerships only.
+- Organization schema corrected — OVLP is not a RealEstateAgent.
+
+## Search engine indexing — 2026-06-21
+
+**Sitemap:** 48 URLs at `/sitemap.xml` — all county sell-land pages return 200.
+
+**Post-deploy checklist:**
+
+1. **IndexNow** — run `scripts/indexnow-notify.sh` after every deploy.
+   - Key file live: `/a7f3e91c2b8d4056e6f1a9c3d7e5b204.txt`
+   - 2026-06-21: API returned `UserForbiddedToAccessSite` — **re-verify domain in Bing Webmaster Tools** (Sites → Add site → URL prefix `https://ohiovalleylandpartners.com` → HTML file or DNS verify), then re-run script.
+
+2. **Google Search Console** — submit sitemap + request indexing on priority URLs:
+   - GSC → Sitemaps → submit `https://ohiovalleylandpartners.com/sitemap.xml`
+   - URL Inspection → Request indexing for each URL in `scripts/gsc-priority-urls.txt`
+
+3. **Bing Webmaster Tools** — submit same sitemap after verification.
+
+4. **Do not index** `ovlp-portal.vercel.app` — private portal is `noindex`.
+
+Priority URL list: `scripts/gsc-priority-urls.txt` (20 URLs).
 
 ## Recent session notes (2026-06-15 → 2026-06-16)
 
@@ -281,7 +311,9 @@ inside the website repo.
 ```bash
 cd /Users/richardjamison/Documents/Projects/Ohio_Valley_Land_Partners
 npm run build
-# Push to GitHub → Cloudflare Pages auto-deploys
+git push origin main   # Cloudflare Pages auto-deploys
+bash scripts/indexnow-notify.sh   # after deploy settles (~2 min)
+# Then GSC: submit sitemap + request indexing on scripts/gsc-priority-urls.txt
 ```
 
 ---

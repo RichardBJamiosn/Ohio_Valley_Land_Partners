@@ -1,0 +1,24 @@
+# Google Search Console — Request indexing (URL Inspection → Request indexing)
+# Run after sitemap submit: https://ohiovalleylandpartners.com/sitemap.xml
+# Date: 2026-06-21
+
+https://ohiovalleylandpartners.com
+https://ohiovalleylandpartners.com/contact
+https://ohiovalleylandpartners.com/land
+https://ohiovalleylandpartners.com/ohio-valley-guides
+https://ohiovalleylandpartners.com/blog
+https://ohiovalleylandpartners.com/community
+https://ohiovalleylandpartners.com/about
+https://ohiovalleylandpartners.com/member-mailer
+https://ohiovalleylandpartners.com/sell-land/franklin-county-oh
+https://ohiovalleylandpartners.com/sell-land/belmont-county-oh
+https://ohiovalleylandpartners.com/sell-land/jefferson-county-oh
+https://ohiovalleylandpartners.com/sell-land/columbiana-county-oh
+https://ohiovalleylandpartners.com/sell-land/harrison-county-oh
+https://ohiovalleylandpartners.com/sell-land/carroll-county-oh
+https://ohiovalleylandpartners.com/sell-land/ohio-county-wv
+https://ohiovalleylandpartners.com/sell-land/marshall-county-wv
+https://ohiovalleylandpartners.com/sell-land/brooke-county-wv
+https://ohiovalleylandpartners.com/blog/sell-vacant-land-geauga-county-ohio-2026
+https://ohiovalleylandpartners.com/blog/franklin-county-ohio-sell-vacant-land-2026
+https://ohiovalleylandpartners.com/blog/sell-inherited-land-ohio-probate
