@@ -38,7 +38,7 @@
 Static pages:
 - `/` — Homepage
 - `/about` — Company background
-- `/contact` — Get a cash offer
+- `/contact` — Request property analysis / contact
 - `/community` — Community giving page
 - `/land` — Land offers silo
 - `/commercial` — Commercial real estate silo
@@ -310,7 +310,7 @@ OUTPUT FORMAT: Return the post as clean HTML using ONLY: <h2>, <h3>, <p>, <ul>, 
 
 After the HTML, return metadata:
 - slug: (kebab-case, unique, not in the existing list above)
-- metaDescription: (150–160 chars, includes county name + "cash offer" or "sell land")
+- metaDescription: (150–160 chars, includes county name + "sell land" or "property analysis")
 - keywords: [array of 5 strings]
 - readingTime: "X min read"
 - category: "County Guides" or "Seller Guides"
@@ -376,7 +376,7 @@ A long-tail keyword phrase NOT already likely in the existing keywords array. Mu
 ### 4. Meta description review
 Only provide a new meta description if the current one is:
 - Missing the county name
-- Missing "cash offer" or "24 hours" or "sell land"
+- Missing county name + seller intent ("sell land", "vacant land", or "property analysis")
 - Over 160 characters
 Otherwise write: "Current meta description is adequate — no change needed."
 
