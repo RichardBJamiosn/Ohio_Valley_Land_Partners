@@ -1,147 +1,73 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { DollarSign, Eye, Phone, Users, MapPin, FileText } from 'lucide-react';
+import { Handshake, MapPin, Users, FileText } from 'lucide-react';
+import { LegalDisclaimer } from '@/components/legal-disclaimer';
 
 export const metadata: Metadata = {
-  title: 'Land Scouts — Earn Referral Fees for Ohio Valley Land Leads',
+  title: 'Introductions & Local Partnerships — Ohio Valley Land Partners',
   description:
-    'Know someone who needs to sell land in the Ohio Valley? Earn a referral fee when we close. No license required. We work with attorneys, farmers, and anyone with local connections.',
+    'Learn how landowners, professionals, and community members can introduce property opportunities to Ohio Valley Land Partners for direct acquisition review.',
 };
 
-const whoWeWant = [
+const partnerTypes = [
   {
     icon: FileText,
-    title: 'Estate & Probate Attorneys',
+    title: 'Attorneys and Other Licensed Professionals',
     description:
-      'You handle estates with land in them every week. When your clients need to sell fast, refer them to us. We close clean, pay cash, and make you look like a hero.',
+      'Professionals may introduce OVLP as one possible principal buyer when consistent with their own duties, licensing rules, and client instructions. OVLP does not ask anyone to provide services outside their professional role.',
   },
   {
     icon: MapPin,
-    title: 'County Auditor & Recorder Contacts',
+    title: 'Landowners and Neighbors',
     description:
-      'You see delinquent tax lists, estate transfers, and distressed parcels before anyone else. That information is valuable to us — and we pay for it.',
+      'If you know an owner who may want to speak with a direct buyer, you may share our public contact information or make an introduction with the owner’s permission.',
   },
   {
     icon: Users,
-    title: 'Farmers and Rural Neighbors',
+    title: 'Builders and Community Partners',
     description:
-      'If you know someone locally who has land they\'d sell — vacant lots, old family farms, timber tracts — a referral from a trusted neighbor carries more weight than any marketing we can do.',
-  },
-  {
-    icon: Phone,
-    title: 'Rural Real Estate Agents',
-    description:
-      'Have a listing that won\'t move through traditional channels? Refer it to us. We buy what the market won\'t finance, and we pay a referral fee at closing.',
-  },
-  {
-    icon: Eye,
-    title: 'Mail Carriers and Route Drivers',
-    description:
-      'You see overgrown lots, abandoned properties, and neglected land before anyone else does. If you spot something that looks like a motivated seller situation, we want to know.',
-  },
-  {
-    icon: DollarSign,
-    title: 'Anyone with Local Connections',
-    description:
-      'No license required. If you have a relationship in the Ohio Valley and can put us in front of someone who needs to sell land, we can make it worth your time.',
+      'We welcome conversations about parcels that may fit our acquisition interests or private builders network. Each opportunity is reviewed independently.',
   },
 ];
 
-const howItWorks = [
-  {
-    step: '01',
-    title: 'You Identify a Lead',
-    description:
-      'Someone you know has land they want to sell — inherited property, vacant lots, back-tax parcels, anything. You make the introduction.',
-  },
-  {
-    step: '02',
-    title: 'We Take It From There',
-    description:
-      'We contact the seller, evaluate the property, and make a cash offer. You don\'t have to do anything else. No paperwork, no follow-up required from you.',
-  },
-  {
-    step: '03',
-    title: 'We Close and You Get Paid',
-    description:
-      'When we close on the deal, you receive your referral fee. Paid at closing, through the title company, on the HUD settlement statement — clean and transparent.',
-  },
-];
-
-export default function LandScoutsPage() {
+export default function IntroductionsPage() {
   return (
     <div className="min-h-screen bg-background">
-
-      {/* Hero */}
       <section className="py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-amber/20 bg-amber/5 px-4 py-2">
-              <DollarSign className="h-4 w-4 text-amber" />
-              <span className="text-sm font-semibold text-amber">Land Scout Referral Program</span>
-            </div>
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-              Know Someone Who Needs to Sell Land?
-              <span className="block text-amber mt-2">Get Paid for the Introduction.</span>
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-2xl mx-auto">
-              Ohio Valley Land Partners pays referral fees to anyone who connects us with a
-              motivated land seller — attorneys, farmers, neighbors, real estate agents, or
-              anyone else with local knowledge and relationships across the Ohio Valley.
-            </p>
-            <div className="mt-10">
-              <Link
-                href="/contact?type=partnership"
-                className="inline-flex items-center gap-2 rounded-lg bg-amber px-8 py-4 text-base font-bold text-forest hover:bg-amber/90 transition-colors"
-              >
-                Become a Land Scout
-              </Link>
-            </div>
+        <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-amber/20 bg-amber/5 px-4 py-2">
+            <Handshake className="h-4 w-4 text-amber" />
+            <span className="text-sm font-semibold text-amber">Introductions &amp; Local Partnerships</span>
+          </div>
+          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+            Know of a Property We Should Review?
+          </h1>
+          <p className="mt-6 text-lg leading-8 text-muted-foreground">
+            You may introduce Ohio Valley Land Partners to a property owner who wants to explore a
+            direct sale. We act only as a prospective principal buyer. An introduction does not
+            create an agency, brokerage, advisory, employment, or fiduciary relationship.
+          </p>
+          <div className="mt-10">
+            <Link
+              href="/contact?type=partnership"
+              className="inline-flex items-center rounded-lg bg-amber px-8 py-4 text-base font-bold text-forest hover:bg-amber/90 transition-colors"
+            >
+              Start a Partnership Conversation
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* How It Works */}
       <section className="py-20 bg-card border-t border-border">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl font-bold text-foreground">How It Works</h2>
-            <p className="mt-4 text-muted-foreground">Three steps. No license required. No complicated paperwork.</p>
-          </div>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
-            {howItWorks.map((step) => (
-              <div key={step.step} className="relative rounded-2xl border border-border bg-background p-8">
-                <div className="text-5xl font-black text-amber/15 mb-4">{step.step}</div>
-                <h3 className="text-lg font-bold text-foreground mb-3">{step.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Who We Want */}
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl font-bold text-foreground">Who Makes a Good Land Scout</h2>
-            <p className="mt-4 text-muted-foreground">
-              You don't need a license or real estate experience. You just need local knowledge and a connection.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {whoWeWant.map((type) => {
+            {partnerTypes.map((type) => {
               const Icon = type.icon;
               return (
-                <div
-                  key={type.title}
-                  className="rounded-xl border border-border bg-card p-6 hover:border-amber/40 hover:shadow-md transition-all"
-                >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber/10 text-amber mb-4">
-                    <Icon className="h-5 w-5" />
-                  </div>
-                  <h3 className="font-semibold text-foreground mb-2">{type.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{type.description}</p>
+                <div key={type.title} className="rounded-2xl border border-border bg-background p-8">
+                  <Icon className="h-6 w-6 text-amber mb-5" />
+                  <h2 className="text-lg font-bold text-foreground mb-3">{type.title}</h2>
+                  <p className="text-sm leading-7 text-muted-foreground">{type.description}</p>
                 </div>
               );
             })}
@@ -149,53 +75,19 @@ export default function LandScoutsPage() {
         </div>
       </section>
 
-      {/* What Qualifies */}
-      <section className="py-20 bg-card border-t border-border">
-        <div className="mx-auto max-w-4xl px-6 lg:px-8">
-          <div className="rounded-2xl border border-border bg-background p-8 sm:p-12">
-            <h2 className="text-2xl font-bold text-foreground mb-6">What Kind of Leads We're Looking For</h2>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              {[
-                'Vacant land with no active use',
-                'Inherited property going through probate',
-                'Land with delinquent property taxes',
-                'Landowners who\'ve tried and failed to sell',
-                'Out-of-state owners with Ohio Valley land',
-                'Parcels with overgrown, neglected condition',
-                'Farm ground where the farmer is ready to exit',
-                'Family land being sold after an estate settlement',
-              ].map((item) => (
-                <div key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-amber flex-shrink-0" />
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
       <section className="py-20">
-        <div className="mx-auto max-w-3xl px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-foreground mb-4">
-            Ready to Start Earning Referral Fees?
-          </h2>
-          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-            Contact us and we'll explain the referral fee structure for your specific situation.
-            Every deal is different — we'll give you a straight answer on what your introduction
-            is worth before you commit to anything.
-          </p>
-          <Link
-            href="/contact?type=partnership"
-            className="inline-flex items-center gap-2 rounded-lg bg-amber px-8 py-4 text-base font-bold text-forest hover:bg-amber/90 transition-colors"
-          >
-            Contact Us About Scouting
-          </Link>
-          <p className="mt-6 text-xs text-muted-foreground">
-            Ohio Valley Land Partners operates as a principal buyer, not a licensed real estate broker or agent.
-            Referral arrangements are structured accordingly and comply with applicable state law.
-          </p>
+        <div className="mx-auto max-w-3xl px-6 lg:px-8">
+          <div className="rounded-2xl border border-border bg-card p-8 sm:p-10">
+            <h2 className="text-2xl font-bold text-foreground mb-5">Important Boundaries</h2>
+            <ul className="list-disc pl-6 space-y-3 text-sm leading-7 text-muted-foreground">
+              <li>Do not negotiate, price, advertise, or speak for OVLP or a property owner.</li>
+              <li>Do not obtain confidential records or use nonpublic information without authorization.</li>
+              <li>Do not imply that compensation is promised. Any lawful arrangement must be separately reviewed and documented in writing before services are performed.</li>
+              <li>Licensed professionals remain responsible for their own legal, ethical, disclosure, and licensing obligations.</li>
+              <li>OVLP may decline any introduction or property for any lawful reason.</li>
+            </ul>
+            <LegalDisclaimer className="mt-8" />
+          </div>
         </div>
       </section>
     </div>

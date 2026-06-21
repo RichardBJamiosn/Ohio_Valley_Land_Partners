@@ -56,7 +56,7 @@ const COUNTY_GUIDES = [
     state: 'Ohio',
     hook: 'East Palestine & post-derailment context',
     description:
-      'Market conditions, land value factors, and what sellers in this county should understand right now.',
+      'General market observations and property factors that may be relevant in this county.',
     highlighted: true,
   },
   {
@@ -65,7 +65,7 @@ const COUNTY_GUIDES = [
     state: 'Ohio',
     hook: 'Remote acreage & hunting land',
     description:
-      'Back-tax parcels, wooded tracts, and rural ground — what moves and what sits in this county.',
+      'Wooded tracts, rural ground, and general observations from our acquisition activity.',
   },
   {
     slug: 'carroll-county-oh',
@@ -79,7 +79,7 @@ const COUNTY_GUIDES = [
     name: 'Franklin County',
     state: 'Ohio',
     hook: 'Columbus infill & metro-fringe lots',
-    description: 'Central Ohio campaign — different market than the river counties, worth its own guide.',
+    description: 'Central Ohio campaign — a different market from the river counties, presented as general context.',
   },
   {
     slug: 'ohio-county-wv',
@@ -110,19 +110,19 @@ const INSIDE_GUIDES = [
     num: '01',
     title: 'Land types in this county',
     description:
-      "Vacant lots, timber, farm ground, inherited parcels, back-tax land — what's common here and what buyers look for.",
+      "Vacant lots, timber, farm ground, and other parcel types commonly seen in the area.",
   },
   {
     num: '02',
     title: 'Seller situations we see',
     description:
-      'Inherited land, out-of-state owners, estate settlements, delinquent taxes — how each situation plays out locally.',
+      'Examples of owner situations we encounter, without offering legal, tax, or transaction advice.',
   },
   {
     num: '03',
     title: 'County FAQs',
     description:
-      'Zoning, pricing patterns, and process — plain answers from someone operating in that county.',
+      'General county observations from a prospective buyer. Verify zoning, value, and process with the appropriate professionals.',
   },
 ];
 
@@ -179,9 +179,7 @@ export default function GuidesPage() {
                   <span className="block text-amber mt-2">for buyers and sellers.</span>
                 </h1>
                 <p className="mt-6 text-base sm:text-lg text-white/80 leading-relaxed max-w-lg">
-                  Field notes from the counties where we work — what land is worth, who buys it,
-                  and how each market actually behaves. For landowners selling and builders buying
-                  in the same valley.
+                  Field notes from counties where we operate — general property factors, acquisition interests, and regional observations. These guides are informational and are not appraisals or professional advice.
                 </p>
                 <div className="flex flex-wrap gap-2 mt-8">
                   <a

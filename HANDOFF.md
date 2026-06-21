@@ -1,6 +1,6 @@
 # Ohio Valley Land Partners — Marketing Site Handoff
 
-*Last updated: 2026-06-19 · source: agent · Status: LIVE (Cloudflare Pages) · HEAD: `6ab6ce2`*
+*Last updated: 2026-06-20 · source: CODEX · Status: LOCAL CHANGES — legal/advisory copy safety pass pending deploy*
 
 ---
 
@@ -207,6 +207,16 @@ source ~/.nvm/nvm.sh
 
 ---
 
+## Legal/advisory copy safety pass — 2026-06-20
+
+- Softened site-wide language that could read as legal, tax, title, appraisal, brokerage, or transaction advice.
+- Reframed county FAQs through a shared public-copy safeguard.
+- Rewrote the highest-risk probate, delinquent-tax, valuation, and campaign articles as general informational overviews.
+- Replaced the public referral-fee / "no license required" Land Scouts program with a limited introductions and partnerships page.
+- Corrected organization schema so OVLP is not represented as a RealEstateAgent.
+- Preserved OVLP's right to market its own acquisition interests, private builders network, and portfolio as a principal buyer.
+- Build and visual verification required before deploy.
+
 ## Recent session notes (2026-06-15 → 2026-06-16)
 
 - Community page v2 mockup approved → implemented and deployed
@@ -234,6 +244,35 @@ source ~/.nvm/nvm.sh
 | `mockups/community-redesign.html` | Approved redesign mockup |
 | `public/hero.mp4` | Landing hero video |
 | `public/og.jpg` | OG / fallback imagery |
+| `app/member-mailer/page.tsx` | Permanent public weekly-mailer viewer at `/member-mailer` |
+| `public/member-assets/current.pdf` | Stable current mailer asset; email links should point to `/member-mailer`, not this file |
+| `public/member-assets/current-preview.jpg` | Fast first-page preview generated during the weekly update |
+| `lib/member-mailer.ts` | Current edition/date/opportunity metadata |
+| `scripts/update-member-mailer.sh` | Weekly PDF and preview replacement helper |
+
+## Weekly member mailer workflow
+
+The permanent public link is:
+
+`https://ohiovalleylandpartners.com/member-mailer`
+
+Update it each week with:
+
+```bash
+scripts/update-member-mailer.sh \
+  "/absolute/path/to/new-mailer.pdf" \
+  "YYYY-MM-DD" \
+  "Week of Month D, YYYY" \
+  <opportunity-count>
+npm run build
+```
+
+The script copies the new PDF to the stable `public/member-assets/current.pdf`,
+generates a first-page JPEG preview with Poppler, and updates
+`lib/member-mailer.ts`. Commit and push the generated changes; Cloudflare Pages
+then publishes the new edition without changing the email link. Keep dated
+source editions in the operating package archive rather than duplicating them
+inside the website repo.
 
 ---
 

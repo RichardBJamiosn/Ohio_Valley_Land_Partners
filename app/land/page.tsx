@@ -36,20 +36,20 @@ const process = [
   },
   {
     step: '02',
-    title: 'Free Market Analysis',
-    description: 'A real person calls you — not a bot, not a form response. We ask a few questions and discuss your situation.',
+    title: 'Internal Property Review',
+    description: 'A team member may contact you to ask property-specific questions and discuss whether the parcel fits our acquisition criteria.',
     icon: Clock,
   },
   {
     step: '03',
     title: 'Written Offer After Review',
-    description: 'We send a written offer with our number and the reasoning behind it. No mystery pricing — we under-promise and over-deliver.',
+    description: 'If interested, we may send a written purchase proposal reflecting our own intended use, costs, and risk. It is not an appraisal or broker price opinion.',
     icon: DollarSign,
   },
   {
     step: '04',
     title: 'Close On Your Timeline',
-    description: 'If you accept, we handle everything. Close quickly and comfortably — we accommodate fast closing needs without long, drawn-out closings. No agent commissions, no fees from you.',
+    description: 'If both parties sign an agreement, the transaction proceeds through the applicable title and closing process. Timing and costs are governed by the written agreement and property-specific conditions.',
     icon: ShieldCheck,
   },
 ];
@@ -81,20 +81,19 @@ export default function LandPage() {
                 <p className="heading-serif text-amber text-2xl mb-4">Local land buyer</p>
                 <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl leading-tight">
                   We Buy Ohio Valley Land.
-                  <span className="block text-amber mt-1">Direct. No Agents. No Fees.</span>
+                  <span className="block text-amber mt-1">Direct Inquiry. Property-Specific Review.</span>
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-muted-foreground">
                   Vacant land, inherited property, back-tax parcels — we review all of it across the
                   entire Ohio Valley in OH, PA, WV, KY, and Indiana. Multiple active campaigns with
-                  an active builders network. Free in-depth property market analysis and a written
-                  offer after review. We under-promise and over-deliver.
+                  an active builders network. Free internal acquisition review and, when appropriate, a property-specific written proposal. Our review is not an appraisal or professional opinion of value.
                 </p>
                 <ul className="mt-6 flex flex-col gap-3">
                   {[
                     'Local buyer — active across Ohio Valley counties in OH, PA, WV, KY, and Indiana',
-                    'No agent fees or commissions — ever',
-                    'Close quickly and comfortably — fast closing when you need it',
-                    'We under-promise and over-deliver on every offer',
+                    'OVLP acts only as a prospective principal buyer',
+                    'Requested timing is considered but never guaranteed',
+                    'All terms are property-specific and subject to a written agreement',
                   ].map((point) => (
                     <li key={point} className="flex items-center gap-3 text-sm font-medium text-foreground">
                       <ShieldCheck className="h-4 w-4 text-amber flex-shrink-0" />
@@ -126,8 +125,8 @@ export default function LandPage() {
               {/* Seller form */}
               <div className="rounded-2xl border border-border bg-card p-8 shadow-lg">
                 <div className="mb-6 text-center">
-                  <h2 className="text-xl font-bold text-foreground">Receive Your Property Analysis &amp; Offer</h2>
-                  <p className="text-sm text-muted-foreground mt-1">Free in-depth property market analysis. We under-promise and over-deliver.</p>
+                  <h2 className="text-xl font-bold text-foreground">Request a Property Review</h2>
+                  <p className="text-sm text-muted-foreground mt-1">Free internal acquisition review. Not an appraisal, broker price opinion, or legal or tax review.</p>
                 </div>
                 <SellerForm />
               </div>

@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: 'Ohio Valley Land Partners',
-  description: 'Direct land offers, residential development, and commercial real estate authority in the Ohio Valley region and active Central Ohio campaign markets',
+  description: 'Direct land acquisition inquiries, portfolio marketing, and regional property information from a prospective principal buyer in the Ohio Valley',
   url: 'https://ohiovalleylandpartners.com',
   ogImage: 'https://ohiovalleylandpartners.com/og.jpg',
   phone: '(614) 653-7430',
@@ -46,7 +46,7 @@ export const silos = {
   land: {
     title: 'Land Offers',
     path: '/land',
-    description: 'Cash land offers for motivated sellers and off-market land opportunities for cash buyers',
+    description: 'Direct land acquisition inquiries and private portfolio opportunities from a prospective principal buyer',
     keywords: 'land offers, cash land buyers, motivated sellers, Ohio Valley land',
   },
   commercial: {
@@ -64,7 +64,7 @@ export const silos = {
   guides: {
     title: 'Ohio Valley Guides',
     path: '/ohio-valley-guides',
-    description: 'Comprehensive county-by-county real estate guides for the Ohio Valley region and active campaign markets',
+    description: 'General county-by-county land information and market observations for the Ohio Valley region',
     keywords: 'Ohio Valley real estate, Franklin County land, county guides, local market analysis',
   },
 };

@@ -102,14 +102,22 @@ export default function LegalDisclaimerPage() {
             closing timelines for any specific parcel.
           </p>
 
-          <h2>8. Accuracy and Updates</h2>
+          <h2>8. No Reliance or Fiduciary Relationship</h2>
+          <p>
+            Do not rely on Site content as a substitute for advice from professionals who represent
+            your interests. OVLP does not owe Site users a fiduciary duty and does not undertake to
+            investigate, protect, or advise them concerning deadlines, value, title, taxes, estate
+            authority, mineral interests, land use, or transaction alternatives.
+          </p>
+
+          <h2>9. Accuracy and Updates</h2>
           <p>
             We strive to keep Site content accurate but make no warranty that information is
             complete, current, or error-free. Content may be updated without notice. Your use of
             the Site is at your own risk.
           </p>
 
-          <h2>9. Limitation of Liability</h2>
+          <h2>10. Limitation of Liability</h2>
           <p>
             To the fullest extent permitted by law, OVLP disclaims liability for any action you take
             or fail to take based on Site content. For warranty disclaimers and liability
@@ -120,13 +128,13 @@ export default function LegalDisclaimerPage() {
             .
           </p>
 
-          <h2>10. Governing Law</h2>
+          <h2>11. Governing Law</h2>
           <p>
             This disclaimer is governed by the laws of the State of West Virginia, consistent with
             our Terms of Service, without regard to conflict-of-law principles.
           </p>
 
-          <h2>11. Contact</h2>
+          <h2>12. Contact</h2>
           <p>Questions about this disclaimer:</p>
           <p>
             <strong>{siteConfig.name}</strong>

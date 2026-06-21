@@ -20,13 +20,13 @@ export async function onRequestPost(context) {
       body: JSON.stringify({
         from: 'OVLP Website <noreply@ohiovalleylandpartners.com>',
         to: 'info@ohiovalleylandpartners.com',
-        subject: 'New Seller Lead — Cash Offer Request',
+        subject: 'New Seller Lead — Property Review Request',
         html: `
           <h2>New Seller Lead</h2>
           <p><strong>Property Address:</strong> ${escapeHtml(address)}</p>
           <p><strong>Email:</strong> ${escapeHtml(email)}</p>
           <p><strong>Phone:</strong> Not collected on this form. Phone/SMS opt-in is handled by the GHL chat widget.</p>
-          <p><strong>Source:</strong> Homepage — Get My Cash Offer form</p>
+          <p><strong>Source:</strong> Homepage — Property Review form</p>
         `,
       }),
     });

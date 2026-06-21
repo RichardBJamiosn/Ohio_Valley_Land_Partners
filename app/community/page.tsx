@@ -363,7 +363,7 @@ export default function CommunityPage() {
               href="/"
               className="mt-6 inline-flex w-fit items-center gap-2 rounded-lg bg-amber px-5 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
             >
-              Get a Property Analysis <ArrowRight className="h-4 w-4" />
+              Request Property Review <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
           <div className="rounded-3xl bg-forest p-10 flex flex-col justify-center text-white">

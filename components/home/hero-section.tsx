@@ -5,10 +5,11 @@ import Link from 'next/link';
 import { MapPin, Clock, DollarSign, TreePine, ShieldCheck, Users, Calendar, Target } from 'lucide-react';
 import { SellerForm } from '@/components/forms/seller-form';
 import { InvestorIntakeForm } from '@/components/forms/investor-intake-form';
+import { sellerPositioning } from '@/lib/public-copy';
 
 const stats = [
-  { label: 'In-Depth Market Analysis', value: 'Free', icon: Clock },
-  { label: 'Fast Closing When You Need It', value: 'Flexible', icon: Calendar },
+  { label: sellerPositioning.analysisLabel, value: 'Free', icon: Clock },
+  { label: 'Fast Closing When Necessary', value: 'Flexible', icon: Calendar },
   { label: 'Core Acres', value: '1.77M+', icon: TreePine },
   { label: 'Campaigns & Buyers Network', value: 'Active', icon: MapPin },
 ];
@@ -32,8 +33,8 @@ const serviceRegions = [
 const sellerTrustPoints = [
   'Local buyer — active across Ohio Valley counties in OH, PA, WV, KY, and Indiana',
   'Multiple active campaigns backed by an active builders network',
-  'Close quickly and comfortably — without long, drawn-out closings',
-  'We under-promise and over-deliver on every offer',
+  'Full property analysis before every proposal',
+  'Aggressively fast closings when necessary',
 ];
 
 const buyerTrustPoints = [
@@ -74,7 +75,7 @@ export function HeroSection() {
 
             {/* Serif italic label — Mynd style */}
             <p className="heading-serif text-amber text-2xl mb-4">
-              {activeTab === 'sell' ? 'Sell your land with confidence.' : 'Buy before it hits the market.'}
+              {activeTab === 'sell' ? 'Explore a direct sale.' : 'Buy before it hits the market.'}
             </p>
 
             {activeTab === 'sell' ? (
@@ -87,8 +88,7 @@ export function HeroSection() {
                   We buy vacant land, inherited property, and back-tax parcels across the entire
                   Ohio Valley — Ohio, Pennsylvania, West Virginia, Kentucky, and Indiana. Multiple
                   active campaigns with an active builders network. A local buyer in counties
-                  throughout the region — not just Franklin. Full offer after review. No agents,
-                  no fees, no out-of-state runaround.
+                  throughout the region — not just Franklin. Full property analysis first — then a property-specific proposal. Aggressively fast closings when necessary.
                 </p>
                 {/* force Cloudflare Pages rebuild - user 'again didnt update' on 3c06292 Core Acres restore + stats labels; previous forces insufficient; dcf01c2 + ... + 3c06292; hard refresh no luck */}
                 <ul className="mt-6 flex flex-col gap-3">
@@ -183,9 +183,9 @@ export function HeroSection() {
                 {activeTab === 'sell' ? (
                   <>
                     <div className="mb-6 text-center">
-                      <h2 className="text-xl font-bold text-foreground">Receive Your Property Analysis &amp; Offer</h2>
+                      <h2 className="text-xl font-bold text-foreground">{sellerPositioning.formTitle}</h2>
                       <p className="text-sm text-muted-foreground mt-1">
-                        Free in-depth property market analysis. We under-promise and over-deliver.
+                        {sellerPositioning.formSub}
                       </p>
                     </div>
                     <SellerForm />

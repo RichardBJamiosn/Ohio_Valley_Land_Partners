@@ -53,7 +53,7 @@ export const metadata: Metadata = {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Ohio Valley Land Partners — Cash Land Buyers in the Ohio Valley',
+        alt: 'Ohio Valley Land Partners — Local Land Buyers in the Ohio Valley',
       },
     ],
   },

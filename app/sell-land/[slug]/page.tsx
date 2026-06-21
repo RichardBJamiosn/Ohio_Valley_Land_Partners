@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { countySellPages, getCountySellPage } from '@/lib/county-sell-data';
 import { getBlogPost } from '@/lib/blog-data';
 import { siteConfig } from '@/lib/seo-config';
+import { countySubheadline, sellerPositioning, softenCountyFaq } from '@/lib/public-copy';
 import { BreadcrumbSchema, FAQSchema, LocalBusinessSchema } from '@/components/seo/json-ld';
 import { LegalDisclaimer } from '@/components/legal-disclaimer';
 import { SellerForm } from '@/components/forms/seller-form';
@@ -41,7 +42,7 @@ export default function CountySellPage({ params }: Props) {
   const county = getCountySellPage(params.slug);
   if (!county) notFound();
 
-  const faqs = county.faqs.map((f) => ({ question: f.q, answer: f.a }));
+  const faqs = county.faqs.map((f) => ({ question: f.q, answer: softenCountyFaq(f.q, f.a) }));
   const relatedPosts = county.relatedBlogSlugs
     .map((slug) => getBlogPost(slug))
     .filter(Boolean);
@@ -97,7 +98,7 @@ export default function CountySellPage({ params }: Props) {
                   {county.headline}
                 </h1>
                 <p className="mt-4 text-lg text-muted-foreground leading-8 county-subheadline">
-                  {county.subheadline}
+                  {county.subheadline || countySubheadline(county.name)}
                 </p>
 
                 <div className="mt-8">
@@ -136,10 +137,10 @@ export default function CountySellPage({ params }: Props) {
                 <div className="rounded-2xl border border-border bg-card p-8 shadow-lg">
                   <div className="mb-6 text-center">
                     <h2 className="text-xl font-bold text-foreground">
-                      Get a Cash Offer on Your {county.name} Land
+                      {sellerPositioning.formTitle}
                     </h2>
                     <p className="text-sm text-muted-foreground mt-1">
-                      We call you within 24 hours. No obligation.
+                      {sellerPositioning.formSub}
                     </p>
                   </div>
                   <SellerForm />
@@ -199,7 +200,7 @@ export default function CountySellPage({ params }: Props) {
               {county.faqs.map((faq) => (
                 <div key={faq.q} className="rounded-xl border border-border bg-card p-6">
                   <h3 className="font-semibold text-foreground mb-3">{faq.q}</h3>
-                  <p className="text-sm text-muted-foreground leading-7">{faq.a}</p>
+                  <p className="text-sm text-muted-foreground leading-7">{softenCountyFaq(faq.q, faq.a)}</p>
                 </div>
               ))}
             </div>
@@ -239,7 +240,7 @@ export default function CountySellPage({ params }: Props) {
                   className="inline-flex items-center gap-2 text-sm font-medium text-amber hover:text-amber/80 transition-colors"
                 >
                   <ChevronRight className="h-4 w-4" />
-                  Contact us for a no-obligation cash offer
+                  Contact us about a direct purchase inquiry
                 </Link>
               </li>
             </ul>
@@ -253,7 +254,7 @@ export default function CountySellPage({ params }: Props) {
               Ready to Sell Your {county.name} Land?
             </h2>
             <p className="text-muted-foreground mb-8">
-              Submit your property above, request a cash offer on our{' '}
+              Submit your property above, start a direct purchase inquiry on our{' '}
               <Link href="/contact" className="text-amber hover:underline">contact page</Link>, or
               browse our{' '}
               <Link href={`/ohio-valley-guides/${county.slug}`} className="text-amber hover:underline">
@@ -266,7 +267,7 @@ export default function CountySellPage({ params }: Props) {
                 href="/contact"
                 className="rounded-lg bg-amber px-5 py-2.5 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
               >
-                Get a Cash Offer
+                Request Property Review
               </Link>
               <Link
                 href={`/ohio-valley-guides/${county.slug}`}

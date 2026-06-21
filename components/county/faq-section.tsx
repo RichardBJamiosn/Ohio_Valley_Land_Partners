@@ -26,7 +26,7 @@ export function FAQSection({ county, state }: FAQSectionProps) {
     },
     {
       question: `How long does it take to sell land in ${county}?`,
-      answer: `The timeline for selling land in ${county} depends on property type, pricing, and market conditions. Our cash-buyer network supports 7-30 day closings for qualified deals, significantly faster than traditional listings.`,
+      answer: `The timeline for selling land in ${county} depends on property type, pricing, and market conditions. We provide a full property analysis first, then move to aggressively fast closings when necessary — often well ahead of traditional listings.`,
     },
     {
       question: `What are the zoning regulations in ${county}?`,
@@ -34,7 +34,7 @@ export function FAQSection({ county, state }: FAQSectionProps) {
     },
     {
       question: `Does Ohio Valley Land Partners offer financing?`,
-      answer: `We work exclusively with cash buyers and institutional investors. However, we maintain relationships with regional lenders and can provide introductions to financing partners for qualified projects in ${county}.`,
+      answer: `Ohio Valley Land Partners buys land for our own account as a principal buyer. We maintain relationships with regional lenders and can provide introductions to financing partners for qualified projects in ${county}.`,
     },
   ];
 

@@ -11,7 +11,7 @@ export function LocalBusinessSchema({
 }: LocalBusinessSchemaProps) {
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'RealEstateAgent',
+    '@type': 'Organization',
     '@id': siteConfig.url,
     name,
     description,
@@ -286,9 +286,9 @@ export function PersonSchema() {
       'Rural land sales',
       'Ohio real estate',
       'West Virginia real estate',
-      'Cash land purchases',
+      'Direct land purchases',
       'Ohio Valley land market',
-      'Probate land sales',
+      'Direct land acquisition',
     ],
   };
 
@@ -304,11 +304,11 @@ export function ServiceSchema() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    '@id': `${siteConfig.url}#cash-land-purchases`,
-    serviceType: 'Cash Land Purchases',
-    name: 'Cash Land Purchases — Ohio Valley Land Partners',
+    '@id': `${siteConfig.url}#direct-land-acquisition`,
+    serviceType: 'Direct Land Acquisition Inquiries',
+    name: 'Direct Land Acquisition Inquiries — Ohio Valley Land Partners',
     description:
-      'Cash purchases of vacant, inherited, tax-delinquent, and landlocked land across nine Ohio and West Virginia counties.',
+      'Property-specific acquisition inquiries reviewed by Ohio Valley Land Partners as a prospective principal buyer.',
     provider: {
       '@type': 'Organization',
       '@id': `${siteConfig.url}#organization`,
@@ -323,7 +323,7 @@ export function ServiceSchema() {
       '@type': 'Offer',
       availability: 'https://schema.org/InStock',
       priceCurrency: 'USD',
-      description: 'No-obligation cash offer within 24 hours of inquiry',
+      description: 'Property-specific review with no guarantee of purchase, price, or response time',
     },
   };
 

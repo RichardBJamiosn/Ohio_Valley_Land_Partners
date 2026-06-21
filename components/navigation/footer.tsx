@@ -25,7 +25,7 @@ const footerNavigation = {
   company: [
     { name: 'About Us', href: '/about' },
     { name: 'Community & Giving', href: '/community' },
-    { name: 'Land Scouts', href: '/land-scouts' },
+    { name: 'Introductions', href: '/land-scouts' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
   ],
@@ -53,8 +53,7 @@ export function Footer() {
               />
             </Link>
             <p className="text-sm leading-6 text-white/60 max-w-xs">
-              Local cash land buyer across the Ohio Valley — OH, PA, WV, KY, and Indiana.
-              Multiple active campaigns. Active builders network. Intentional. Not international.
+              Prospective principal land buyer across the Ohio Valley — OH, PA, WV, KY, and Indiana. Direct acquisition inquiries and private portfolio marketing.
             </p>
             <div className="flex flex-col gap-3 text-sm text-white/60">
               <div className="flex items-center gap-2">

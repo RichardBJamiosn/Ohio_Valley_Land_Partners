@@ -52,8 +52,7 @@ export default function TermsOfServicePage() {
 
           <h2>4. Forms and Submissions</h2>
           <p>
-            When you submit information through our website forms (including the &quot;Get My Cash
-            Offer&quot; form, contact form, or investor intake form), you represent that the
+            When you submit information through our website forms (including the property review form, contact form, or investor intake form), you represent that the
             information you provide is truthful and accurate. Submitting a form does not create
             a binding contract or obligation on either party.
           </p>
@@ -68,8 +67,7 @@ export default function TermsOfServicePage() {
 
           <h2>5. No Offer or Commitment</h2>
           <p>
-            Nothing on this Site constitutes a binding offer to purchase property. All cash
-            offers are made individually after review of property-specific information and are
+            Nothing on this Site constitutes a binding offer to purchase property. Any purchase proposal is made individually after review of property-specific information and is
             subject to the terms of a written purchase agreement signed by both parties.
             Information displayed on the Site (including estimated values, timelines, and
             service descriptions) is for general informational purposes only.

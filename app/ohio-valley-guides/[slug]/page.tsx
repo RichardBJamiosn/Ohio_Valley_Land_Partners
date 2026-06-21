@@ -6,6 +6,7 @@ import { MapPin, CheckCircle, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { BreadcrumbSchema, FAQSchema } from '@/components/seo/json-ld';
 import { LegalDisclaimer } from '@/components/legal-disclaimer';
+import { softenCountyFaq } from '@/lib/public-copy';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -23,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `Sell Land in ${county.name}, ${county.state} — Ohio Valley Land Partners`,
     description:
       sellData?.metaDescription ??
-      `Cash land buyer in ${county.name}, ${county.state}. We buy vacant land, inherited property, and back-tax parcels. Cash offer in 24 hours.`,
+      `General land information and OVLP acquisition interests in ${county.name}, ${county.state}. Property-specific review by a prospective principal buyer.`,
     keywords: sellData?.keywords ?? [`sell land ${county.name}`, 'Ohio Valley land buyer'],
     alternates: {
       canonical: url,
@@ -32,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `Sell Land in ${county.name}, ${county.state}`,
       description:
         sellData?.metaDescription ??
-        `Cash land buyer in ${county.name}, ${county.state}. Cash offer in 24 hours.`,
+        `General land information and direct acquisition inquiries in ${county.name}, ${county.state}.`,
       url,
       type: 'website',
     },
@@ -50,7 +51,7 @@ export default async function CountyGuidePage({ params }: Props) {
 
   if (!county) notFound();
 
-  const faqs = sellData?.faqs.map((f) => ({ question: f.q, answer: f.a })) ?? [];
+  const faqs = sellData?.faqs.map((f) => ({ question: f.q, answer: softenCountyFaq(f.q, f.a) })) ?? [];
 
   return (
     <>
@@ -77,8 +78,8 @@ export default async function CountyGuidePage({ params }: Props) {
                 {`Sell Land in ${county.name}, ${county.state}`}
               </h1>
               <p className="mt-6 text-xl leading-8 text-muted-foreground">
-                County guide from a local buyer active in {county.name}. Free property market
-                analysis and a written offer after review. No agents, no fees.
+                General county and property context from a prospective principal buyer active in {county.name}.
+                This guide is not legal, tax, title, appraisal, brokerage, or investment advice.
               </p>
               <div className="mt-8">
                 <Link
@@ -153,7 +154,7 @@ export default async function CountyGuidePage({ params }: Props) {
                 {sellData.faqs.map((faq) => (
                   <div key={faq.q} className="rounded-xl border border-border bg-background p-6">
                     <h3 className="font-semibold text-foreground mb-3">{faq.q}</h3>
-                    <p className="text-sm text-muted-foreground leading-7">{faq.a}</p>
+                    <p className="text-sm text-muted-foreground leading-7">{softenCountyFaq(faq.q, faq.a)}</p>
                   </div>
                 ))}
               </div>
@@ -168,7 +169,7 @@ export default async function CountyGuidePage({ params }: Props) {
               Ready to Sell Your {county.name} Land?
             </h2>
             <p className="text-muted-foreground mb-8">
-              Free property market analysis. No obligation. No agent fees. Written offer after review on any parcel.
+              Request an internal acquisition review. Any proposal is property-specific and reflects only OVLP’s interest as a prospective principal buyer.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link

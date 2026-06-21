@@ -5,11 +5,12 @@ import { siteConfig } from '@/lib/seo-config';
 import { Calendar, Clock, ArrowRight, BookOpen } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { LegalDisclaimer } from '@/components/legal-disclaimer';
+import { publicBlogSummary } from '@/lib/public-copy';
 
 export const metadata: Metadata = {
-  title: 'Blog — Ohio Valley Land Guides & Market Reports',
+  title: 'Blog — Ohio Valley Land Topics & Market Observations',
   description:
-    'Expert guides on selling land in Ohio, navigating probate, back taxes, and market trends across the Ohio Valley region. Written by Ohio Valley Land Partners.',
+    'General educational articles about land ownership, direct-sale inquiries, and regional market observations from Ohio Valley Land Partners.',
   keywords: [
     'sell land Ohio',
     'Ohio Valley real estate blog',
@@ -36,14 +37,13 @@ export default function BlogPage() {
         <div className="mx-auto max-w-2xl text-center mb-16">
           <div className="inline-flex items-center gap-2 rounded-full border border-amber/20 bg-amber/5 px-4 py-2 mb-6">
             <BookOpen className="h-4 w-4 text-amber" />
-            <span className="text-sm font-semibold text-amber">Ohio Valley Land Intelligence</span>
+            <span className="text-sm font-semibold text-amber">Ohio Valley Land Notes</span>
           </div>
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            Land Guides & Market Reports
+            Land Topics & Market Observations
           </h1>
           <p className="mt-4 text-lg text-muted-foreground">
-            Straight answers on selling land in Ohio — probate, back taxes, county markets, and the
-            deals most agents won't talk about.
+            General observations about land, county markets, and direct-purchase inquiries. Legal, tax, title, valuation, and brokerage questions should be directed to licensed professionals.
           </p>
           <LegalDisclaimer className="mt-5" />
         </div>
@@ -62,7 +62,7 @@ export default function BlogPage() {
               Active campaign — Geauga County, Ohio
             </p>
             <p className="mt-1 text-sm text-muted-foreground">
-              Property analysis and offers for vacant lots and inherited land in western Geauga — Chesterland, Chardon, Bainbridge, and surrounding townships.
+              Acquisition review for vacant lots and other land in western Geauga — Chesterland, Chardon, Bainbridge, and surrounding townships.
             </p>
           </div>
         ) : null}
@@ -82,7 +82,7 @@ export default function BlogPage() {
                 {featured.title}
               </Link>
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">{featured.excerpt}</p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">{publicBlogSummary(featured.category)}</p>
             <div className="flex items-center gap-6 text-sm text-muted-foreground">
               <span className="flex items-center gap-1.5">
                 <Calendar className="h-4 w-4" />
@@ -140,7 +140,7 @@ export default function BlogPage() {
         <div className="mt-20 rounded-2xl border border-border bg-card p-10 text-center">
           <h2 className="text-2xl font-bold text-foreground mb-3">Ready to Sell Your Land?</h2>
           <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-            Free in-depth property market analysis and a written offer after review. No agents, no fees, no pressure.
+            Request an internal property review. Any proposal reflects only OVLP’s interest as a prospective principal buyer.
           </p>
           <Link
             href="/"

@@ -32,7 +32,7 @@ export function MobileStickyCta() {
           onClick={() => trackEvent('click_offer_mobile_cta')}
           className="flex flex-1 items-center justify-center rounded-lg bg-amber px-4 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
         >
-          Get Cash Offer
+          Request Analysis
         </Link>
       </div>
     </div>

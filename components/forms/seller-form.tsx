@@ -108,7 +108,7 @@ export function SellerForm() {
             Submitting...
           </>
         ) : (
-          'Request Property Analysis'
+          'Request Property Review'
         )}
       </Button>
 

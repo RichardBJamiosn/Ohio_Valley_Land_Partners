@@ -4,6 +4,8 @@
  * Each entry targets county-level long-tail seller keywords.
  */
 
+import { countySubheadline } from './public-copy';
+
 export interface CountyCitation {
   source: string;
   detail: string;
@@ -35,10 +37,10 @@ export const countySellPages: CountySellData[] = [
     state: 'Ohio',
     stateAbbr: 'OH',
     headline: 'We Buy Vacant Land and Residential Lots in Franklin County, OH',
-    subheadline: 'Sell your Franklin County lot or acreage directly to a local land buyer. No agent fees. Cash offer after review.',
-    metaTitle: 'Sell Land in Franklin County, OH | Columbus Lot Buyer',
+    subheadline: 'Direct acquisition inquiry for Franklin County. Any proposal is property-specific and is not an appraisal or statement of market value.',
+    metaTitle: 'Franklin County Land | Direct Buyer Inquiry',
     metaDescription:
-      'Selling vacant land, an infill lot, or acreage in Franklin County, Ohio? Ohio Valley Land Partners is actively buying in the Columbus market. No agent fees. Direct cash offer after review.',
+      'General information about OVLP acquisition interests in Franklin County, Ohio. Property-specific review by a prospective principal buyer; no guarantee of purchase, price, or timing.',
     keywords: [
       'sell land Franklin County Ohio',
       'cash land buyers Franklin County OH',
@@ -48,7 +50,7 @@ export const countySellPages: CountySellData[] = [
       'sell land with back taxes Franklin County Ohio',
       'sell teardown lot Columbus Ohio',
     ],
-    why: `Franklin County remains Central Ohio's highest-growth land market, with US Census data showing sustained population gains across Columbus, Dublin, Hilliard, and New Albany. The Intel semiconductor campus expansion near Plain Township and US-33 corridor development have intensified builder demand for infill lots and acreage on the urban fringe. According to Franklin County Auditor parcel records, vacant residential lots inside Columbus city limits and along the I-270 belt consistently trade at a premium to rural Ohio Valley parcels. Ohio Valley Land Partners buys Franklin County land directly — inherited lots near German Village, tax-delinquent parcels in Whitehall, and acreage along US-40 toward Reynoldsburg — with cash closings in 14–21 days and no agent commissions.`,
+    why: `Franklin County remains Central Ohio's highest-growth land market, with US Census data showing sustained population gains across Columbus, Dublin, Hilliard, and New Albany. The Intel semiconductor campus expansion near Plain Township and US-33 corridor development have intensified builder demand for infill lots and acreage on the urban fringe. According to Franklin County Auditor parcel records, vacant residential lots inside Columbus city limits and along the I-270 belt consistently trade at a premium to rural Ohio Valley parcels. Ohio Valley Land Partners buys Franklin County land directly — inherited lots near German Village, tax-delinquent parcels in Whitehall, and acreage along US-40 toward Reynoldsburg — subject to property-specific review and mutually acceptable written terms.`,
     localGeography:
       'From the Intel-adjacent Plain Township corridor along US-33 to infill pockets in Clintonville, Franklinton, and the Hilliard–Dublin growth zone along I-270, Franklin County parcels vary widely by access, utilities, and zoning. Parcels near the Scioto River and the OSU campus area see different buyer pools than rural acreage east of Pickerington and south toward Grove City.',
     citations: [
@@ -129,11 +131,11 @@ export const countySellPages: CountySellData[] = [
     name: 'Belmont County',
     state: 'Ohio',
     stateAbbr: 'OH',
-    headline: 'We Buy Vacant Land in Belmont County, OH for Cash',
-    subheadline: 'Sell your Belmont County land fast — no agent, no fees, cash offer in 24 hours.',
-    metaTitle: 'Sell Vacant Land Fast in Belmont County, OH | Cash Offer in 24 Hours',
+    headline: 'We Buy Vacant Land in Belmont County, OH',
+    subheadline: 'Direct acquisition inquiry for Belmont County. Any proposal is property-specific and is not an appraisal or statement of market value.',
+    metaTitle: 'Belmont County Land | Direct Buyer Inquiry',
     metaDescription:
-      'Need to sell vacant land in Belmont County, Ohio? We pay cash for land in any condition — inherited parcels, back-tax lots, and farm ground. Offer in 24 hours, close in 14 days.',
+      'General information about OVLP acquisition interests in Belmont County, Ohio. Property-specific review by a prospective principal buyer; no guarantee of purchase, price, or timing.',
     keywords: [
       'sell land Belmont County Ohio',
       'cash land buyers Belmont County OH',
@@ -142,7 +144,7 @@ export const countySellPages: CountySellData[] = [
       'sell land St Clairsville Ohio',
       'sell farm ground Belmont County Ohio cash',
     ],
-    why: `Belmont County sits at the crossroads of Ohio's Utica and Marcellus shale plays and the I-70 corridor linking Columbus to Wheeling, WV. Surface parcels near St. Clairsville, Barnesville, and Shadyside draw interest from energy-adjacent buyers, agricultural operators, and investors holding along the Ohio River. Belmont County Auditor records show a mix of active farm ground, wooded acreage, and parcels with recorded oil and gas leases — each priced differently depending on mineral status. Ohio Valley Land Partners purchases Belmont County land directly for cash, whether mineral rights are severed or still attached to the surface estate, with closings in 14–21 days through a local title company.`,
+    why: `Belmont County sits at the crossroads of Ohio's Utica and Marcellus shale plays and the I-70 corridor linking Columbus to Wheeling, WV. Surface parcels near St. Clairsville, Barnesville, and Shadyside draw interest from energy-adjacent buyers, agricultural operators, and investors holding along the Ohio River. Belmont County Auditor records show a mix of active farm ground, wooded acreage, and parcels with recorded oil and gas leases — each priced differently depending on mineral status. Ohio Valley Land Partners purchases Belmont County land directly, whether mineral rights are severed or still attached to the surface estate, subject to property-specific review and mutually acceptable written terms.`,
     localGeography:
       'Belmont County stretches from the Ohio River communities of Shadyside and Powhatan Point north to St. Clairsville along I-70 and east toward Barnesville and the Harrison County line. Parcels along the river corridor, in the Flushing–Lafferty agricultural zone, and near the I-470 bridge to Wheeling each attract different buyer profiles.',
     citations: [
@@ -202,7 +204,7 @@ export const countySellPages: CountySellData[] = [
       },
       {
         q: 'What happens to my Belmont County land if it goes into the county tax forfeiture process?',
-        a: 'Under ORC § 5723.01, land with unpaid taxes can eventually be certified to the State of Ohio as forfeited land, at which point it may be sold through the Belmont County Auditor\'s forfeited land sale and the original owner loses all interest. If your Belmont County property has accumulated delinquent taxes, selling to a cash buyer before forfeiture is initiated is typically the fastest and cleanest option — you receive proceeds rather than walking away with nothing.',
+        a: 'Under ORC § 5723.01, land with unpaid taxes can eventually be certified to the State of Ohio as forfeited land, at which point it may be sold through the Belmont County Auditor\'s forfeited land sale and the original owner loses all interest. If your Belmont County property has accumulated delinquent taxes, selling to a direct buyer before forfeiture is initiated is typically the fastest and cleanest option — you receive proceeds rather than walking away with nothing.',
       },
       {
         q: 'How do I check whether mineral rights were severed from my Belmont County deed?',
@@ -219,11 +221,11 @@ export const countySellPages: CountySellData[] = [
     name: 'Jefferson County',
     state: 'Ohio',
     stateAbbr: 'OH',
-    headline: 'We Buy Vacant Land in Jefferson County, OH for Cash',
-    subheadline: 'Sell your Jefferson County land fast — cash offer in 24 hours, close in 14 days.',
-    metaTitle: 'Sell Vacant Land Fast in Jefferson County, OH | Cash Offer in 24 Hours',
+    headline: 'We Buy Vacant Land in Jefferson County, OH',
+    subheadline: 'Direct acquisition inquiry for Jefferson County. Any proposal is property-specific and is not an appraisal or statement of market value.',
+    metaTitle: 'Jefferson County Land | Direct Buyer Inquiry',
     metaDescription:
-      'Selling land in Jefferson County, Ohio? We buy vacant lots, farm ground, and inherited parcels for cash — no agent required. Offer within 24 hours.',
+      'General information about OVLP acquisition interests in Jefferson County, Ohio. Property-specific review by a prospective principal buyer; no guarantee of purchase, price, or timing.',
     keywords: [
       'sell land Jefferson County Ohio',
       'cash land buyers Jefferson County OH',
@@ -231,7 +233,7 @@ export const countySellPages: CountySellData[] = [
       'sell inherited land Jefferson County',
       'sell land back taxes Jefferson County Ohio',
     ],
-    why: `Jefferson County sits on the Ohio River across from Weirton, WV, with Steubenville as the county seat and economic anchor. Jefferson County Auditor records show a mix of former industrial parcels, Ohio River frontage lots, and rural township acreage stretching toward Wintersville and Toronto. Energy activity and recreational demand from Pittsburgh-area buyers keep the market active for sellers who want a direct cash buyer instead of a long MLS listing. Ohio Valley Land Partners purchases throughout Jefferson County and closes in 14–21 days.`,
+    why: `Jefferson County sits on the Ohio River across from Weirton, WV, with Steubenville as the county seat and economic anchor. Jefferson County Auditor records show a mix of former industrial parcels, Ohio River frontage lots, and rural township acreage stretching toward Wintersville and Toronto. Energy activity and recreational demand from Pittsburgh-area buyers keep the market active for sellers who want a direct buyer instead of a long MLS listing. Ohio Valley Land Partners purchases throughout Jefferson County and reviews each opportunity individually.`,
     localGeography:
       'Jefferson County runs along the Ohio River from Steubenville and Mingo Junction through Toronto, Brilliant, and rural townships toward the Harrison County line. River corridor parcels, former industrial sites near US-22, and wooded acreage in the upland townships each have distinct buyer demand.',
     citations: [
@@ -308,11 +310,11 @@ export const countySellPages: CountySellData[] = [
     name: 'Columbiana County',
     state: 'Ohio',
     stateAbbr: 'OH',
-    headline: 'We Buy Vacant Land in Columbiana County, OH for Cash',
-    subheadline: 'Sell your Columbiana County land fast — no agent fees, cash offer in 24 hours.',
-    metaTitle: 'Sell Vacant Land Fast in Columbiana County, OH | Cash Offer in 24 Hours',
+    headline: 'We Buy Vacant Land in Columbiana County, OH',
+    subheadline: 'Direct acquisition inquiry for Columbiana County. Any proposal is property-specific and is not an appraisal or statement of market value.',
+    metaTitle: 'Columbiana County Land | Direct Buyer Inquiry',
     metaDescription:
-      'Selling vacant land in Columbiana County, Ohio? We pay cash for land in any condition. No agent fees. Offer in 24 hours. Close in as little as 14 days.',
+      'General information about OVLP acquisition interests in Columbiana County, Ohio. Property-specific review by a prospective principal buyer; no guarantee of purchase, price, or timing.',
     keywords: [
       'sell land Columbiana County Ohio',
       'cash land buyers Columbiana County',
@@ -320,9 +322,9 @@ export const countySellPages: CountySellData[] = [
       'sell farm land Columbiana County Ohio',
       'sell inherited property Columbiana County',
     ],
-    why: `Columbiana County is an agricultural and recreational land market anchored by Lisbon, with steady demand from farming operations, hunters, and investors from the Youngstown–Canton corridor. Columbiana County Auditor records show productive farm ground near Salem, wooded tracts in the northern townships, and vacant lots in East Liverpool along the Ohio River. Ohio Valley Land Partners purchases throughout the county — from Lisbon to Salem to East Liverpool — and closes directly in 14–21 days with no agent fees.`,
+    why: `Columbiana County is an agricultural and recreational land market anchored by Lisbon, with steady demand from farming operations, hunters, and investors from the Youngstown–Canton corridor. Columbiana County Auditor records show productive farm ground near Salem, wooded tracts in the northern townships, and vacant lots in East Liverpool along the Ohio River. Ohio Valley Land Partners purchases throughout the county — from Lisbon to Salem to East Liverpool — and reviews each opportunity individually.`,
     localGeography:
-      'Columbiana County spans from the Ohio River at East Liverpool and Wellsville north through Lisbon and Salem toward the Pennsylvania border. Farm ground in the central townships, hunting land in the wooded hills, and residential lots near the Route 30 corridor each attract different cash buyers.',
+      'Columbiana County spans from the Ohio River at East Liverpool and Wellsville north through Lisbon and Salem toward the Pennsylvania border. Farm ground in the central townships, hunting land in the wooded hills, and residential lots near the Route 30 corridor each attract different buyers.',
     citations: [
       {
         source: 'Columbiana County Auditor',
@@ -397,11 +399,11 @@ export const countySellPages: CountySellData[] = [
     name: 'Harrison County',
     state: 'Ohio',
     stateAbbr: 'OH',
-    headline: 'We Buy Vacant Land in Harrison County, OH for Cash',
-    subheadline: 'Sell your Harrison County land fast — cash offer within 24 hours.',
-    metaTitle: 'Sell Vacant Land Fast in Harrison County, OH | Cash Offer in 24 Hours',
+    headline: 'We Buy Vacant Land in Harrison County, OH',
+    subheadline: 'Direct acquisition inquiry for Harrison County. Any proposal is property-specific and is not an appraisal or statement of market value.',
+    metaTitle: 'Harrison County Land | Direct Buyer Inquiry',
     metaDescription:
-      'Selling land in Harrison County, Ohio? We buy vacant lots, timber tracts, and inherited parcels for cash. No agent fees. Offer in 24 hours, close in 14 days.',
+      'General information about OVLP acquisition interests in Harrison County, Ohio. Property-specific review by a prospective principal buyer; no guarantee of purchase, price, or timing.',
     keywords: [
       'sell land Harrison County Ohio',
       'cash land buyers Harrison County OH',
@@ -410,7 +412,7 @@ export const countySellPages: CountySellData[] = [
       'sell inherited land Harrison County Ohio',
       'sell undeveloped land Harrison County Ohio fast',
     ],
-    why: `Harrison County is one of Ohio's premier hunting and recreational land markets, with Cadiz as the county seat and heavily wooded terrain throughout the rural townships. Harrison County Auditor records show strong demand for hunting tracts, timber parcels, and mineral-adjacent acreage from buyers in Cleveland, Columbus, and Pittsburgh. Ohio Valley Land Partners regularly acquires land throughout Harrison County and closes in 14–21 days through a local title company.`,
+    why: `Harrison County is one of Ohio's premier hunting and recreational land markets, with Cadiz as the county seat and heavily wooded terrain throughout the rural townships. Harrison County Auditor records show strong demand for hunting tracts, timber parcels, and mineral-adjacent acreage from buyers in Cleveland, Columbus, and Pittsburgh. Ohio Valley Land Partners regularly acquires land throughout Harrison County and reviews each opportunity individually through a local title company.`,
     localGeography:
       'Harrison County covers the upland terrain between the Ohio River Valley and the Tuscarawas County line, with Cadiz at the center and rural townships extending toward Scio, Freeport, and the Carroll County border. Timber tracts, hunting ground, and parcels with oil and gas activity each have distinct market values.',
     citations: [
@@ -487,11 +489,11 @@ export const countySellPages: CountySellData[] = [
     name: 'Carroll County',
     state: 'Ohio',
     stateAbbr: 'OH',
-    headline: 'We Buy Vacant Land in Carroll County, OH for Cash',
-    subheadline: 'Sell your Carroll County land fast — cash offer in 24 hours, no agent required.',
-    metaTitle: 'Sell Vacant Land Fast in Carroll County, OH | Cash Offer in 24 Hours',
+    headline: 'We Buy Vacant Land in Carroll County, OH',
+    subheadline: 'Direct acquisition inquiry for Carroll County. Any proposal is property-specific and is not an appraisal or statement of market value.',
+    metaTitle: 'Carroll County Land | Direct Buyer Inquiry',
     metaDescription:
-      'Selling land in Carroll County, Ohio? We buy rural lots, farm ground, timber tracts, and inherited parcels for cash. No agent fees. Offer within 24 hours.',
+      'General information about OVLP acquisition interests in Carroll County, Ohio. Property-specific review by a prospective principal buyer; no guarantee of purchase, price, or timing.',
     keywords: [
       'sell land Carroll County Ohio',
       'cash land buyers Carroll County OH',
@@ -500,7 +502,7 @@ export const countySellPages: CountySellData[] = [
       'sell farm land Carroll County Ohio',
       'Carroll County Ohio vacant land buyers cash',
     ],
-    why: `Carroll County sits between Canton and the Ohio River Valley, with Carrollton as the county seat and Atwood Lake as a major recreational draw. Carroll County Auditor records show a mix of hunting ground, productive farmland, and Utica shale-adjacent acreage from Carrollton through Malvern and Minerva. Ohio Valley Land Partners actively buys throughout Carroll County and closes directly in 14–21 days with no agent commissions.`,
+    why: `Carroll County sits between Canton and the Ohio River Valley, with Carrollton as the county seat and Atwood Lake as a major recreational draw. Carroll County Auditor records show a mix of hunting ground, productive farmland, and Utica shale-adjacent acreage from Carrollton through Malvern and Minerva. Ohio Valley Land Partners actively buys throughout Carroll County and reviews each opportunity individually.`,
     localGeography:
       'Carroll County stretches from Carrollton and Sherrodsville south toward Atwood Lake and east toward the Columbiana County line. Farm ground in the central townships, recreational land near Atwood Lake, and wooded acreage in the northern hills each attract different buyer profiles.',
     citations: [
@@ -577,11 +579,11 @@ export const countySellPages: CountySellData[] = [
     name: 'Ohio County',
     state: 'West Virginia',
     stateAbbr: 'WV',
-    headline: 'We Buy Vacant Land in Ohio County, WV for Cash',
-    subheadline: 'Sell your Ohio County West Virginia land fast — cash offer in 24 hours.',
-    metaTitle: 'Sell Vacant Land Fast in Ohio County, WV | Cash Offer in 24 Hours',
+    headline: 'We Buy Vacant Land in Ohio County, WV',
+    subheadline: 'Direct acquisition inquiry for Ohio County. Any proposal is property-specific and is not an appraisal or statement of market value.',
+    metaTitle: 'Ohio County Land | Direct Buyer Inquiry',
     metaDescription:
-      'Selling land in Ohio County, West Virginia? We buy vacant lots, rural parcels, and inherited property in the Wheeling area for cash. No agent fees. Offer in 24 hours.',
+      'General information about OVLP acquisition interests in Ohio County, West Virginia. Property-specific review by a prospective principal buyer; no guarantee of purchase, price, or timing.',
     keywords: [
       'sell land Ohio County West Virginia',
       'cash land buyers Ohio County WV',
@@ -589,7 +591,7 @@ export const countySellPages: CountySellData[] = [
       'sell inherited land Ohio County WV',
       'sell land fast Wheeling West Virginia',
     ],
-    why: `Ohio County is the economic center of West Virginia's northern panhandle, anchored by Wheeling along the Ohio River. Ohio County Assessor records show a diverse land market — from urban residential lots in Wheeling to rural acreage in Triadelphia and Valley Grove. Proximity to Pittsburgh and the I-70 corridor makes this one of the more liquid WV land markets. Ohio Valley Land Partners buys throughout Ohio County and closes in 14–21 days through a West Virginia title company.`,
+    why: `Ohio County is the economic center of West Virginia's northern panhandle, anchored by Wheeling along the Ohio River. Ohio County Assessor records show a diverse land market — from urban residential lots in Wheeling to rural acreage in Triadelphia and Valley Grove. Proximity to Pittsburgh and the I-70 corridor makes this one of the more liquid WV land markets. Ohio Valley Land Partners buys throughout Ohio County and reviews each opportunity individually through a West Virginia title company.`,
     localGeography:
       'Ohio County runs along the Ohio River from Wheeling through Triadelphia, Valley Grove, and the rural townships toward the Marshall County line. Urban lots in Wheeling, Ohio River corridor parcels, and hillside acreage toward the Pennsylvania border each have distinct buyer demand.',
     citations: [
@@ -633,7 +635,7 @@ export const countySellPages: CountySellData[] = [
       },
       {
         q: 'Is West Virginia land harder to sell than Ohio land?',
-        a: 'WV land has a smaller buyer pool for traditional listings, which is exactly why cash buyers like us are valuable. We know the market and have buyers specifically looking for WV panhandle parcels.',
+        a: 'WV land has a smaller buyer pool for traditional listings, which is exactly why direct buyers like us are valuable. We know the market and have buyers specifically looking for WV panhandle parcels.',
       },
       {
         q: 'How does WV probate differ from Ohio probate for land sales?',
@@ -649,7 +651,7 @@ export const countySellPages: CountySellData[] = [
       },
       {
         q: 'What happens if my Ohio County WV property taxes are delinquent?',
-        a: 'Under WV Code § 11A-3, delinquent taxes can lead to a sheriff\'s tax sale. Selling to a cash buyer before that process completes lets you receive proceeds instead of losing the parcel through redemption deadlines.',
+        a: 'Under WV Code § 11A-3, delinquent taxes can lead to a sheriff\'s tax sale. Selling to a direct buyer before that process completes lets you receive proceeds instead of losing the parcel through redemption deadlines.',
       },
       {
         q: 'Do you buy Ohio River frontage land in Ohio County?',
@@ -657,7 +659,7 @@ export const countySellPages: CountySellData[] = [
       },
       {
         q: 'How is WV land in Ohio County priced compared to across the river in Ohio?',
-        a: 'Ohio County WV parcels near Wheeling often trade at lower per-acre prices than comparable Ohio parcels, which is why direct cash buyers are valuable — we have end buyers specifically looking in the WV panhandle. We pull Ohio County Assessor comparable sales for each offer.',
+        a: 'Ohio County WV parcels near Wheeling often trade at lower per-acre prices than comparable Ohio parcels, which is why direct buyers are valuable — we have end buyers specifically looking in the WV panhandle. We pull Ohio County Assessor comparable sales for each offer.',
       },
     ],
   },
@@ -666,11 +668,11 @@ export const countySellPages: CountySellData[] = [
     name: 'Marshall County',
     state: 'West Virginia',
     stateAbbr: 'WV',
-    headline: 'We Buy Vacant Land in Marshall County, WV for Cash',
-    subheadline: 'Sell your Marshall County West Virginia land fast — cash offer in 24 hours.',
-    metaTitle: 'Sell Vacant Land Fast in Marshall County, WV | Cash Offer in 24 Hours',
+    headline: 'We Buy Vacant Land in Marshall County, WV',
+    subheadline: 'Direct acquisition inquiry for Marshall County. Any proposal is property-specific and is not an appraisal or statement of market value.',
+    metaTitle: 'Marshall County Land | Direct Buyer Inquiry',
     metaDescription:
-      'Selling land in Marshall County, West Virginia? We buy rural parcels, farm ground, and inherited property for cash. No agent fees. Offer within 24 hours.',
+      'General information about OVLP acquisition interests in Marshall County, West Virginia. Property-specific review by a prospective principal buyer; no guarantee of purchase, price, or timing.',
     keywords: [
       'sell land Marshall County West Virginia',
       'cash land buyers Marshall County WV',
@@ -678,9 +680,9 @@ export const countySellPages: CountySellData[] = [
       'sell rural land Marshall County WV',
       'sell inherited land Marshall County West Virginia',
     ],
-    why: `Marshall County stretches along the Ohio River south of Wheeling, with Moundsville as the county seat and a mix of rural farmland, wooded hills, and river corridor parcels. Marshall County Assessor records show steady demand from rural residential buyers, farmers, and recreational investors — quieter than Ohio County but with solid liquidity for well-located parcels. Ohio Valley Land Partners actively purchases in Marshall County and closes in 14–21 days.`,
+    why: `Marshall County stretches along the Ohio River south of Wheeling, with Moundsville as the county seat and a mix of rural farmland, wooded hills, and river corridor parcels. Marshall County Assessor records show steady demand from rural residential buyers, farmers, and recreational investors — quieter than Ohio County but with solid liquidity for well-located parcels. Ohio Valley Land Partners actively purchases in Marshall County and reviews each opportunity individually.`,
     localGeography:
-      'Marshall County runs along the Ohio River from Moundsville and Glen Dale south through Cameron and the rural townships toward Wetzel County. River corridor parcels, farm ground in the central valleys, and wooded hillside acreage each attract different cash buyers.',
+      'Marshall County runs along the Ohio River from Moundsville and Glen Dale south through Cameron and the rural townships toward Wetzel County. River corridor parcels, farm ground in the central valleys, and wooded hillside acreage each attract different buyers.',
     citations: [
       {
         source: 'Marshall County Assessor',
@@ -755,11 +757,11 @@ export const countySellPages: CountySellData[] = [
     name: 'Brooke County',
     state: 'West Virginia',
     stateAbbr: 'WV',
-    headline: 'We Buy Vacant Land in Brooke County, WV for Cash',
-    subheadline: 'Sell your Brooke County West Virginia land fast — cash offer in 24 hours.',
-    metaTitle: 'Sell Vacant Land Fast in Brooke County, WV | Cash Offer in 24 Hours',
+    headline: 'We Buy Vacant Land in Brooke County, WV',
+    subheadline: 'Direct acquisition inquiry for Brooke County. Any proposal is property-specific and is not an appraisal or statement of market value.',
+    metaTitle: 'Brooke County Land | Direct Buyer Inquiry',
     metaDescription:
-      'Selling land in Brooke County, West Virginia? We buy vacant lots and rural parcels in the Wellsburg area for cash. No agent. Offer in 24 hours.',
+      'General information about OVLP acquisition interests in Brooke County, West Virginia. Property-specific review by a prospective principal buyer; no guarantee of purchase, price, or timing.',
     keywords: [
       'sell land Brooke County West Virginia',
       'cash land buyers Brooke County WV',
@@ -767,7 +769,7 @@ export const countySellPages: CountySellData[] = [
       'sell inherited land Brooke County WV',
       'sell land fast Brooke County West Virginia',
     ],
-    why: `Brooke County is the northernmost county in West Virginia's panhandle — a narrow strip between Pennsylvania and Ohio, anchored by Wellsburg along the Ohio River. Brooke County Assessor records show steady demand from Pittsburgh-metro buyers seeking WV rural and recreational land at lower price points than comparable Pennsylvania parcels. Ohio Valley Land Partners buys throughout Brooke County — Wellsburg, Follansbee, Beech Bottom — and closes in 14–21 days.`,
+    why: `Brooke County is the northernmost county in West Virginia's panhandle — a narrow strip between Pennsylvania and Ohio, anchored by Wellsburg along the Ohio River. Brooke County Assessor records show steady demand from Pittsburgh-metro buyers seeking WV rural and recreational land at lower price points than comparable Pennsylvania parcels. Ohio Valley Land Partners buys throughout Brooke County — Wellsburg, Follansbee, Beech Bottom — and reviews each opportunity individually.`,
     localGeography:
       'Brooke County hugs the Ohio River from Wellsburg and Beech Bottom south through Follansbee toward the Hancock County line, with the Pennsylvania border to the east. Compact parcels, river corridor lots, and wooded hillside acreage each have limited but active buyer pools.',
     citations: [
@@ -840,6 +842,10 @@ export const countySellPages: CountySellData[] = [
     ],
   },
 ];
+
+for (const page of countySellPages) {
+  page.subheadline = countySubheadline(page.name);
+}
 
 export function getCountySellPage(slug: string): CountySellData | undefined {
   return countySellPages.find((c) => c.slug === slug);

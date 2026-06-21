@@ -6,21 +6,21 @@ import { LegalDisclaimer } from '@/components/legal-disclaimer';
 export const metadata: Metadata = {
   title: 'About Us — Ohio Valley Land Partners',
   description:
-    'Ohio Valley Land Partners is a cash land buyer dedicated to the Ohio Valley region — honest offers, fast closings, and a commitment to giving back to the communities we serve.',
+    'Ohio Valley Land Partners is a principal land buyer focused on direct acquisition inquiries, private portfolio marketing, and community investment in the Ohio Valley.',
 };
 
 const principles = [
   {
     icon: Shield,
-    title: 'Honest Offers. Every Time.',
+    title: 'Clear Purchase Proposals.',
     description:
-      'We explain every number we put in front of you. If we can\'t make the math work for both sides, we say so — and we say it quickly, so you\'re not waiting on an answer that isn\'t coming.',
+      'When we present a proposal, we explain the acquisition factors that shaped our number. It reflects our own business judgment and is not an appraisal or statement of market value.',
   },
   {
     icon: Handshake,
     title: 'Direct. No Middlemen.',
     description:
-      'We are the buyer. There is no chain of investors, no assignment flip happening behind the scenes. We make an offer, we sign a purchase agreement, we close. That\'s the entire process.',
+      'We approach owners as a prospective principal buyer. Any transaction depends on property review, mutually acceptable written terms, title work, and the parties\' independent professional advice.',
   },
   {
     icon: MapPin,
@@ -73,7 +73,7 @@ export default function AboutPage() {
           <div className="text-center mb-14">
             <h2 className="text-3xl font-bold text-foreground">How We Operate</h2>
             <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
-              Four things that are true about every deal we do — from the first call to the closing table.
+              Four principles that guide how we approach direct acquisition inquiries.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -161,15 +161,13 @@ export default function AboutPage() {
             <p>
               We built this company for the family that inherited land from a parent and
               doesn't know what to do with it. For the landowner who's been paying taxes
-              on a parcel they haven't visited in years. For the estate executor who needs
-              to settle an account cleanly and quickly. For the out-of-state heir who just
+              on a parcel they haven't visited in years. For an estate representative exploring possible buyers while relying on the estate's own attorney and other professionals. For the out-of-state heir who just
               needs the process to be simple.
             </p>
             <p>
               We are not the right buyer for every deal. But for land in the Ohio Valley
               or Franklin County — rural parcels, vacant lots, inherited properties,
-              back-tax land, and infill lots — we are ready to make a serious offer
-              and follow through.
+              back-tax land, and infill lots — we are prepared to review the property and determine whether it fits our acquisition criteria.
             </p>
           </div>
           <div className="mt-10 flex flex-wrap gap-4">

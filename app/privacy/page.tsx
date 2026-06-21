@@ -42,8 +42,8 @@ export default function PrivacyPolicyPage() {
           <h2>3. How We Use Your Information</h2>
           <p>We use the information we collect to:</p>
           <ul className="list-disc pl-6">
-            <li>Respond to your inquiries and provide cash offers on your property</li>
-            <li>Send transactional messages related to your inquiry (e.g., offer details, closing updates)</li>
+            <li>Respond to your inquiries and evaluate possible direct property acquisitions</li>
+            <li>Send transactional messages related to your inquiry (e.g., review status, proposed terms, closing updates)</li>
             <li>Send promotional messages about land buying opportunities, if you have opted in</li>
             <li>Improve our website and services</li>
             <li>Comply with legal obligations</li>

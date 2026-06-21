@@ -7,6 +7,7 @@ import { silos, siteConfig } from '@/lib/seo-config';
 import { countySellPages } from '@/lib/county-sell-data';
 import { campaignFeaturedSlug } from '@/lib/blog-data';
 import { LegalDisclaimer } from '@/components/legal-disclaimer';
+import { sellerPositioning } from '@/lib/public-copy';
 
 export const metadata: Metadata = {
   alternates: {
@@ -16,29 +17,29 @@ export const metadata: Metadata = {
 
 const homepageFAQs = [
   {
-    question: 'How do I sell vacant land in Ohio without a real estate agent?',
+    question: 'What does a direct sale to Ohio Valley Land Partners look like?',
     answer:
-      'Submit your parcel address through our contact form or homepage. Ohio Valley Land Partners provides a free in-depth property market analysis — reviewing county auditor records, tax history, and comparable sales — then calls you with a written cash offer. If you accept, we sign a purchase agreement and close through a licensed title company on a timeline that works for you, including fast closings when needed — no listing, no showings, and no agent commissions.',
+      'Submit your parcel information for our internal acquisition review. If the property fits our criteria, we may present a written purchase proposal as a prospective principal buyer. Owners remain free to consult an attorney, appraiser, tax professional, or licensed real estate professional and to compare other sale options.',
   },
   {
     question: 'Do you buy land with back taxes or tax liens?',
     answer:
-      'Yes. Delinquent taxes are commonly addressed at closing from sale proceeds — your attorney and title company can explain how that applies to your parcel. We factor known tax debt into our offer. Many sellers consult counsel before a county tax sale or forfeiture deadline.',
+      'We consider properties with reported delinquent taxes, but the effect on ownership, timing, and proceeds depends on the parcel and local process. A title company, attorney, and tax professional can explain how any balance may affect a transaction. Our role is limited to evaluating whether we wish to purchase the property.',
   },
   {
     question: 'Can I sell inherited land before probate is complete?',
     answer:
-      'Often yes, with court authorization — probate rules vary by county and estate. Ohio Valley Land Partners regularly purchases from estates mid-probate and coordinates with your attorney; we do not provide legal advice on fiduciary authority.',
+      'Possibly, but authority to sell inherited property depends on the estate, title, court orders, and applicable law. OVLP may consider an estate-owned parcel as a prospective buyer, but we do not determine who has authority to sell. Please consult the estate attorney and title company.',
   },
   {
     question: 'Do you buy landlocked parcels with no road access?',
     answer:
-      'We evaluate them case by case. Landlocked parcels are worth less, but many still have value — especially if they adjoin larger tracts or have a recorded easement. Submit the address and we will check county GIS maps and title records before giving you an honest assessment.',
+      'We review access-limited parcels case by case from our own acquisition perspective. Access, recorded easements, terrain, and neighboring uses may affect our interest and proposed price. Our review is not an appraisal, survey, title opinion, or legal determination.',
   },
   {
     question: 'How fast can you close on vacant land?',
     answer:
-      'We close quickly and comfortably — without long, drawn-out closings. On a clean-title parcel we can accommodate fast closing needs; probate, heir disputes, or complex title issues may take longer, but we handle those with a local title company. No lender approval or appraisal contingency is required because we pay cash.',
+      'We can discuss a requested timeline, but every transaction depends on title review, the written agreement, third-party professionals, and property-specific conditions. Any timing discussed before a signed agreement is an estimate, not a guarantee.',
   },
   {
     question: 'What counties in Ohio and West Virginia do you buy land in?',
@@ -46,21 +47,21 @@ const homepageFAQs = [
       'We buy across the entire Ohio Valley — Ohio, Pennsylvania, West Virginia, Kentucky, and Indiana — with multiple active campaigns and dedicated sell-land pages and Ohio Valley guides for Franklin, Belmont, Jefferson, Columbiana, Harrison, Carroll, Ohio County WV, Marshall, and Brooke counties.',
   },
   {
-    question: 'How do you calculate a cash offer for my land?',
+    question: 'How do you develop a purchase proposal for land?',
     answer:
-      'We pull comparable land sales from the county auditor, assess road access, utilities, zoning, liens, and back taxes, then build an offer based on what the parcel can realistically support for our end use. We explain the number when we call — no obligation to accept.',
+      'We review public records and property characteristics to decide what we may be willing to pay for our own account. That figure reflects our intended use, costs, risk, and business judgment; it is not an appraisal, broker price opinion, or statement of market value.',
   },
   {
     question: 'What happens after I submit my parcel information?',
     answer:
-      'We provide a free in-depth property market analysis using county auditor and GIS records. A team member calls you with a cash offer and walks through next steps. If you accept, we send a purchase agreement, open title, and schedule closing on your timeline. You can also reach us at (614) 653-7430.',
+      'We start with a full property analysis using available parcel information. If interested, we contact you with a written purchase proposal. Any transaction requires a mutually signed agreement and appropriate title and professional review. You can also reach us at (614) 653-7430.',
   },
 ];
 
 const whatWeDo = [
   {
     name: silos.land.title,
-    description: 'Cash offers on vacant land, inherited property, and back-tax parcels across the Ohio Valley. No agents, no fees.',
+    description: 'Direct acquisition inquiries for vacant land and other parcels across the Ohio Valley. OVLP acts only as a prospective principal buyer.',
     href: silos.land.path,
     icon: TreePine,
     tag: 'Core Business',
@@ -97,7 +98,7 @@ export default function Home() {
               <p className="mt-3 text-muted-foreground leading-relaxed">
                 We are buying vacant lots, inherited parcels, and long-held infill ground across
                 western Geauga — ZIP codes 44022, 44023, 44026, 44065, 44072, and 44202. Free
-                in-depth property market analysis. We comfortably accommodate fast closing needs.
+                full property analysis. Aggressively fast closings when necessary.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
@@ -111,7 +112,7 @@ export default function Home() {
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-amber px-5 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
               >
-                Get Cash Offer <ArrowRight className="h-4 w-4" />
+                Request Your Analysis <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -124,11 +125,10 @@ export default function Home() {
           <div className="text-center mb-10">
             <p className="heading-serif text-amber text-xl mb-2">Sell Your Land</p>
             <h2 className="text-2xl font-bold text-foreground sm:text-3xl">
-              County Cash-Buyer Pages
+              {sellerPositioning.countySectionTitle}
             </h2>
             <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">
-              Every county we buy in has a dedicated page with local FAQs, tax guidance, and a direct
-              path to a cash offer.
+              {sellerPositioning.countySectionSub}
             </p>
           </div>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -200,9 +200,7 @@ export default function Home() {
               We are builders and developers working directly with landowners.
             </h2>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              No hedge fund. No call center. A network of local buyers with one focus — buying land
-              in the Ohio Valley from sellers who want a fair deal
-              and a fast close.
+              No hedge fund. No call center. We evaluate land for our own account and connect portfolio opportunities with our private builders network. Property owners choose whether our direct-purchase model fits their goals.
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-4xl grid grid-cols-1 gap-8 sm:grid-cols-2">
@@ -320,8 +318,8 @@ export default function Home() {
 
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               {[
-                { label: 'Property market analysis', value: 'Free', sub: 'In-depth review before every offer', icon: Clock },
-                { label: 'Closing pace', value: 'Flexible', sub: 'Comfortably accommodates fast closing when you need it', icon: Clock },
+                { label: sellerPositioning.analysisLabel, value: 'Free', sub: sellerPositioning.analysisSub, icon: Clock },
+                { label: 'Closing pace', value: 'Flexible', sub: sellerPositioning.closingSub, icon: Clock },
                 { label: 'Agent fees charged', value: '$0', sub: 'You deal directly with the buyer', icon: DollarSign },
                 { label: 'Back to the Ohio Valley', value: '5%', sub: 'Of every closing to Arc of Appalachia & Salvation Army East Palestine', icon: Heart },
               ].map((item) => (

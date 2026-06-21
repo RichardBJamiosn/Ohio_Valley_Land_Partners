@@ -6,6 +6,7 @@ import { ArticleSchema, BreadcrumbSchema } from '@/components/seo/json-ld';
 import { siteConfig } from '@/lib/seo-config';
 import { Badge } from '@/components/ui/badge';
 import { LegalDisclaimer } from '@/components/legal-disclaimer';
+import { publicBlogSummary } from '@/lib/public-copy';
 import { Calendar, Clock, ArrowLeft, ArrowRight } from 'lucide-react';
 
 interface Props {
@@ -22,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const url = `${siteConfig.url}/blog/${post.slug}`;
   return {
     title: post.title,
-    description: post.metaDescription,
+    description: publicBlogSummary(post.category),
     keywords: post.keywords,
     alternates: {
       canonical: url,
@@ -57,7 +58,7 @@ export default function BlogPostPage({ params }: Props) {
       />
       <ArticleSchema
         headline={post.title}
-        description={post.metaDescription}
+        description={publicBlogSummary(post.category)}
         datePublished={post.datePublished}
         dateModified={post.dateModified}
         slug={post.slug}
@@ -98,6 +99,11 @@ export default function BlogPostPage({ params }: Props) {
             </div>
           </header>
 
+          {/* Educational-use notice */}
+          <div className="mb-8 rounded-xl border border-amber/25 bg-amber/5 p-5 text-sm leading-7 text-muted-foreground">
+            This article offers general background and OVLP market observations only. It is not legal, tax, title, appraisal, brokerage, or investment advice. Laws, procedures, values, and timelines vary. Consult the appropriate licensed professionals before making a property decision.
+          </div>
+
           {/* Post body */}
           <div
             className="prose prose-slate max-w-none
@@ -119,10 +125,10 @@ export default function BlogPostPage({ params }: Props) {
           {/* CTA box */}
           <div className="mt-16 rounded-2xl border border-amber/30 bg-amber/5 p-8 text-center">
             <h2 className="text-xl font-bold text-foreground mb-2">
-              Ready for Your Property Analysis &amp; Offer?
+              Ready to Request a Property Review?
             </h2>
             <p className="text-sm text-muted-foreground mb-6">
-              No obligation. No agent fees. We buy land across the Ohio Valley — any condition, any situation.
+              No obligation. OVLP will review the property only as a prospective principal buyer. Not every property will fit our criteria.
             </p>
             <Link
               href="/contact"

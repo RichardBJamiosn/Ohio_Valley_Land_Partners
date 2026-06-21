@@ -76,13 +76,13 @@ export function MainNav() {
             href="/land-scouts"
             className="text-sm font-medium text-white/60 hover:text-white transition-colors px-3 py-2"
           >
-            Land Scouts
+            Introductions
           </Link>
           <Link
             href="/"
             className="rounded-lg bg-amber px-4 py-2 text-sm font-semibold text-forest hover:bg-amber/90 transition-colors"
           >
-            Analysis & Offer
+            Property Review
           </Link>
           <a
             href="https://ovlp-portal.vercel.app"
@@ -149,7 +149,7 @@ export function MainNav() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full rounded-lg bg-amber py-3 text-center text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
               >
-                Analysis & Offer
+                Property Review
               </Link>
               <a
                 href="https://ovlp-portal.vercel.app"

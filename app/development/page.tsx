@@ -33,14 +33,14 @@ export default function DevelopmentPage() {
               </p>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
                 If you have land you believe has residential development potential, contact us.
-                We evaluate development sites and make direct cash offers on land that fits our criteria.
+                We review possible development sites for our own account and may present a property-specific purchase proposal when a parcel fits our criteria.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
                   href="/"
                   className="inline-flex items-center gap-2 rounded-lg bg-amber px-6 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
                 >
-                  Get a Cash Offer on Your Land <ArrowRight className="h-4 w-4" />
+                  Request a Property Review <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
                   href="/investor-portal"
@@ -99,14 +99,14 @@ export default function DevelopmentPage() {
               </h2>
               <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
                 If you have a parcel in the Ohio Valley — large acreage, vacant land near existing
-                infrastructure, or farm ground near growing areas — we want to talk. We make cash
-                offers on development-ready land directly.
+                infrastructure, or farm ground near growing areas — we welcome a conversation.
+                We may present a property-specific proposal when the parcel fits our criteria.
               </p>
               <Link
                 href="/"
                 className="inline-flex items-center gap-2 rounded-lg bg-amber px-8 py-4 text-base font-bold text-forest hover:bg-amber/90 transition-colors"
               >
-                Get a Cash Offer <ArrowRight className="h-4 w-4" />
+                Request a Property Review <ArrowRight className="h-4 w-4" />
               </Link>
               <p className="mt-6 text-xs text-muted-foreground">
                 Ohio Valley Land Partners operates as a principal buyer of real estate, not a licensed broker or agent.
