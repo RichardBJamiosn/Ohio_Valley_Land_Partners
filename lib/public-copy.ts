@@ -5,6 +5,20 @@
  * to independent licensed professionals.
  */
 
+/** Community giving — 5% of profits to all nonprofit partners (currently three). */
+export const communityGiving = {
+  headline: '5% of profits. Shared across all three nonprofit partners.',
+  principles:
+    '5% of profits is donated to all three of our nonprofit partners — Arc of Appalachia, the Salvation Army\'s East Palestine recovery work, and COCIC Franklin County Land Bank. A business operating in the Ohio Valley should invest in it.',
+  mission:
+    '5% of profits is donated to all three nonprofit partners — Arc of Appalachia, Salvation Army East Palestine recovery, and COCIC Franklin County Land Bank. A business operating in the Ohio Valley should invest in it.',
+  statSub: 'Of profits to all three nonprofit partners',
+  badge: '5% of profits supports our nonprofit partners',
+  footer: '5% of profits back to the Ohio Valley',
+  communityClosing:
+    '5% of profits supports all three nonprofit partners — Arc of Appalachia, Salvation Army East Palestine recovery, and COCIC Franklin County Land Bank.',
+} as const;
+
 /** Visible on-page seller positioning — no cash-offer or fast-closing language. */
 export const sellerPositioning = {
   analysisLabel: 'Full Property Analysis',

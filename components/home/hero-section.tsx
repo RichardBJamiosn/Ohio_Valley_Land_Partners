@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { MapPin, Clock, TreePine, ShieldCheck, Users, Target, Globe2 } from 'lucide-react';
 import { SellerForm } from '@/components/forms/seller-form';
 import { InvestorIntakeForm } from '@/components/forms/investor-intake-form';
-import { sellerPositioning } from '@/lib/public-copy';
+import { communityGiving, sellerPositioning } from '@/lib/public-copy';
 
 const stats = [
   { label: sellerPositioning.analysisLabel, value: 'Free', icon: Clock },
@@ -143,7 +143,7 @@ export function HeroSection() {
                 className="inline-flex items-center gap-2 rounded-full border border-meadow/40 bg-meadow/10 px-4 py-2 text-xs font-medium text-meadow hover:bg-meadow/20 transition-colors"
               >
                 <span className="h-1.5 w-1.5 rounded-full bg-meadow" />
-                5% of every closing supports Ohio Valley communities
+                {communityGiving.badge}
               </Link>
             </div>
           </div>

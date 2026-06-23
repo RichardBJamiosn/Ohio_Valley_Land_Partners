@@ -7,7 +7,7 @@ import { silos, siteConfig } from '@/lib/seo-config';
 import { countySellPages } from '@/lib/county-sell-data';
 import { campaignFeaturedSlug } from '@/lib/blog-data';
 import { LegalDisclaimer } from '@/components/legal-disclaimer';
-import { faqFraming, sellerPositioning } from '@/lib/public-copy';
+import { communityGiving, faqFraming, sellerPositioning } from '@/lib/public-copy';
 import { homepageSeoMeta } from '@/lib/seo-meta';
 
 export const metadata: Metadata = {
@@ -309,10 +309,7 @@ export default function Home() {
                   land means to families here, and answers the phone.
                 </p>
                 <p>
-                  5% of every closing goes directly to Arc of Appalachia — protecting
-                  Ohio's forests and waterways — and the Salvation Army's East Palestine
-                  recovery work in Columbiana County. A business operating in the Ohio Valley
-                  should invest in it.
+                  {communityGiving.mission}
                 </p>
               </div>
               <div className="mt-8">
@@ -330,7 +327,7 @@ export default function Home() {
                 { label: sellerPositioning.analysisLabel, value: 'Free', sub: sellerPositioning.analysisSub, icon: Clock },
                 { label: 'Ohio Valley coverage', value: '5 States', sub: 'Every county across OH, PA, WV, KY, and IN', icon: MapPin },
                 { label: 'Agent fees charged', value: '$0', sub: 'You deal directly with the buyer', icon: DollarSign },
-                { label: 'Back to the Ohio Valley', value: '5%', sub: 'Of every closing to Arc of Appalachia & Salvation Army East Palestine', icon: Heart },
+                { label: 'Back to the Ohio Valley', value: '5%', sub: communityGiving.statSub, icon: Heart },
               ].map((item) => (
                 <div key={item.label} className="rounded-xl border border-border bg-background p-6">
                   <div className="text-2xl font-black text-amber mb-1">{item.value}</div>

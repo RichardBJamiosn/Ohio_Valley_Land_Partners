@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, Heart, Shield, MapPin, Handshake } from 'lucide-react';
 import { LegalDisclaimer } from '@/components/legal-disclaimer';
+import { communityGiving } from '@/lib/public-copy';
 
 export const metadata: Metadata = {
   title: 'About Us — Ohio Valley Land Partners',
@@ -32,7 +33,7 @@ const principles = [
     icon: Heart,
     title: 'Built to Give Back.',
     description:
-      '5% of every closing goes directly to our community partners — Arc of Appalachia, the Salvation Army\'s East Palestine recovery work, and COCIC Franklin County Land Bank. A business operating in the Ohio Valley should invest in it.',
+      communityGiving.principles,
   },
 ];
 
@@ -140,7 +141,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <p className="text-sm font-bold text-foreground mb-4">
-                5% of every closing. Directly to Arc and Palestine.
+                {communityGiving.headline}
               </p>
               <Link
                 href="/community"

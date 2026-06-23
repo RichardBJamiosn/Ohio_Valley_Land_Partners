@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { communityGiving } from '@/lib/public-copy';
 
 export const metadata: Metadata = {
   title: 'Community — Ohio Valley Land Partners',
@@ -385,8 +386,7 @@ export default function CommunityPage() {
       {/* Quiet giving line */}
       <section className="pb-20 sm:pb-28">
         <p className="mx-auto max-w-2xl px-6 text-center heading-serif text-meadow text-xl sm:text-2xl leading-relaxed">
-          A portion of every closing supports Arc of Appalachia, Salvation Army East Palestine recovery,
-          and COCIC Franklin County Land Bank.
+          {communityGiving.communityClosing}
         </p>
       </section>
 

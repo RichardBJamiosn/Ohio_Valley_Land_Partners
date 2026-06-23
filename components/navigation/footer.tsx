@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Mail, Phone, Heart, MapPin } from 'lucide-react';
 import { siteConfig, ohioValleyStates } from '@/lib/seo-config';
+import { communityGiving } from '@/lib/public-copy';
 import Image from 'next/image';
 
 const footerNavigation = {
@@ -74,7 +75,7 @@ export function Footer() {
             </div>
             <div className="flex items-center gap-2 rounded-full border border-meadow/30 bg-meadow/10 px-3 py-1.5 w-fit">
               <Heart className="h-3.5 w-3.5 text-meadow" />
-              <span className="text-xs text-meadow font-medium">5% back to the Ohio Valley</span>
+              <span className="text-xs text-meadow font-medium">{communityGiving.footer}</span>
             </div>
           </div>
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
