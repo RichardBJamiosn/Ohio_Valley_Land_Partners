@@ -2,16 +2,16 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { MapPin, Clock, DollarSign, TreePine, ShieldCheck, Users, Calendar, Target } from 'lucide-react';
+import { MapPin, Clock, TreePine, ShieldCheck, Users, Target, Globe2 } from 'lucide-react';
 import { SellerForm } from '@/components/forms/seller-form';
 import { InvestorIntakeForm } from '@/components/forms/investor-intake-form';
 import { sellerPositioning } from '@/lib/public-copy';
 
 const stats = [
   { label: sellerPositioning.analysisLabel, value: 'Free', icon: Clock },
-  { label: 'Ohio Valley Counties', value: '9+', icon: Calendar },
+  { label: 'Ohio Valley Coverage', value: '5 States', icon: Globe2 },
   { label: 'Core Acres', value: '1.77M+', icon: TreePine },
-  { label: 'Campaigns & Buyers Network', value: 'Active', icon: MapPin },
+  { label: 'Campaigns & Buyers Network', value: 'Active', icon: Target },
 ];
 
 const campaignRegions = [
@@ -91,7 +91,6 @@ export function HeroSection() {
                   just Franklin. Full property analysis first, then a property-specific proposal
                   when the parcel fits our criteria.
                 </p>
-                {/* force Cloudflare Pages rebuild - user 'again didnt update' on 3c06292 Core Acres restore + stats labels; previous forces insufficient; dcf01c2 + ... + 3c06292; hard refresh no luck */}
                 <ul className="mt-6 flex flex-col gap-3">
                   {sellerTrustPoints.map((point) => (
                     <li key={point} className="flex items-center gap-3 text-sm font-medium text-white/80">

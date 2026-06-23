@@ -328,7 +328,7 @@ export default function Home() {
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               {[
                 { label: sellerPositioning.analysisLabel, value: 'Free', sub: sellerPositioning.analysisSub, icon: Clock },
-                { label: 'Ohio Valley reach', value: '9+', sub: 'Active county campaigns across OH and WV', icon: MapPin },
+                { label: 'Ohio Valley coverage', value: '5 States', sub: 'Every county across OH, PA, WV, KY, and IN', icon: MapPin },
                 { label: 'Agent fees charged', value: '$0', sub: 'You deal directly with the buyer', icon: DollarSign },
                 { label: 'Back to the Ohio Valley', value: '5%', sub: 'Of every closing to Arc of Appalachia & Salvation Army East Palestine', icon: Heart },
               ].map((item) => (
