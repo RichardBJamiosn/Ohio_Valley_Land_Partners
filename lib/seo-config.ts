@@ -14,7 +14,7 @@ export const siteConfig = {
   // TODO: Replace placeholder comments with real URLs
   // Set after signing up at clarity.microsoft.com (rbjpholdings@gmail.com)
   clarityProjectId: process.env.NEXT_PUBLIC_CLARITY_ID ?? '',
-  indexNowKey: 'a7f3e91c2b8d4056e6f1a9c3d7e5b204',
+  indexNowKey: '97803ac8eb1a4fb997336648f3d7eb26',
   sameAs: [
     // 'https://www.linkedin.com/company/ohio-valley-land-partners', // add after LinkedIn created
     // 'https://www.google.com/maps/place/[GBP_ID]',                 // add after GBP verified

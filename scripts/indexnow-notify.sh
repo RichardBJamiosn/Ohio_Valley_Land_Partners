@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # Notify Bing/Yandex of ALL sitemap URLs via IndexNow after deploy.
-# Key file: https://ohiovalleylandpartners.com/a7f3e91c2b8d4056e6f1a9c3d7e5b204.txt
+# Key file: https://ohiovalleylandpartners.com/97803ac8eb1a4fb997336648f3d7eb26.txt
 
 set -euo pipefail
 
 SITE="https://ohiovalleylandpartners.com"
-KEY="a7f3e91c2b8d4056e6f1a9c3d7e5b204"
+KEY="97803ac8eb1a4fb997336648f3d7eb26"
 KEY_LOCATION="${SITE}/${KEY}.txt"
 SITEMAP="${SITE}/sitemap.xml"
 
