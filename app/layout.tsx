@@ -1,9 +1,11 @@
 import './globals.css';
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import { Poppins, Cormorant_Garamond } from 'next/font/google';
 import { MainNav } from '@/components/navigation/main-nav';
 import { Footer } from '@/components/navigation/footer';
 import { MobileStickyCta } from '@/components/navigation/mobile-sticky-cta';
+import SiteHitTracker from '@/components/analytics/site-hit-tracker';
 import { WebSiteSchema, PersonSchema, OrganizationSchema, ServiceSchema } from '@/components/seo/json-ld';
 import { siteConfig } from '@/lib/seo-config';
 import Script from 'next/script';
@@ -124,6 +126,9 @@ export default function RootLayout({
             `}
           </Script>
         ) : null}
+        <Suspense fallback={null}>
+          <SiteHitTracker />
+        </Suspense>
         <MainNav />
         <main className="min-h-screen pb-20 lg:pb-0">{children}</main>
         <Footer />
