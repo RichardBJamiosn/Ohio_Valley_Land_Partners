@@ -1,10 +1,15 @@
 /**
  * county-sell-data.ts — Data for county-specific seller landing pages
  * URL pattern: /sell-land/[slug]
- * Each entry targets county-level long-tail seller keywords.
+ * Visible copy stays compliance-safe; high-intent SEO lives in meta fields via seo-meta.ts.
  */
 
-import { countySubheadline } from './public-copy';
+import {
+  countySellMetaDescription,
+  countySellMetaTitle,
+  countyVisualHeadline,
+  countyVisualSubheadline,
+} from '@/lib/seo-meta';
 
 export interface CountyCitation {
   source: string;
@@ -844,7 +849,15 @@ export const countySellPages: CountySellData[] = [
 ];
 
 for (const page of countySellPages) {
-  page.subheadline = countySubheadline(page.name);
+  page.headline = countyVisualHeadline(page.name, page.stateAbbr);
+  page.subheadline = countyVisualSubheadline(page.name);
+  page.metaTitle = countySellMetaTitle(page.name, page.stateAbbr, page.slug);
+  page.metaDescription = countySellMetaDescription(
+    page.name,
+    page.state,
+    page.stateAbbr,
+    page.slug,
+  );
 }
 
 export function getCountySellPage(slug: string): CountySellData | undefined {

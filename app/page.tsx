@@ -8,10 +8,19 @@ import { countySellPages } from '@/lib/county-sell-data';
 import { campaignFeaturedSlug } from '@/lib/blog-data';
 import { LegalDisclaimer } from '@/components/legal-disclaimer';
 import { faqFraming, sellerPositioning } from '@/lib/public-copy';
+import { homepageSeoMeta } from '@/lib/seo-meta';
 
 export const metadata: Metadata = {
+  title: homepageSeoMeta.title,
+  description: homepageSeoMeta.description,
+  keywords: [...homepageSeoMeta.keywords],
   alternates: {
     canonical: siteConfig.url,
+  },
+  openGraph: {
+    title: homepageSeoMeta.title,
+    description: homepageSeoMeta.description,
+    url: siteConfig.url,
   },
 };
 
@@ -98,7 +107,7 @@ export default function Home() {
               <p className="mt-3 text-muted-foreground leading-relaxed">
                 We are buying vacant lots, inherited parcels, and long-held infill ground across
                 western Geauga — ZIP codes 44022, 44023, 44026, 44065, 44072, and 44202. Free
-                full property analysis. Aggressively fast closings when necessary.
+                full property analysis through our Geauga County campaign page.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
@@ -319,7 +328,7 @@ export default function Home() {
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               {[
                 { label: sellerPositioning.analysisLabel, value: 'Free', sub: sellerPositioning.analysisSub, icon: Clock },
-                { label: 'Closing pace', value: 'Flexible', sub: sellerPositioning.closingSub, icon: Clock },
+                { label: 'Ohio Valley reach', value: '9+', sub: 'Active county campaigns across OH and WV', icon: MapPin },
                 { label: 'Agent fees charged', value: '$0', sub: 'You deal directly with the buyer', icon: DollarSign },
                 { label: 'Back to the Ohio Valley', value: '5%', sub: 'Of every closing to Arc of Appalachia & Salvation Army East Palestine', icon: Heart },
               ].map((item) => (

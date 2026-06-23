@@ -26,7 +26,7 @@ export function FAQSection({ county, state }: FAQSectionProps) {
     },
     {
       question: `How long does it take to sell land in ${county}?`,
-      answer: `The timeline for selling land in ${county} depends on property type, pricing, and market conditions. We provide a full property analysis first, then move to aggressively fast closings when necessary — often well ahead of traditional listings.`,
+      answer: `Timing depends on property type, title review, and the written agreement. OVLP provides a full property analysis first, then discusses next steps only if we wish to purchase the property for our own account.`,
     },
     {
       question: `What are the zoning regulations in ${county}?`,

@@ -5,20 +5,19 @@
  * to independent licensed professionals.
  */
 
-/** Canonical seller positioning — not cash offers. */
+/** Visible on-page seller positioning — no cash-offer or fast-closing language. */
 export const sellerPositioning = {
   analysisLabel: 'Full Property Analysis',
   analysisSub: 'In-depth review before every proposal',
-  closingSub: 'Aggressively fast closings when necessary',
   countySectionTitle: 'County Property Pages',
   countySectionSub:
-    'Every county we work in has a dedicated page with local FAQs and property context — and a direct path to a full property analysis, with aggressively fast closings when necessary.',
+    'Every county we work in has a dedicated page with local FAQs, property context, and a direct path to a full property analysis.',
   formTitle: 'Request Your Property Analysis',
-  formSub: 'Full in-depth analysis. Aggressively fast closings when necessary.',
+  formSub: 'Full in-depth property review by a prospective principal buyer.',
 } as const;
 
 export function countySubheadline(countyName: string): string {
-  return `Full property analysis for ${countyName} parcels. Aggressively fast closings when necessary.`;
+  return `Full property analysis for ${countyName} parcels across the Ohio Valley.`;
 }
 
 /** FAQ section framing — process only, not seller advice. */

@@ -9,7 +9,7 @@ import { sellerPositioning } from '@/lib/public-copy';
 
 const stats = [
   { label: sellerPositioning.analysisLabel, value: 'Free', icon: Clock },
-  { label: 'Fast Closing When Necessary', value: 'Flexible', icon: Calendar },
+  { label: 'Ohio Valley Counties', value: '9+', icon: Calendar },
   { label: 'Core Acres', value: '1.77M+', icon: TreePine },
   { label: 'Campaigns & Buyers Network', value: 'Active', icon: MapPin },
 ];
@@ -31,10 +31,10 @@ const serviceRegions = [
 ];
 
 const sellerTrustPoints = [
-  'Local buyer — active across Ohio Valley counties in OH, PA, WV, KY, and Indiana',
+  'We buy land all over the Ohio Valley — OH, PA, WV, KY, and Indiana',
   'Multiple active campaigns backed by an active builders network',
   'Full property analysis before every proposal',
-  'Aggressively fast closings when necessary',
+  'Principal buyer — not a broker or listing agent',
 ];
 
 const buyerTrustPoints = [
@@ -81,14 +81,15 @@ export function HeroSection() {
             {activeTab === 'sell' ? (
               <>
                 <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl leading-tight">
-                  Ohio Valley Land Buyer.
+                  We Buy Land All Over the Ohio Valley.
                   <span className="block text-amber mt-1">Local. Intentional. Fair.</span>
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-white/70">
-                  We buy vacant land, inherited property, and back-tax parcels across the entire
-                  Ohio Valley — Ohio, Pennsylvania, West Virginia, Kentucky, and Indiana. Multiple
-                  active campaigns with an active builders network. A local buyer in counties
-                  throughout the region — not just Franklin. Full property analysis first — then a property-specific proposal. Aggressively fast closings when necessary.
+                  Vacant lots, inherited property, and back-tax parcels across Ohio, Pennsylvania,
+                  West Virginia, Kentucky, and Indiana. Multiple active campaigns with an active
+                  builders network — a local principal buyer in counties throughout the region, not
+                  just Franklin. Full property analysis first, then a property-specific proposal
+                  when the parcel fits our criteria.
                 </p>
                 {/* force Cloudflare Pages rebuild - user 'again didnt update' on 3c06292 Core Acres restore + stats labels; previous forces insufficient; dcf01c2 + ... + 3c06292; hard refresh no luck */}
                 <ul className="mt-6 flex flex-col gap-3">

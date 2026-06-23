@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   title: 'Investor Portal — Join the Ohio Valley Land Deal List',
   description:
     'Get first access to off-market land deals across the Ohio Valley. Join our buyer network — hunting tracts, farm ground, development sites, and investment parcels.',
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: { index: false, follow: false },
+  },
 };
 
 const benefits = [
