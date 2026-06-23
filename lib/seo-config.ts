@@ -69,6 +69,14 @@ export const silos = {
   },
 };
 
+export const ohioValleyStates = [
+  { name: 'Ohio', href: '/land' },
+  { name: 'Pennsylvania', href: '/land' },
+  { name: 'West Virginia', href: '/land' },
+  { name: 'Kentucky', href: '/land' },
+  { name: 'Indiana', href: '/land' },
+] as const;
+
 export const counties = [
   { name: 'Franklin County', state: 'OH', slug: 'franklin-county-oh' },
   { name: 'Belmont County', state: 'OH', slug: 'belmont-county-oh' },
