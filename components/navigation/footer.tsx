@@ -10,9 +10,17 @@ const footerNavigation = {
     { name: 'Residential Development', href: '/development' },
     { name: 'Investor Portal', href: '/investor-portal' },
   ],
-  sellLand: counties.map((county) => ({
-    name: `${county.name}, ${county.state}`,
-    href: `/sell-land/${county.slug}`,
+  sellLandByState: [
+    { state: 'Ohio', abbr: 'OH' },
+    { state: 'West Virginia', abbr: 'WV' },
+  ].map(({ state, abbr }) => ({
+    state,
+    counties: counties
+      .filter((county) => county.state === abbr)
+      .map((county) => ({
+        name: county.name,
+        href: `/sell-land/${county.slug}`,
+      })),
   })),
   guides: counties.slice(0, 4).map((county) => ({
     name: `${county.name}, ${county.state}`,
@@ -96,16 +104,25 @@ export function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-6">Sell Land</h3>
-                <ul role="list" className="space-y-4">
-                  {footerNavigation.sellLand.map((item) => (
-                    <li key={item.name}>
-                      <Link href={item.href} className="text-sm text-white/60 hover:text-amber transition-colors">
-                        {item.name}
-                      </Link>
-                    </li>
+                <h3 className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-4">Sell Land</h3>
+                <div className="space-y-4">
+                  {footerNavigation.sellLandByState.map((group) => (
+                    <div key={group.state}>
+                      <p className="text-[11px] font-semibold uppercase tracking-wider text-white/35 mb-2">
+                        {group.state}
+                      </p>
+                      <ul role="list" className="space-y-1.5">
+                        {group.counties.map((item) => (
+                          <li key={item.href}>
+                            <Link href={item.href} className="text-sm text-white/60 hover:text-amber transition-colors">
+                              {item.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
