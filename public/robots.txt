@@ -2,6 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /investor-portal/
+Disallow: /p/
 Disallow: /_next/
 Crawl-delay: 2
 
