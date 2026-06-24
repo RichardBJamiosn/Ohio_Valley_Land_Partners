@@ -9,6 +9,7 @@ import SiteHitTracker from '@/components/analytics/site-hit-tracker';
 import { WebSiteSchema, PersonSchema, OrganizationSchema, ServiceSchema } from '@/components/seo/json-ld';
 import { siteConfig } from '@/lib/seo-config';
 import Script from 'next/script';
+import { GhlBubbleOnly } from '@/components/ghl-bubble-only';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -133,6 +134,7 @@ export default function RootLayout({
         <main className="min-h-screen pb-20 lg:pb-0">{children}</main>
         <Footer />
         <MobileStickyCta />
+        <GhlBubbleOnly />
       </body>
     </html>
   );
