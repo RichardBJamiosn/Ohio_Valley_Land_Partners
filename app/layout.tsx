@@ -10,6 +10,7 @@ import { WebSiteSchema, PersonSchema, OrganizationSchema, ServiceSchema } from '
 import { siteConfig } from '@/lib/seo-config';
 import Script from 'next/script';
 import { GhlBubbleOnly } from '@/components/ghl-bubble-only';
+import { GhlChatEmbed } from '@/components/ghl-chat-embed';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -87,19 +88,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${cormorant.variable}`}>
       <body className={poppins.className}>
-        {/* GHL LeadConnector A2P widget embed. Keep this as raw HTML for scanner detection. */}
-        <div
-          data-chat-widget=""
-          data-widget-id="6a1730411b5a98ef9dec746a"
-          data-location-id="bNT4wp0nukIQdBJbQDaa"
-        />
-        <script
-          src="https://widgets.leadconnectorhq.com/loader.js"
-          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-          data-widget-id="6a1730411b5a98ef9dec746a"
-          data-location-id="bNT4wp0nukIQdBJbQDaa"
-          data-source="WEB_USER"
-        />
+        {/* GHL LeadConnector A2P widget — marker div stays in HTML for scanner detection; script loads post-hydration. */}
+        <GhlChatEmbed />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-7FQDXC8DVC"
           strategy="afterInteractive"

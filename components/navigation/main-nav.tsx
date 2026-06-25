@@ -3,10 +3,15 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { silos } from '@/lib/seo-config';
 import Image from 'next/image';
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+} from '@/components/ui/sheet';
 
 const navigation = [
   { name: 'Buy Land', href: '/properties', description: 'Browse available listings' },
@@ -27,24 +32,26 @@ export function MainNav() {
         aria-label="Global"
       >
         {/* Logo */}
-        <div className="flex lg:flex-1">
+        <div className="flex min-w-0 lg:flex-1">
           <Link href="/" className="flex items-center">
             <Image
               src="/logo.png"
               alt="Ohio Valley Land Partners"
               width={180}
               height={72}
-              className="object-contain"
+              className="h-10 w-auto max-w-[140px] object-contain sm:h-12 sm:max-w-[180px]"
               priority
             />
           </Link>
         </div>
 
-        {/* Mobile menu button */}
-        <div className="flex lg:hidden">
+        {/* Mobile menu — Sheet portals to body so backdrop-blur on header cannot trap fixed UI */}
+        <div className="flex shrink-0 lg:hidden">
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-lg p-2 text-white/70 hover:text-white hover:bg-white/10 transition-colors"
+            className="relative z-10 inline-flex items-center justify-center rounded-lg p-2 text-white/70 hover:text-white hover:bg-white/10 transition-colors"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-main-menu"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -93,75 +100,74 @@ export function MainNav() {
         </div>
       </nav>
 
-      {/* Mobile menu */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-50">
-          <div
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm"
-            onClick={() => setMobileMenuOpen(false)}
-          />
-          <div className="fixed inset-y-0 right-0 w-full max-w-sm bg-forest px-6 py-6 overflow-y-auto">
-            <div className="flex items-center justify-between mb-8">
-              <Link
-                href="/"
-                onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center"
-              >
-                <Image
-                  src="/logo.png"
-                  alt="Ohio Valley Land Partners"
-                  width={160}
-                  height={64}
-                  className="object-contain"
-                />
-              </Link>
-              <button
-                type="button"
-                className="rounded-lg p-2 text-white/70 hover:text-white hover:bg-white/10 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <X className="h-6 w-6" />
-              </button>
-            </div>
+      <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+        <SheetContent
+          id="mobile-main-menu"
+          side="right"
+          className="w-full max-w-sm overflow-y-auto border-white/10 bg-forest p-6 text-white sm:max-w-sm [&>button]:text-white/70 [&>button]:hover:text-white"
+        >
+          <SheetTitle className="sr-only">Main menu</SheetTitle>
 
-            <div className="flex flex-col gap-1">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={cn(
-                    'rounded-lg px-4 py-3 text-base font-medium transition-colors',
-                    pathname?.startsWith(item.href)
-                      ? 'text-amber bg-white/10'
-                      : 'text-white/80 hover:text-white hover:bg-white/10'
-                  )}
-                >
-                  {item.name}
-                  <div className="text-xs text-white/40 mt-0.5 font-normal">{item.description}</div>
-                </Link>
-              ))}
-            </div>
-
-            <div className="mt-8 flex flex-col gap-3 border-t border-white/10 pt-8">
-              <Link
-                href="/"
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-full rounded-lg bg-amber py-3 text-center text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
-              >
-                Property Review
-              </Link>
-              <a
-                href="https://ovlp-portal.vercel.app"
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-full rounded-lg border border-white/20 py-3 text-center text-sm font-semibold text-white hover:bg-white/10 transition-colors"
-              >
-                Buyer Portal
-              </a>
-            </div>
+          <div className="mb-8 flex items-center justify-between">
+            <Link
+              href="/"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center"
+            >
+              <Image
+                src="/logo.png"
+                alt="Ohio Valley Land Partners"
+                width={160}
+                height={64}
+                className="h-10 w-auto object-contain"
+              />
+            </Link>
           </div>
-        </div>
-      )}
+
+          <div className="flex flex-col gap-1">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className={cn(
+                  'rounded-lg px-4 py-3 text-base font-medium transition-colors',
+                  pathname?.startsWith(item.href)
+                    ? 'bg-white/10 text-amber'
+                    : 'text-white/80 hover:bg-white/10 hover:text-white'
+                )}
+              >
+                {item.name}
+                <div className="mt-0.5 text-xs font-normal text-white/40">{item.description}</div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-8 flex flex-col gap-3 border-t border-white/10 pt-8">
+            <Link
+              href="/land-scouts"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full rounded-lg border border-white/20 py-3 text-center text-sm font-semibold text-white hover:bg-white/10 transition-colors"
+            >
+              Introductions
+            </Link>
+            <Link
+              href="/"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full rounded-lg bg-amber py-3 text-center text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
+            >
+              Property Review
+            </Link>
+            <a
+              href="https://ovlp-portal.vercel.app"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full rounded-lg border border-white/20 py-3 text-center text-sm font-semibold text-white hover:bg-white/10 transition-colors"
+            >
+              Buyer Portal
+            </a>
+          </div>
+        </SheetContent>
+      </Sheet>
     </header>
   );
 }
