@@ -17,7 +17,7 @@ export interface PrivatePreview {
   inquirySubject: string;
 }
 
-/** Unlisted builder previews — never add these URLs to sitemap or public nav. */
+/** Unlisted builder previews — never add these URLs to sitemap or public nav. Deploy: 2026-06-26 */
 export const privatePreviews: Record<string, PrivatePreview> = {
   k7m2x9q4: {
     token: 'k7m2x9q4',
