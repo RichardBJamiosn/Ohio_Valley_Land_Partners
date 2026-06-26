@@ -25,18 +25,18 @@ export const privatePreviews: Record<string, PrivatePreview> = {
     title: 'Columbus Multi-Home Infill Lot',
     summary:
       'Off-market parcel in East Linden — large enough for multiple townhomes or single-family builds, utilities at street, school directly across Woodland Avenue.',
-    address: '2577 Woodward Ave · Columbus, OH 43211',
+    address: '2577 Woodland Ave · Columbus, OH 43211',
     parcelId: '190-000591',
     flyerPath: '/private-previews/k7m2x9q4-flyer.png',
     flyerAlt:
-      '2577 Woodward Ave — Columbus multi-home infill lot property sheet with parcel map and aerial context',
+      '2577 Woodland Ave — Columbus multi-home infill lot property sheet with parcel map and aerial context',
     stats: [
       { label: 'Lot Size', value: '0.686 AC', detail: '29,882 sq ft' },
-      { label: 'Target Pricing', value: 'Near $50K', detail: 'Best qualified offer' },
+      { label: 'Target Pricing', value: 'Near $40K', detail: 'Best qualified offer' },
       { label: 'Utilities', value: 'Water + Sewer', detail: 'At street' },
       { label: 'Access', value: 'Paved Frontage', detail: 'Woodland Avenue' },
     ],
-    inquirySubject: '2577 Woodward Ave — Builder Inquiry',
+    inquirySubject: '2577 Woodland Ave — Builder Inquiry',
   },
 };
 
