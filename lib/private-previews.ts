@@ -32,7 +32,7 @@ export const privatePreviews: Record<string, PrivatePreview> = {
       '2577 Woodland Ave — Columbus multi-home infill lot property sheet with parcel map and aerial context',
     stats: [
       { label: 'Lot Size', value: '0.686 AC', detail: '29,882 sq ft' },
-      { label: 'Target Pricing', value: 'Near $40K', detail: 'Best qualified offer' },
+      { label: 'Target Pricing', value: '40K target', detail: 'Best qualified offer' },
       { label: 'Utilities', value: 'Water + Sewer', detail: 'At street' },
       { label: 'Access', value: 'Paved Frontage', detail: 'Woodland Avenue' },
     ],
